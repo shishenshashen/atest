@@ -1,0 +1,29 @@
+{
+  "detected_at": 1781513887,
+  "hermes": {
+    "available": true,
+    "path": "C:\\Users\\Administrator\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\hermes.EXE",
+    "version": "Hermes Agent v0.15.1 (2026.5.29)"
+  },
+  "claude": {
+    "available": true,
+    "path": "C:\\Users\\Administrator\\AppData\\Local\\hermes\\node\\claude.CMD",
+    "version": null
+  },
+  "codex": {
+    "available": false,
+    "path": null,
+    "version": null
+  },
+  "cursor-agent": {
+    "available": false,
+    "path": null,
+    "version": null
+  },
+  "aider": {
+    "available": false,
+    "path": null,
+    "version": null
+  },
+  "best": "hermes"
+}

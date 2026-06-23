@@ -1,0 +1,27 @@
+# 凭证 & 隐私
+*.key
+*.pem
+.ssh/
+.mavis*
+.minimax*
+.mm-x-agent*
+@mmx-agentelectron-updater*
+
+# 临时
+__pycache__/
+*.pyc
+*.pyo
+*~
+*.tmp
+*.log.gz
+.DS_Store
+Thumbs.db
+
+# 大仓库内部 .git
+github-mirror/*/.git/
+hermes-agent/.git/
+
+# 虚拟环境
+.venv/
+venv/
+node_modules/

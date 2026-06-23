@@ -1,0 +1,29 @@
+{
+  "test": {
+    "auto_timeout": null,
+    "consecutive_done": 0,
+    "last_adj_at": 0,
+    "last_adj_kind": null,
+    "manual_override": false,
+    "manual_timeout": null,
+    "total_timeout": 1
+  },
+  "test_role3": {
+    "auto_timeout": null,
+    "consecutive_done": 0,
+    "last_adj_at": 0,
+    "last_adj_kind": null,
+    "manual_override": false,
+    "manual_timeout": null,
+    "total_timeout": 1
+  },
+  "watchdogtest": {
+    "auto_timeout": 37,
+    "consecutive_done": 0,
+    "last_adj_at": 1781492461,
+    "last_adj_kind": "down",
+    "manual_override": false,
+    "manual_timeout": null,
+    "total_timeout": 2
+  }
+}
