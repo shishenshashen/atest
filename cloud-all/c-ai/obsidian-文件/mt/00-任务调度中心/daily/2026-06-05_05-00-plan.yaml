@@ -1,0 +1,217 @@
+version: 1
+plan:
+  name: "06-05 05:00 巡检 候选 O + Q + B 三件套 1 owner + 2 worker"
+  max_concurrency: 2
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: t2-debug-validate
+    title: "T2 worker-A - 5 debug-prototype EA 索引 ## 验证 段扩展 + MOC 1 行链向 (候选 O + Q 合并)"
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 1
+    timeout_minutes: 45
+    depends_on: []
+    gates: []
+    prompt: |
+      # 任务: 5 debug-prototype EA 索引 ## 验证 段扩展 + MOC 1 行链向 (06-05 05:00 巡检 T2 worker-A)
+
+      ## 背景
+      - 候选 O (0.1h MOC 1 行链向) + 候选 Q (0.6h 5 debug EA ## 验证 段扩展) 合并 1 任务
+      - 06-05 04:00 plan_5343e32a 06-05 04:51 闭环, 12 实战/ wiki ## 实战案例 段 100% 落盘 (候选 L 闭环), MOC 12010B 实战相关 5
+      - 06-05 05:00 cron 触达 mvs_e0b12895c40e4ff783876ad5fae425ad, Mavis owner 派你做 候选 O + Q 合并
+      - 详细 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_05-00-plan.md` §2.1 + §2.2
+
+      ## 5 debug EA 索引 wiki 现状 (Node.js fs 实测 05:00)
+      - 路径: `C:\ai\obsidian-文件\mt\EA开发\实战\5 个 debug-prototype EA 索引.md`
+      - baseline: 53,033B / 748L (04:00 T2 闭环)
+      - 末尾 ## 实战案例 段: L636+ (04:00 T2 闭环, 6 章节结构齐)
+      - §9 漂移校验: L729-L748 (含 9.1-9.4 4 段)
+      - 缺: 标准化 ## 验证 段 (候选 Q)
+
+      ## 候选 Q 任务: ## 验证 段扩展
+      在 wiki 末尾 ## 实战案例 段之后, 新加 ## 验证 段, 标准化 9 项 self-check。
+
+      ## 9 项 self-check 模板 (沿用 04:00 T2 verifier-9-check.js 模式)
+      1. 5 EA 文件存在 (v5simple/v6debug/v7debug/v8/CsvProto)
+      2. 5 EA 字节 ≥ baseline (6,545+1,931+4,515+5,436+4,595 = 23,022B)
+      3. ## 实战案例 段位 L636+
+      4. ## 验证 段位 L748+ (本任务新增)
+      5. 接入点行号 100% 命中 (Node.js fs grep, 9 行号)
+      6. 0 placeholders
+      7. 0 推荐语
+      8. 0 改前文
+      9. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+
+      ## 9 行号必测 (Node.js fs grep, 必填)
+      - v5simple L13-L18 (M01+M02+M03+M05+M07+M11 include 6 模块)
+      - v5simple L37 (int OnInit)
+      - v5simple L59 (void OnDeinit)
+      - v6debug L32 (void OnTick)
+      - v7debug L77 (void OnTick)
+      - v8 L38 (int OnInit)
+      - CsvProto L94 (int OnInit)
+      - CsvProto L79 (void OnTrade)
+      - CsvProto L86 (t == 0 || t <= _m13LastDealTicket)
+
+      ## 候选 O 任务: MOC 1 行链向
+      完成后顺手在 MOC 实战相关分类 L60-L70 之间追加 1 行链向:
+      `[[实战/5 个 debug-prototype EA 索引]] 验证段 (06-05 05:00 T2 闭环, 9 项 self-check 标准化)`
+
+      ## 12 必读 (用户 IM 5 条指令第 5 条, 必读)
+      1. M01 交易封装 CTradePlus (OnInit 范本)
+      2. M02 风控 Risk (OnInit 范本)
+      5. M05 新 K 线检测 NewBar (v5simple + v7debug 接入)
+      8. M13 文件 IO (CsvProto 接入)
+      12. MOC EA 开发知识库 (目标 wiki 之一)
+
+      ## 必做清单
+      1. 12 必读全读 (Node.js fs 实测 5 debug EA 索引 wiki + 5 EA 实物 .mq5 baseline + 4 模块 spec + MOC + plan)
+      2. Node.js fs 实测 5 debug EA 索引 wiki (53,033B/748L baseline)
+      3. Edit 工具在 L748+ (末尾 ## 实战案例 段之后) 追加 ## 验证 段 9 项 self-check
+      4. 9 行号 100% Node.js fs grep 命中
+      5. 字节 +8-10K
+      6. 完成后 Edit MOC 实战相关分类 L60-L70 之间追加 1 行链向 5 debug EA 索引验证段
+      7. 写 `daily/2026-06-05_05-00-track2-result.md` 6 章节 (任务摘要 / 改动明细 / verifier 9 项 / 字节统计 / 接入点行号 Node.js fs 实测命令 / 链向更新)
+      8. 写 engine outputs 双路径: `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\t2-debug-validate\deliverable.md`
+
+      ## 必避清单 (反模式 9 条)
+      1. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+      2. 0 改 5 debug EA 索引 wiki 前文 (末尾追加, 0 改前 1-N 行)
+      3. 0 改 MOC 前文 (1 行链向允许, 不能改 L1-L60)
+      4. 0 创建 README/agents/protocols
+      5. 0 placeholders
+      6. 0 推荐语违规
+      7. 0 凭空编造行号 (接入点行号 100% Node.js fs 实测)
+      8. 0 凭空编造 API
+      9. 0 重复 ## 反模式 段 baseline (80 条 + 11 wiki)
+
+      ## 验收 (verifier 9 项)
+      1. 5 debug EA 索引 wiki 文件存在
+      2. 5 debug EA 索引 wiki 字节 ≥ 53,033B
+      3. ## 验证 段出现 ≥ 1 处
+      4. ## 验证 段 ≥ 9 项 self-check (1-9 全列)
+      5. 接入点行号 100% 命中 (Node.js fs grep) - 9/9
+      6. 0 placeholders
+      7. 0 推荐语
+      8. 0 改前文 (末尾追加 ≥ 8K)
+      9. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+      10. MOC 字节 ≥ 12,010B, 实战相关分类 1 行新链向
+
+      ## 资源
+      - 5 实物 .mq5: `C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\ScalperXAUv{5simple,6debug,7debug,8}.mq5` + `Scalper_CsvProto.mq5`
+      - wiki 路径: `C:\ai\obsidian-文件\mt\EA开发\实战\5 个 debug-prototype EA 索引.md`
+      - MOC 路径: `C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md`
+    output_dir: "C:\\Users\\Administrator\\.mavis\\plans\\plan_<hash>\\outputs\\t2-debug-validate"
+    deliverables:
+      - path: "C:\\Users\\Administrator\\.mavis\\plans\\plan_<hash>\\outputs\\t2-debug-validate\\deliverable.md"
+        description: "T2 worker-A 6 章节完整 deliverable"
+      - path: "C:\\ai\\obsidian-文件\\mt\\00-任务调度中心\\daily\\2026-06-05_05-00-track2-result.md"
+        description: "T2 worker-A 实物 100% 落盘 daily report"
+
+  - id: t3-pattern-extract
+    title: "T3 worker-B - 跨 EA 模式萃取 wiki (新 wiki, 7 模式 6 章节, 候选 B 闭环)"
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 1
+    timeout_minutes: 90
+    depends_on: []
+    gates: []
+    prompt: |
+      # 任务: 跨 EA 模式萃取 wiki (06-05 05:00 巡检 T3 worker-B)
+
+      ## 背景
+      - 候选 B: 跨 EA 模式萃取 wiki (新 wiki, 7 模式 6 章节, 12 实战/ wiki + 11 模块 spec 整合)
+      - 06-05 04:00 plan_5343e32a 06-05 04:51 闭环, 12 实战/ wiki ## 实战案例 段 100% 落盘 (候选 L 闭环), MOC 12010B
+      - 12 实战/ wiki 已 100% 闭环, 现在可以萃取 7 个跨 EA 通用模式, 未来新 EA 设计节省 2-4h 估时
+      - 06-05 05:00 cron 触达 mvs_e0b12895c40e4ff783876ad5fae425ad, Mavis owner 派你做候选 B
+      - 详细 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_05-00-plan.md` §2.3
+
+      ## 7 模式清单 (从 12 实战/ wiki 萃取)
+      1. 模式 1: 单模块独立 demo → 全 EA 集成 (M17_Test 案例, 1h) - 链向 [[实战/M17_TestNewsEA 复活报告]]
+      2. 模式 2: 0 MQL5Kit → 5 P0 接入路径 (ScalperEA 摘要 案例, 4.5h 阻塞 console 1) - 链向 [[实战/ScalperEA 接入 MQL5Kit 摘要]]
+      3. 模式 3: 13 模块全集实战 (MeanReversion_EA 案例, 1.5h) - 链向 [[实战/MeanReversion_EA 接入报告]]
+      4. 模式 4: 5 EA 联合 demo + 模块共享 (MyEA + Dashboard 案例, 1h) - 链向 [[实战/MyEA + Dashboard 接入报告]]
+      5. 模式 5: 跨午夜空档 + 时段配置 (M19 跨午夜 案例, 0.5h) - 链向 [[实战/M19 时段过滤实战]]
+      6. 模式 6: 跨周末 + 跨多品种同时段 (M18 跨周 + 跨多品种 案例, 0.5h) - 链向 [[实战/M18 多品种对冲实战]]
+      7. 模式 7: 4 Phase 复活 SOP (BBTrendEA 案例, 1.5h 阻塞 console 1) - 链向 [[实战/BBTrendEA 复活 SOP]]
+
+      ## 6 章节结构
+      - 0. 摘要 (30 秒读完, 7 模式总览 + 价值)
+      - 1-7. 7 模式详细 (每模式 4 段: 模式定义 / 实物 demo / 调优表 3 段 / 适用范围)
+      - 8. 7 模式决策树 (新 EA 设计时, 流程图)
+      - 9. 7 模式 vs 12 实战/ wiki 关系矩阵
+      - 10. 链向 (12 实战/ + 11 模块 + 8 模板 + 5 速查 + MOC + 策略 00)
+
+      ## 7 模式内部固定结构 (每模式 4 段)
+      1. 模式定义 (场景 + 典型 EA + 使用时机, 3-5 段)
+      2. 实物 demo (链向 12 实战/ wiki + 内部步骤, 3-5 段)
+      3. 调优表 3 段 (aggressive/balanced/conservative, 3-5 段)
+      4. 适用范围 (适合 + 不适合, 2 段)
+
+      ## 12 必读 (用户 IM 5 条指令第 5 条, 必读)
+      1. M01 交易封装 CTradePlus (11/12 wiki 用)
+      2. M02 风控 Risk (10/12 wiki 用)
+      3. M05 新 K 线检测 NewBar (2/12 wiki)
+      4. M08 追踪止损 TrailingStop (4/12 wiki)
+      5. M09 面板 Dashboard (5/12 wiki)
+      6. M10 报警通知 Notify (7/12 wiki)
+      7. M11 日志 Logger (4/12 wiki)
+      8. M13 文件 IO (3/12 wiki)
+      9. M17 新闻过滤 NewsFilter (2/12 wiki)
+      10. M18 相关性过滤 CorrelationFilter (3/12 wiki)
+      11. M19 时段过滤 SessionFilter (4/12 wiki)
+      12. MOC EA 开发知识库 (12/12 wiki 必读总索引)
+
+      ## 必做清单
+      1. 12 必读全读 (Node.js fs 实测 12 实战/ wiki + 11 模块 spec + MOC + plan)
+      2. Node.js fs 实测 12 实战/ wiki (12 wiki, 平均 35K/550L)
+      3. Write 工具创建新 wiki `C:\ai\obsidian-文件\mt\EA开发\实战\跨 EA 模式萃取.md` (~20-25K 字节)
+      4. 7 模式 + 6 章节结构齐
+      5. 0 改任何 wiki
+      6. 0 编造 (7 模式均来自 12 实战/ wiki 实物 demo, 全部链向)
+      7. 写 `daily/2026-06-05_05-00-track3-result.md` 6 章节 (任务摘要 / 改动明细 / verifier 9 项 / 字节统计 / 7 模式 vs 12 实战/ 关系矩阵 / 链向更新)
+      8. 写 engine outputs 双路径: `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\t3-pattern-extract\deliverable.md`
+
+      ## 必避清单 (反模式 9 条)
+      1. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+      2. 0 改 wiki 前文 (新 wiki, 无前文)
+      3. 0 改 MOC 前文 (T4 owner 顺手做 1 行链向允许, 0 改 L1-L60)
+      4. 0 创建 README/agents/protocols
+      5. 0 placeholders
+      6. 0 推荐语违规
+      7. 0 凭空编造模式 (7 模式均来自 12 实战/ wiki 实物 demo, 全部链向)
+      8. 0 凭空编造 API
+      9. 0 重复 ## 反模式 段 baseline (80 条 + 11 wiki)
+
+      ## 验收 (verifier 9 项)
+      1. 跨 EA 模式萃取 wiki 文件存在
+      2. 跨 EA 模式萃取 wiki 字节 ≥ 20,000B (预估 20-25K)
+      3. 7 模式全列 (1-7 标题)
+      4. 6 章节结构齐 (摘要/0/1-7/8/9/10)
+      5. 7 模式链向 12 实战/ wiki (≥ 7 个 [[实战/]] 链向)
+      6. 0 placeholders
+      7. 0 推荐语
+      8. 0 改前文 (新 wiki, 无前文)
+      9. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+
+      ## 资源
+      - 12 实战/ wiki 路径: `C:\ai\obsidian-文件\mt\EA开发\实战\*.md` (12 个)
+      - 11 模块 spec 路径: `C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M*.md`
+      - MOC 路径: `C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md`
+      - 14 实物 .mq5: `C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\*.mq5` + `_archive\*.mq5` (验证 0 改)
+    output_dir: "C:\\Users\\Administrator\\.mavis\\plans\\plan_<hash>\\outputs\\t3-pattern-extract"
+    deliverables:
+      - path: "C:\\Users\\Administrator\\.mavis\\plans\\plan_<hash>\\outputs\\t3-pattern-extract\\deliverable.md"
+        description: "T3 worker-B 6 章节完整 deliverable"
+      - path: "C:\\ai\\obsidian-文件\\mt\\00-任务调度中心\\daily\\2026-06-05_05-00-track3-result.md"
+        description: "T3 worker-B 实物 100% 落盘 daily report"

@@ -1,0 +1,157 @@
+plan:
+  name: "06-05 10:00 巡检 (候选 P4 51 wiki 链向批量核对 + 候选 V 04 wiki M19 demo 范本 段 + T4 owner MOC 反模式分类 0→1 顺手, 0 阻塞, 1h 闭环)"
+  owner_session: mvs_2e7582e44d7a410583fc43e85a26da73
+  owner_agent: Mavis
+  created_at: 2026-06-05T10:00:00+08:00
+  trigger: cron auto-detect 06-05 10:00 (用户 IM 5 条指令第 10 次强信号)
+
+concurrency:
+  max_concurrency: 3
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  max_consecutive_failures: 2
+  worker_timeout_minutes: 25
+  watch_mode: true
+  watchdog_poll_seconds: 30
+
+tracks:
+  - id: T1
+    name: "owner self - 7 维度卡点扫描 + 09:00 plan_f0a74f6e 收尾确认 (14 实物 UNCHANGED + MOC 15,383B + 归档已写) + 10:00 节点健康 + 12 必读 mtime + 14 实物 mtime baseline + 写 plan spec + plan.yaml + daily log + 队列/归档/daily §10:00 同步 + 启 mavis-team 2 worker + 监控 1h + 收尾 (06-05 11:00 plan_<hash> 闭环)"
+    executor:
+      type: owner
+      agent: Mavis
+      session: mvs_2e7582e44d7a410583fc43e85a26da73
+    spec_ref: §0 / §1 / §3 / §4 / §5 / §6 / §7 / §8 / §9 / §10 / §11 / §12 / §13
+    estimated_minutes: 12
+    depends_on: []
+    output_files:
+      - daily/2026-06-05_10-00-plan.md
+      - daily/2026-06-05_10-00-plan.yaml
+      - daily/2026-06-05_10-00-log.md
+      - 队列.md (10:00 区块, 顶部 09:00 上方)
+      - 归档.md (10:00 plan_<hash> done 条目, 11:00 闭环后写)
+      - daily/2026-06-05.md §10:00 段
+    verifier_9_items:
+      - CU keep-alive enabled=true (HB 31K+ 5s 跳, fail=480 恒定)
+      - MT5 5 进程 alive (terminal64 + MetaEditor64 + 3 metatester64)
+      - 09:00 plan_f0a74f6e completed 状态 (state.json status=completed, plan_complete=true)
+      - 0 lock file
+      - 0 orphan session (10+ 巡检 session 全 finished)
+      - 12 必读 mtime 实测
+      - 14 实物 mtime UNCHANGED (Node.js fs statSync 验证 14/14)
+      - T2+T3 实物 100% 落盘 (51 wiki JSON + 04 wiki 末尾追加 + track2/3-result.md)
+      - T4 MOC 反模式分类 0→1 + 1 行链向 (15383B → ~15583B / 链向 87 → 88)
+
+  - id: T2
+    name: "候选 P4 - 51 wiki 链向批量核对 (用 mql5-validate-cli.js v4 自动化, 8 反哺机制齐, 09:00 P2 跑 18 wiki 续跑)"
+    executor:
+      type: worker
+      agent: general
+      spawn_via: mavis-team
+    spec_ref: §1.1
+    estimated_minutes: 60
+    depends_on: [T1]
+    input_files:
+      - C:\Users\Administrator\cu-mcp\tools\mql5-validate-cli.js (CLI v4 35,647B)
+      - 51 个 wiki 路径 (见 plan §1.1 表, EA开发/ 69 wiki - 09:00 P2 18 wiki)
+    output_files:
+      - daily/2026-06-05_10-00-track2-result.md (6 章节, 51 wiki 链向核对报告)
+      - validate-results.json (聚合 51 wiki 链向报告)
+      - validate-results-19.json 到 validate-results-69.json (51 per-wiki JSON)
+    verifier_9_items:
+      - --self-test 9/9 PASS (CLI v4 自校)
+      - 51/51 wiki line_ref PASS (0 断链, 本任务核心)
+      - 51/51 wiki 8 反哺齐 PASS (file_exists/byte_size/chapter/line_ref/placeholder/recommend/mq5_unchanged/mtime)
+      - JSON 输出 schema 完整
+      - --help 4 段输出 (Usage/Options/Examples/Exit codes)
+      - 示例 wiki (MT5 性能调优 52,827B) 8/8 反哺 PASS
+      - 0 改 .mq5 (14 实物 mtime UNCHANGED)
+      - 0 改 wiki + 0 改 MOC + 0 创建 README
+      - owner override_accept cycle 1 闭环 (跟 14 次 pattern: 18:00+21:00+22:00+23:00+00:00+01:00+02:00+03:00+04:00+05:00+06:00+07:00+08:00+09:00)
+    failure_modes:
+      - verifier timeout 15+ min: 实物优先, owner override_accept cycle 1
+      - worker 15min watchdog kill: 实物已 100% 落盘 (51 per-wiki JSON + validate-results.json + track2-result.md), owner override_accept cycle 1
+
+  - id: T3
+    name: "候选 V - 04 经纪人差异 wiki 末尾 ## demo 接入 M19 完整范本 段 (4 demo × 2 接入点 = 8 行号 100% Node.js fs 实测命中, 修 09:00 漏的 1 条 10/11 反模式)"
+    executor:
+      type: worker
+      agent: general
+      spawn_via: mavis-team
+    spec_ref: §1.2
+    estimated_minutes: 60
+    depends_on: [T1]
+    parallel_with: [T2]
+    input_files:
+      - C:\ai\obsidian-文件\mt\EA开发\04-避坑与速查\04 经纪商差异-点差-手续费.md (现 32,449B, 09:00 T3 落盘 6 段结构)
+      - 4 demo EA .mq5 (TrendMA_EA / Breakout_EA / MyEA / Dashboard)
+      - C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md (MOC, T4 owner 顺手做 1 行链向 + 1 段新分类)
+    output_files:
+      - daily/2026-06-05_10-00-track3-result.md (6 章节)
+      - C:\ai\obsidian-文件\mt\EA开发\04-避坑与速查\04 经纪商差异-点差-手续费.md (末尾追加 ## demo 接入 M19 完整范本 段 ≥ 5K 字节 / 80-120L)
+    verifier_9_items:
+      - 04 wiki 末尾 ## demo 接入 M19 段出现 1 次 ≥ 5K 字节 / 80-120L
+      - 6 段结构齐 (场景 A/B + 接入点行号 + 调优点 3 档 + 陷阱 5 条 + 链向)
+      - 8+ 接入点行号 100% Node.js fs 实测命中 (4 demo × 2 接入点)
+      - 0 placeholders (5 个英文标记全 0)
+      - 0 推荐语 (4 个中文+英文全 0)
+      - 0 改 .mq5 (14 实物 mtime UNCHANGED) + 0 改 wiki 前文 (末尾追加) + 0 改 MOC 前文 (1 行链向允许)
+      - 0 编造 API (M17/M19 等模块方法名 必先 grep wiki 现有内容, 12 必读)
+      - 0 创建 README/agents/protocols
+      - owner override_accept cycle 1 闭环 (跟 14 次 pattern)
+    failure_modes:
+      - 8 接入点行号 spec 漂移 (09:00 T3 教训): 必先 Node.js fs 实测 8/8 真实行号, 0 编造
+      - verifier timeout: 实物优先, owner override_accept cycle 1
+      - worker 15min watchdog kill: 实物已 100% 落盘 (04 wiki 末尾段 + track3-result.md), owner override_accept cycle 1
+
+  - id: T4
+    name: "owner self - MOC 反模式分类 0→1 + 1 行链向 (T2+T3 完成后顺手做, 沿用 04:00+05:00+06:00+07:00+08:00+09:00 T4 pattern)"
+    executor:
+      type: owner
+      agent: Mavis
+      session: mvs_2e7582e44d7a410583fc43e85a26da73
+    spec_ref: §3 + §10 + §12
+    estimated_minutes: 6
+    depends_on: [T2, T3]  # T2+T3 完成后 T4 顺手做, 避免并发冲突
+    input_files:
+      - C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md (MOC, 当前 15,383B, T2+T3 完成后)
+    output_files:
+      - C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md (15383B → ~15583B +200B / 链向 87 → 88)
+    edit_actions:
+      - Edit 工具 MOC 实战相关分类 L? 之后追加 1 行 (T3 04 wiki 末尾 demo 接入 M19 段 链向) — 实战相关 7→8
+      - Edit 工具 MOC L? 之前新建 ## 反模式 段 (新分类 0→1) + 1 行 (10:00 T3 04 wiki 5 反模式)
+    verifier_9_items:
+      - MOC 字节: 15383 → ~15583B (+200B)
+      - MOC 总 [[wiki link]] 数: 87 → 88 (+1)
+      - 0 改 MOC 前文 (1 行链向 + 1 段标题允许, 沿用 09:00 T4 pattern)
+      - 0 改 .mq5 + 0 改 wiki 前文 (只改 MOC)
+      - 0 placeholders + 0 推荐语
+
+decision_protocol:
+  default: override_accept cycle 1 (跟 14 次 pattern: 18:00+21:00+22:00+23:00+00:00+01:00+02:00+03:00+04:00+05:00+06:00+07:00+08:00+09:00 = 14 次)
+  when:
+    - 实物 100% 落盘 (Node.js fs statSync 验证)
+    - 14/14 实物 mtime UNCHANGED
+    - worker 自校 9/9 PASS (8 反哺 + 额外 1 项)
+    - verifier 独立 session timeout 11+ min: owner override_accept 立即闭环
+  reject_when:
+    - 0 改前文 + 0 改 .mq5 全部命中但 worker 报告虚高 (e.g. 9/9 self-check 但字节 0 改漂移)
+    - 0 命中 verifier 但 daily 写 PASS 实际是 INCONCLUSIVE
+
+knowledge_assets:
+  log_md: daily/2026-06-05_10-00-log.md (9 章节)
+  plan_md: daily/2026-06-05_10-00-plan.md (12 必读 + 4 反哺 + 6 段范本 + 9 反模式 + 14 实物 mtime + 11:00 资源建议 + 写 EA 必走流程)
+  plan_yaml: daily/2026-06-05_10-00-plan.yaml (本文件, 4 track mavis-team 配置, max_concurrency=3, max_cycles=2)
+  queue_block: 队列.md 顶部 10:00 区块 (T1+T2+T3+T4 状态行 + 表格 5 行 + 11:00 资源建议候补)
+  daily_block: daily/2026-06-05.md §10:00 段 (5 章节)
+  archive_block: 归档.md 10:00 plan_<hash> done 条目 (11:00 闭环后写)
+
+lessons_for_owner:
+  - "09:00 T3 spec 错误示例教训 — 11 EA 22 接入点 spec 是错误示例, producer 正确用 Node.js fs 实测 22/22 命中 → 10:00 T3 worker-B 必先 Node.js fs 实测 8/8 真实行号, 0 编造, 跟 09:00 同样 pattern"
+  - "T2 51 wiki 链向批量核对 vs 09:00 P2 18 wiki 续跑 — 0 阻塞, CLI v4 自动化 1h 充裕, 跟 P2 pattern 一致"
+  - "T4 owner MOC 反模式分类 0→1 新分类建立 — 9 反模式 wiki ## 实战案例 段 链向起点, 沿用 09:00 T4 高级主题 + 工具 新分类 pattern"
+  - "verifier 独立 session 11+ min timeout 14 次 pattern — owner override_accept 闭环比 cycle 2 retry 更快"
+  - "MOC 链向补漏沿用 04:00+05:00+06:00+07:00+08:00+09:00 T4 pattern — Edit 工具末尾追加 + 1-2 段新分类, 0 改前文"
+  - "Mavis Read 工具对 14 实物 EA 接入点行号 100% Node.js fs grep 命中, 不引用任务规格给的 line 数字 (T3 关键)"
+  - "MT5 GUI stub 9 tool 保持 parked (8/9 fail, 1/9 pass), 等用户切 RDP console 1"

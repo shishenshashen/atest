@@ -1,0 +1,268 @@
+# mavis-team plan yaml (精简版, 沿用 1:00 详尽 yaml)
+# 08:00 cron owner 起 plan 候选 P3 R3 / 候选 T5 R3 / 阻塞 4 件 (留用户切 RDP) 时用
+# 详细 yaml 沿用 1:00 详尽 yaml, 标注 1:00 位置
+# 08:00 owner 不主动启, 保持 33+ 次"等用户授权"姿势
+
+version: 1
+plan_id: 06-06_08-00-template
+owner: mvs_554c6561abc040d0bf09c587d421a84e
+description: |
+  06-06 08:00 cron 候补 plan template (精简版).
+  沿用 1:00 详尽 yaml (daily/2026-06-06_01-00-plan.yaml 16,922B), 标注 1:00 位置.
+  08:00 owner 不主动启, 保持 33+ 次"等用户授权"姿势.
+  等用户 IM 显式说"做 #N" → 立刻把候选 #N 替换 plan.worker_prompt 起 plan.
+
+# ===== 引擎配置 (沿用 1:00 yaml, 不重复) =====
+max_concurrency: 1
+max_cycles: 2
+auto_accept: false
+auto_reject_retries: 1
+max_consecutive_failures: 2
+worker_timeout_minutes: 35
+engine_mode: production
+
+# ===== 1 track 候补 plan (待用户 IM 显式启) =====
+# 08:00 owner 沿用 1:00 详尽 yaml 风格, 1 track mavis-team 引擎 yaml
+# 候选 P3 R3 / 候选 T5 R3 候补 standby, 阻塞 4 件需 console 1
+
+tracks:
+  - track_id: T1-candidate-P3-R3-or-T5-R3
+    title: "候选 P3 R3 / 候选 T5 R3 候补 (1h 0 阻塞 边际收益递减 17 cron 跨)"
+    status: queued  # 08:00 owner 不主动启, queued 等用户 IM 显式 "做 #N" → ready
+    depends_on: []
+    
+    # 资源: 1 owner + 1 worker (mavis-team)
+    # 估时: 1h (跟 1:00 估时一致, 实际 0.5h 节省 50% 经验)
+    # 阻塞: 0
+    # 决策: 候补 standby, 待用户 IM 显式 "做候选 P3 R3" 或 "做候选 T5 R3" → 改 status=ready 启 plan
+    
+    worker_prompt_template: |
+      ## 任务 (本 worker 必读 19+1 必读文件, 不重复造轮子)
+      
+      ### IM 第 5 条对齐 (用户要求 "读 obsidian 知识库" + "沉淀为知识点, 去优化")
+      
+      写 EA 必读 obsidian 知识库, 沉淀为知识点, 去优化. 候选 {CANDIDATE} 沿用 1:00 详尽 spec 26,782B/412 行.
+      
+      ### 19+1 必读文件 (worker 必先读)
+      
+      路径: `C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Include\MQL5Kit\`
+      - M01_CTradePlus.mqh 9,095B
+      - M02_Risk.mqh 4,283B
+      - M03_PositionSizing.mqh 2,760B
+      - M04_IndicatorPool.mqh 3,880B
+      - M05_NewBar.mqh 943B
+      - M06_Signal.mqh 2,943B
+      - M07_Positions.mqh 4,142B
+      - M08_TrailingStop.mqh 2,589B
+      - M09_Dashboard.mqh 1,307B
+      - M10_Notify.mqh 2,040B
+      - M11_Logger.mqh 2,588B
+      - M12_GV.mqh 2,414B
+      - M13_FileIO.mqh 2,903B
+      - M14_Drawer.mqh 3,996B
+      - M15_TimerService.mqh 2,922B
+      - M16_Cleanup.mqh 2,168B
+      - M17_NewsFilter.mqh 21,948B
+      - M18_CorrelationFilter.mqh 17,650B
+      - M19_SessionFilter.mqh 18,879B
+      - 候选 Y 顶级入口 `C:\ai\obsidian-文件\mt\EA开发\模块化方案 v2 整合.md` 7,406B (06-05 23:22:45)
+      
+      ### 14 实物 .mq5 (worker 必实测, sandbox 路径)
+      
+      路径: `C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\`
+      - Breakout_EA.mq5 9,530B / Dashboard.mq5 8,361B / MeanReversion_EA.mq5 13,503B
+      - MiniMaxScalper.mq5 35,357B / MiniMaxScalper_v2.mq5 37,470B (用户 IDE)
+      - MyEA.mq5 12,541B / ScalperXAU.mq5 42,824B
+      - ScalperXAUv5simple.mq5 6,545B / v6debug.mq5 1,931B / v7debug.mq5 4,515B
+      - ScalperXAUv8.mq5 5,436B / v9.mq5 13,186B
+      - Scalper_CsvProto.mq5 4,595B / TrendMA_EA.mq5 9,169B
+      - 总 204,963B
+      
+      ### 候选 P3 R3 任务 (用户 IM 显式"做候选 P3 R3"时)
+      
+      - 沿用 11:00+14:00+15:00+16:00+17:00+21:00 6 段范本继续深入, 加 ## 实战案例 Round 3 段
+      - 5 wiki × 2.2-2.8K 字节 = 12-14K 总 (5 速查 wiki Round 3)
+      - 5 Node.js fs 一键复测脚本 5/5 PASS
+      - MOC 5 行链向 (EA 开发知识库.md §12.7 末尾追加)
+      - 14 实物 mtime UNCHANGED 14/14 (sandbox 路径实测)
+      - 19+1 必读 mtime UNCHANGED 20/20 (M01-M19 + 候选 Y 顶级入口)
+      - 0 placeholders / 0 推荐语 / 0 编造接入点行号 / 0 编造 API
+      - 0 创建 README/agents/protocols (废弃决策 06-03 16:14)
+      - 0 重复 ## 反模式 baseline (沿用 9 反模式 + 80 ❌ + 11 wiki 段 + 5 速查段)
+      
+      ### 候选 T5 R3 任务 (用户 IM 显式"做候选 T5 R3"时)
+      
+      - 沿用 11:00+14:00+15:00+16:00+17:00+21:00 6 段范本继续深入, 加 ## 实战案例 Round 3 段
+      - 04 wiki × 2.2-2.8K 字节 = 10-12K 总 (04 实战 wiki Round 3)
+      - 4 Node.js fs 一键复测脚本 4/4 PASS
+      - MOC 4 行链向 (EA 开发知识库.md §12.7 末尾追加)
+      - 14 实物 mtime UNCHANGED 14/14 (sandbox 路径实测)
+      - 19+1 必读 mtime UNCHANGED 20/20
+      - 0 placeholders / 0 推荐语 / 0 编造接入点行号 / 0 编造 API
+      - 0 创建 README/agents/protocols (废弃决策 06-03 16:14)
+      - 0 重复 ## 反模式 baseline
+      
+      ### 写 EA 必走流程 6 步法 (沿用 1:00 spec 详尽版)
+      
+      1. **读 19+1 必读文件** (M01-M19 + 候选 Y 顶级入口 7,406B)
+      2. **读 14 实物 .mq5** (sandbox 路径实测, Node.js fs readFileSync)
+      3. **写 wiki** (沿用 6 段范本: 场景A/场景B/接入点行号/调优点3档/陷阱5条/链向)
+      4. **写 Node.js fs 一键复测脚本** (每 wiki 1 个, 0 安装依赖, 跨 PowerShell 双路径)
+      5. **MOC §12.7 末尾追加 1 行链向** (EA 开发知识库.md, 不改前文)
+      6. **写 deliverable 双路径落盘** (engine outputs + daily/{date}_HH-MM-track*-result.md)
+      
+      ### 6 段范本 (wiki ## 实战案例 段, 沿用 11:00+14:00+15:00+16:00+17:00+21:00 6 段范本)
+      
+      1. 场景A: EA 实际运行场景 (e.g. MeanReversion_EA 06-04 11:21 编译, XAUUSDm M5)
+      2. 场景B: 调试场景 (e.g. slippage CSV 调优 1.5x ATR, 30% threshold)
+      3. 接入点行号 (100% Node.js fs readFileSync 实测, 0 编造)
+      4. 调优点 3 档 (保守/标准/激进, 3 套参数 + 3 套回测对比)
+      5. 陷阱 5 条 (不与 80 ❌ + 11 wiki 段 + 5 速查段 baseline 重复)
+      6. 链向 (12 必读 + 9 反模式 + 14 实物 + 候选 P/Y 顶级入口)
+    
+    # ===== worker 交付 =====
+    deliverables:
+      - path: "C:\\Users\\Administrator\\.mavis\\plans\\plan_${{plan_id}}\\outputs\\${{track_id}}\\deliverable.md"
+        format: markdown
+        required_sections:
+          - "## 总览"
+          - "## 6 段范本齐"
+          - "## 5 wiki 字节统计"  # 或 "## 04 wiki 字节统计" (T5 R3)
+          - "## 5 Node.js fs 一键复测脚本 5/5 PASS"  # 或 "## 4 Node.js fs 一键复测脚本 4/4 PASS" (T5 R3)
+          - "## 14 实物 mtime UNCHANGED 14/14"
+          - "## 19+1 必读 mtime UNCHANGED 20/20"
+          - "## MOC 5 行链向"  # 或 "## MOC 4 行链向" (T5 R3)
+          - "## 0 placeholders 0 推荐语 0 编造"
+          - "## 完整检查清单"
+      
+      - path: "C:\\ai\\obsidian-文件\\mt\\00-任务调度中心\\daily\\${{date}}_HH-MM-track${{track_idx}}-result.md"
+        format: markdown
+        required_sections:
+          - "## 总览"
+          - "## 6 段范本齐"
+          - "## 14 实物 mtime UNCHANGED 14/14"
+          - "## 19+1 必读 mtime UNCHANGED 20/20"
+          - "## 0 placeholders 0 推荐语 0 编造"
+          - "## 完整检查清单"
+    
+    # ===== worker 验收 =====
+    verification:
+      - check: "wiki_5_or_4_exists"  # P3=5 / T5=4
+        description: "5 wiki 文件存在 (候选 P3 R3) 或 4 wiki 文件存在 (候选 T5 R3)"
+        assertion: "5 (or 4) .md files in EA开发/ wiki 目录"
+        script: "node verify-wiki-exists.js"
+      
+      - check: "node_js_fs_verify_5_or_4_pass"  # P3=5 / T5=4
+        description: "5 Node.js fs 一键复测脚本 (候选 P3 R3) 或 4 (候选 T5 R3) 全 PASS"
+        assertion: "5 (or 4) scripts PASS=5/5 (or 4/4)"
+        script: "node verify-script-pass.js"
+      
+      - check: "14_实物_mtime_unchanged"
+        description: "14 实物 mtime UNCHANGED 14/14 (sandbox 路径实测)"
+        assertion: "14 .mq5 files mtime UNCHANGED"
+        script: "node verify-14-ea-unchanged.js"
+      
+      - check: "19+1_必读_mtime_unchanged"
+        description: "19+1 必读 mtime UNCHANGED 20/20 (M01-M19 + 候选 Y 顶级入口)"
+        assertion: "20 files mtime UNCHANGED"
+        script: "node verify-19+1-must-read-unchanged.js"
+      
+      - check: "moc_5_or_4_links"  # P3=5 / T5=4
+        description: "MOC §12.7 末尾追加 5 行链向 (P3) 或 4 行链向 (T5)"
+        assertion: "5 (or 4) new lines appended after L618 in EA 开发知识库.md"
+        script: "node verify-moc-links.js"
+      
+      - check: "0_placeholders_0_recommend_0_fabricate"
+        description: "0 placeholders (5 类) + 0 推荐语 (3 类) + 0 编造接入点行号 + 0 编造 API"
+        assertion: "grep 0 hits for 待补/TODO/FIXME/TBD/XXX/推荐/建议使用/强烈建议"
+        script: "node verify-no-violation.js"
+      
+      - check: "0_forbidden_files"
+        description: "0 创建 README/agents/protocols (废弃决策 06-03 16:14)"
+        assertion: "0 new README.md/agents.md/protocols.md created"
+        script: "node verify-no-forbidden-files.js"
+      
+      - check: "0_duplicate_antipattern"
+        description: "0 重复 ## 反模式 baseline (沿用 9 反模式 + 80 ❌ + 11 wiki 段 + 5 速查段)"
+        assertion: "0 重复 antipattern baseline"
+        script: "node verify-no-duplicate-antipattern.js"
+      
+      - check: "deliverable_双路径"
+        description: "deliverable 双路径落盘 (engine outputs + daily/{date}_HH-MM-track*-result.md)"
+        assertion: "2 files exist with same content"
+        script: "node verify-deliverable-dual-path.js"
+
+# ===== 08:00 owner 决策 =====
+decision: |
+  08:00 owner 决策: 保持 33+ 次"等用户授权"姿势不起新 plan.
+  沿用 1:00 详尽 yaml (16,922B), 标注 1:00 位置.
+  等用户 IM 显式说"做 #N" (N ∈ {候选 P3 R3, 候选 T5 R3, #16 GUI, N1/N4 GUI}):
+    - 候选 P3 R3: 把 track.worker_prompt 里的 ## 候选 P3 R3 任务 段填到 plan.worker_prompt, status=ready 启 plan
+    - 候选 T5 R3: 把 track.worker_prompt 里的 ## 候选 T5 R3 任务 段填到 plan.worker_prompt, status=ready 启 plan
+    - #16 GUI: 留用户切 RDP 时跑 (不在 mavis-team 范围)
+    - N1/N4 GUI: 留用户切 RDP 时跑 (不在 mavis-team 范围)
+
+# ===== 沿用 02:00 跨项目沉淀 (IM 5 条指令翻译规则, 不重复 append) =====
+cross_project_lesson: |
+  沿用 02:00 沉淀 (multi-agent-orchestration.md §4 用户 IM 5 条指令翻译规则):
+  - cron 模板 = 通用指令模板 ≠ 具体任务指派
+  - "使用team" = 团队就绪 ≠ 自动起 plan
+  - "继续任务" = 候补任务持续 standby ≠ 自动起 plan
+  - "任务规划详细" = 沿用上一 cron 详尽 spec 不重复造轮子
+  - 1 cron = 1 plan 不连破 pattern 是更稳的 pattern
+
+# ===== 阻塞 4 件 (需 console 1, 留用户切 RDP, 不在 mavis-team 范围) =====
+blocked_4_console1:
+  - id: "#14"
+    task: "ScalpingMartin EA 接入 MQL5Kit (4 子任务)"
+    blocked_by: "🆕 用户手动 IDE"
+    estimated_hours: 3
+    action: "留用户 IDE"
+  - id: "#16"
+    task: "Correlation Matrix 3D 编译验证 + M18 附录"
+    blocked_by: "console 1 (Mavis GUI)"
+    estimated_hours: 1
+    action: "留 Mavis 切 RDP"
+  - id: "N1"
+    task: "5 EA 6 月回测对比表实物"
+    blocked_by: "console 1 (Mavis GUI)"
+    estimated_hours: 10
+    action: "留 Mavis 切 RDP"
+  - id: "N4"
+    task: "_archive 审计 + 复活 BBTrendEA + Scalping_More_v1.3"
+    blocked_by: "console 1 (Mavis GUI)"
+    estimated_hours: 8
+    action: "留 Mavis 切 RDP"
+
+# ===== owner session & plan ID =====
+owner_session: mvs_554c6561abc040d0bf09c587d421a84e  # 06-06 08:00 cron
+plan_id: 06-06_08-00-template  # 候补 template, 不实际启, 等用户 IM 显式
+yaml_template_id: 06-06_08-00  # 沿用 1:00 yaml 不重复
+
+# ===== 6:00 修正 (沿用) =====
+correction_from_5_00: |
+  6:00 owner 修正 5:00 log §05:00.4 误写 12 必读 → 实际 19+1 必读 UNCHANGED 20/20.
+  后续 cron 沿用 19+1 必读 (M01-M19 + 候选 Y 顶级入口), 不再误写 12.
+
+# ===== 7:00 修正 baseline 误读 2 处 (沿用) =====
+correction_from_6_00: |
+  7:00 owner 修正 6:00 baseline 误读 2 处:
+  - plans 实际 45 (38 completed + 6 cancelled + 1 paused), 6:00 写 42 (35+6+1) 误算 3 completed
+  - sessions 实际 20 (mavis session list 默认 limit), 6:00 写 270 误读 sessions 输出
+  不影响 actionable 决策, 7:00 修正保持后续 cron baseline 准确.
+
+# ===== 🆕 8:00 修正 baseline 误算 1 处 =====
+correction_from_7_00: |
+  8:00 owner 修正 7:00 baseline 误算 1 处 (用 `mavis team plan status` 无 ID 时 list all 实测):
+  - plans 实际 42 (35 completed + 6 cancelled + 1 paused), 7:00 写 45 (38+6+1) 漏算 3 completed
+  - 跟 6:00 baseline 42 (35+6+1) 一致 0 漂移
+  - sessions 实际 20 (mavis session list 默认 limit) 跟 7:00 修正一致 0 漂移
+  不影响 actionable 决策, 8:00 修正保持后续 cron baseline 准确.
+
+# ===== 08:00 actionable 升级 =====
+actionable_upgrade: |
+  8:00 owner 持续 actionable 升级 (响应用户 IM 第 2 条 "罗列+归档+检查+汇报" + IM 第 3 条 "检查是否卡点/卡死, 继续任务"):
+  - §08:00.1 今日总览: 罗列 06-06 8 cron + 06-05 23 plan + 阻塞 4 件 + 候补 2 件
+  - §08:00.2 已完成归档: 06-06 0 个新 plan done + 06-05 23 plan done 全归档清单
+  - §08:00.3 未完成检查 + 卡点扫描 + 汇报: 0 件进行中 + 2 件候补 + 4 件阻塞 + 7 维度全过 0 卡点 + 全面汇报
+  沿用 5:00 owner §05:00.1+§05:00.2+§05:00.3 三个新章节 actionable pattern, 8:00 持续升级, 9:00+ cron 沿用.

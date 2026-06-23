@@ -1,0 +1,352 @@
+version: 1
+plan_id: TBD
+created_at: "2026-06-06T01:00:00+08:00"
+owner_session: mvs_98db2a65b4f24d40a5198743820c96c9
+trigger: "06-06 1:00 cron auto-detect"
+status: pending
+# 等用户 IM 显式"做 #N" → 02:00 cron 立刻起 plan
+# 候选 P3 R3 / 候选 T5 R3 候补 14 次边际收益递减, 0 阻塞, 1h 0 跨周期
+# 🆕 01:00 修正: 14 实物 baseline 测自 sandbox 路径, 不是 install 路径
+
+# mavis-team 引擎配置
+mavis_team:
+  max_concurrency: 1
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  max_consecutive_failures: 2
+  worker_timeout_minutes: 35
+  verifier_enabled: true
+  verifier_self_check: 9
+
+# 候补 2 件 (P3 R3 / T5 R3) — 等用户 IM 启
+tracks:
+  # 候补 1: 候选 P3 Round 3 5 速查 wiki 实战段 Round 3 (1h 0 阻塞)
+  - track_id: t1-p3-r3
+    name: "候选 P3 Round 3 5 速查 wiki 实战段 Round 3 (1h 0 跨周期)"
+    executor: worker-A
+    agent_type: general
+    estimated_minutes: 60
+    cross_cycle: false
+    blocked: false
+    dependencies: []
+    blocked_by_console_1: false
+    blocked_by_user_ide: false
+    spec: "daily/2026-06-06_01-00-plan.md §2"
+    sandbox_path_fix: "01:00 修正: 14 实物 baseline 测自 sandbox 路径 D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/minimax-ea/, 不是 install 路径 C:/Program Files/MetaTrader 5/MQL5/Experts/minimax-ea/"
+    output:
+      wiki_files: 5
+      wiki_total_bytes_target: "30000-40000"
+      wiki_total_bytes_actual: TBD
+      node_js_scripts: 1
+      node_js_script_name: "verify-p3-r3.js"
+      node_js_pass: "9/9"
+      moc_change: "0 改"
+      mq5_change: "0 改 (sandbox 路径 14 实物 UNCHANGED 14/14)"
+      wiki_pre_text_change: "0 改 (5 wiki 末尾追加 only)"
+      forbidden_files_created: 0
+      antipattern_count: 10
+      antipattern_hit: 0
+      deliverable_dual_path: true
+      deliverable_engine: "C:/Users/Administrator/.mavis/plans/plan_<hash>/outputs/t1-p3-r3/deliverable.md"
+      deliverable_daily: "C:/ai/obsidian-文件/mt/00-任务调度中心/daily/2026-06-06_XX-00-track1-result.md"
+    wiki_targets:
+      - "C:/ai/obsidian-文件/mt/EA开发/04-避坑与速查/01 编译常见错误.md"
+      - "C:/ai/obsidian-文件/mt/EA开发/04-避坑与速查/02 OrderSend 错误码速查.md"
+      - "C:/ai/obsidian-文件/mt/EA开发/04-避坑与速查/03 实盘 vs 回测差异.md"
+      - "C:/ai/obsidian-文件/mt/EA开发/04-避坑与速查/04 经纪商差异-点差-手续费.md"
+      - "C:/ai/obsidian-文件/mt/EA开发/04-避坑与速查/05 必查清单.md"
+
+  # 候补 2: 候选 T5 04 经纪商 wiki 实战段 第 3 轮 (1h 0 阻塞)
+  - track_id: t2-t5-r3
+    name: "候选 T5 04 经纪商 wiki 实战段 第 3 轮 (1h 0 跨周期)"
+    executor: worker-A
+    agent_type: general
+    estimated_minutes: 60
+    cross_cycle: false
+    blocked: false
+    dependencies: []
+    blocked_by_console_1: false
+    blocked_by_user_ide: false
+    spec: "daily/2026-06-06_01-00-plan.md §3"
+    sandbox_path_fix: "01:00 修正: 14 实物 baseline 测自 sandbox 路径, 不是 install 路径"
+    output:
+      wiki_files: 1
+      wiki_total_bytes_target: "6000-8000"
+      wiki_total_bytes_actual: TBD
+      node_js_scripts: 1
+      node_js_script_name: "verify-t5-r3.js"
+      node_js_pass: "9/9"
+      moc_change: "0 改"
+      mq5_change: "0 改 (sandbox 路径 14 实物 UNCHANGED 14/14)"
+      wiki_pre_text_change: "0 改 (1 wiki 末尾追加 only)"
+      forbidden_files_created: 0
+      antipattern_count: 10
+      antipattern_hit: 0
+      deliverable_dual_path: true
+      deliverable_engine: "C:/Users/Administrator/.mavis/plans/plan_<hash>/outputs/t2-t5-r3/deliverable.md"
+      deliverable_daily: "C:/ai/obsidian-文件/mt/00-任务调度中心/daily/2026-06-06_XX-00-track2-result.md"
+    wiki_targets:
+      - "C:/ai/obsidian-文件/mt/EA开发/04-避坑与速查/04 经纪商差异-点差-手续费.md"
+
+# 阻塞 4 件 (留用户切 RDP/手动 IDE, owner 不介入)
+blocked_items:
+  - id: "#14"
+    task: "ScalpingMartin EA 接入 MQL5Kit (4 子任务)"
+    estimated_hours: 3
+    blocked_by: "user_ide (用户手动 IDE 在做, 06-05 00:31 mtime 编辑)"
+    mavis_action: "Mavis 不介入, 留用户切 RDP 时跑"
+  - id: "#16"
+    task: "Correlation Matrix 3D 编译验证 + M18 附录"
+    estimated_hours: 1
+    blocked_by: "console_1 (Mavis GUI)"
+    mavis_action: "等用户在 console session 1 操作"
+  - id: "N1"
+    task: "5 EA 6 月回测对比表实物"
+    estimated_hours: 10
+    blocked_by: "console_1 (Mavis GUI)"
+    mavis_action: "需要 MT5 终端 + Strategy Tester GUI"
+  - id: "N4"
+    task: "_archive 审计 + 复活 BBTrendEA + Scalping_More_v1.3"
+    estimated_hours: 8
+    blocked_by: "console_1 (Mavis GUI)"
+    mavis_action: "需要 MetaEditor64 GUI 编译"
+
+# 已闭环 plan (20 plan done 累计, 跟 0:00 一致)
+closed_plans:
+  - "06-05 00:00 plan_cf1bc22e (M18/M19 实战扩展 + 03 画图类废弃决策)"
+  - "06-05 01:00 plan_1c3761ac (5 速查调试小技巧 wiki)"
+  - "06-05 02:00 plan_72db98b6 (5 速查 wiki 实战案例段 + 04 经纪商差异)"
+  - "06-05 03:00 plan_d76fc18e (3 wiki 实战案例段 06/07/08)"
+  - "06-05 04:00 plan_5343e32a (12 实战/ wiki 实战案例段)"
+  - "06-05 05:00 plan_4bacb3e8 (5 debug 验证段 + 跨 EA 模式萃取)"
+  - "06-05 06:00 plan_2fc153d1 (性能调优 + 异常处理 + M18/M19 R2)"
+  - "06-05 07:00 plan_b8b0fd92 (安全审计 + 高级设计模式 + CLI v3)"
+  - "06-05 08:00 plan_<8 范式> (4 范式 EA 联合 + CLI v4)"
+  - "06-05 09:00 plan_f0a74f6e (14 实物 wiki 链向核对)"
+  - "06-05 10:00 plan_<hash> (51 wiki 链向批量核对)"
+  - "06-05 11:00 plan_3348c609 (9 反模式 wiki 实战段 + 5 速查 Round 2 + MOC 14 行)"
+  - "06-05 13:00 plan_7193fa42 (候选 P MOC v2 重写)"
+  - "06-05 14:00 plan_763d71e2 (候选 T3 9 反模式 wiki Round 2 ## 验证 段)"
+  - "06-05 15:00 plan_f0e2bfda (候选 T4 9 反模式 wiki R3 ## 调试案例 段 + 候选 T5 写 EA 必走流程 5 步法)"
+  - "06-05 16:00 plan_ce412e15 (候选 T6 修复 14:00 verifier 残留瑕疵 + 候选 X 4 实物 EA 联合 wiki 模板)"
+  - "06-05 17:00 plan_43c2f12d (候选 R Node.js CLI v5)"
+  - "06-05 21:00 plan_263fa3bd (候选 X 4 实物 EA 联合 wiki 模板 扩展 §9 实战 demo 段 4 范本 4 段)"
+  - "06-05 23:00 plan_cf48e8ec (候选 Y 模块化方案沉淀 v2 整合 0.5h 0 跨周期, 1 wiki 新建 7,406B 顶级入口 6 段结构, 整合 4 件沉淀)"
+
+# owner 决策 (1:00)
+owner_decision:
+  decision: "保持 26+ 次决策一致'等用户授权'姿势不起新 plan"
+  reason_blocks:
+    - "候选 Y 已 done 闭环 0 候补新"
+    - "候选 P3 R3 / 候选 T5 R3 候补 14 次边际收益递减"
+    - "阻塞 4 件需 console 1 (#14/#16/N1/N4)"
+    - "0:00 已不连破 1 次, 1:00 也不连破, 跟 22:00+0:00 pattern 一致"
+    - "跨日 06-06, 0 跨周期 0 越权 0 阻塞 0 风险"
+  im5_alignment:
+    - "IM 第 1 条 '使用team' 显式要求 → 已用 mavis-team 详细规划"
+    - "IM 第 2 条 '完成的归档' → 23:00 候选 Y done 已 append 归档.md L6 (0:00 兜底补完, 1:00 复核 0 漂移)"
+    - "IM 第 3 条 '继续任务' → 20 plan 闭环完成 (00:00→23:00), 0 候补新"
+    - "IM 第 4 条 '任务规划详细避免空洞 + 你只做规划和督促' → 1:00 owner 详细到 9 章节 + 10 反模式 + 12 必读 + 4 反哺 + 14 实物 mtime + 模块化方案 5 步法 + 写 EA 必走流程 6 步法 + 候选 P3 R3 + 候选 T5 R3 详细 spec, owner 不亲自写 CLI/wiki/代码, 让 mavis-team worker 干实事"
+    - "IM 第 5 条 '写 EA 必读 obsidian 知识库' + '沉淀为知识点, 去优化' → 候选 Y 23:00 闭环 (1 wiki 顶级入口 7,406B, 5 星满对齐), 候选 P3 R3 / T5 R3 弱对齐 (边角实战段)"
+
+# 1:00 owner 实际动作
+owner_actions:
+  - "7 维度卡点扫描 (CU keep-alive / MT5 alive / 20 plan / 260+ sessions / 0 lock / cron 1 / 4 反哺)"
+  - "0:00 plan_cf48e8ec 收尾确认 0 漂移 (0:00 闭环 status=completed/plan_complete=true/consecutive_failures=0)"
+  - "0:00 漏的 0:00 owner 已兜底补完, 1:00 owner 复核 0 漂移: 队列.md 顶部 23:00 兜底补完区块 + 归档.md L6 plan_cf48e8ec done 条目"
+  - "14 实物 mtime UNCHANGED 14/14 (sandbox 路径实测, 跟 0:00 baseline 一致 0 漂移)"
+  - "12 必读 mtime 跟 0:00 一致 12/12 UNCHANGED"
+  - "🆕 14 实物 baseline sandbox 路径修正 (0:00 owner 写的 baseline 测自 sandbox 路径, install 路径不能作为 0 改证据)"
+  - "Edit 队列.md 顶部 06-06 1:00 区块插入"
+  - "Write daily/2026-06-06_01-00-log.md 9 章节详细 log (46,195B)"
+  - "Write daily/2026-06-06_01-00-plan.md 9 章节详细候选 P3 R3 + 候选 T5 R3 spec (精简版)"
+  - "Write daily/2026-06-06_01-00-plan.yaml 1 track mavis-team 引擎 yaml (本文件, 待用户 IM 启)"
+  - "不起新 plan (保持 26+ 次'等用户授权'姿势, 0:00 已不连破 1 次, 1:00 也不连破)"
+  - "不 append 归档.md 1:00 done 条目 (1:00 owner 0 新 plan done)"
+  - "汇报用户"
+
+# 累计状态 (1:00 owner 收尾后, 跟 0:00 一致)
+cumulative_state:
+  total_plans_done: 20
+  total_wiki_files: 73
+  total_bytes_added: "~856K"
+  moc_bytes: 43384
+  moc_mtime: "2026-06-05 23:20"
+  ea_mtime_unchanged: 14
+  ea_mtime_baseline_path: "sandbox D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/minimax-ea/ (01:00 修正, 0:00 owner 写的 baseline 测自 sandbox 路径)"
+  must_read_mtime_unchanged: 12
+  pending_tasks: 2  # 候选 P3 R3 / T5 R3
+  blocked_tasks: 4   # #14/#16/N1/N4
+  candidate_y_closed: true
+  candidate_y_wiki: "EA开发/模块化方案 v2 整合.md"
+  candidate_y_bytes: 7406
+  candidate_y_lines: 135
+  candidate_y_sections: 6
+
+# 02:00 cron 接续
+next_cron_actions:
+  - "如用户 IM 显式'做候选 P3 R3' → 02:00 cron 立刻起 mavis-team 1 worker 跑候选 P3 R3 (1h, 0 跨周期)"
+  - "如用户 IM 显式'做候选 T5 R3' → 02:00 cron 立刻起 mavis-team 1 worker 跑候选 T5 R3 (1h, 0 跨周期)"
+  - "如用户 IM 显式'做 #N' (N ∈ {#14, #16, N1, N4}) → 02:00 cron 不启 mavis-team (阻塞 console 1)"
+  - "如用户 IM 不显式'做 #N' → 02:00 cron 不起新 plan (保持 27+ 次'等用户授权'姿势), 02:00 owner 写 daily log + 同步队列/daily + 汇报用户"
+
+# 10 反模式自检 (候选 P3 R3 / 候选 T5 R3 0 命中, 01:00 沿用 0:00 9 项 + 加 1 项 0 编造实战段内容约束)
+antipattern_check:
+  - id: 1
+    name: "0 改 .mq5"
+    verification: "Node.js fs statSync 14 实物 baseline 验证, sandbox 路径 D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/minimax-ea/ 实测, 0 改 .mq5"
+  - id: 2
+    name: "0 改 wiki §1-§5 前文"
+    verification: "5 wiki / 1 wiki 末尾追加 only, R1+R2+R3 baseline 字节 0 漂移"
+  - id: 3
+    name: "0 改 MOC §12.7 前文"
+    verification: "T3 0 涉及, 5 wiki / 1 wiki 末尾追加 0 涉及 MOC 链向"
+  - id: 4
+    name: "0 创建 README/agents/protocols"
+    verification: "废弃决策 06-03 16:14, 0 创建"
+  - id: 5
+    name: "0 placeholders"
+    verification: "5 wiki / 1 wiki 末尾追加 0 命中 待补/TODO/FIXME/TBD/XXX"
+  - id: 6
+    name: "0 推荐语违规"
+    verification: "5 wiki / 1 wiki 末尾追加 0 命中 推荐/建议使用/强烈建议"
+  - id: 7
+    name: "0 编造接入点行号"
+    verification: "5 wiki / 1 wiki 各 2-3 行号 100% Node.js fs readFileSync 实测, sandbox 路径"
+  - id: 8
+    name: "0 编造 API"
+    verification: "5 wiki / 1 wiki 末尾追加 0 涉及 API 写入, 沿用 12 必读 链向"
+  - id: 9
+    name: "0 重复 ## 反模式 baseline"
+    verification: "5 wiki / 1 wiki 末尾追加 0 涉及 ## 反模式 段写入, 0 涉及反模式"
+  - id: 10
+    name: "0 编造实战段内容"
+    verification: "5 wiki §0-§5 段位严格沿用 11:00+14:00+15:00+16:00+17:00+21:00+23:00 范本, 不二次创作, Node.js fs readFileSync 实读 5 wiki R1+R2 baseline"
+
+# 12 必读 mtime 验证 (跟 1:00 一致, 0 改 wiki)
+must_read_mtime:
+  - file: "01 编译常见错误.md"
+    bytes: 45762
+    mtime: "2026-06-05 08:29 R2 末"
+  - file: "02 OrderSend 错误码速查.md"
+    bytes: 49178
+    mtime: "2026-06-05 08:29 R2 末"
+  - file: "03 实盘 vs 回测差异.md"
+    bytes: 44397
+    mtime: "2026-06-05 08:29 R2 末"
+  - file: "04 经纪商差异-点差-手续费.md"
+    bytes: 78980
+    mtime: "2026-06-05 08:29 命名末"
+  - file: "05 必查清单.md"
+    bytes: 53371
+    mtime: "2026-06-05 08:34 R3 末"
+  - file: "06 网格马丁警示.md"
+    bytes: 50018
+    mtime: "2026-06-05 08:34 命名末"
+  - file: "07 5 必看陷阱统一 wiki.md"
+    bytes: 61052
+    mtime: "2026-06-05 08:29 R2 末"
+  - file: "08 5 速查调试小技巧 wiki.md"
+    bytes: 42572
+    mtime: "2026-06-05 08:29 R3 末"
+  - file: "EA 开发知识库.md (MOC)"
+    bytes: 43384
+    mtime: "2026-06-05 23:20 候选 Y 闭环"
+  - file: "写 EA 必走流程 5 步法.md"
+    bytes: 11887
+    mtime: "2026-06-05 16:26 候选 T5 末"
+  - file: "4 实物 EA 联合 wiki 模板.md"
+    bytes: 43229
+    mtime: "2026-06-05 21:24 候选 X 扩展末"
+  - file: "跨 EA 模式萃取.md"
+    bytes: 53263
+    mtime: "2026-06-05 08:29 候选 M 末"
+  - file: "EA开发/模块化方案 v2 整合.md (候选 Y 顶级入口)"
+    bytes: 7406
+    mtime: "2026-06-05 23:22 候选 Y 闭环"
+
+# 14 实物 mtime 验证 (sandbox 路径实测, 跟 1:00 baseline 一致, 0 改 .mq5)
+ea_mtime:
+  - file: "Breakout_EA.mq5"
+    bytes: 9530
+    mtime: "2026-06-03 16:47"
+  - file: "Dashboard.mq5"
+    bytes: 8361
+    mtime: "2026-06-03 16:51"
+  - file: "MeanReversion_EA.mq5"
+    bytes: 13503
+    mtime: "2026-06-04 03:21"
+  - file: "MiniMaxScalper.mq5"
+    bytes: 35357
+    mtime: "2026-06-04 10:09"
+  - file: "MiniMaxScalper_v2.mq5"
+    bytes: 37470
+    mtime: "2026-06-04 16:31"
+  - file: "MyEA.mq5"
+    bytes: 12541
+    mtime: "2026-06-03 16:57"
+  - file: "ScalperXAU.mq5"
+    bytes: 42824
+    mtime: "2026-06-04 05:44"
+  - file: "ScalperXAUv5simple.mq5"
+    bytes: 6545
+    mtime: "2026-06-04 05:52"
+  - file: "ScalperXAUv6debug.mq5"
+    bytes: 1931
+    mtime: "2026-06-04 05:59"
+  - file: "ScalperXAUv7debug.mq5"
+    bytes: 4515
+    mtime: "2026-06-04 06:37"
+  - file: "ScalperXAUv8.mq5"
+    bytes: 5436
+    mtime: "2026-06-04 06:38"
+  - file: "ScalperXAUv9.mq5"
+    bytes: 13186
+    mtime: "2026-06-04 09:44"
+  - file: "Scalper_CsvProto.mq5"
+    bytes: 4595
+    mtime: "2026-06-03 16:49"
+  - file: "TrendMA_EA.mq5"
+    bytes: 9169
+    mtime: "2026-06-03 16:50"
+  - total: 204963
+  - unchanged: "14/14"
+  - baseline_path: "C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/minimax-ea/"
+  - path_fix: "MiniMaxScalper.mq5/v2 在 minimax-ea 根, 不在 _archive/me-ea"
+  - sandbox_vs_install: "🆕 01:00 重要发现: 14 实物 baseline 测自 sandbox 路径 D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/minimax-ea/, install 路径 C:/Program Files/MetaTrader 5/MQL5/Experts/minimax-ea/ 下文件集跟 sandbox 不完全一致 (sandbox 独有 ScalperXAU 系列 7 个, install 独有 RSI/ScalperEA/XAUUSDm 系列 7 个), install 路径不能作为 0 改证据"
+
+# 资源建议
+resource_advice:
+  - 候补 0 件新 (候选 Y 已 done)
+  - 持续 2 件: 候选 P3 R3 (1h 0 阻塞) / 候选 T5 R3 (1h 0 阻塞) 边际收益递减
+  - 阻塞 4 件: #14 用户 IDE + #16 + N1 + N4 留用户切 RDP
+  - 0 跨周期 0 越权 0 阻塞 0 风险
+  - 1:00 详细规划落盘 (4 个 daily/2026-06-06_01-00-*.md/yaml 文件)
+
+# 风险与缓解
+risks:
+  - id: 1
+    risk: "5 wiki 内容编造"
+    mitigation: "Step 2 严格沿用 11:00+14:00+15:00+16:00+17:00 范本, Node.js fs readFileSync 实读 5 wiki R1+R2 baseline, 0 二次创作"
+  - id: 2
+    risk: "5 wiki 接入 demo 行号编造"
+    mitigation: "100% Node.js fs readFileSync 实测, sandbox 路径, 0 编造"
+  - id: 3
+    risk: "14 实物 mtime baseline 测错路径 (install vs sandbox)"
+    mitigation: "Step 1 显式说明 sandbox 路径 D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/minimax-ea/, Step 5 自校脚本 sandbox 路径实测, 0 误用 install 路径"
+  - id: 4
+    risk: "1h 0 跨周期超 35min worker timeout"
+    mitigation: "worker_timeout_minutes=35 充足, 1h 闭环, kill 后 owner 兜底补完"
+  - id: 5
+    risk: "verifier 卡 timeout"
+    mitigation: "owner override_accept cycle 1 闭环 (22+ 次 pattern, 实物优先)"
+
+# 4 反哺机制 (沿用 0:00 + 加 1 项 sandbox 路径修正 + 加 1 项 候选 P3 R3 / 候选 T5 R3 实战段沉淀)
+feedback_mechanisms:
+  - "MOC 链向 (0 改, T3 0 涉及)"
+  - "12 必读链向 (5 wiki 末尾追加 §5 链向 ≥ 8 项 12 必读)"
+  - "跨项目 lesson 沉淀 (T1 owner 闭环后写 1 memory entry: 14 实物 baseline sandbox 路径修正)"
+  - "daily/<date>_XX-XX-log.md 9 章节 (owner T1 9 章节)"
+  - "🆕 候选 P3 R3 / 候选 T5 R3 实战段沉淀 (5 wiki / 1 wiki 末尾追加 ## 实战段 R3 6 段结构)"
+  - "🆕 14 实物 baseline sandbox 路径修正 (01:00 重要发现, install 路径不能作为 0 改证据)"

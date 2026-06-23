@@ -1,0 +1,7 @@
+﻿{
+  "messageId": 1870,
+  "status": "delivered",
+  "data": {
+    "targetSessionId": "mvs_396483b1dad04d028fe14fd1f3500a43"
+  }
+}

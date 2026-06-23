@@ -1,0 +1,190 @@
+version: 1
+plan:
+  name: "06-05 04:00 巡检 候选 L 12 实战/ wiki 实战段扩展 1 owner + 2 worker"
+  max_concurrency: 2
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: track2-six-wiki-cases-small
+    title: "T2 worker-A - 6 wiki (5 debug / M17_Test / MeanRev / ScalperEA / Scalping_More / BBTrendEA) 末尾 ## 实战案例 段扩展 (候选 L 闭环 1/2)"
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 1
+    timeout_minutes: 30
+    depends_on: []
+    gates: []
+    prompt: |
+      # 任务: 6 wiki ## 实战案例 段扩展 (06-05 04:00 巡检 T2 worker-A)
+
+      ## 背景
+      - 候选 L 闭环 (03:00 资源建议 L167), 闭环类 0 阻塞
+      - 06-05 03:00 plan_d76fc18e 06-05 03:48 闭环, 3 wiki +43,474B + 候选 K 闭环 + MOC 9804B 实战相关 5
+      - 06-05 04:00 cron 触达 mvs_04d2170d82ef4455a1fc602ac8f3a6de, Mavis owner 派你跑 6 wiki 实战段
+      - 详 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_04-00-plan.md` §2.2 (T2 worker-A 6 wiki 详细 spec)
+
+      ## 6 wiki 列表 (小/中规模, Node.js fs 实测 04:00)
+      - 5 个 debug-prototype EA 索引 (41,498B / 684L) - v5+v6+v7+v8+CsvProto 5 EA 速查
+      - M17_TestNewsEA 复活报告 (20,120B / 428L) - 1 模块 M17 自检
+      - MeanReversion_EA 接入报告 (20,814B / 316L) - 13 模块全集含 M18+M19
+      - ScalperEA 接入 MQL5Kit 摘要 (20,689B / 291L) - 76K 0 MQL5Kit 0 #include
+      - Scalping_More v1.3 接入示例 (32,476B / 748L) - 10 段可复制代码
+      - BBTrendEA 复活 SOP (41,984B / 905L) - 12 步复活
+
+      ## 6 段结构 (沿用 03:00 T2 范本)
+      1. 场景 A (3-5 行)
+      2. 场景 B (3-5 行)
+      3. 接入点行号 (5-10 行, Node.js fs 实测, 必填)
+      4. 调优点 3 档 (3-5 行)
+      5. 陷阱 5 条 (5 行, 不与 80 ❌ + 11 wiki ## 反模式 段 55 条 baseline 重复)
+      6. 链向 (3-5 行, Obsidian [[wiki link]])
+
+      ## 12 必读 (用户 IM 5 条指令第 5 条, 必读)
+      1. M01 交易封装 CTradePlus — OrderSend 实战段
+      2. M02 风控 Risk — 风控实战段 (5 debug/M17/MeanRev/ScalpEA/ScalpMore/BBTrendEA)
+      3. M05 新 K 线检测 NewBar — OnTick 实战段
+      4. M08 追踪止损 TrailingStop — 追踪实战段 (BBTrendEA/ScalpMore)
+      5. M09 仪表盘 Dashboard — 监控实战段 (5 debug)
+      6. M10 报警通知 Notify — 通知实战段 (ScalpMore)
+      7. M11 日志 Logger — 日志实战段 (MeanRev/ScalpMore)
+      8. M13 文件 IO — 文件实战段 (M17_Test)
+      9. M17 新闻过滤 NewsFilter — 新闻实战段 (M17_Test)
+      10. M18 相关性过滤 CorrelationFilter — 多品种实战段 (MeanRev)
+      11. M19 时段过滤 SessionFilter — 时段实战段 (MeanRev)
+      12. MOC EA 开发知识库 — 总索引, 写 wiki 必读 L1-L100
+
+      ## 必做清单
+      1. 12 必读全读 (Node.js fs 实测 6 wiki baseline + 11 模块 spec + MOC + plan)
+      2. Node.js fs 实测 6 wiki (5 debug / M17_Test / MeanRev / ScalperEA / Scalping_More / BBTrendEA) 末尾追加 ## 实战案例 段 6 章节 12-14K 字节
+      3. 接入点行号 100% Node.js fs 实测 (必 grep MQL5 实物 .mq5, owner 预热行号表见 plan.md §3, 必 100% 命中)
+      4. 陷阱 5 条 不与 ## 反模式 段 80 ❌ + 11 wiki ## 反模式 段 baseline 重复 (必先 grep baseline)
+      5. 写 `daily/2026-06-05_04-00-track2-result.md` 6 章节 (任务摘要 / 改动明细 / verifier 9 项 / 字节统计 / 接入点行号 Node.js fs 实测命令 / 链向更新)
+      6. 写 engine outputs 双路径: `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\track2-six-wiki-cases-small\deliverable.md`
+
+      ## 必避清单 (反模式 9 条, 沿用 03:00 T2)
+      1. 0 改 .mq5 (6 wiki 都是实战/报告/索引, 0 涉及)
+      2. 0 改 6 wiki 前文 (末尾追加, 0 改前 1-N 行)
+      3. 0 改 MOC 前文 (T4 owner 1-2 行链向允许)
+      4. 0 创建 README/agents/protocols
+      5. 0 placeholders (待补/TODO/FIXME/TBD/XXX)
+      6. 0 推荐语违规 (推荐/建议使用/强烈建议)
+      7. 0 凭空编造行号 (接入点行号 100% Node.js fs 实测)
+      8. 0 凭空编造 API (M01/M02/M08/M10/M11/M13 等模块方法名 必先 grep wiki 现有内容)
+      9. 0 重复 ## 反模式 段 80 ❌ + 11 wiki ## 反模式 段 baseline (陷阱 5 条 必须 grep baseline, 必读 #7)
+
+      ## 验收 (verifier 9 项, 沿用 03:00 T2)
+      1. 6 wiki 文件存在 (Node.js fs statSync)
+      2. 6 wiki 字节 ≥ baseline (5 debug≥41498 / M17_Test≥20120 / MeanRev≥20814 / ScalpEA≥20689 / ScalpMore≥32476 / BBTrendEA≥41984)
+      3. 6 wiki 末尾 ## 实战案例 段出现 1 次
+      4. 6 wiki ## 实战案例 段 6 段结构齐 (场景 A / 场景 B / 接入点行号 / 调优点 3 档 / 陷阱 5 条 / 链向)
+      5. 6 wiki 接入点行号 100% 命中 (Node.js fs grep)
+      6. 6 wiki 0 placeholders (待补/TODO/FIXME/TBD/XXX)
+      7. 6 wiki 0 推荐语违规 (新加内容)
+      8. 6 wiki 0 改前文 (末尾追加 字节 +8000B 以上)
+      9. 0 改 .mq5 (14 实物 mq5 mtime 全部 UNCHANGED) + 0 改 MOC 前文
+
+      ## 资源 (无 console 1 阻塞, 0 涉及 GUI 编译)
+      - 6 wiki 都是实战/报告/索引, 0 涉及 .mq5 实物
+      - 0 改 .mq5 实物
+      - 0 改 MOC 前文 (T4 owner 1-2 行标注允许)
+      - 0 创建 README/agents/protocols
+    output_dir: "C:\\Users\\Administrator\\.mavis\\plans\\plan_<hash>\\outputs\\track2-six-wiki-cases-small"
+    deliverables:
+      - path: "C:\\Users\\Administrator\\.mavis\\plans\\plan_<hash>\\outputs\\track2-six-wiki-cases-small\\deliverable.md"
+        description: "T2 worker-A 6 章节完整 deliverable"
+      - path: "C:\\ai\\obsidian-文件\\mt\\00-任务调度中心\\daily\\2026-06-05_04-00-track2-result.md"
+        description: "T2 worker-A 实物 100% 落盘 daily report"
+
+  - id: track3-six-wiki-cases-large
+    title: "T3 worker-B - 6 wiki (5 EA 回测 / M18 / M19 / MyEA+Dash / SX / TrendMA+Breakout) 末尾 ## 实战案例 段扩展 (候选 L 闭环 2/2)"
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 1
+    timeout_minutes: 30
+    depends_on: []
+    gates: []
+    prompt: |
+      # 任务: 6 wiki ## 实战案例 段扩展 (06-05 04:00 巡检 T3 worker-B)
+
+      ## 背景
+      - 候选 L 闭环 (03:00 资源建议 L167), 闭环类 0 阻塞
+      - 06-05 03:00 plan_d76fc18e 06-05 03:48 闭环, 3 wiki +43,474B + 候选 K 闭环 + MOC 9804B 实战相关 5
+      - 06-05 04:00 cron 触达 mvs_04d2170d82ef4455a1fc602ac8f3a6de, Mavis owner 派你跑 6 wiki 实战段
+      - 详 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_04-00-plan.md` §2.3 (T3 worker-B 6 wiki 详细 spec)
+
+      ## 6 wiki 列表 (中/大规模, Node.js fs 实测 04:00)
+      - 5 EA 6 月回测对比 SOP (46,477B / 1008L) - 5 EA × 6 月 × 7 维度 35 数据点
+      - M18 多品种对冲实战 (33,967B / 520L) - 已有 ## 实战扩展 段, ## 实战案例 段为补充
+      - M19 时段过滤实战 (47,305B / 930L) - 已有 ## 实战扩展 段, ## 实战案例 段为补充
+      - MyEA + Dashboard 接入报告 (53,814B / 718L) - 10+4 模块 2 EA 联合
+      - ScalperXAU 接入报告 + v1→v4 演进史 (33,197B / 511L) - 13 模块含 M17+M13 + v1→v4 4 版本
+      - TrendMA_EA + Breakout_EA 接入报告 (66,688B / 873L) - 2 EA 联合 12+11 模块
+
+      ## 6 段结构 (沿用 03:00 T2 范本)
+      1. 场景 A (3-5 行)
+      2. 场景 B (3-5 行)
+      3. 接入点行号 (5-10 行, Node.js fs 实测, 必填)
+      4. 调优点 3 档 (3-5 行)
+      5. 陷阱 5 条 (5 行, 不与 80 ❌ + 11 wiki ## 反模式 段 55 条 baseline 重复)
+      6. 链向 (3-5 行, Obsidian [[wiki link]])
+
+      ## 12 必读 (用户 IM 5 条指令第 5 条, 必读)
+      1. M01 交易封装 CTradePlus — OrderSend 实战段
+      2. M02 风控 Risk — 风控实战段 (5 回测/M18/M19/MyEA/SX/TrendMA+BO)
+      3. M05 新 K 线检测 NewBar — OnTick 实战段 (TrendMA+BO)
+      4. M08 追踪止损 TrailingStop — 追踪实战段 (SX)
+      5. M09 仪表盘 Dashboard — 监控实战段 (5 回测/MyEA)
+      6. M10 报警通知 Notify — 通知实战段 (MyEA)
+      7. M11 日志 Logger — 日志实战段 (SX)
+      8. M13 文件 IO — 文件实战段 (SX/MyEA)
+      9. M17 新闻过滤 NewsFilter — 新闻实战段 (SX)
+      10. M18 相关性过滤 CorrelationFilter — 多品种实战段 (5 回测/M18/SX)
+      11. M19 时段过滤 SessionFilter — 时段实战段 (5 回测/M19/SX)
+      12. MOC EA 开发知识库 — 总索引, 写 wiki 必读 L1-L100
+
+      ## 必做清单
+      1. 12 必读全读 (Node.js fs 实测 6 wiki baseline + 11 模块 spec + MOC + plan)
+      2. Node.js fs 实测 6 wiki (5 回测 / M18 / M19 / MyEA+Dash / SX / TrendMA+BO) 末尾追加 ## 实战案例 段 6 章节 12-14K 字节
+      3. 接入点行号 100% Node.js fs 实测 (必 grep MQL5 实物 .mq5, owner 预热行号表见 plan.md §3, 必 100% 命中)
+      4. 陷阱 5 条 不与 ## 反模式 段 80 ❌ + 11 wiki ## 反模式 段 baseline 重复 (必先 grep baseline)
+      5. 写 `daily/2026-06-05_04-00-track3-result.md` 6 章节 (任务摘要 / 改动明细 / verifier 9 项 / 字节统计 / 接入点行号 Node.js fs 实测命令 / 链向更新)
+      6. 写 engine outputs 双路径: `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\track3-six-wiki-cases-large\deliverable.md`
+
+      ## 必避清单 (反模式 9 条)
+      1. 0 改 .mq5 (6 wiki 都是实战/报告/索引, 0 涉及)
+      2. 0 改 6 wiki 前文 (末尾追加, 0 改前 1-N 行)
+      3. 0 改 MOC 前文 (T4 owner 1-2 行链向允许)
+      4. 0 创建 README/agents/protocols
+      5. 0 placeholders
+      6. 0 推荐语违规
+      7. 0 凭空编造行号 (接入点行号 100% Node.js fs 实测)
+      8. 0 凭空编造 API
+      9. 0 重复 ## 反模式 段 baseline
+
+      ## 验收 (verifier 9 项)
+      1. 6 wiki 文件存在
+      2. 6 wiki 字节 ≥ baseline (5 回测≥46477 / M18≥33967 / M19≥47305 / MyEA≥53814 / SX≥33197 / TMA+BO≥66688)
+      3. 6 wiki 末尾 ## 实战案例 段出现 1 次
+      4. 6 wiki ## 实战案例 段 6 段结构齐
+      5. 6 wiki 接入点行号 100% 命中
+      6. 6 wiki 0 placeholders
+      7. 6 wiki 0 推荐语违规
+      8. 6 wiki 0 改前文
+      9. 0 改 .mq5 (14 实物 mq5 mtime 全部 UNCHANGED) + 0 改 MOC 前文
+
+      ## 资源
+      (同 T2 worker-A)
+    output_dir: "C:\\Users\\Administrator\\.mavis\\plans\\plan_<hash>\\outputs\\track3-six-wiki-cases-large"
+    deliverables:
+      - path: "C:\\Users\\Administrator\\.mavis\\plans\\plan_<hash>\\outputs\\track3-six-wiki-cases-large\\deliverable.md"
+        description: "T3 worker-B 6 章节完整 deliverable"
+      - path: "C:\\ai\\obsidian-文件\\mt\\00-任务调度中心\\daily\\2026-06-05_04-00-track3-result.md"
+        description: "T3 worker-B 实物 100% 落盘 daily report"

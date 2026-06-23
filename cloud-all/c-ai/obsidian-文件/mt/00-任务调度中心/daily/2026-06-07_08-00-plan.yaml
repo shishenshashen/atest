@@ -1,0 +1,166 @@
+# 08:00 cron 巡检引擎 yaml (1 track 4 worker 并行 ready)
+# 沿用 15:00 1 track mavis-team 引擎 yaml 13,374B 模板不重复
+# 嵌入 6 步法 + verifier 9 项 worker prompt 模板
+# 18:00 路径 E 3 obsidian 优化项 task 模板 + 22:00 t6-cleanup-ghosts 优化项 4 task 模板
+# 19:00 3 新 node 进程 (降级为 t8-confirm-mcp-knowns)
+# 20:00 v4 + 22:00 v5 + v5.1 + 23:00 v6 + 05:00 v7 + v7.1 lesson 嵌入
+# 候选 P3 R3 / 候选 T5 R3 / 路径 E 4 优化项 / 阻塞 4 件 / 7 node 进程 CommandLine 确认 task 模板已落盘
+# max_concurrency=2 2.5-3.5h 0 阻塞
+# 等 user IM 显式"做 #N" / "做路径 E" / "做路径 E+" / "启优化项 1+2+3+4 并行" → 08:00+ cron 立刻启 plan
+version: 1
+plan:
+  name: '候选 P3 R3 + 候选 T5 R3 + 路径 E 4 obsidian 优化项 4 worker 并行 (跨日 06-07 第 9 次 ready)'
+  max_concurrency: 2
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers: [verifier]
+    audit_sample_rate: 1.0
+    strict_mode: true
+tasks:
+  # 路径 E+ 4 worker 并行 (max_concurrency=2)
+  - id: t2_p3_r3
+    title: '候选 P3 R3 5 速查 wiki ## 实战案例 段 R3 (1h, 0 阻塞)'
+    role: produce
+    assigned_to: general
+    prompt: |
+      # 写 EA 必走 6 步法 (15:00 owner 强化, 缺一步 verifier reject)
+      ## 第 1 步: 必读 12 必读 wiki
+      ReadFile: C:\Users\Administrator\.mavis\agents\mavis\memory\mql5-wiki-12-必读.md
+      12 必读清单全部读 (M01-M19 + MOC), 9 反模式全部避, 14 实物 mtime baseline 记下
+      ## 第 2 步: 必读 14 实物 mtime baseline (sandbox 路径)
+      Node.js fs readFileSync + statSync 实测 14 实物 sandbox 路径 mtime
+      路径: C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\
+      必显式输出 "sandbox 路径实测 mtime, 14 实物 mtime baseline" 一段
+      ## 第 3 步: 必走 9 反模式 0 命中
+      末尾 grep 推荐|建议使用|强烈建议|待补|TODO|FIXME|TBD|XXX 0 命中
+      写陷阱 5 条必先 grep 120 baseline (80 ❌ + 11 wiki ## 反模式 段 55 条) 避免重复
+      ## 第 4 步: 必走 4 反哺机制
+      (1) MOC 索引 + 行链向 (1-2 行追加)
+      (2) 必读链向 (worker prompt 链向 M17/M10/M02/M08 spec)
+      (3) 跨项目 lesson 沉淀 (闭环后写 memory entry)
+      (4) daily/<date>_XX-XX-log.md 9 章节
+      ## 第 5 步: 编译 0 errors (N/A for wiki-only task, 跳过)
+      ## 第 6 步: verifier 9 项 + 4 反哺 + 双路径
+      9 项: 0 改 .mq5 / 0 改 wiki 前文 / 0 改 MOC 前文 / 0 README / 0 placeholders / 0 推荐语 / 0 编造行号 / 0 编造 API / 0 重复 baseline
+      4 反哺: 上面第 4 步
+      双路径: engine outputs/trackN/deliverable.md + daily/<date>_XX-XX-trackN-result.md
+      ## 任务实际 spec
+      候选 P3 R3 = 5 速查 wiki (01 编译 / 02 OrderSend / 03 实盘 vs 回测 / 04 经纪商 / 05 必查清单) ## 实战案例 段 R3 末尾追加 4 段 (调试场景 / 步骤 5 步法 / 接入点行号 100% 实测 / 陷阱 5 条 / 链向)
+      沿用 11:00 R1 实战段 + 14:00 R2 验证段 范本继续深入
+      5 wiki × 2.2-2.8K = 12,584B 总
+      0 改 .mq5 / 0 改 wiki 前文 / 0 改 MOC / 0 推荐语 / 0 placeholders / 0 编造行号 (5 wiki 各 2-3 行号 100% Node.js fs 实测)
+    verified_by: verifier
+    depends_on: []
+    max_retries: 1
+    timeout_ms: 5400000   # 1.5h
+
+  - id: t3_t5_r3
+    title: '候选 T5 R3 04 实战段 第 3 轮 (1h, 0 阻塞)'
+    role: produce
+    assigned_to: general
+    prompt: |
+      # 写 EA 必走 6 步法 (15:00 owner 强化, 缺一步 verifier reject)
+      ## 第 1 步: 必读 12 必读 wiki (同 t2_p3_r3)
+      ## 第 2 步: 必读 14 实物 mtime baseline (sandbox 路径, 同 t2_p3_r3)
+      ## 第 3 步: 必走 9 反模式 0 命中 (同 t2_p3_r3)
+      ## 第 4 步: 必走 4 反哺机制 (同 t2_p3_r3)
+      ## 第 5 步: 编译 0 errors (N/A, 跳过)
+      ## 第 6 步: verifier 9 项 + 4 反哺 + 双路径 (同 t2_p3_r3)
+      ## 任务实际 spec
+      候选 T5 R3 = 04 实战段 R3 末尾追加 4 段 (调试场景 / 步骤 5 步法 / 接入点行号 100% 实测 / 陷阱 5 条 / 链向)
+      沿用 11:00 R1 实战段 + 14:00 R2 验证段 范本继续深入
+      04 实战段 × 2.2-2.8K = 2.5K 总
+      0 改 .mq5 / 0 改 wiki 前文 / 0 改 MOC / 0 推荐语 / 0 placeholders / 0 编造行号
+    verified_by: verifier
+    depends_on: []
+    max_retries: 1
+    timeout_ms: 5400000   # 1.5h
+
+  - id: t4_optim_1_3
+    title: '路径 E 3 obsidian 优化项 (2.5h, 0 阻塞, 1-2 worker 并行)'
+    role: produce
+    assigned_to: general
+    prompt: |
+      # 写 EA 必走 6 步法 (15:00 owner 强化, 缺一步 verifier reject)
+      ## 第 1 步: 必读 12 必读 wiki (同 t2_p3_r3)
+      ## 第 2 步: 必读 14 实物 mtime baseline (sandbox 路径, 同 t2_p3_r3)
+      ## 第 3 步: 必走 9 反模式 0 命中 (同 t2_p3_r3)
+      ## 第 4 步: 必走 4 反哺机制 (同 t2_p3_r3)
+      ## 第 5 步: 编译 0 errors (N/A, 跳过)
+      ## 第 6 步: verifier 9 项 + 4 反哺 + 双路径 (同 t2_p3_r3)
+      ## 任务实际 spec
+      路径 E 3 obsidian 优化项 (沿用 18:00 4 worker 模板 task spec)
+      优化项 1: MOC 实战分类 5→6 链向
+      优化项 2: 4 片段统一目录
+      优化项 3: 5 debug/prototype EA 索引
+      0 改 .mq5 / 0 改 wiki 前文 / 0 改 MOC / 0 推荐语 / 0 placeholders / 0 编造行号
+    verified_by: verifier
+    depends_on: []
+    max_retries: 1
+    timeout_ms: 7200000   # 2h
+
+  - id: t5_optim_4_cleanup
+    title: '优化项 4 cleanup 7 ghost (0.5h, 0 阻塞, 沿用 22:00 t6-cleanup-ghosts 模板)'
+    role: produce
+    assigned_to: general
+    prompt: |
+      # 写 EA 必走 6 步法 (15:00 owner 强化, 缺一步 verifier reject)
+      ## 第 1 步: 必读 12 必读 wiki (同 t2_p3_r3)
+      ## 第 2 步: 必读 14 实物 mtime baseline (sandbox 路径, 同 t2_p3_r3)
+      ## 第 3 步: 必走 9 反模式 0 命中 (同 t2_p3_r3)
+      ## 第 4 步: 必走 4 反哺机制 (同 t2_p3_r3)
+      ## 第 5 步: 编译 0 errors (N/A, 跳过)
+      ## 第 6 步: verifier 9 项 + 4 反哺 + 双路径 (同 t2_p3_r3)
+      ## 任务实际 spec
+      优化项 4 = cleanup 7 ghost (沿用 22:00 t6-cleanup-ghosts 模板)
+      7 ghost wiki 删除 / 整理
+      0 改 .mq5 / 0 改 wiki 前文 / 0 改 MOC / 0 推荐语 / 0 placeholders
+    verified_by: verifier
+    depends_on: []
+    max_retries: 1
+    timeout_ms: 1800000   # 0.5h
+
+  # verifier 任务 (沿用 15:00 模板, 双重 verify)
+  - id: t6_verifier
+    title: 'verifier 9 项检查 + 6 步法追溯 (verifier 独立 session)'
+    role: verify
+    assigned_to: verifier
+    verified_by: verifier   # 双重 verify
+    prompt: |
+      # Verifier 9 项检查 + 6 步法追溯
+      ## 0 必读 12 必读 wiki 验证
+      worker deliverable 里必含一段 "12 必读清单 (M01-M19 + MOC) 全部读过" 的声明
+      没声明 → reject, 理由 "未读 12 必读, 强制重做"
+      ## 1 必读 14 实物 mtime baseline (sandbox 路径) 验证
+      worker deliverable 里必含 "sandbox 路径实测 mtime" 一段, 14 实物 mtime 列表
+      没显式 "sandbox 路径" 字符串 → reject, 理由 "未走 sandbox 路径, 误判风险"
+      ## 2 必走 9 反模式 0 命中验证
+      worker deliverable 末尾必 grep 9 反模式关键字 0 命中
+      有命中 → reject, 列出命中位置
+      ## 3 必走 4 反哺机制验证
+      (1) MOC 索引行链向 — 检查 MOC 文件 mtime + 字节 +X
+      (2) 必读链向 — 检查 wiki [[wiki link]] 包含 M17/M10/M02/M08
+      (3) 跨项目 lesson — 检查 memory entry 是否写入
+      (4) daily log 9 章节 — 检查 9 章节齐全
+      缺一项 → reject
+      ## 4 编译 0 errors 验证
+      worker deliverable 必含 "mavis mcp call mt5 mt5_compile_ea 0 errors" 一段
+      没 0 errors → reject (N/A for wiki-only task, 跳过)
+      ## 5 0 改 .mq5 验证
+      Node.js fs statSync 14 实物 sandbox 路径 mtime, 必 UNCHANGED
+      有 1 实物 DRIFTED → reject (除非任务就是改 .mq5, 那要看是不是 14 实物里的)
+      ## 6-8 其他 0 命中 / 0 编造 / 0 重复 baseline / 0 推荐语
+      标准 9 项 check
+      ## 9 双路径落盘验证
+      engine outputs/trackN/deliverable.md 必存在
+      daily/<date>_XX-XX-trackN-result.md 必存在
+      缺一个 → reject
+      ## 最终判断
+      全过 → PASS
+      任何一项缺 → reject, 列出 reject 理由 + 修复建议
+    depends_on: [t2_p3_r3, t3_t5_r3, t4_optim_1_3, t5_optim_4_cleanup]
+    max_retries: 1
+    timeout_ms: 900000   # 15 min

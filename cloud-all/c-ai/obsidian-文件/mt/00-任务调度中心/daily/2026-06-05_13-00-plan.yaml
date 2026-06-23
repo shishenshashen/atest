@@ -1,0 +1,199 @@
+# 06-05 13:00 mavis-team plan engine yaml
+# 候选 P MOC v2 重写 64+ wiki 分类系统化 1.5h
+# owner: mvs_e29acc9ba31447319aab6261285b5161 (由 --from 指定, yaml 不放 owner task)
+# daily spec: daily/2026-06-05_13-00-plan.md (13 章节) + daily/2026-06-05_13-00-log.md (9 章节)
+# 启动命令: mavis team plan run daily/2026-06-05_13-00-plan.yaml --from mvs_e29acc9ba31447319aab6261285b5161
+version: 1
+plan:
+  name: 06-05 13:00 巡检 候选 P MOC v2 重写 64+ wiki 分类系统化 1 owner + 1 worker 1.5h
+  max_concurrency: 1
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: t2-moc-v2-rewrite
+    title: 'T2 worker-A - 候选 P MOC v2 重写 64+ wiki 分类系统化 (8 范式 + 12 必读 + 4 反哺 + 64 wiki 链向, 1.5h)'
+    prompt: >
+      # 任务: 候选 P MOC v2 重写 64+ wiki 分类系统化 (06-05 13:00 巡检 T2 worker-A, IM 第 5 条"沉淀为知识点, 去优化"闭环)
+
+
+      ## 背景
+
+      - 候选 P: MOC v2 重写 64+ wiki 分类系统化 (MOC 整篇重写, 8 范式 + 12 必读 + 4 反哺, 让用户写 EA 时能高效找到对应知识)
+
+      - 06-05 11:00 plan_3348c609 11:54+11:38 闭环, 9 反模式 wiki 实战段 + 5 速查 Round 2 + MOC 14 行链向 (T4 顺手), MOC 20,497B / 链向 104 / 实战相关 22 / 性能 1 / 异常 1 / 高级 1 / 工具 1 / 反模式 1 共 6 分类
+
+      - 14:00 沉淀清单 23/23 done, 累计 wiki 64-70 (按口径), 累计字节 ~720K, 6 反哺机制齐
+
+      - 06-05 13:00 cron 触达 mvs_e29acc9ba31447319aab6261285b5161, Mavis owner 派你做候选 P
+
+      - 详细 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_13-00-plan.md` 13 章节
+
+      - 详细 log: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_13-00-log.md` 9 章节
+
+
+      ## 8 范式 (MOC v2 重写主结构, L21-L120 ~100 行)
+
+      1. **写 EA 入口** — MOC 摘要 + 3 步流程 (看 MOC → 选模板 → 写 EA)
+      2. **模板套用** — `02-完整模板/` 8 模板 (通用骨架 / MA 交叉 / RSI Bollinger / Donchian 突破 / 网格马丁 / 剥头皮 / 多品种对冲 / Dashboard 监控)
+      3. **模块调用** — `01-调用模块/M01-M19` 12 必读 (M01/M02/M03/M05/M08/M09/M10/M11/M13/M17/M18/M19)
+      4. **通用片段** — `03-通用片段/00-04` 5 分类 (00 目录 / 01 下单 / 02 读取 / 03 画图 (0/0EA 跳过) / 04 实用)
+      5. **反模式避坑** — `04-避坑与速查/01-08` 8 速查 + 跨 EA 模式萃取
+      6. **性能调优** — `性能调优/MT5 性能调优 wiki.md` (8 性能维度 × 19 模块段位)
+      7. **异常处理** — `异常处理/异常处理手册.md` (4 异常维度 × 19 模块段位)
+      8. **高级设计** — `安全审计/EA 安全审计 wiki.md` + `高级设计模式/高级 EA 设计模式 wiki.md` + `实战/4 范式 EA 联合 wiki 模板.md`
+
+
+      ## 12 必读 (M01-M19 spec, 全部在 8 范式下链向)
+
+      M01 交易封装 CTradePlus (19892B) / M02 风控 Risk (16643B) / M03 仓位管理 PositionSizing (17454B) / M05 新 K 线检测 NewBar (12327B) / M08 追踪止损 TrailingStop (23481B) / M09 仪表盘 Dashboard (15960B) / M10 报警通知 Notify (16723B) / M11 日志 Logger (15110B) / M13 文件 IO (17899B) / M17 新闻过滤 NewsFilter (24310B) / M18 相关性过滤 CorrelationFilter (17696B) / M19 时段过滤 SessionFilter (17479B)
+
+
+      ## 4 反哺机制
+
+      1. MOC 链向 (12 必读 + 64 wiki)
+      2. 12 必读 mtime 同步
+      3. 14 实物 .mq5 mtime snapshot
+      4. 9 反模式 wiki 链向 (跨 EA 模式萃取 + 8 速查)
+
+
+      ## 64 wiki 全链向 (按 8 范式分类索引, 实际 64+ wiki 包含 M01-M19 spec 19 + 8 模板 + 5 片段 + 8 速查 + 1 性能 + 1 异常 + 1 安全 + 1 高级 + 1 4 范式 + 1 跨 EA 模式 + 12 实战 + 3 快速开始 + 4 回测旧版 = 64 文件)
+
+      每 wiki 1 行 + 描述 + 状态 (size + mtime + 关键段 + Obsidian [[wiki link]])
+
+
+      ## 6 反模式 (不与 80+110+09:00+10:00+11:00 baseline 重复)
+
+      1. 单一指标依赖
+      2. 无风控
+      3. 过度拟合
+      4. 滑点忽略
+      5. 跨期复利
+      6. 调试过犹不及
+
+
+      ## 6 段范本 (沿用 04:00 L 范本 + 08:00 T2 4 范式 EA 联合 wiki 模板 6 段结构)
+
+      1. **MOC 摘要段** (L1-L20, ~20 行)
+      2. **8 范式段** (L21-L120, ~100 行)
+      3. **对比矩阵段** (L121-L160, ~40 行)
+      4. **写 EA 必走流程段** (L161-L200, ~40 行) — 模块化方案 5 步法 + 4 反哺机制
+      5. **反模式段** (L201-L240, ~40 行) — 6 反模式 + 链向 9 反模式 wiki
+      6. **链向验证段** (L241-L300, ~60 行) — 64 wiki 全链向 + 12 必读 + 14 实物 mtime 快照 + 4 反哺机制齐
+
+      总计 ≥ 30K 字节 / 200-300L
+
+
+      ## 14 实物 mtime snapshot (T2 worker 必读 + 跑前跑后实测)
+
+      | # | EA 实物 | 13:00 baseline | 13:30 after T2 |
+      |---|---|---|---|
+      | 1 | MeanReversion_EA.mq5 | 13,503B / 2026-06-04 11:21 | T2 worker 实测 UNCHANGED |
+      | 2 | ScalperXAU.mq5 | 42,824B / 2026-06-04 13:44 | T2 worker 实测 UNCHANGED |
+      | 3 | TrendMA_EA.mq5 | 9,169B / 2026-06-04 00:50 | T2 worker 实测 UNCHANGED |
+      | 4 | Breakout_EA.mq5 | 9,530B / 2026-06-04 00:47 | T2 worker 实测 UNCHANGED |
+      | 5 | MyEA.mq5 | 12,541B / 2026-06-04 00:57 | T2 worker 实测 UNCHANGED |
+      | 6 | Dashboard.mq5 | 8,361B / 2026-06-04 00:51 | T2 worker 实测 UNCHANGED |
+      | 7 | ScalperXAUv5simple.mq5 | 6,545B / 2026-06-04 13:52 | T2 worker 实测 UNCHANGED |
+      | 8 | ScalperXAUv6debug.mq5 | 1,931B / 2026-06-04 13:59 | T2 worker 实测 UNCHANGED |
+      | 9 | ScalperXAUv7debug.mq5 | 4,515B / 2026-06-04 14:37 | T2 worker 实测 UNCHANGED |
+      | 10 | ScalperXAUv8.mq5 | 5,436B / 2026-06-04 14:38 | T2 worker 实测 UNCHANGED |
+      | 11 | ScalperXAUv9.mq5 | 13,186B / 2026-06-04 17:44 | T2 worker 实测 UNCHANGED |
+      | 12 | Scalper_CsvProto.mq5 | 4,595B / 2026-06-04 00:49 | T2 worker 实测 UNCHANGED |
+      | 13 | MiniMaxScalper.mq5 | 35,357B / 2026-06-04 18:09 | T2 worker 实测 UNCHANGED (用户手动 IDE) |
+      | 14 | MiniMaxScalper_v2.mq5 | 37,470B / 2026-06-05 00:31 | T2 worker 实测 UNCHANGED (用户手动 IDE) |
+
+
+      ## 9 反模式 wiki 链向
+
+      | # | wiki | 当前字节 | 链向位置 |
+      |---|---|---|---|
+      | 1 | 01 编译常见错误 | 40,570B | 5. 反模式避坑 段 |
+      | 2 | 02 OrderSend 错误速查 | 41,964B | 5. 反模式避坑 段 |
+      | 3 | 03 实盘 vs 回测差异 | 36,968B | 5. 反模式避坑 段 |
+      | 4 | 04 经纪商差异-点差-手续费 | 73,915B | 5. 反模式避坑 段 |
+      | 5 | 05 回测必查清单 | 46,023B | 5. 反模式避坑 段 |
+      | 6 | 06 网格马丁警示 | 42,462B | 5. 反模式避坑 段 |
+      | 7 | 07 5 必看陷阱统一 wiki | 55,269B | 5. 反模式避坑 段 |
+      | 8 | 08 5 速查调试小技巧 wiki | 34,850B | 5. 反模式避坑 段 |
+      | 9 | 实战/跨 EA 模式萃取 | 47,539B | 5. 反模式避坑 段 |
+
+
+      ## 必做清单 (1.5h)
+
+      1. (5 min) Node.js fs readFileSync 12 必读 mtime — 0 改 wiki
+      2. (5 min) Node.js fs readFileSync 14 实物 mtime — 0 改 .mq5
+      3. (5 min) Node.js fs readFileSync 9 反模式 wiki — 0 改 wiki
+      4. (5 min) Node.js fs readFileSync MOC 当前内容 (20,497B) — 基线
+      5. (5 min) Read 工具读 MOC 当前内容
+      6. (60 min) 用 Write 工具**整篇重写** MOC (≥ 30K 字节 / 200-300L, 6 段范本 + 8 范式 + 12 必读 + 4 反哺 + 64 wiki 链向 + 6 反模式)
+      7. (5 min) Node.js fs statSync 验证 MOC 字节 ≥ 30K, mtime 更新, 14 实物 mtime UNCHANGED 14/14
+      8. (10 min) Edit 工具追加 daily/2026-06-05_13-00-track2-result.md 6 章节
+      9. (5 min) Edit 工具追加 §6 验证段 Node.js fs 一键复测命令
+
+
+      ## 输出 (deliverable 双路径)
+
+      - MOC `C:/ai/obsidian-文件/mt/EA开发/EA 开发知识库.md` 整篇重写 (≥ 30K 字节 / 200-300L)
+      - `daily/2026-06-05_13-00-track2-result.md` 6 章节
+      - engine outputs `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\t2-moc-v2-rewrite\deliverable.md`
+
+
+      ## 反模式自检 (T2 worker 必跑)
+
+      - 0 改 wiki 前文 (MOC 整篇重写不计)
+      - 0 改 .mq5 (14 实物 mtime UNCHANGED 14/14)
+      - 0 改 MOC 段标题 (8 范式段允许, 6 段范本允许)
+      - 0 编造 API (12 必读 mtime 全部对照, 0 涉及未文档化 API)
+      - 0 编造行号 (T2 不涉及 .mq5 行号, 0 涉及)
+      - 0 placeholders (5 类: 待补/TODO/FIXME/TBD/XXX 全 0)
+      - 0 推荐语 (3 类: 推荐/建议使用/强烈建议 全 0)
+      - 0 创建 README/agents/protocols (MOC 入口重写, 不创建新 README/agents/protocols)
+
+
+      ## verifier 9 项 (T2 worker 必跑)
+
+      1. MOC 字节 ≥ 30K (Node.js fs statSync 验证)
+      2. MOC mtime 更新 (Node.js fs statSync 验证, 比 baseline 11:58 晚)
+      3. 6 段范本齐 (Node.js fs grep 6 段标题: MOC 摘要 / 8 范式 / 对比矩阵 / 写 EA 必走流程 / 反模式 / 链向验证)
+      4. 8 范式齐 (Node.js fs grep 8 范式标题: 写 EA 入口 / 模板套用 / 模块调用 / 通用片段 / 反模式避坑 / 性能调优 / 异常处理 / 高级设计)
+      5. 12 必读齐 (Node.js fs grep 12 必读 wiki 链向: M01/M02/M03/M05/M08/M09/M10/M11/M13/M17/M18/M19)
+      6. 4 反哺齐 (Node.js fs grep 4 反哺标题: MOC 链向 / 12 必读 / 14 实物 / 9 反模式)
+      7. 64 wiki 链向齐 (Node.js fs grep 64 wiki 链向 [[wiki link]], 跟 plan §5 表格对账)
+      8. 6 反模式齐 + 0 重复 (Node.js fs grep 6 反模式关键词: 单一指标依赖 / 无风控 / 过度拟合 / 滑点忽略 / 跨期复利 / 调试过犹不及, 跟 80+110 baseline 不重复)
+      9. 14 实物 mtime UNCHANGED 14/14 (Node.js fs statSync 14 实物)
+
+
+      ## 异常处理 (跟 18+ 次 pattern)
+
+      - verifier 11+ min timeout (18+ 次 pattern): 实物优先, owner override_accept 立即闭环
+      - worker 15min watchdog kill: 检查 MOC 整篇重写 + track2-result.md 实物是否 100% 落盘, 是则 override_accept
+      - MOC 整篇重写后 mq5 误改: 立即 0 改 14 实物 statSync 对比, 0 涉及 .mq5
+
+
+      ## 资源
+
+      - MOC 当前基线: `C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md` (20,497B / mtime 2026-06-05 11:58)
+      - 12 必读: `C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M*.md` (19 文件, 12 必读 100% 覆盖)
+      - 14 实物: `C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\*.mq5` (14 文件)
+      - 8 模板: `C:\ai\obsidian-文件\mt\EA开发\02-完整模板\*.md` (8 文件)
+      - 5 片段: `C:\ai\obsidian-文件\mt\EA开发\03-通用片段\0*.md` (5 文件)
+      - 8 速查: `C:\ai\obsidian-文件\mt\EA开发\04-避坑与速查\0*.md` (8 文件)
+      - 4 高级: `C:\ai\obsidian-文件\mt\EA开发\性能调优\MT5 性能调优 wiki.md` + `C:\ai\obsidian-文件\mt\EA开发\异常处理\异常处理手册.md` + `C:\ai\obsidian-文件\mt\EA开发\安全审计\EA 安全审计 wiki.md` + `C:\ai\obsidian-文件\mt\EA开发\05-高级设计模式\高级 EA 设计模式 wiki.md` (4 文件)
+      - 12 实战: `C:\ai\obsidian-文件\mt\EA开发\实战\*.md` (12 文件)
+      - 跨 EA 模式萃取 wiki (05:00 T3): `C:\ai\obsidian-文件\mt\EA开发\实战\跨 EA 模式萃取.md` 47539B (11:00 T2 末尾 +6905B)
+      - 4 范式 EA 联合 wiki 模板 (08:00 T2): `C:\ai\obsidian-文件\mt\EA开发\实战\4 范式 EA 联合 wiki 模板.md` 33316B
+      - 4 反哺 + 5 步法范本: `C:\ai\obsidian-文件\mt\EA开发\实战\4 范式 EA 联合 wiki 模板.md` §6 (沿用 8 范式 + 5 步法 + 4 反哺)
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 1
+    timeout_ms: 5400000

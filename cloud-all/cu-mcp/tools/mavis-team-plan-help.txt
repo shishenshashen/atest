@@ -1,0 +1,20 @@
+﻿Usage: mavis team plan [options] [command]
+
+Plan execution engine 鈥?run, monitor, steer, and control plans
+
+Options:
+  -h, --help                                    display help for command
+
+Commands:
+  run [options] <yaml-file>                     Create and immediately start a plan from a YAML file
+  steer [options] <id>                          Steer all active workers in a running plan (abort + new message)
+  unblock [options] <plan-id> <task-id>         Force a blocked task to ready, bypassing depends_on (owner only). Use when the dependency graph is wrong at runtime and you want a task to start immediately without cancelling and relaunching the plan. The plan definition (depends_on) is preserved for audit.
+  extend-timeout [options] <plan-id> <task-id>  Extend timeout for a currently producing task (owner only). Use when a worker is making progress but needs more time before the hard kill.
+  update [options] <plan-id> <task-id>          Toggle a task's verify state mid-plan (owner only, v0.2 搂5.2). Effects depend on current task state: not producing 鈫?applied immediately to next cycle; producing 鈫?applied after current cycle (verify-only cycle is triggered); done 鈫?triggers a reopen flow (status flips done 鈫?reopened, queued for retry).
+  status [options] [id]                         Show plan status (or list all plans)
+  pause [options] <id>                          Pause a running plan (owner only)
+  resume [options] <id>                         Resume a paused plan (owner only)
+  decision [options] <id>                       Submit owner decision for a plan cycle (owner only)
+  cancel [options] <id>                         Cancel a plan: stop running workers and mark cancelled (preserves all files for inspection)
+  delete [options] <id>                         Physically delete a plan directory (any status; cancels first if running)
+  help [command]                                display help for command

@@ -1,0 +1,117 @@
+[
+  {
+    "at": 1781492583,
+    "level": "error",
+    "msg": "🚨 任务升级到 escalate: t-20260615-110303-bd00c5\n角色: ops 等级: S\n目标: esc-level\n心跳断: 7秒前 (3×stale=6s)\n进度: {'current': 0, 'message': '', 'total': 0}\n→ 子 agent 已冻结，等你拍板（重试/换思路/取消）"
+  },
+  {
+    "at": 1781492583,
+    "level": "error",
+    "msg": "⏰ 任务假死: t-20260615-110303-6960ee\n角色: ops\n目标: timeout-level\n心跳断: 6秒前 (阈值 5s)\n进度: {'current': 0, 'message': '', 'total': 0}"
+  },
+  {
+    "at": 1781492600,
+    "level": "error",
+    "msg": "🚨 任务升级到 escalate: t-20260615-110303-a025bc\n角色: ops 等级: S\n目标: status test 1\n心跳断: 20秒前 (3×stale=6s)\n进度: {'current': 0, 'message': '', 'total': 0}\n→ 子 agent 已冻结，等你拍板（重试/换思路/取消）"
+  },
+  {
+    "at": 1781492600,
+    "level": "error",
+    "msg": "🚨 任务升级到 escalate: t-20260615-110303-c6ae3b\n角色: ops 等级: S\n目标: status test 3\n心跳断: 24秒前 (3×stale=6s)\n进度: {'current': 0, 'message': '', 'total': 0}\n→ 子 agent 已冻结，等你拍板（重试/换思路/取消）"
+  },
+  {
+    "at": 1781492600,
+    "level": "error",
+    "msg": "🚨 任务升级到 escalate: t-20260615-110303-fbb6b4\n角色: ops 等级: S\n目标: status test 2\n心跳断: 22秒前 (3×stale=6s)\n进度: {'current': 0, 'message': '', 'total': 0}\n→ 子 agent 已冻结，等你拍板（重试/换思路/取消）"
+  },
+  {
+    "at": 1781492660,
+    "level": "error",
+    "msg": "⏰ 任务假死: t-20260615-110303-a025bc\n角色: ops\n目标: status test 1\n心跳断: 80秒前 (阈值 30s)\n进度: {'current': 0, 'message': '', 'total': 0}"
+  },
+  {
+    "at": 1781492660,
+    "level": "error",
+    "msg": "⏰ 任务假死: t-20260615-110303-c6ae3b\n角色: ops\n目标: status test 3\n心跳断: 84秒前 (阈值 30s)\n进度: {'current': 0, 'message': '', 'total': 0}"
+  },
+  {
+    "at": 1781492660,
+    "level": "error",
+    "msg": "⏰ 任务假死: t-20260615-110303-fbb6b4\n角色: ops\n目标: status test 2\n心跳断: 82秒前 (阈值 30s)\n进度: {'current': 0, 'message': '', 'total': 0}"
+  },
+  {
+    "at": 1781512940,
+    "level": "error",
+    "msg": "⏰ 任务假死: t-20260615-164202-2011aa\n角色: ops\n目标: test\n心跳断: 18秒前 (阈值 5s)\n进度: {'current': 0, 'message': '', 'total': 0}"
+  },
+  {
+    "at": 1781513136,
+    "level": "info",
+    "msg": "♻️ 自动重试: t-20260615-164529-58603e\n角色: general 等级: M\n策略: rewrite_prompt (第 1 次)\n原因: 心跳断 7s (3×stale)\n→ 已重置为 queued，等子 agent 重启"
+  },
+  {
+    "at": 1781513164,
+    "level": "info",
+    "msg": "♻️ 自动重试: t-20260615-164529-58603e\n角色: general 等级: M\n策略: extend_timeout (第 2 次)\n原因: 心跳断 28s (3×stale)\n→ 已重置为 queued，等子 agent 重启"
+  },
+  {
+    "at": 1781513164,
+    "level": "info",
+    "msg": "♻️ 自动重试: t-20260615-164557-389423\n角色: general 等级: M\n策略: rewrite_prompt (第 1 次)\n原因: 心跳断 7s (3×stale)\n→ 已重置为 queued，等子 agent 重启"
+  },
+  {
+    "at": 1781513180,
+    "level": "error",
+    "msg": "🚨 任务升级到 escalate: t-20260615-164529-58603e\n角色: general 等级: M\n目标: simulate escalate then auto-retry\n\n---\n⚠️ [auto_retry] 这是你第 1 次重试。之前已超时/失败，请：\n1. 更聚焦于核心交付，别在边缘优化上耗时间\n心跳断: 16秒前 (3×stale=6s)\n进度: {'current': 0, 'message': '', 'total': 0}\n→ 子 agent 已冻结，等你拍板（重试/换思路/取消）"
+  },
+  {
+    "at": 1781513180,
+    "level": "error",
+    "msg": "🚨 任务升级到 escalate: t-20260615-164557-389423\n角色: general 等级: M\n目标: simulate escalate then auto-retry\n\n---\n⚠️ [auto_retry] 这是你第 1 次重试。之前已超时/失败，请：\n1. 更聚焦于核心交付，别在边缘优化上耗时间\n心跳断: 16秒前 (3×stale=6s)\n进度: {'current': 0, 'message': '', 'total': 0}\n→ 子 agent 已冻结，等你拍板（重试/换思路/取消）"
+  },
+  {
+    "at": 1781513240,
+    "level": "error",
+    "msg": "⏰ 任务假死: t-20260615-164529-58603e\n角色: general\n目标: simulate escalate then auto-retry\n\n---\n⚠️ [auto_retry] 这是你第 1 次重试。之前已超时/失败，请：\n1. 更聚焦于核心交付，别在边缘优化上耗时间\n心跳断: 76秒前 (阈值 60s)\n进度: {'current': 0, 'message': '', 'total': 0}"
+  },
+  {
+    "at": 1781513240,
+    "level": "error",
+    "msg": "⏰ 任务假死: t-20260615-164557-389423\n角色: general\n目标: simulate escalate then auto-retry\n\n---\n⚠️ [auto_retry] 这是你第 1 次重试。之前已超时/失败，请：\n1. 更聚焦于核心交付，别在边缘优化上耗时间\n心跳断: 76秒前 (阈值 30s)\n进度: {'current': 0, 'message': '', 'total': 0}"
+  },
+  {
+    "at": 1781513480,
+    "level": "error",
+    "msg": "⏰ 任务假死: t-20260615-165033-1c3f5f\n角色: test_role3\n目标: test skip_rewrite\n心跳断: 47秒前 (阈值 10s)\n进度: {'current': 0, 'message': '', 'total': 0}"
+  },
+  {
+    "at": 1781513712,
+    "level": "warn",
+    "msg": "⚠️ 入队但未真派发: t-20260615-165512-b18159\n原因: require_dispatch=False\n目标: v4 test no dispatch"
+  },
+  {
+    "at": 1781513871,
+    "level": "info",
+    "msg": "♻️ 自动重试: t-20260615-165744-373322\n角色: general 等级: M\n策略: rewrite_prompt (第 1 次)\n原因: 心跳断 7s (3×stale)\n→ 已重置为 queued，等子 agent 重启"
+  },
+  {
+    "at": 1781513872,
+    "level": "warn",
+    "msg": "⚠️ 入队但未真派发: t-20260615-165752-1a4101\n原因: require_dispatch=False\n目标: v4 test no dispatch"
+  },
+  {
+    "at": 1781513887,
+    "level": "info",
+    "msg": "♻️ 自动重试: t-20260615-165759-4bff63\n角色: general 等级: M\n策略: rewrite_prompt (第 1 次)\n原因: 心跳断 7s (3×stale)\n→ 已重置为 queued，等子 agent 重启"
+  },
+  {
+    "at": 1781513887,
+    "level": "warn",
+    "msg": "⚠️ 入队但未真派发: t-20260615-165807-2ede97\n原因: require_dispatch=False\n目标: v4 test no dispatch"
+  },
+  {
+    "at": 1781513922,
+    "level": "info",
+    "msg": "♻️ 自动重试: t-20260615-165833-582986\n角色: general 等级: M\n策略: rewrite_prompt (第 1 次)\n原因: 心跳断 9s (3×stale)\n→ 已重置为 queued，等子 agent 重启"
+  }
+]

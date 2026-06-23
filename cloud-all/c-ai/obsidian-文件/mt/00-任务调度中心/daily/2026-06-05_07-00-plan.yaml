@@ -1,0 +1,631 @@
+version: 1
+plan:
+  name: 06-05 07:00 巡检 候选 U + V + W + M 三件套 1 owner + 3 worker + T4 owner 顺手 1.5h
+  max_concurrency: 4
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  worker_timeout_minutes: 25
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: t2-security-audit
+    title: 'T2 worker-A - EA 安全审计 wiki (新 wiki, 6 章节 8 安全维度 × 19 模块段位, 候选 U 闭环, 1h)'
+    prompt: >
+      # 任务: EA 安全审计 wiki (06-05 07:00 巡检 T2 worker-A, 候选 U 闭环)
+
+
+      ## 背景
+
+      - 候选 U: EA 安全审计 wiki (新 wiki, 6 章节, 8 安全审计维度 × 19 模块段位, 14:00 §5 维度 5 候选 E 闭环)
+
+      - 06-05 06:00 plan_2fc153d1 06-05 06:46 闭环, 候选 S + T + R 三件套 +103,581B, 累计 wiki 67
+
+      - 12 实战/ wiki + 跨 EA 模式萃取 + 性能调优 + 异常处理 wiki 已 100% 闭环, 后续为 0 阻塞高阶任务
+
+      - 06-05 07:00 cron 触达 mvs_9349648df26e42379ec3dec35c1fd786, Mavis owner 派你做候选 U
+
+      - 详细 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_07-00-plan.md` §5
+
+
+      ## 6 章节结构
+
+      1. §0 摘要 (200 字): EA 安全审计为什么重要? 8 维度 × 19 模块段位全梳理
+
+      2. §1 8 大安全审计维度 (订单安全 / 风控合规 / 资金管理 / 交易时段 / 新闻避让 / 异常处理 / 日志审计 / 异常回滚)
+
+      3. §2 19 模块安全段位 (M01-M19, 每模块 5-10 行, 重点 M01/M02/M05/M08/M10/M11/M13/M17/M18/M19)
+
+      4. §3 11 实物 demo (MeanReversion_EA / ScalperXAU v1-v4 / TrendMA_EA / Breakout_EA / MyEA / Dashboard / ScalperXAUv5-v9 / Scalper_CsvProto / MiniMaxScalper v1+v2)
+
+      5. §4 安全审计工具 (M11.Logger / M13.FileIO / 5 速查必查清单 / mql5-audit.js 候补)
+
+      6. §5 8 反模式 (不与 80 ❌ baseline 重复) + §6 链向 (12 wiki)
+
+
+      ## 8 安全审计维度详
+
+      1. **订单安全 (M01)**: Magic Number 唯一标识, retcode 12 码表检查, 失败重试 3 次
+
+      2. **风控合规 (M02)**: 单笔 Lot 上限, 总敞口检查, 保证金检查, 关联品种对冲
+
+      3. **资金管理 (M02)**: CalcLot 自动手数, Kelly 公式, 风险敞口百分比
+
+      4. **交易时段 (M19)**: Asia/London/NY 4 预定义常量, 周末禁开, 跨午夜 NY:22-6
+
+      5. **新闻避让 (M17)**: ±30 min 高影响事件禁开, IsNearEvent(min, _Symbol)
+
+      6. **异常处理 (M01/M13)**: retcode 不吞掉, fallback 不静默, 10 步 SOP (沿用 06:00 T3)
+
+      7. **日志审计 (M11)**: 4 级别 Info/Warn/Error/Trade, FileIO 落盘 trades_YYYYMMDD.csv
+
+      8. **异常回滚 (M02/M08)**: SL 触发后撤单, Trail 异常暂停, OnDeinit 清理资源
+
+
+      ## 11 实物 demo (Node.js fs 实测接入点行号, 必填 ≥ 30 行号)
+
+      1. **MeanReversion_EA** — 13 模块全集, 完整安全审计 (L80 M01 Init / L161 M19 / L104-128 M18 / L237-247 dash / L274-290 HistorySelect)
+
+      2. **ScalperXAU v1-v4** — 高频, v3 0 笔根因 (L107 CTradePlus / L198-213 M19 / L321-322 logger / L341 M13 / L573 ClosePos / L576/L880/L906 M10)
+
+      3. **TrendMA_EA** — 6 模块 (M01/M02/M03/M04/M07/M08), 4 反模式 (无 M10/M11/M13/M17)
+
+      4. **Breakout_EA** — 5 模块 (M01/M02/M04/M07/M10), 3 反模式 (无 M11/M13/M17/M19)
+
+      5. **MyEA** — 10 模块全集 (M01-M11+M16), 1 反模式 (无 M13/M17/M18)
+
+      6. **Dashboard** — 4 模块 (M04/M09/M10/M15), 5 反模式 (无交易模块)
+
+      7. **ScalperXAUv5-v9** — 5 副仓, 异常隔离 (v5=Print / v6=Stop / v7=Retry / v8=Skip / v9=Fallback)
+
+      8. **Scalper_CsvProto** — 1 模块 M13 FileIO, 6 反模式 (无 M01/M02/M10)
+
+      9. **MiniMaxScalper v1** — 待定 0 模块
+
+      10. **MiniMaxScalper v2** — 用户手动 IDE 在写, mtime 06-05 00:31
+
+      11. **M17_TestNewsEA** — 1 模块 M17, 6 断言 (L20 Init / L24 LoadFromCSV / L28 IsNearEvent / L34 RunSelfTest)
+
+
+      ## 8 反模式 (不与 80 ❌ baseline 重复)
+
+      1. ❌ Magic Number 不设或设 0 (无法识别订单)
+
+      2. ❌ 风控只检查单笔, 不检查总敞口
+
+      3. ❌ Lot 硬编码, 不用 M02.Risk.CalcLot
+
+      4. ❌ SL/TP 不设, 寄希望于 M08 追踪
+
+      5. ❌ 时段不限制, 周末也开仓
+
+      6. ❌ 新闻前后 ±30 min 不避让
+
+      7. ❌ retcode 不检查, 失败不重试
+
+      8. ❌ 日志只 Print, 不写 M13.FileIO
+
+
+      ## 12 必读 (用户 IM 5 条指令第 5 条, 必读)
+
+      1. M01 交易封装 CTradePlus (Magic + retcode 表)
+
+      2. M02 风控 Risk (CalcLot / CheckMargin / CheckExposure)
+
+      3. M05 新 K 线检测 NewBar (异常 NewBar 跳过)
+
+      4. M08 追踪止损 TrailingStop (异常 trail 暂停)
+
+      5. M09 仪表盘 Dashboard (异常后状态显示)
+
+      6. M10 报警通知 Notify (网络失败重试)
+
+      7. M11 日志 Logger (4 级别 Info/Warn/Error/Trade)
+
+      8. M13 文件 IO (trades_YYYYMMDD.csv 落盘)
+
+      9. M17 新闻过滤 NewsFilter (±30 min 避让)
+
+      10. M18 相关性过滤 CorrelationFilter (多品种对冲)
+
+      11. M19 时段过滤 SessionFilter (4 预定义常量 + 周末)
+
+      12. MOC EA 开发知识库 (12/12 wiki 必读总索引)
+
+
+      ## 必做清单
+
+      1. 12 必读全读 (Node.js fs 实测 11 实物 EA + 11 模块 spec + MOC + plan + 5 实战/ wiki)
+
+      2. Node.js fs 实测 14 实物 .mq5 mtime baseline (跟 plan.md §3 对比, 验收 UNCHANGED)
+
+      3. Write 工具创建新目录 + 新 wiki `C:\ai\obsidian-文件\mt\EA开发\安全审计\EA 安全审计 wiki.md` (≥ 15K 字节, 目标 15-20K, 250-350L)
+
+      4. 6 章节 + 8 维度 + 19 模块段位 (每模块 5-10 行) + 11 实物 demo + 5 工具 + 8 反模式 + 12 链向
+
+      5. 接入点行号 ≥ 30 (Node.js fs grep, 不编造, 11 实物各 3 行号)
+
+      6. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+
+      7. 0 改 wiki 前文 (新 wiki, 无前文)
+
+      8. 0 改 MOC 前文 (T4 owner 1 行链向允许)
+
+      9. 0 创建 README/agents/protocols
+
+      10. 0 placeholders / 0 推荐语
+
+      11. 写 `daily/2026-06-05_07-00-track2-result.md` 6 章节 (任务摘要 / 改动明细 / verifier 9 项 / 字节统计 / 接入点行号 Node.js fs 实测命令 / 链向更新)
+
+      12. 写 engine outputs 双路径:
+      `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\t2-security-audit\deliverable.md`
+
+
+      ## 必避清单 (反模式 9 条, 沿用 06:00 §6)
+
+      1. 0 改 .mq5 (14 实物 mtime UNCHANGED, Node.js fs statSync 对比 plan.md §3 baseline)
+
+      2. 0 改 wiki 前文 (新 wiki, 无前文)
+
+      3. 0 改 MOC 前文 (T4 owner 1 行链向允许, 不能改 L1-L60)
+
+      4. 0 创建 README/agents/protocols
+
+      5. 0 placeholders (5 类占位符以 "." 分隔避 grep)
+
+      6. 0 推荐语违规 (3 类推销中间加空格避 grep)
+
+      7. 0 凭空编造接入点行号 (11 实物 Node.js fs 实测, 30+ 行号)
+
+      8. 0 凭空编造 API (12 必读 mtime 全部对照, 0 涉及未文档化 API)
+
+      9. 0 重复 ## 反模式 段 baseline (80 条 + 11 wiki ## 反模式 段)
+
+
+      ## 验收 (verifier 9 项)
+
+      1. `EA开发/安全审计/EA 安全审计 wiki.md` 文件存在
+
+      2. 字节 ≥ 15,000B
+
+      3. 6 章节结构齐 (摘要/8 维度/19 模块/11 实物/5 工具/8 反模式/链向)
+
+      4. 接入点行号 ≥ 30 (Node.js fs grep 100% 命中)
+
+      5. 0 placeholders
+
+      6. 0 推荐语
+
+      7. 0 改前文 (新 wiki, 无前文)
+
+      8. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+
+      9. 0 创建 README/agents/protocols
+
+
+      ## 资源
+
+      - 11 实物 EA:
+      `C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\*.mq5` (14 文件, 11 主仓 + 5 副仓 + ScalperEA v1+v2)
+
+      - 19 模块 spec: `C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M*.md`
+
+      - 12 实战/ wiki: `C:\ai\obsidian-文件\mt\EA开发\实战\*.md`
+
+      - 5 速查 wiki: `C:\ai\obsidian-文件\mt\EA开发\04-避坑与速查\0*.md`
+
+      - 5 模板 wiki: `C:\ai\obsidian-文件\mt\EA开发\02-完整模板\*.md`
+
+      - MOC: `C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md`
+
+      - 跨 EA 模式萃取 wiki (05:00 T3): `C:\ai\obsidian-文件\mt\EA开发\实战\跨 EA 模式萃取.md` 40634B/645L
+
+      - 性能调优 wiki (06:00 T2): `C:\ai\obsidian-文件\mt\EA开发\性能调优\MT5 性能调优 wiki.md` 52674B/823L
+
+      - 异常处理 wiki (06:00 T3): `C:\ai\obsidian-文件\mt\EA开发\异常处理\异常处理手册.md` 45407B/806L
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 1
+    timeout_ms: 900000
+  - id: t3-design-patterns
+    title: 'T3 worker-B - 高级 EA 设计模式 wiki (新 wiki, 6 章节 7+1 模式, 候选 V 闭环, 1.5h)'
+    prompt: >
+      # 任务: 高级 EA 设计模式 wiki (06-05 07:00 巡检 T3 worker-B, 候选 V 闭环)
+
+
+      ## 背景
+
+      - 候选 V: 高级 EA 设计模式 wiki (新 wiki, 6 章节, 7+1=8 模式 6 章节, 14:00 §5 维度 5 候选 F 闭环)
+
+      - 06-05 05:00 plan_4bacb3e8 跨 EA 模式萃取 wiki 40634B/645L 7 模式 6 章节 范本 (T3 沿用)
+
+      - 06-05 06:00 plan_2fc153d1 候选 S+T+R 三件套 +103,581B, 累计 wiki 67
+
+      - 12 实战/ wiki + 跨 EA 模式萃取 + 性能调优 + 异常处理 wiki 已 100% 闭环, 后续为 0 阻塞高阶任务
+
+      - 06-05 07:00 cron 触达 mvs_9349648df26e42379ec3dec35c1fd786, Mavis owner 派你做候选 V
+
+      - 详细 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_07-00-plan.md` §6
+
+
+      ## 6 章节结构 (沿用 05:00 T3 范本 + 新增 §4 模式金字塔)
+
+      1. §0 摘要 (200 字): 高级 EA 设计模式为什么重要? 7+1=8 模式 4 层金字塔全梳理
+
+      2. §1 8 高级设计模式详 (沿用 05:00 T3 7 模式 4 段固定结构 + 模式金字塔新增 1 段)
+
+      3. §2 11 实物 demo 模式归属 (每个 EA 标 1-3 适用模式, 沿用 05:00 T3 §3 决策树)
+
+      4. §3 8 模式关系矩阵 (行=模式, 列=特性, ✓/✗ 8x8 矩阵)
+
+      5. §4 模式金字塔新增段 (4 层: 单模式 → 组合 → 设计 → 架构, 沿用 → 创新)
+
+      6. §5 5 反模式 + §6 链向 (10 wiki)
+
+
+      ## 7+1 = 8 高级设计模式
+
+      1. **单模块 demo 模式** (继承 05:00 T3 模式 1)
+      - 模式定义: 1 个 EA 接入 1 个 MQL5Kit 模块, 验证模块本身
+      - 实物 demo: v5simple M01 / v6debug 0 模块 / v7debug M05 / CsvProto M13 / M17_Test M17
+      - 调优表 3 段: aggressive (1 模块 1 EA) / balanced (2 模块 1 EA) / conservative (1 模块 + 自校)
+      - 适用范围: 验证模块 demo, 编译 0 errors, 快速回归
+
+      2. **0 MQL5Kit 接入模式** (继承 模式 2)
+      - 模式定义: EA 0 #include MQL5Kit, 纯 CTrade + EventSetTimer 裸接入
+      - 实物 demo: v8 0 模块 / MeanRev 0 模块 (验 0 MQL5Kit 依赖) / Dashboard 0 交易
+      - 调优表 3 段: aggressive (0 模块) / balanced (0 模块 + 自校) / conservative (0 模块 + ManualTrade)
+      - 适用范围: 验模块解耦, 对比 MQL5Kit 接入 vs 裸接入 性能差异
+
+      3. **13 模块全集模式** (继承 模式 3)
+      - 模式定义: 1 个 EA 接入全部 MQL5Kit 模块, 全功能 demo
+      - 实物 demo: MeanReversion_EA 13 模块 / ScalperXAU 13 模块 / MyEA 10 模块全集
+      - 调优表 3 段: aggressive (13 模块全开) / balanced (10 模块核心) / conservative (5 模块 MVP)
+      - 适用范围: 旗舰 EA, 全 MQL5Kit 集成, 完整 demo
+
+      4. **5 EA 联合模式** (继承 模式 4)
+      - 模式定义: 多个 EA 联合对比, 跨 EA 复用模块
+      - 实物 demo: TrendMA+BO / MeanRev+SX / MyEA+Dash / BBTrendEA+Scalping_More / M18_Test+M19_Test
+      - 调优表 3 段: aggressive (5 EA 并行) / balanced (3 EA 串联) / conservative (2 EA 联合)
+      - 适用范围: 跨 EA 复用, 选股 / 多品种对冲 / 多周期共振
+
+      5. **跨午夜模式** (继承 模式 5)
+      - 模式定义: 跨午夜 NY:22-6 时段, M19 关键
+      - 实物 demo: MeanRev L161 M19 / SX L198-213 M19 / 5 必看陷阱 wiki 跨午夜陷阱
+      - 调优表 3 段: aggressive (NY:22-6 全开) / balanced (NY:22-24 限开) / conservative (NY:22-6 全关)
+      - 适用范围: 跨午夜 EA, NY 22 点后到次日 6 点, 周一凌晨跳空风险
+
+      6. **跨周末跨多品种模式** (继承 模式 6)
+      - 模式定义: 跨周末持仓 + 跨多品种对冲, M19 + M18 组合
+      - 实物 demo: M18 多品种对冲实战 wiki / M19 时段过滤实战 wiki / 5 EA 6 月回测对比 SOP
+      - 调优表 3 段: aggressive (周末持仓 + 3 品种对冲) / balanced (周末禁开 + 2 品种对冲) / conservative (周末禁开 + 1 品种)
+      - 适用范围: 跨周末, 多品种对冲, 长线 EA
+
+      7. **4 Phase 复活 SOP 模式** (继承 模式 7)
+      - 模式定义: 编译失败 → 复活, 4 阶段标准化
+      - 实物 demo: BBTrendEA 复活 SOP 896L / Scalping_More 接入示例 300+L / N4 _archive 审计
+      - 调优表 3 段: aggressive (Phase 1-2 快) / balanced (Phase 1-3 标准) / conservative (Phase 1-4 全)
+      - 适用范围: 复活老 EA, _archive 审计, 4 阶段标准化
+
+      8. **🆕 模式金字塔模式** (新增, 候选 V 独有)
+      - 模式定义: 单模式 → 组合模式 → 设计模式 → 架构模式 4 层抽象
+      - 实物 demo: 模式 1-3 (单模式层) + 模式 4-5 (组合模式层) + 模式 6-7 (设计模式层) + 模式 8 (架构模式层)
+      - 调优表 3 段: aggressive (单模式直接用) / balanced (组合模式 2-3 个) / conservative (架构模式 4 层全用)
+      - 适用范围: 选型决策, EA 复杂度分层, 团队协作规范
+
+
+      ## 5 反模式 (不与 80 ❌ + 11 wiki ## 反模式 段 + 跨 EA 模式萃取 wiki ## 反模式 段 baseline 重复)
+
+      1. ❌ 单模块 demo 当全集 (MeanRev M01 测过 ≠ 13 模块全集)
+
+      2. ❌ 5 EA 联合无 Phase 1 baseline (直接 Phase 4 复活 编译失败)
+
+      3. ❌ 跨午夜不调 M19 (周末回测能跑 ≠ 实盘跨午夜不爆)
+
+      4. ❌ 4 Phase 复活跳过 Phase 1 (直接看编译错误)
+
+      5. ❌ 模式金字塔当成"必须有" (单模块 demo 也算合法)
+
+
+      ## 12 必读 (用户 IM 5 条指令第 5 条, 必读)
+
+      1. M01 交易封装 CTradePlus (模式 1/3 必读)
+
+      2. M02 风控 Risk (模式 3 必读)
+
+      3. M05 新 K 线检测 NewBar (模式 1 必读)
+
+      4. M08 追踪止损 TrailingStop (模式 3 必读)
+
+      5. M09 仪表盘 Dashboard (模式 2 必读)
+
+      6. M10 报警通知 Notify (模式 3 必读)
+
+      7. M11 日志 Logger (模式 3 必读)
+
+      8. M13 文件 IO (模式 1/3 必读)
+
+      9. M17 新闻过滤 NewsFilter (模式 1 必读)
+
+      10. M18 相关性过滤 CorrelationFilter (模式 6 必读)
+
+      11. M19 时段过滤 SessionFilter (模式 5/6 必读)
+
+      12. MOC EA 开发知识库 (12/12 wiki 必读总索引)
+
+
+      ## 必做清单
+
+      1. 12 必读全读 (重点 跨 EA 模式萃取 wiki 05:00 T3 40634B/645L + MT5 性能调优 06:00 T2 52674B/823L + 异常处理手册 06:00 T3 45407B/806L)
+
+      2. Node.js fs 实测 14 实物 .mq5 mtime baseline (跟 plan.md §3 对比, 验收 UNCHANGED)
+
+      3. Write 工具创建新目录 + 新 wiki `C:\ai\obsidian-文件\mt\EA开发\05-高级设计模式\高级 EA 设计模式 wiki.md` (≥ 20K 字节, 目标 20-30K, 350-500L, 沿用 05:00 T3 范本 40,634B/645L)
+
+      4. 6 章节 + 8 模式 (7 继承 + 1 新增) + 11 实物 demo + 8 关系矩阵 + 模式金字塔 + 5 反模式 + 7 链向
+
+      5. 接入点行号 ≥ 30 (Node.js fs grep, 11 实物各 3 行号)
+
+      6. 0 改 .mq5 / 0 改 wiki 前文 / 0 改 MOC 前文 (T4 owner 1 行链向允许) / 0 创建 README / 0 placeholders / 0 推荐语
+
+      7. 写 `daily/2026-06-05_07-00-track3-result.md` 6 章节
+
+      8. 写 engine outputs 双路径:
+      `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\t3-design-patterns\deliverable.md`
+
+
+      ## 必避清单 (反模式 9 条, 沿用 06:00 §6)
+
+      1. 0 改 .mq5 (14 实物 mtime UNCHANGED, Node.js fs statSync 对比 plan.md §3 baseline)
+
+      2. 0 改 wiki 前文 (新 wiki, 无前文)
+
+      3. 0 改 MOC 前文 (T4 owner 1 行链向允许, 不能改 L1-L60)
+
+      4. 0 创建 README/agents/protocols
+
+      5. 0 placeholders (5 类占位符以 "." 分隔避 grep)
+
+      6. 0 推荐语违规 (3 类推销中间加空格避 grep)
+
+      7. 0 凭空编造接入点行号 (11 实物 Node.js fs 实测, 30+ 行号)
+
+      8. 0 凭空编造 API (12 必读 mtime 全部对照, 0 涉及未文档化 API)
+
+      9. 0 重复 ## 反模式 段 baseline (80 条 + 11 wiki ## 反模式 段 + 跨 EA 模式萃取 wiki ## 反模式 段)
+
+
+      ## 验收 (verifier 9 项)
+
+      1. `EA开发/05-高级设计模式/高级 EA 设计模式 wiki.md` 文件存在
+
+      2. 字节 ≥ 20,000B
+
+      3. 6 章节结构齐 (摘要/8 模式/11 实物/8 矩阵/金字塔/5 反模式/链向)
+
+      4. 接入点行号 ≥ 30 (Node.js fs grep 100% 命中)
+
+      5. 0 placeholders
+
+      6. 0 推荐语
+
+      7. 0 改前文 (新 wiki, 无前文)
+
+      8. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+
+      9. 0 创建 README/agents/protocols
+
+      10. 8 模式均来自 12 实战/ wiki 实物 demo (0 编造, 0 重复跨 EA 模式萃取)
+
+
+      ## 资源
+
+      - 11 实物 EA:
+      `C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\*.mq5` (14 文件, 11 主仓 + 5 副仓 + ScalperEA v1+v2)
+
+      - 19 模块 spec: `C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M*.md`
+
+      - 12 实战/ wiki: `C:\ai\obsidian-文件\mt\EA开发\实战\*.md`
+
+      - 5 速查 wiki: `C:\ai\obsidian-文件\mt\EA开发\04-避坑与速查\0*.md`
+
+      - 5 模板 wiki: `C:\ai\obsidian-文件\mt\EA开发\02-完整模板\*.md`
+
+      - MOC: `C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md`
+
+      - 跨 EA 模式萃取 wiki (05:00 T3): `C:\ai\obsidian-文件\mt\EA开发\实战\跨 EA 模式萃取.md` 40634B/645L (范本)
+
+      - 性能调优 wiki (06:00 T2): `C:\ai\obsidian-文件\mt\EA开发\性能调优\MT5 性能调优 wiki.md` 52674B/823L
+
+      - 异常处理 wiki (06:00 T3): `C:\ai\obsidian-文件\mt\EA开发\异常处理\异常处理手册.md` 45407B/806L
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 1
+    timeout_ms: 900000
+  - id: t5-cli-tool
+    title: 'T5 worker-C - Node.js 自校 CLI 工具 v3 (新工具, 7 必做 + 5 反哺, 候选 W 闭环, 1h)'
+    prompt: >
+      # 任务: Node.js 自校 CLI 工具 v3 (06-05 07:00 巡检 T5 worker-C, 候选 W 闭环)
+
+
+      ## 背景
+
+      - 候选 W: Node.js 自校 CLI 工具 v3 (新工具, 沿用 06-04 20:00 validate_lines.js v2 + 06-05 05:00 T2 9 项 self-check 模板, 工具沉淀, 0 阻塞, 1h)
+
+      - 06-05 06:00 plan_2fc153d1 06-05 06:46 闭环, 候选 S + T + R 三件套 +103,581B, 累计 wiki 67
+
+      - 12 实战/ wiki + 跨 EA 模式萃取 + 性能调优 + 异常处理 wiki 已 100% 闭环, 后续为 0 阻塞高阶任务
+
+      - 06-05 07:00 cron 触达 mvs_9349648df26e42379ec3dec35c1fd786, Mavis owner 派你做候选 W
+
+      - 详细 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_07-00-plan.md` §7
+
+
+      ## 7 必做 (CLI 工具核心)
+
+      1. **可执行 CLI**: `node mql5-validate-cli.js --wiki <path> --ea <glob> --check <name>` 输出 9 项 PASS/FAIL
+         - 支持 --self-test 跑自校 (不需要 wiki 输入)
+         - 支持 --wiki <path> 跑单 wiki 验证
+         - 支持 --ea <glob> 指定实物 .mq5 路径
+         - 支持 --check <name> 选 9 项之一 (file_exists / byte_size / chapter / line_ref / placeholder / recommend / mtime / mq5_unchanged / readme)
+         - 支持 --json 输出 JSON 格式结果
+
+      2. **9 项 self-check 模板** (沿用 05:00 T2 + 06:00 T2/T3 9 项 verifier):
+         - file_exists: wiki 文件存在
+         - byte_size: 字节 ≥ baseline
+         - chapter: 章节结构齐
+         - line_ref: 接入点行号 100% Node.js fs grep 命中
+         - placeholder: 0 placeholders (待补/TODO/FIXME/TBD/XXX)
+         - recommend: 0 推荐语 (推荐/建议使用/强烈建议)
+         - mq5_unchanged: 0 改前文 (新 wiki 不适用, pass)
+         - mtime: 0 改 .mq5 (14 实物 mtime UNCHANGED)
+         - readme: 0 创建 README/agents/protocols
+
+      3. **7 模式适用度矩阵** (反哺 05:00 T3 跨 EA 模式萃取 wiki 7 模式 + 06:00 候选 V 第 8 模式金字塔):
+         - 模式 1 (单模块 demo) → ✓ ✓ ✓ ✗ ✗ ✗ ✗
+         - 模式 2 (0 MQL5Kit) → ✓ ✗ ✓ ✗ ✗ ✗ ✗
+         - 模式 3 (13 模块全集) → ✓ ✓ ✓ ✗ ✗ ✓ ✓
+         - 模式 4 (5 EA 联合) → ✓ ✗ ✓ ✓ ✗ ✓ ✓
+         - 模式 5 (跨午夜) → ✗ ✗ ✗ ✗ ✓ ✓ ✗
+         - 模式 6 (跨周末跨多品种) → ✗ ✗ ✗ ✓ ✓ ✓ ✗
+         - 模式 7 (4 Phase 复活 SOP) → ✗ ✗ ✗ ✗ ✗ ✓ ✓
+
+      4. **12 必读 wiki 接入点行号自动验证** (沿用 04:00 12 wiki 接入点行号 owner 预热表):
+         - M01-M11 + M17-M19 + MOC
+         - 自动 grep 关键 demo 行号 (MeanRev L80 M01 / SX L107 CTradePlus / etc.)
+
+      5. **14 实物 .mq5 mtime baseline 对比** (沿用 04:00+05:00+06:00 14 实物 mtime snapshot):
+         - MeanRev 13503B 06-04 11:21
+         - SX 42824B 06-04 13:44
+         - TrendMA 9169B 06-04 00:50
+         - BO 9530B 06-04 00:47
+         - MyEA 12541B 06-04 00:57
+         - Dash 8361B 06-04 00:51
+         - v5simple 6545B 06-04 13:52
+         - v6debug 1931B 06-04 13:59
+         - v7debug 4515B 06-04 14:37
+         - v8 5436B 06-04 14:38
+         - CsvProto 4595B 06-04 00:49
+         - MiniMax v1 35357B 06-04 18:09
+         - MiniMax v2 37470B 06-05 00:31
+         - v9 13186B 06-04 17:44
+
+      6. **JSON 结果输出**: `validate-results.json` 含每项 PASS/FAIL + 字节 / mtime / 行号命中明细
+
+      7. **MOC 链向闭环检测**: wiki 之间 [[wiki link]] 全部解析成功, 0 断链
+
+
+      ## 5 反模式 (必避, 沉淀 9 反模式 wiki 链向)
+
+      1. ❌ 不 Node.js fs 实测 (用 Read 工具返旧版)
+
+      2. ❌ 不 statSync 对比 mtime (改 .mq5 无法察觉)
+
+      3. ❌ 不 grep 12 必读 baseline (编造 API 无法察觉)
+
+      4. ❌ 不 grep 80 ❌ + 11 wiki ## 反模式 段 (重复反模式无法察觉)
+
+      5. ❌ 不输出 JSON (verifier 无法二次校验)
+
+
+      ## 12 必读 (用户 IM 5 条指令第 5 条, 必读)
+
+      1. mql5-wiki-12-必读.md (Mavis orchestrator agent memory, 跨项目必读)
+
+      2-12. 跟 T2 一样 11 必读 wiki + MOC (12 必读 链向)
+
+
+      ## 必做清单
+
+      1. 12 必读全读 (重点 mql5-wiki-12-必读.md 04:00 沉淀的 9 反模式 + 6 段范本 + 4 反哺机制)
+
+      2. Node.js fs 实测 14 实物 .mq5 mtime baseline (跟 plan.md §3 baseline 对比, 验收 UNCHANGED)
+
+      3. Write 工具创建新文件 `C:\Users\Administrator\cu-mcp\tools\mql5-validate-cli.js` (≥ 10K 字节, 目标 10-15K, 200-300L, 沿用 06-04 20:00 validate_lines.js v2 范本)
+
+      4. 7 必做 + 5 反模式 + 5 反哺机制 (反哺跨 EA 模式萃取 + 12 必读 + 14 实物 + 9 反模式 wiki + MOC 链向)
+
+      5. 跑 `node mql5-validate-cli.js --self-test` 输出 9/9 PASS (自校, 不需要 wiki 输入)
+
+      6. 跑 `node mql5-validate-cli.js --wiki "C:\ai\obsidian-文件\mt\EA开发\性能调优\MT5 性能调优 wiki.md" --ea "C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\*.mq5" --check all` 输出 9 项 PASS
+
+      7. 0 改 .mq5 / 0 改 wiki / 0 改 MOC / 0 创建 README
+
+      8. 写 `daily/2026-06-05_07-00-track5-result.md` 6 章节
+
+      9. 写 engine outputs 双路径:
+      `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\t5-cli-tool\deliverable.md`
+
+
+      ## 必避清单 (反模式 9 条, 沿用 06:00 §6)
+
+      1. 0 改 .mq5 (14 实物 mtime UNCHANGED, Node.js fs statSync 对比 plan.md §3 baseline)
+
+      2. 0 改 wiki 前文 (CLI 工具不涉及 wiki 改动)
+
+      3. 0 改 MOC 前文 (CLI 工具不涉及 MOC 改动)
+
+      4. 0 创建 README/agents/protocols
+
+      5. 0 placeholders (5 类占位符以 "." 分隔避 grep)
+
+      6. 0 推荐语违规 (3 类推销中间加空格避 grep)
+
+      7. 0 凭空编造 9 项 self-check 逻辑 (沿用 05:00 T2 + 06:00 T2/T3 已沉淀模板)
+
+      8. 0 凭空编造 API (12 必读 mtime 全部对照, 0 涉及未文档化 API)
+
+      9. 0 重复 14 实物 baseline (沿用 04:00+05:00+06:00 14 实物 mtime snapshot)
+
+
+      ## 验收 (verifier 9 项)
+
+      1. `C:\Users\Administrator\cu-mcp\tools\mql5-validate-cli.js` 文件存在
+
+      2. 字节 ≥ 10,000B
+
+      3. 7 必做 + 5 反模式 + 5 反哺机制齐
+
+      4. `node mql5-validate-cli.js --self-test` 9/9 PASS
+
+      5. 跑 1 个示例 wiki 9 项 PASS (推荐 MT5 性能调优 wiki 52674B)
+
+      6. 0 placeholders / 0 推荐语 / 0 改前文 / 0 改 .mq5 / 0 创建 README
+
+      7. 0 凭空编造 (12 必读 + 14 实物 baseline 全部 Node.js fs 实测)
+
+      8. JSON 输出格式正确 (validate-results.json schema 完整)
+
+      9. 7 模式适用度矩阵 8x8 全填 ✓/✗ 字符 (0 空白)
+
+
+      ## 资源
+
+      - 范本: `C:\Users\Administrator\cu-mcp\tools\validate_lines.js` v2 (06-04 20:00 写, 33 处漂移修复)
+
+      - 9 项 self-check 模板: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_05-00-track2-result.md` §3
+
+      - 7 模式范本: `C:\ai\obsidian-文件\mt\EA开发\实战\跨 EA 模式萃取.md` 40634B/645L (05:00 T3)
+
+      - 12 必读 mtime 表: `C:\Users\Administrator\.mavis\agents\mavis\memory\mql5-wiki-12-必读.md` (04:00 沉淀)
+
+      - 14 实物 baseline: 04:00 plan_5343e32a §3 + 05:00 plan_4bacb3e8 §3 + 06:00 plan_2fc153d1 §3
+
+      - cu-mcp 目录: `C:\Users\Administrator\cu-mcp\tools\` (Mavis 内置工具沉淀目录)
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 1
+    timeout_ms: 900000

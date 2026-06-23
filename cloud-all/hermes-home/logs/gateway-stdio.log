@@ -1,0 +1,46 @@
+[33m⚠ Deprecated .env settings detected:[0m
+  [33m⚠[0m TERMINAL_CWD=C:\Users\Administrator\AppData\Local\Hermes Agent CN Desktop found in .env — this is deprecated.
+  [2mMove to config.yaml instead:  terminal:\n    cwd: /your/project/path[0m
+  [2mThen remove the old entries from C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home/.env[0m
+
+WARNING gateway.run: Feishu: lark-oapi not installed or FEISHU_APP_ID/SECRET not set
+WARNING gateway.run: No adapter available for feishu
+ERROR cron.scheduler: Job 'daily-digest' failed: ImportError: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\cron\scheduler.py", line 1625, in _run_job_impl
+    agent = AIAgent(
+            ^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\run_agent.py", line 387, in __init__
+    init_agent(
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\agent\agent_init.py", line 646, in init_agent
+    agent._anthropic_client = build_anthropic_client(effective_key, base_url, timeout=_provider_timeout)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\agent\anthropic_adapter.py", line 680, in build_anthropic_client
+    raise ImportError(
+ImportError: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'
+ERROR cron.scheduler: Job 'daily-digest' failed: ImportError: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\cron\scheduler.py", line 1625, in _run_job_impl
+    agent = AIAgent(
+            ^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\run_agent.py", line 387, in __init__
+    init_agent(
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\agent\agent_init.py", line 646, in init_agent
+    agent._anthropic_client = build_anthropic_client(effective_key, base_url, timeout=_provider_timeout)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\agent\anthropic_adapter.py", line 680, in build_anthropic_client
+    raise ImportError(
+ImportError: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'
+ERROR cron.scheduler: Job 'daily-digest' failed: ImportError: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\cron\scheduler.py", line 1625, in _run_job_impl
+    agent = AIAgent(
+            ^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\run_agent.py", line 387, in __init__
+    init_agent(
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\agent\agent_init.py", line 646, in init_agent
+    agent._anthropic_client = build_anthropic_client(effective_key, base_url, timeout=_provider_timeout)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\hermes\hermes-agent\agent\anthropic_adapter.py", line 680, in build_anthropic_client
+    raise ImportError(
+ImportError: The 'anthropic' package is required for the Anthropic provider. Install it with: pip install 'anthropic>=0.39.0'

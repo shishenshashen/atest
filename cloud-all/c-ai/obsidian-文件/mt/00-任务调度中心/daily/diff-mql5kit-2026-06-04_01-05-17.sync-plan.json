@@ -1,0 +1,108 @@
+{
+  "generated": "2026-06-04T01:36:26.736Z",
+  "report": "C:\\ai\\obsidian-文件\\mt\\00-任务调度中心\\daily\\diff-mql5kit-2026-06-04_01-05-17.md",
+  "canonical": "b = <sandbox>/Include/MQL5Kit/",
+  "non_canonical": "a = <sandbox>/Experts/Include/MQL5Kit/",
+  "stats": {
+    "same": 17,
+    "a_newer": 0,
+    "b_newer": 0,
+    "conflict": 0,
+    "a_only": 0,
+    "b_only": 0,
+    "total": 17,
+    "copy_a_to_b": 0,
+    "copy_b_to_a": 0,
+    "skip": 17,
+    "conflict_pending": 0
+  },
+  "a_files_after_sync": 17,
+  "write_gitkeep": false,
+  "actions": [
+    {
+      "tag": "skip",
+      "file": "M01_CTradePlus.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M02_Risk.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M03_PositionSizing.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M04_IndicatorPool.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M05_NewBar.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M06_Signal.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M07_Positions.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M08_TrailingStop.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M09_Dashboard.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M10_Notify.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M11_Logger.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M12_GV.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M13_FileIO.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M14_Drawer.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M15_TimerService.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M16_Cleanup.mqh",
+      "extra": "both same"
+    },
+    {
+      "tag": "skip",
+      "file": "M17_NewsFilter.mqh",
+      "extra": "both same"
+    }
+  ]
+}

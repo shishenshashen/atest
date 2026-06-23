@@ -1,0 +1,743 @@
+{
+  "started_at": "2026-06-16T07:32:16.259220+00:00",
+  "duration_seconds": 3189.99,
+  "model": "MiniMax-M3",
+  "provider": "minimax-cn",
+  "auto_transitions": {
+    "marked_stale": 0,
+    "archived": 0,
+    "reactivated": 0,
+    "checked": 74,
+    "seeded": 70
+  },
+  "counts": {
+    "before": 74,
+    "after": 73,
+    "delta": -1,
+    "archived_this_run": 1,
+    "added_this_run": 0,
+    "consolidated_this_run": 0,
+    "pruned_this_run": 1,
+    "state_transitions": 0,
+    "cron_jobs_rewritten": 0,
+    "tool_calls_total": 171
+  },
+  "tool_call_counts": {
+    "terminal": 148,
+    "read_file": 11,
+    "skill_view": 1,
+    "search_files": 1,
+    "todo": 3,
+    "patch": 7
+  },
+  "archived": [
+    "nano-pdf"
+  ],
+  "consolidated": [],
+  "pruned": [
+    {
+      "name": "nano-pdf",
+      "source": "no-evidence fallback",
+      "reason": ""
+    }
+  ],
+  "pruned_names": [
+    "nano-pdf"
+  ],
+  "added": [],
+  "state_transitions": [],
+  "cron_rewrites": {
+    "rewrites": [],
+    "jobs_updated": 0,
+    "jobs_scanned": 3
+  },
+  "llm_final": "Most are at v1.0.0. Nothing indicates obsolescence. The library is just fresh.\n\nLet me also look at the description fields one more time to confirm none look like salvage/audit artifacts:",
+  "llm_summary": "Most are at v1.0.0. Nothing indicates obsolescence. The library is just fresh.\n\nLet me also look at the description fields one more time to confirm none look like salvage/audit artifacts:",
+  "llm_error": null,
+  "tool_calls": [
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/ 2>/dev/null | head -100\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/ 2>/dev/null && echo \\\"---\\\" && find ~/.hermes -name \\\"SKILL.md\\\" -not -path \\\"*/node_modules/*\\\" 2>/dev/null | head -20\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills list 2>&1 | head -50\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills list 2>&1 | tail -60\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills --help 2>&1 | head -40\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find / -name \\\"SKILL.md\\\" -path \\\"*/skills/*\\\" 2>/dev/null | grep -v github-mirror | head -50\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills inspect airtable 2>&1 | head -30\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills inspect airtable 2>&1 | head -30 &\\nPID=$!\\nsleep 5\\nkill -9 $PID 2>/dev/null\\necho \\\"---killed\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.config/hermes-agent 2>/dev/null; ls ~/.local/share/hermes-agent 2>/dev/null; find ~ -maxdepth 4 -name \\\"skills\\\" -type d 2>/dev/null | head -10\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/ 2>/dev/null; echo \\\"---\\\"; ls /c/Users/Administrator/.hermes/skills 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find / -maxdepth 8 -name \\\"airtable\\\" -type d 2>/dev/null | grep -i skill | head -10\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find / -maxdepth 10 -name \\\"SKILL.md\\\" 2>/dev/null | xargs -I {} dirname {} 2>/dev/null | xargs -I {} basename {} 2>/dev/null | sort -u | head -100\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find /c/Users/Administrator -name \\\"SKILL.md\\\" 2>/dev/null | head -100\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find / -name \\\"config.yaml\\\" -path \\\"*hermes*\\\" 2>/dev/null | head -10\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/ -la 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cat ~/.hermes/.cli_capabilities.json 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Local/hermes\\\" 2>/dev/null; echo \\\"---\\\"; ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop\\\" 2>/dev/null | head\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/skills\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/skills\\\" -name \\\"SKILL.md\\\" 2>/dev/null | head -100\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills inspect airtable --path 2>&1 &\\nPID=$!\\nsleep 3\\nkill -9 $PID 2>/dev/null\\necho done\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills config 2>&1 | head -30\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/\\\" 2>/dev/null; echo \\\"---\\\"; find \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/\\\" -maxdepth 4 -type d 2>/dev/null | head -20\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cat \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/config.yaml\\\" 2>/dev/null | head -50\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -i \\\"skill\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/config.yaml\\\" 2>/dev/null | head -20\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -A 5 -B 2 \\\"skills\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/config.yaml\\\" 2>/dev/null | head -50\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -B 2 -A 10 \\\"external_dirs\\\\|skills:\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/config.yaml\\\" 2>/dev/null | head -30\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cat \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/state.db\\\" 2>/dev/null | head -2; echo \\\"---\\\"; sqlite3 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/state.db\\\" \\\"SELECT name, root_path FROM skills ORDER BY name;\\\" 2>&1 | head -20\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python -c \\\"\\nimport sqlite3\\ndb = sqlite3.connect(r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/state.db')\\ncur = db.cursor()\\n# Find skills-related tables\\ncur.execute(\\\\\\\"SELECT name FROM sqlite_master WHERE type='table'\\\\\\\")\\nfor t in cur.fetchall():\\n    if 'skill' in t[0].lower() or t[0].lower() in ('skills',):\\n        print(t[0])\\n\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python -c \\\"\\nimport sqlite3\\ndb = sqlite3.connect(r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/state.db')\\ncur = db.cursor()\\ncur.execute(\\\\\\\"SELECT name FROM sqlite_master WHERE type='table'\\\\\\\")\\ntables = cur.fetchall()\\nprint('Total tables:', len(tables))\\nfor t in tables:\\n    print(t[0])\\n\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/index-cache/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/\\\" 2>/dev/null; echo \\\"---\\\"; ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/diagramming\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/apple\\\" 2>/dev/null; echo \\\"---\\\"; ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/apple/apple-notes\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/apple/apple-notes/SKILL.md\", \"limit\": 50}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"skill_view\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/ 2>/dev/null; echo \\\"---env---\\\"; echo \\\"HOME=$HOME\\\"; echo \\\"USERPROFILE=$USERPROFILE\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfor dir in \\\"$SKILLS_ROOT\\\"/*/; do\\n  for sub in \\\"$dir\\\"*/; do\\n    if [ -f \\\"$sub/SKILL.md\\\" ]; then\\n      name=$(basename \\\"$sub\\\")\\n      echo \\\"=== $name ===\\\"\\n      head -20 \\\"$sub/SKILL.md\\\" | grep -E \\\"^(name|description):\\\" | head -2\\n    fi\\n  done\\ndone 2>&1 | hea…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfor dir in \\\"$SKILLS_ROOT\\\"/*/; do\\n  for sub in \\\"$dir\\\"*/; do\\n    if [ -f \\\"$sub/SKILL.md\\\" ]; then\\n      name=$(basename \\\"$sub\\\")\\n      echo \\\"=== $name ===\\\"\\n      head -20 \\\"$sub/SKILL.md\\\" | grep -E \\\"^(name|description):\\\" | head -2\\n    fi\\n  done\\ndone 2>&1 | tai…"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/plan/SKILL.md\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/writing-plans/SKILL.md\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/subagent-driven-development/SKILL.md\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/subagent-driven-development/\\\" 2>/dev/null; echo \\\"---\\\"; ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/plan/\\\" 2>/dev/null; echo \\\"---\\\"; ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.herme…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/subagent-driven-development/references/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in claude-design design-md popular-web-designs pretext sketch; do\\n  echo \\\"=== $skill ===\\\"\\n  head -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in architecture-diagram excalidraw; do\\n  echo \\\"=== $skill ===\\\"\\n  head -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in apple-notes apple-reminders findmy imessage macos-computer-use; do\\n  echo \\\"=== $skill ===\\\"\\n  head -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/apple/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in hermes-agent-skill-authoring hermes-python-on-windows-msys hermes-s6-container-supervision debugging-hermes-tui-commands; do\\n  echo \\\"=== $skill ===\\\"\\n  head -15 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in heartmula songsee songwriting-and-ai-music songsee gif-search youtube-content spotify; do\\n  echo \\\"=== $skill ===\\\"\\n  head -12 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/media/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in ascii-art ascii-video manim-video p5js pixel-art comfyui touchdesigner-mcp; do\\n  echo \\\"=== $skill ===\\\"\\n  head -12 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in baoyu-article-illustrator baoyu-comic baoyu-infographic; do\\n  echo \\\"=== $skill ===\\\"\\n  head -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\\necho \\\"---SIZES---\\\"\\nfor skill in baoyu-article-illustrator baoyu-comic baoyu-infographic; do\\n  wc -l \\\"C:/Users/Admini…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in arxiv blogwatcher llm-wiki polymarket research-paper-writing; do\\n  echo \\\"=== $skill ===\\\"\\n  head -12 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/research/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in airtable google-workspace linear notion ocr-and-documents powerpoint teams-meeting-pipeline nano-pdf maps; do\\n  echo \\\"=== $skill ===\\\"\\n  head -12 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in ocr-and-documents nano-pdf; do\\n  echo \\\"=== $skill ===\\\"\\n  head -40 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/ocr-and-documents/\\\" 2>/dev/null\\necho \\\"---\\\"\\nls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/nano-pdf/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/ocr-and-documents/scripts/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in python-debugpy node-inspect-debugger systematic-debugging; do\\n  echo \\\"=== $skill ===\\\"\\n  head -12 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in kanban-orchestrator kanban-worker webhook-subscriptions; do\\n  echo \\\"=== $skill ===\\\"\\n  head -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/devops/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in huggingface-hub llama-cpp serving-llms-vllm evaluating-llms-harness obliteratus weights-and-biases segment-anything-model audiocraft-audio-generation; do\\n  echo \\\"=== $skill ===\\\"\\n  head -10 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/mlops/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/mlops\\\" -name \\\"SKILL.md\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" 2>/dev/null | while read f; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n  desc=$(grep -E \\\"^description:\\\" \\\"$f\\\" | head -1 | sed 's/description: //')\\n  echo \\\"$name | $desc\\\"\\ndone | sort\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -mindepth 2 -maxdepth 2 -type d 2>/dev/null | while read d; do\\n  name=$(basename \\\"$d\\\")\\n  if [ -f \\\"$d/SKILL.md\\\" ]; then\\n    extras=$(ls \\\"$d\\\" 2>/dev/null | grep -v \\\"^SKILL.md$\\\" | tr '\\\\n' ',')\\n    if [ -n \\\"$extras\\\" ]; then\\n      echo \\\"$name:…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in spike test-driven-development requesting-code-review; do\\n  echo \\\"=== $skill ===\\\"\\n  head -15 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/$skill/SKILL.md\\\" 2>/dev/null\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfor skill in hermes-python-on-windows-msys; do\\n  echo \\\"=== $skill ===\\\"\\n  cat \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/$skill/SKILL.md\\\" 2>/dev/null | head -50\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | while read d; do\\n  catname=$(basename \\\"$d\\\")\\n  count=$(find \\\"$d\\\" -name \\\"SKILL.md\\\" 2>/dev/null | wc -l)\\n  echo \\\"$catname: $count skills\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.curator_backups\\\" 2>/dev/null\\necho \\\"---\\\"\\nls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.hub\\\" 2>/dev/null\\necho \\\"---\\\"\\nls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.archive\\\" 2>…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.curator_backups/2026-06-16T07-32-16Z\\\" 2>/dev/null\\necho \\\"---\\\"\\nls \\\"C:/Users/Administrator/.hermes/skills/.archive\\\" 2>/dev/null\\necho \\\"---\\\"\\nmkdir -p \\\"C:/Users/Administrator/.hermes/skills/.archive\\\"\\nls \\\"C:/Users/Administrator/.hermes/skills/.archive\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find \\\"C:/Users/Administrator\\\" -path \\\"*hermes*\\\" -name \\\"*.py\\\" 2>/dev/null | xargs grep -l \\\"archive\\\" 2>/dev/null | head -5\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find \\\"C:/Users/Administrator\\\" -path \\\"*hermes*\\\" -name \\\"curator*.py\\\" 2>/dev/null | head -5\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -n \\\"archive\\\" \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/agent/curator.py\\\" 2>/dev/null | head -20\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -n \\\"archive\\\" \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/hermes_cli/curator.py\\\" 2>/dev/null | head -20\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent\\\" -name \\\"skill_usage*\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -n \\\"archive\\\\|.archive\\\" \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/tools/skill_usage.py\\\" 2>/dev/null | head -30\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -n \\\"_skills_dir\\\" \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/tools/skill_usage.py\\\" 2>/dev/null | head -10\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/tools/skill_usage.py\", \"offset\": 59, \"limit\": 10}"
+    },
+    {
+      "name": "search_files",
+      "arguments": "{\"pattern\": \"def get_hermes_home\", \"target\": \"content\", \"path\": \"C:/Users/Administrator/AppData/Local/hermes/hermes-agent\", \"file_glob\": \"*.py\", \"output_mode\": \"content\", \"context\": 3}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -rn \\\"def get_hermes_home\\\" \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent\\\" 2>/dev/null | head -3\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -l \\\"def get_hermes_home\\\" \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent\\\"/*.py 2>/dev/null | head -3\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -A 30 \\\"def get_hermes_home\\\" \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/hermes_constants.py\\\" 2>/dev/null | head -40\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"echo \\\"HERMES_HOME=$HERMES_HOME\\\"\\nls -la \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.curator_backups/2026-06-16T07-32-16Z/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"limit\": 75, \"offset\": 480, \"path\": \"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/tools/skill_usage.py\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/autonomous-ai-agents/kanban-codex-lane/\\\" 2>/dev/null\\necho \\\"---\\\"\\nls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/autonomous-ai-agents/kanban-codex-lane/templates/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/autonomous-ai-agents/kanban-codex-lane/SKILL.md\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in huggingface-hub llama-cpp obliteratus serving-llms-vllm evaluating-llms-harness weights-and-biases; do\\n  echo \\\"=== $skill ===\\\"\\n  head -12 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/mlops/$skill/SKILL.md\\\" 2>/dev/null || \\\\\\n  find \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" 2>/dev/null | wc -l\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/ocr-and-documents/SKILL.md\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\" -name \\\"SKILL.md\\\" -path \\\"*ideation*\\\" 2>/dev/null\\necho \\\"---\\\"\\nls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/\\\" 2>/dev/null | grep -i idea\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"head -20 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/creative-ideation/SKILL.md\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\n# Check for any \\\"hermes-\\\" prefixed skills\\nfor skill in hermes-redaction-safe hermes-agent hermes-agent-skill-authoring hermes-python-on-windows-msys hermes-s6-container-supervision; do\\n  echo \\\"=== $skill ===\\\"\\n  find \\\"$SKILLS_ROOT\\\" -path \\\"*$skill*\\\" -name \\\"SKILL.md\\\"…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"wc -l \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/hermes-redaction-safe/SKILL.md\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/hermes-python-on-windows-msys/SKILL.md\\\" 2>/dev/null\\necho \\\"---\\\"\\nhead -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.…"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/hermes-redaction-safe/SKILL.md\", \"limit\": 100}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/cron/\\\" 2>/dev/null | head -20\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -E '\\\"skills\\\"' \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/cron/jobs.json\\\" 2>/dev/null | head -20\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python -c \\\"\\nimport json\\nwith open(r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/cron/jobs.json') as f:\\n    data = json.load(f)\\n# Check if plan or writing-plans are referenced\\nall_skills_refs = set()\\nfor job in data.get('jobs', []):\\n    for sk in job.get('skills', []):\\n        all_skills_refs.add(sk)\\nprint('Skills referenced in cron:'…"
+    },
+    {
+      "name": "todo",
+      "arguments": "{\"todos\": [{\"id\": \"1\", \"content\": \"Verify consolidation plan; ensure archive paths are correct\", \"status\": \"in_progress\"}, {\"id\": \"2\", \"content\": \"Consolidate writing-plans into plan (plan is superset)\", \"status\": \"pending\"}, {\"id\": \"3\", \"content\": \"Consolidate nano-pdf into ocr-and-documents as a section\", \"status\": \"pending\"}, {\"id\": \"4\", \"content\": \"Iterate \\u2014 find any further consolidation…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.archive\\\" 2>/dev/null\\necho \\\"---\\\"\\nls \\\"C:/Users/Administrator/.hermes/skills/.archive\\\" 2>/dev/null\\necho \\\"---\\\"\\n# Check both locations exist\\nmkdir -p \\\"C:/Users/Administrator/.hermes/skills/.archive\\\"\\necho \\\"After mkdir:\\\"\\nls \\\"C:/Users/Administrator/.hermes/skills/.archive\\\" 2>…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.archive\\\"\\nls -la \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.archive\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.usage.json\\\" 2>/dev/null && head -50 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.usage.json\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python -c \\\"\\nimport json\\nwith open(r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.usage.json') as f:\\n    data = json.load(f)\\nfor name in ['plan', 'writing-plans', 'nano-pdf', 'ocr-and-documents']:\\n    if name in data:\\n        print(f'{name}: state={data[name][\\\\\\\"state\\\\\\\"]}, use_count={data[name][\\\\\\\"use_count\\\\\\\"]}')\\n    else:\\…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/writing-plans/\\\" 2>/dev/null\\necho \\\"---\\\"\\n# Also check via find\\nfind \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\" -path \\\"*writing-plans*\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python -c \\\"\\nplan_lines = open(r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/plan/SKILL.md').readlines()\\nwp_lines = open(r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/writing-plans/SKILL.md').readlines()\\nprint(f'plan: {len(plan_lines)} lines, {…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python -c \\\"\\nplan_text = open(r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/plan/SKILL.md').read()\\nwp_text = open(r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/writing-plans/SKILL.md').read()\\n\\n# Check if writing-plans content is fully containe…"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/plan/SKILL.md\", \"offset\": 200, \"limit\": 50}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/plan/SKILL.md\", \"old_string\": \"---\\nname: plan\\ndescription: \\\"Plan mode: write an actionable markdown plan to .hermes/plans/, no execution. Bite-sized tasks, exact paths, complete code.\\\"\\nversion: 2.0.0\\nauthor: Hermes Agent (writing-craft adapted from ob…"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"### Step 6: Review the Plan\\n\\nCheck:\\n- [ ] Tasks are sequential and logical\\n- [ ] Each task is bite-sized (2-5 min)\\n- [ ] File paths are exact\\n- [ ] Code examples are complete (copy-pasteable)\\n- [ ] Commands are exact with expected output\\n- [ ] No missing context\\n- [ ] DRY, YAGNI, TDD principles applied\\n\\n### Step 7 (optional): Commit the plan to the rep…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Archive writing-plans\\nSRC=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/writing-plans\\\"\\nDEST=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.archive/writing-plans\\\"\\n\\n# Check no extra files\\necho \\\"=== Source contents ===\\\"\\nls -la \\\"$SRC\\\"\\n\\n# Create archive dir…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Mirror to prompt's archive path\\nSRC=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.archive/writing-plans\\\"\\nDEST_BASE=\\\"C:/Users/Administrator/.hermes/skills/.archive\\\"\\n\\nmkdir -p \\\"$DEST_BASE\\\"\\ncp -r \\\"$SRC\\\" \\\"$DEST_BASE/\\\"\\n\\nls -la \\\"$DEST_BASE/\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python -c \\\"\\nimport json\\nimport os\\nfrom datetime import datetime, timezone\\n\\nusage_path = r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.usage.json'\\nwith open(usage_path) as f:\\n    data = json.load(f)\\n\\n# Mark writing-plans as archived\\nnow = datetime.now(timezone.utc).isoformat()\\ndata['writing-plans'] = {\\n    'archived_at': no…"
+    },
+    {
+      "name": "todo",
+      "arguments": "{\"todos\": [{\"content\": \"Verify consolidation plan; ensure archive paths are correct\", \"id\": \"1\", \"status\": \"completed\"}, {\"content\": \"Consolidate writing-plans into plan (plan is superset)\", \"id\": \"2\", \"status\": \"completed\"}, {\"content\": \"Consolidate nano-pdf into ocr-and-documents as a section\", \"id\": \"3\", \"status\": \"in_progress\"}, {\"content\": \"Iterate \\u2014 find any further consolidation opport…"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"---\\nname: ocr-and-documents\\ndescription: \\\"PDF & document workflows: extract text from PDFs/scans (pymupdf, marker-pdf) AND edit PDF text/typos/titles via nano-pdf (NL prompts). One skill for read- and write-side PDF operations.\\\"\\nversion: 3.0.0\\nauthor: Hermes Agent\\nlicense: MIT\\nplatforms: [linux, macos, windows]\\nmetadata:\\n  hermes:\\n    tags: [PDF, Docum…"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/nano-pdf/SKILL.md\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"## Notes\\n\\n- `web_extract` is always first choice for URLs\\n- pymupdf is the safe default \\u2014 instant, no models, works everywhere\\n- marker-pdf is for OCR, scanned docs, equations, complex layouts \\u2014 install only when needed\\n- Both helper scripts accept `--help` for full usage\\n- marker-pdf downloads ~2.5GB of models to `~/.cache/huggingface/` on first …"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Check nano-pdf contents\\nls -la \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/nano-pdf/\\\"\\n\\n# Archive nano-pdf\\nSRC=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/nano-pdf\\\"\\nDEST=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/herme…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python -c \\\"\\nimport json\\nfrom datetime import datetime, timezone\\n\\nusage_path = r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.usage.json'\\nwith open(usage_path) as f:\\n    data = json.load(f)\\n\\nnow = datetime.now(timezone.utc).isoformat()\\n\\n# Mark nano-pdf as archived\\ndata['nano-pdf']['state'] = 'archived'\\ndata['nano-pdf']['arch…"
+    },
+    {
+      "name": "todo",
+      "arguments": "{\"todos\": [{\"content\": \"Verify consolidation plan; ensure archive paths are correct\", \"id\": \"1\", \"status\": \"completed\"}, {\"content\": \"Consolidate writing-plans into plan (plan is superset)\", \"id\": \"2\", \"status\": \"completed\"}, {\"content\": \"Consolidate nano-pdf into ocr-and-documents as a section\", \"id\": \"3\", \"status\": \"completed\"}, {\"content\": \"Iterate \\u2014 find any further consolidation opportun…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" 2>/dev/null | while read f; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n  echo \\\"$name\\\"\\ndone | sort\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\" -name \\\"SKILL.md\\\" -path \\\"*nano-pdf*\\\" 2>/dev/null\\necho \\\"---\\\"\\nfind \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\" -name \\\"SKILL.md\\\" -path \\\"*writing-plans*\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\n# Exclude .archive and .curator_backups\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" -not -path \\\"*/.curator_backups/*\\\" -not -path \\\"*/.hub/*\\\" 2>/dev/null | while read f; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n  echo \\\"…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" -not -path \\\"*/.curator_backups/*\\\" -not -path \\\"*/.hub/*\\\" 2>/dev/null | while read f; do\\n  lines=$(wc -l < \\\"$f\\\")\\n  bytes=$(wc -c < \\\"$f\\\")\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" -not -path \\\"*/.curator_backups/*\\\" -not -path \\\"*/.hub/*\\\" 2>/dev/null | while read f; do\\n  lines=$(wc -l < \\\"$f\\\")\\n  bytes=$(wc -c < \\\"$f\\\")\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"head -30 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/mlops/huggingface-hub/SKILL.md\\\" 2>/dev/null\\necho \\\"---LLAMA-CPP---\\\"\\nhead -30 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/mlops/inference/llama-cpp/SKILL.md\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"head -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/note-taking/obsidian/SKILL.md\\\" 2>/dev/null\\necho \\\"---LLM-WIKI---\\\"\\nhead -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/research/llm-wiki/SKILL.md\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"head -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/mlops/models/audiocraft/SKILL.md\\\" 2>/dev/null\\necho \\\"---\\\"\\nhead -25 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/mlops/models/segment-anything/SKILL.md\\\" 2>/dev/null\\necho \\\"---\\\"\\n# These have different paths - check the original…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" -not -path \\\"*/.curator_backups/*\\\" -not -path \\\"*/.hub/*\\\" 2>/dev/null | while read f; do\\n  lines=$(wc -l < \\\"$f\\\")\\n  bytes=$(wc -c < \\\"$f\\\")\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for s in obsidian youtube-content polymarket songsee apple-notes gif-search yuanbao openhue; do\\n  if [ -f \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/$s/SKILL.md\\\" ]; then\\n    fp=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/$s/SKILL.md\\\"\\n  else\\n    fp=$(fi…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"head -40 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/dogfood/SKILL.md\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"head -20 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/autonomous-ai-agents/codex/SKILL.md\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for s in heartmula songsee songwriting-and-ai-music; do\\n  echo \\\"=== $s ===\\\"\\n  fp=$(find \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\" -path \\\"*$s*\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" 2>/dev/null | head -1)\\n  head -20 \\\"$fp\\\"\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for s in touchdesigner-mcp comfyui manim-video p5js pixel-art ascii-video ascii-art; do\\n  echo \\\"=== $s ===\\\"\\n  fp=$(find \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\" -path \\\"*$s*\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" 2>/dev/null | head -1)\\n  head -10 \\\"$fp\\\"\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" -not -path \\\"*/.curator_backups/*\\\" -not -path \\\"*/.hub/*\\\" 2>/dev/null | while read f; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n  desc=$(grep -E \\\"^description:\\\" \\\"$f\\\" | head -…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Check if both use MCP\\ngrep -l \\\"MCP\\\\|mcp\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/touchdesigner-mcp/SKILL.md\\\" 2>/dev/null\\necho \\\"---\\\"\\ngrep -l \\\"MCP\\\\|mcp\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/comfyui/SKILL.md\\\" 2>/dev/null\\necho \\\"---\\\"\\n# Look a…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\n# Check messaging platforms\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" -not -path \\\"*/.curator_backups/*\\\" 2>/dev/null | xargs grep -l \\\"telegram\\\\|discord\\\\|slack\\\" 2>/dev/null | head -5\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Check Hermes-platform skills - how much overlap?\\necho \\\"=== hermes-agent-skill-authoring size ===\\\"\\nwc -l \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/hermes-agent-skill-authoring/SKILL.md\\\" 2>/dev/null\\necho \\\"\\\"\\necho \\\"=== hermes-python-on-windows-msys size ===\\\"\\nwc -l \\\"C:/Users/Administrator/AppData/Roami…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Check if comfyui has distinct workflow\\nls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/comfyui/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\n# Productivity skills\\nfor f in \\\"$SKILLS_ROOT/productivity\\\"/*/SKILL.md; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n  desc=$(grep -E \\\"^description:\\\" \\\"$f\\\" | head -1 | sed 's/description: //' | head -c 80)\\n  echo \\\"$name: $desc\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"head -20 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/google-workspace/SKILL.md\\\" 2>/dev/null\\necho \\\"---\\\"\\nhead -20 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/teams-meeting-pipeline/SKILL.md\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfor f in \\\"$SKILLS_ROOT/research\\\"/*/SKILL.md; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n  desc=$(grep -E \\\"^description:\\\" \\\"$f\\\" | head -1 | sed 's/description: //' | head -c 100)\\n  echo \\\"$name: $desc\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -E \\\"arxiv|research-paper\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/research/research-paper-writing/SKILL.md\\\" 2>/dev/null | head -5\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nls \\\"$SKILLS_ROOT/creative/\\\" | wc -l\\necho \\\"---\\\"\\nls \\\"$SKILLS_ROOT/creative/\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"head -40 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/humanizer/SKILL.md\\\" 2>/dev/null\\necho \\\"---\\\"\\nls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/creative/humanizer/\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\necho \\\"=== data-science ===\\\"\\nfind \\\"$SKILLS_ROOT/data-science\\\" -name \\\"SKILL.md\\\" 2>/dev/null | head -3\\necho \\\"\\\"\\necho \\\"=== mcp ===\\\"\\nfind \\\"$SKILLS_ROOT/mcp\\\" -name \\\"SKILL.md\\\" 2>/dev/null | head -3\\necho \\\"\\\"\\necho \\\"=== red-teaming ===\\\"\\nfind \\\"$SKILLS_ROOT/red-tea…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -E \\\"^name:\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/mem0/SKILL.md\\\" 2>/dev/null | head -1\\necho \\\"---\\\"\\ngrep -E \\\"^name:\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/vault-curator/SKILL.md\\\" 2>/dev/null | head -1\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -E \\\"^(name|description):\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/devops/kanban-orchestrator/SKILL.md\\\" 2>/dev/null | head -2\\necho \\\"---\\\"\\ngrep -E \\\"^(name|description):\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/devops/kanban-worker/SKILL.md\\\" 2>/dev/null | head -2\\ne…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfor f in \\\"$SKILLS_ROOT/gaming\\\"/*/SKILL.md; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n  desc=$(grep -E \\\"^description:\\\" \\\"$f\\\" | head -1 | sed 's/description: //' | head -c 80)\\n  echo \\\"$name: $desc\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfor dir in social-media smart-home; do\\n  echo \\\"=== $dir ===\\\"\\n  for f in \\\"$SKILLS_ROOT/$dir\\\"/*/SKILL.md; do\\n    name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n    desc=$(grep -E \\\"^description:\\\" \\\"$f\\\" | head -1 | sed 's/description: //' | head -c 80)\\n…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfor f in \\\"$SKILLS_ROOT/email\\\"/*/SKILL.md; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n  desc=$(grep -E \\\"^description:\\\" \\\"$f\\\" | head -1 | sed 's/description: //' | head -c 80)\\n  echo \\\"$name: $desc\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for s in claude-code codex opencode hermes-agent kanban-codex-lane; do\\n  echo \\\"=== $s ===\\\"\\n  fp=$(find \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\" -path \\\"*$s*\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" 2>/dev/null | head -1)\\n  head -10 \\\"$fp\\\"\\n  echo \\\"\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"SKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfor f in \\\"$SKILLS_ROOT/software-development\\\"/*/SKILL.md; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/name: //')\\n  desc=$(grep -E \\\"^description:\\\" \\\"$f\\\" | head -1 | sed 's/description: //' | head -c 80)\\n  echo \\\"$name: $desc\\\"\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"echo \\\"=== Active archive (live hermes-home) ===\\\"\\nls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.archive/\\\"\\necho \\\"\\\"\\necho \\\"=== Mirror archive (~/.hermes/skills/.archive) ===\\\"\\nls \\\"C:/Users/Administrator/.hermes/skills/.archive/\\\"\\necho \\\"\\\"\\necho \\\"=== Verify writing-plans SKILL.md exists in archive ===\\\"\\nls \\\"C:/Users/Admin…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"echo \\\"=== plan/SKILL.md frontmatter ===\\\"\\nhead -20 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/plan/SKILL.md\\\"\\necho \\\"\\\"\\necho \\\"=== ocr-and-documents/SKILL.md frontmatter ===\\\"\\nhead -20 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/ocr-and-document…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"echo \\\"=== Plan: references check ===\\\"\\ngrep -E \\\"references/|templates/|scripts/|assets/\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/plan/SKILL.md\\\" 2>/dev/null\\necho \\\"\\\"\\necho \\\"=== ocr-and-documents: references check ===\\\"\\ngrep -E \\\"references/|templates/|scripts/|assets/\\\" \\\"C:/Users/Administrator/AppData…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/productivity/ocr-and-documents/scripts/\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Check if any active skill references writing-plans or nano-pdf\\necho \\\"=== Skills referencing writing-plans ===\\\"\\ngrep -rl \\\"writing-plans\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\" 2>/dev/null | grep -v \\\".archive\\\\|.curator_backups\\\\|.hub\\\" | head -5\\necho \\\"\\\"\\necho \\\"=== Skills referencing nano-pdf ===\\\"\\ngrep -rl \\\"nano-p…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep \\\"nano-pdf\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.bundled_manifest\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"head -10 \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.bundled_manifest\\\" 2>/dev/null\\necho \\\"---\\\"\\necho \\\"Active skill count:\\\"\\nwc -l \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.bundled_manifest\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Check what's in the manifest for the relevant skills\\ngrep \\\"nano-pdf\\\\|writing-plans\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.bundled_manifest\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -B 2 -A 5 \\\"bundled_manifest\\\" \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/tools/skill_usage.py\\\" 2>/dev/null | head -30\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"metadata:\\n  hermes:\\n    tags: [delegation, subagent, implementation, workflow, parallel]\\n    related_skills: [plan, requesting-code-review, test-driven-development]\", \"old_string\": \"metadata:\\n  hermes:\\n    tags: [delegation, subagent, implementation, workflow, parallel]\\n    related_skills: [writing-plans, requesting-code-review, test-driven-development]\", \"…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -n \\\"writing-plans\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/subagent-driven-development/SKILL.md\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"- You have an implementation plan (from the `plan` skill or user requirements)\", \"old_string\": \"- You have an implementation plan (from writing-plans skill or user requirements)\", \"path\": \"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/software-development/subagent-driven-development/SKILL.md\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"### With `plan`\\n\\nThis skill EXECUTES plans created by the `plan` skill:\\n1. User requirements \\u2192 `plan` \\u2192 implementation plan\\n2. Implementation plan \\u2192 `subagent-driven-development` \\u2192 working code\", \"old_string\": \"### With writing-plans\\n\\nThis skill EXECUTES plans created by the writing-plans skill:\\n1. User requirements \\u2192 writing-plans…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -rn \\\"writing-plans\\\" \\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\" 2>/dev/null | grep -v \\\".archive\\\\|.curator_backups\\\\|.hub\\\\|.usage.json\\\\|.bundled_manifest\\\" | head -10\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills list 2>&1 | grep -E \\\"writing-plans|nano-pdf|plan|ocr\\\" | head -10\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills list 2>&1 | wc -l\\necho \\\"---\\\"\\nhermes skills list 2>&1 | head -3\\necho \\\"---\\\"\\nhermes skills list 2>&1 | tail -3\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -B 2 -A 15 \\\"def is_agent_created\\\" \\\"C:/Users/Administrator/AppData/Local/hermes/hermes-agent/tools/skill_usage.py\\\" 2>/dev/null | head -25\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills list 2>&1 | grep \\\"nano-pdf\\\\|writing-plans\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python -c \\\"\\nimport json\\nwith open(r'C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills/.usage.json') as f:\\n    data = json.load(f)\\nprint('nano-pdf:', data.get('nano-pdf'))\\nprint('writing-plans:', data.get('writing-plans'))\\nprint()\\nprint('State summary:')\\ncounts = {'active': 0, 'archived': 0, 'stale': 0, 'other': 0}\\nfor name, rec in d…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Final state check\\nSKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\n\\necho \\\"=== Active skills (excluding .archive) ===\\\"\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" -not -path \\\"*/.curator_backups/*\\\" -not -path \\\"*/.hub/*\\\" 2>/dev/null | wc -l\\necho \\\"\\\"\\necho \\\"=== Archived skills ===\\\"\\nfind \\…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cat << 'EOF' | grep -c \\\"^\\\"\\n- airtable\\n- apple-notes\\n- apple-reminders\\n- architecture-diagram\\n- arxiv\\n- ascii-art\\n- ascii-video\\n- audiocraft-audio-generation\\n- baoyu-infographic\\n- blogwatcher\\n- claude-code\\n- claude-design\\n- codebase-inspection\\n- codex\\n- comfyui\\n- design-md\\n- dogfood\\n- evaluating-llms-harness\\n- excalidraw\\n- findmy\\n- gif-search\\n- github-auth\\n- gi…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Look at skills with description containing stale markers\\nSKILLS_ROOT=\\\"C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/skills\\\"\\nfind \\\"$SKILLS_ROOT\\\" -name \\\"SKILL.md\\\" -not -path \\\"*/.archive/*\\\" -not -path \\\"*/.curator_backups/*\\\" -not -path \\\"*/.hub/*\\\" 2>/dev/null | while read f; do\\n  name=$(grep -E \\\"^name:\\\" \\\"$f\\\" | head -1 | sed 's/na…"
+    }
+  ]
+}

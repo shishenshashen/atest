@@ -1,0 +1,16 @@
+﻿Usage: mavis team plan run [options] <yaml-file>
+
+Create and immediately start a plan from a YAML file
+
+Options:
+  --from <session>         Your session ID (default: __MAVIS_PARENT_SESSION_ID
+                           env)
+  --no-wait                Return immediately without waiting for plan to reach
+                           running state
+  --skip-verify <taskIds>  Comma-separated task ids whose verification should
+                           be skipped. For each id the CLI prompts for a reason
+                           (required). Tasks that are structurally unsafe to
+                           skip (referenced by depends_on or being a plan exit)
+                           are rejected by the daemon engine-floor-validator
+                           with an actionable error.
+  -h, --help               display help for command

@@ -1,0 +1,264 @@
+# 2026-06-06 20:00 巡检 plan.yaml (1 track mavis-team 引擎 yaml 精简版, 沿用 15:00 模板 + 🆕 20:00 v4 lesson)
+# 沿用 1:00 详尽 spec 26,782B/412 行 9 章节不重复造轮子 (响应 IM 第 4 条"详细好执行")
+# 沿用 15:00 1 track mavis-team 引擎 yaml 模板嵌入 6 步法 + verifier 9 项 worker prompt 模板
+# 🆕 18:00 路径 E 3 obsidian 优化项 task 模板 (t3-opt1-moc / t4-opt2-m04 / t5-opt3-m18-m19)
+# 🆕 19:00 3 新 node 进程 pending_investigations 段 (PID 7548/10864/12084 10h+ alive)
+# 🆕 20:00 §20:00.5 baseline 漂移修正 v4 lesson 嵌入 worker prompt 模板 (修正 baseline 必先双重保险)
+# 🆕 20:00 修正 19:00 mqh baseline 误判 "19/19 109,450B → 15/15 97,892B" (实际 19/19 109,450B 跟 18:00 一致)
+
+version: 1
+plan:
+  name: "06-06 20:00 巡检 mavis-team 引擎 yaml (候选 P3 R3 + T5 R3 + 路径 E 3 obsidian 优化项 + 3 新 node 进程 候补 standby + 🆕 v4 lesson)"
+  owner: mavis
+  session: mvs_965f33f1c01545b281b917034e8888ee
+  max_concurrency: 1
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  max_consecutive_failures: 2
+  worker_timeout_minutes: 90
+  verifier_timeout_minutes: 15
+  decision_timeout_minutes: 60
+  archive_on_complete: true
+  workspace: "C:/ai/obsidian-文件/mt/00-任务调度中心/daily/"
+
+tasks:
+  # ========== 候选 P3 R3 (1h 0 阻塞 边际收益递减 29 cron 跨) ==========
+  - id: t1-p3r3
+    title: "候选 P3 Round 3: 5 速查 wiki 实战段 Round 3"
+    type: code-wiki
+    status: queued
+    priority: medium
+    estimated_minutes: 60
+    depends_on: []
+    inputs:
+      - "daily/2026-06-06_01-00-plan.md (1:00 详尽 spec 26,782B/412 行 9 章节)"
+      - "daily/2026-06-06_20-00-plan.md (20:00 精简 plan)"
+      - "memory/mql5-wiki-12-必读.md (12 必读清单 + 6 段范本 + 9 反模式 + 14 实物 mtime 表 + 19 mqh mtime 表)"
+    prompt_template: |
+      【写 EA 必走 6 步法】(沿用 15:00 §8 6 步法 + verifier 9 项 lesson, 200+ 行落盘 multi-agent-orchestration.md §8):
+
+      🆕 v4 lesson 嵌入 (20:00 owner 主动落盘, 修正 baseline 必先双重保险):
+        - 步骤 0 (新增): 修正任何 baseline 必先双重保险:
+          (a) 上一 cron baseline 验证 (回放 statSync 看是不是 UNCHANGED)
+          (b) 重新实测 (独立 statSync 看现状)
+          两相对比, 任何不一致先停下来分析, 不要急着写修正结论
+        - v4 是 v3 lesson 的反面例子: 19:00 owner "修正" 18:00 baseline 反而引入新错 (mqh 19/19 109,450B → 错的 15/15 97,892B, 实际 19/19 109,450B 跟 18:00 一致)
+
+      步法 1: 读 wiki — 必读 21 wiki 必读 (M01-M19 + 候选 Y 顶级入口 + 00 调用模块索引.md) + MOC
+      步法 2: 写 baseline — Node.js fs readdirSync + statSync 实测目录 entry 数 + 字节, **双重保险 v4 lesson** 必先 (a) 上一 cron baseline 验证 + (b) 重新实测, 两相对比再下结论
+      步法 3: 实测 — 接入点行号 100% Node.js fs 实测 .mq5 sandbox 路径
+      步法 4: 文档 — 6 段范本末尾追加 ## 实战案例 段 (场景 A/B + 接入点行号 + 调优点 3 档 + 陷阱 5 条 + 链向 + ## 验证 段)
+      步法 5: 验证 — Node.js fs 6 步法: 检查 wiki 字节 / 段落 / 链向 / mtime / 0 占位符 / 0 推荐语
+      步法 6: 反哺 — MOC 链向 + 12 必读 + 14 实物 + 9 反模式
+
+      【verifier 9 项】(必 reject 不读 wiki 的 worker):
+      1. 必读 21 wiki 必读 + MOC 验证 (Node.js fs 实测引用次数 ≥ 5)
+      2. 0 改 .mq5 验证 (sandbox 路径 statSync mtime UNCHANGED 14/14)
+      3. 0 改 wiki 前文 (末尾追加 字节 +8K 以上, 段落 UNCHANGED)
+      4. 0 改 MOC 前文 (T4 owner 1-2 行链向允许)
+      0. 0 创建 README/agents/protocols (废弃决策 06-03 16:14)
+      5. 0 placeholders (待补/TODO/FIXME/TBD/XXX 0 命中)
+      6. 0 推荐语违规 (推荐/建议使用/强烈建议 0 命中)
+      7. 0 凭空编造行号 (接入点行号 100% Node.js fs 实测)
+      8. 0 凭空编造 API (模块方法名 必先 grep wiki 现有内容, 21 必读)
+      9. 0 重复 ## 反模式 段 baseline (陷阱 5 条 必须 grep baseline, 必读 #7)
+
+      任务: 候选 P3 Round 3 — 5 速查 wiki 实战段 Round 3 (1h 0 阻塞 边际收益递减 29 cron 跨)
+      候补 standby, 等用户 IM 显式"做 #N" / "路径 A" 启动.
+    deliverable: "t1-p3r3-deliverable.md"
+    verify:
+      type: file-exists
+      must_include: ["## 实战案例 段 Round 3", "6 段范本", "9 反模式 baseline", "0 改 .mq5 验证", "0 改 wiki 前文"]
+
+  # ========== 候选 T5 R3 (1h 0 阻塞 边际收益递减 29 cron 跨) ==========
+  - id: t2-t5r3
+    title: "候选 T5 04 实战段 第 3 轮"
+    type: code-wiki
+    status: queued
+    priority: medium
+    estimated_minutes: 60
+    depends_on: []
+    inputs:
+      - "daily/2026-06-06_01-00-plan.md (1:00 详尽 spec 26,782B/412 行 9 章节)"
+      - "daily/2026-06-06_20-00-plan.md (20:00 精简 plan)"
+      - "memory/mql5-wiki-12-必读.md (12 必读清单 + 6 段范本 + 9 反模式 + 14 实物 mtime 表 + 19 mqh mtime 表)"
+    prompt_template: |
+      【写 EA 必走 6 步法 + v4 lesson】(沿用 15:00 §8 6 步法 + verifier 9 项 lesson):
+      步法 0-6 同 t1-p3r3 (含 v4 lesson 双重保险)
+      【verifier 9 项】同 t1-p3r3
+
+      任务: 候选 T5 04 实战段 第 3 轮 (1h 0 阻塞 边际收益递减 29 cron 跨)
+      候补 standby, 等用户 IM 显式"做 #N" / "路径 B" 启动.
+    deliverable: "t2-t5r3-deliverable.md"
+    verify:
+      type: file-exists
+      must_include: ["## 实战案例 段 Round 3", "6 段范本", "9 反模式 baseline", "0 改 .mq5 验证"]
+
+  # ========== 🆕 路径 E 优化项 1: MOC §12.7 实战相关 +5-6 行 (1 worker 0.5h) ==========
+  - id: t3-opt1-moc
+    title: "[路径 E 优化项 1] MOC §12.7 实战相关 +5-6 行 (1 worker 0.5h)"
+    type: code-wiki
+    status: queued
+    priority: low
+    estimated_minutes: 30
+    depends_on: []
+    inputs:
+      - "C:/ai/obsidian-文件/mt/EA开发/EA 开发知识库.md (MOC, 43,384B mtime 2026-06-05 15:20:07)"
+      - "memory/mql5-wiki-12-必读.md (12 必读清单)"
+    prompt_template: |
+      【写 wiki 必走 6 步法 + v4 lesson】+ 【verifier 9 项】同 t1-p3r3
+
+      任务: MOC §12.7 实战相关 +5-6 行 — 添加 P3 R3/T5 R3/阻塞 4 件的实战索引链向
+      候补 standby, 等用户 IM 显式"做优化项 1" 启动.
+    deliverable: "t3-opt1-moc-deliverable.md"
+    verify:
+      type: file-exists
+      must_include: ["§12.7 实战相关", "5-6 行链向", "0 改 MOC 前文 (L1-L615 段位 0 漂移)"]
+
+  # ========== 🆕 路径 E 优化项 2: M04 IndicatorPool 末尾追加 ## 实战案例 段 (1 worker 1h) ==========
+  - id: t4-opt2-m04
+    title: "[路径 E 优化项 2] M04 IndicatorPool 末尾追加 ## 实战案例 段 (1 worker 1h)"
+    type: code-wiki
+    status: queued
+    priority: low
+    estimated_minutes: 60
+    depends_on: []
+    inputs:
+      - "C:/ai/obsidian-文件/mt/EA开发/01-调用模块/M04 指标句柄管理 IndicatorPool.md (20,738B mtime 2026-06-04 12:30)"
+      - "memory/mql5-wiki-12-必读.md (12 必读清单 + 6 段范本 + 9 反模式)"
+    prompt_template: |
+      【写 wiki 必走 6 步法 + v4 lesson】+ 【verifier 9 项】同 t1-p3r3
+
+      任务: M04 IndicatorPool 末尾追加 ## 实战案例 段 (沿用 6 段范本 + 9 反模式)
+      候补 standby, 等用户 IM 显式"做优化项 2" 启动.
+    deliverable: "t4-opt2-m04-deliverable.md"
+    verify:
+      type: file-exists
+      must_include: ["## 实战案例 段", "6 段范本", "0 改 wiki 前文 (R1+R2 段位 0 漂移)", "0 改 .mq5"]
+
+  # ========== 🆕 路径 E 优化项 3: M18/M19 wiki 实战段 +1 段 "跨 EA 模式萃取" 段 (1 worker 1.5h) ==========
+  - id: t5-opt3-m18-m19
+    title: "[路径 E 优化项 3] M18/M19 wiki 实战段 +1 段 \"跨 EA 模式萃取\" 段 (1 worker 1.5h)"
+    type: code-wiki
+    status: queued
+    priority: low
+    estimated_minutes: 90
+    depends_on: []
+    inputs:
+      - "C:/ai/obsidian-文件/mt/EA开发/01-调用模块/M18 相关性过滤 CorrelationFilter.md (17,696B mtime 2026-06-04 22:36)"
+      - "C:/ai/obsidian-文件/mt/EA开发/01-调用模块/M19 时段过滤 SessionFilter.md (17,479B mtime 2026-06-04 22:36)"
+      - "C:/ai/obsidian-文件/mt/EA开发/实战/7 EA 模式萃取.md (53,263B mtime 2026-06-05 08:29)"
+      - "memory/mql5-wiki-12-必读.md (12 必读清单 + 6 段范本 + 9 反模式)"
+    prompt_template: |
+      【写 wiki 必走 6 步法 + v4 lesson】+ 【verifier 9 项】同 t1-p3r3
+
+      任务: M18/M19 wiki 实战段 +1 段 "跨 EA 模式萃取" 段 (沿用 6 段范本 + 9 反模式)
+      候补 standby, 等用户 IM 显式"做优化项 3" 启动.
+    deliverable: "t5-opt3-m18-m19-deliverable.md"
+    verify:
+      type: file-exists
+      must_include: ["## 跨 EA 模式萃取 段", "M18 链向", "M19 链向", "0 改 wiki 前文"]
+
+# ========== 🆕 3 新 node 进程 pending_investigations 段 (沿用 19:00) ==========
+pending_investigations:
+  - id: inv-3-new-node
+    title: "调查 3 新 node 进程 10h+ (PID 7548/10864/12084 06-06 10:00 启动)"
+    type: investigation
+    status: standby
+    estimated_minutes: 30
+    inputs:
+      - "PowerShell Get-Process node (20:00 实测: 4 老 node 进程 06-03+06-04 启动 77h+ / 74h+ + 3 新 node 进程 10h+ PID 7548/10864/12084, CPU 0.1-1.9s, WS 48-92MB)"
+      - "可能的源头: mcp matrix / cu keep-alive / 自动化任务残留"
+    prompt_template: |
+      任务: 调查 3 新 node 进程 10h+ 来源
+      候补 standby, 等用户 IM 显式"调查 3 新 node 进程" 启动.
+    note: "0 越权不擅自 kill, 等 user IM 决定"
+
+# ========== 阻塞 4 件 (沿用 18:00, 留用户切 RDP) ==========
+blocked_tasks:
+  - id: blk-14-scalping-martin
+    title: "#14 ScalpingMartin_EA.mq5 接入示例 wiki (用户手动 IDE)"
+    blocker: "console session 1 (CU 在 RDP session 2+ 截屏失败)"
+    estimated_minutes: 60
+  - id: blk-16-correlation-3d
+    title: "#16 Correlation Matrix 3D 可视化"
+    blocker: "console session 1"
+    estimated_minutes: 60
+  - id: blk-n1-5ea-backtest
+    title: "N1 5 EA 6 月回测对比"
+    blocker: "console session 1"
+    estimated_minutes: 600
+  - id: blk-n4-archive-audit
+    title: "N4 _archive 审计"
+    blocker: "console session 1"
+    estimated_minutes: 480
+
+# ========== decision_protocol (沿用 15:00 模板) ==========
+decision_protocol:
+  owner: mavis
+  cycle_decision:
+    - "如果 worker 实物 100% 落盘 + 自校 9/9 PASS + 50/50 PASS → owner override_accept cycle 1 闭环 (跟 21+ 次 pattern 一致)"
+    - "如果 verifier 7+ min 卡 timeout + 实物已落盘 → owner override_accept cycle 1 闭环 (实物优先)"
+  fallback:
+    - "如果 cycle 2 producer steer 0 改动 + 实物 100% 落盘 → owner override_accept cycle 2 闭环"
+    - "如果 cycle 1 verifier AUTO-REJECT (FAIL 3+) → cycle 2 retry 修正"
+  post_complete:
+    - "0 改 .mq5 验证 (sandbox 路径 statSync 14 实物 mtime UNCHANGED)"
+    - "0 改 wiki 前文 (字节 UNCHANGED)"
+    - "0 改 MOC 前文 (T4 owner 1-2 行链向允许)"
+    - "0 推荐语 + 0 placeholders + 0 编造接入点行号 + 0 编造 API + 0 重复 ## 反模式 baseline"
+
+# ========== knowledge_assets (沿用 1:00 详尽 spec) ==========
+knowledge_assets:
+  must_read_12_wiki:
+    - "M01 交易封装 CTradePlus"
+    - "M02 风控 Risk"
+    - "M05 新 K 线检测 NewBar"
+    - "M08 追踪止损 TrailingStop"
+    - "M09 面板 Dashboard"
+    - "M10 推送通知 Notify"
+    - "M11 日志 Logger"
+    - "M13 文件 IO"
+    - "M17 新闻过滤 NewsFilter"
+    - "M18 相关性过滤 CorrelationFilter"
+    - "M19 时段过滤 SessionFilter"
+    - "MOC EA 开发知识库 (总索引)"
+  must_read_19_mqh_baseline:
+    path: "C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Include/MQL5Kit"
+    count: 19
+    bytes: 109450
+    note: "🆕 20:00 修正 19:00 误判 15/15 97,892B → 正确 19/19 109,450B (跟 18:00 baseline 一致)"
+  must_read_14_ea_mq5_baseline:
+    path: "C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/minimax-ea"
+    count: 14
+    bytes: 204963
+  candidate_y_top_entry:
+    path: "C:/ai/obsidian-文件/mt/EA开发/模块化方案 v2 整合.md"
+    bytes: 7406
+    mtime: "2026-06-05 15:22:45"
+    note: "在 EA开发/ 根, 不在 01-调用模块/ 子目录"
+  must_read_21_wiki_baseline:
+    count: 21
+    bytes_m01_m19: 19
+    candidate_y: 1
+    call_module_index: 1
+    note: "00 调用模块索引.md 1,995B (沿用 19:00 命名修正)"
+
+# ========== v4 lesson 嵌入 (20:00 主动落盘) ==========
+v4_lesson_summary:
+  date: "2026-06-06 20:00"
+  trigger: "19:00 owner 主动 '修正' 18:00 baseline 反而引入新错 (mqh 19/19 109,450B → 错的 15/15 97,892B, 实际 19/19 109,450B 跟 18:00 一致)"
+  lesson: |
+    修正 baseline 必先验证上一 cron baseline 自己是否实测过 — 双重保险:
+    (a) 上一 cron baseline 验证 (回放 statSync 看是不是 UNCHANGED)
+    (b) 重新实测 (独立 statSync 看现状)
+    两相对比, 任何不一致先停下来分析, 不要急着写修正结论
+  cross_project_applicable: true
+  applicable_when: |
+    任何 "我看到上一 cron 写 X, 但我觉得应该是 Y" 的情况
+  predecessor_lessons:
+    v1: "写 wiki baseline 必先 Node.js fs readdirSync + statSync 实测目录, 不复制粘贴上一 cron baseline (17:00 沉淀)"
+    v2: "数 .md 文件数必先 Node.js fs readdirSync 实测目录 entry 数, 不要从 'M01-M19' 反推 (18:00 沉淀)"
+    v3: "找文件必先 glob/walk 实际路径, 数字节必先 statSync 实测, 不要从上一 cron baseline 复制粘贴 (19:00 沉淀)"
+    v4: "修正 baseline 必先双重保险: 上一 cron baseline 验证 + 重新实测, 两相对比 (20:00 沉淀, 是 v3 lesson 的反面例子)"

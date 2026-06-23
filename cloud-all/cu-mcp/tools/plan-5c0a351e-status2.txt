@@ -1,0 +1,115 @@
+﻿{
+  "state": {
+    "plan_id": "plan_5c0a351e",
+    "status": "running",
+    "owner_session_id": "mvs_2e7582e44d7a410583fc43e85a26da73",
+    "owner_agent_name": "Mavis",
+    "cycle": 1,
+    "phase": "producing",
+    "results": [
+      {
+        "task_id": "T2-wiki-link-audit-51",
+        "status": "verifying",
+        "attempt": 0,
+        "producer_session_id": "mvs_04828bf89b0a4a8c9c6a598b0422a7e3",
+        "producer_agent": "general",
+        "verifier_results": [],
+        "gate_results": [],
+        "started_at": 1780626011495,
+        "finished_at": 1780627183317,
+        "timeout_extended_ms": 0,
+        "timeout_deadline_at": 1780627511495
+      },
+      {
+        "task_id": "T3-m19-demo-wiki",
+        "status": "verifying",
+        "attempt": 0,
+        "producer_session_id": "mvs_396483b1dad04d028fe14fd1f3500a43",
+        "producer_agent": "general",
+        "verifier_results": [],
+        "gate_results": [],
+        "started_at": 1780626012123,
+        "finished_at": 1780627146570,
+        "timeout_extended_ms": 0,
+        "timeout_deadline_at": 1780627512123
+      }
+    ],
+    "dynamic_tasks": [],
+    "task_overrides": {},
+    "consecutive_failures": 0,
+    "engine_sessions": {
+      "mvs_04828bf89b0a4a8c9c6a598b0422a7e3": {
+        "task_id": "T2-wiki-link-audit-51",
+        "role": "producer",
+        "agent_name": "general",
+        "spawned_at": 1780626011493
+      },
+      "mvs_396483b1dad04d028fe14fd1f3500a43": {
+        "task_id": "T3-m19-demo-wiki",
+        "role": "producer",
+        "agent_name": "general",
+        "spawned_at": 1780626012121
+      },
+      "mvs_5cffca41a1a64470882015b652ea828b": {
+        "task_id": "T3-m19-demo-wiki",
+        "role": "verifier",
+        "agent_name": "verifier",
+        "spawned_at": 1780627149096
+      },
+      "mvs_133ece0a21c14e96b958ea006b9fb8a9": {
+        "task_id": "T2-wiki-link-audit-51",
+        "role": "verifier",
+        "agent_name": "verifier",
+        "spawned_at": 1780627183574
+      }
+    },
+    "created_at": 1780625993247,
+    "updated_at": 1780627183574
+  },
+  "plan": {
+    "version": 1,
+    "plan": {
+      "name": "06-05 10:00 宸℃ (鍊欓€?P4 51 wiki 閾惧悜鎵归噺鏍稿 + 鍊欓€?V 04 wiki M19 demo 鑼冩湰 娈? 0 闃诲, 1h 闂幆 + T4 owner MOC 鍙嶆ā寮忓垎绫?0鈫? 0.1h)",
+      "max_concurrency": 2,
+      "max_consecutive_failures": 2,
+      "max_cycles": 2,
+      "auto_accept": false,
+      "auto_reject_retries": 1,
+      "verifier_config": {
+        "default_verifiers": [
+          "verifier"
+        ],
+        "audit_sample_rate": 0,
+        "strict_mode": false
+      }
+    },
+    "tasks": [
+      {
+        "id": "T2-wiki-link-audit-51",
+        "title": "51 wiki 閾惧悜鎵归噺鏍稿 (鐢?mql5-validate-cli.js v4 鑷姩鍖? 8 鍙嶅摵鏈哄埗榻? 09:00 P2 璺?18 wiki 缁窇)",
+        "prompt": "# 浠诲姟: 51 wiki 閾惧悜鎵归噺鏍稿 (鍊欓€?P4 闂幆, 09:00 P2 缁窇)\n\n## 蹇呰\n- 璇︾粏 spec: `C:\\ai\\obsidian-鏂囦欢\\mt\\00-浠诲姟璋冨害涓績\\daily\\2026-06-05_10-00-plan.md` 搂1.1 (4 鍙嶅摵 + 6 娈佃寖鏈?+ 9 鍙嶆ā寮?+ 12 蹇呰 + 14 瀹炵墿 mtime + 11:00 璧勬簮寤鸿)\n- 璇︾粏 log: `C:\\ai\\obsidian-鏂囦欢\\mt\\00-浠诲姟璋冨害涓績\\daily\\2026-06-05_10-00-log.md` 13 绔犺妭\n- 12 蹇呰娓呭崟: `C:\\Users\\Administrator\\.mavis\\agents\\mavis\\memory\\mql5-wiki-12-蹇呰.md`\n- CLI v4 宸ュ叿: `C:\\Users\\Administrator\\cu-mcp\\tools\\mql5-validate-cli.js` (35,647B 钀界洏 2026-06-05 08:25:06)\n\n## 鐩爣 (0 闃诲, 1h 闂幆)\n鐢?mql5-validate-cli.js v4 璺?51 wiki 閾惧悜鏍稿 (EA寮€鍙? 69 wiki - 09:00 P2 璺?18 wiki) + 8 鍙嶅摵鏈哄埗榻?(file_exists/byte_size/chapter/line_ref/placeholder/recommend/mq5_unchanged/mtime)\n\n## 51 wiki 娓呭崟 (鎸夊垎绫?\n\n### 00-蹇€熷紑濮?(3 涓?\n- 10 浠朵簨: `EA寮€鍙?00-蹇€熷紑濮?EA 鍐欎箣鍓嶈鐭ラ亾鐨?10 浠朵簨.md` (2,027B)\n- 妯℃澘濂楃敤: `EA寮€鍙?00-蹇€熷紑濮?EA 妯℃澘濂楃敤娴佺▼.md` (1,534B)\n- GUI 5 娆″け璐? `EA寮€鍙?00-蹇€熷紑濮?MT5 GUI 鑷姩鍖?5 娆″け璐ュ叏璁板綍 + 鍒嗗伐鍗忚.md` (4,865B)\n\n### 01-璋冪敤妯″潡 (12 涓? 09:00 P2 璺戣繃 M01/M02/M05/M08/M09/M10/M11/M13/M17/M18/M19 鍏?11 涓?+ 绱㈠紩)\n- 绱㈠紩: `EA寮€鍙?01-璋冪敤妯″潡/00 璋冪敤妯″潡绱㈠紩.md` (1,995B)\n- M03 浠撲綅璁＄畻: `EA寮€鍙?01-璋冪敤妯″潡/M03 浠撲綅璁＄畻 PositionSizing.md` (17,454B)\n- M04 BB 澶?buffer: `EA寮€鍙?01-璋冪敤妯″潡/M04 BB 澶?buffer 鐢ㄦ硶琛ュ厖.md` (3,092B)\n- M04 鎸囨爣鍙ユ焺绠＄悊: `EA寮€鍙?01-璋冪敤妯″潡/M04 鎸囨爣鍙ユ焺绠＄悊 IndicatorPool.md` (20,738B)\n- M06 澶氱┖鍒ゆ柇: `EA寮€鍙?01-璋冪敤妯″潡/M06 澶氱┖鍒ゆ柇 Signal.md` (7,213B)\n- M07 鎸佷粨绠＄悊: `EA寮€鍙?01-璋冪敤妯″潡/M07 鎸佷粨绠＄悊 Positions.md` (19,840B)\n- M12 鍏ㄥ眬鍙橀噺: `EA寮€鍙?01-璋冪敤妯″潡/M12 鍏ㄥ眬鍙橀噺 GV.md` (6,310B)\n- M14 鐢诲浘: `EA寮€鍙?01-璋冪敤妯″潡/M14 鐢诲浘 Drawer.md` (7,859B)\n- M15 瀹氭椂鍣? `EA寮€鍙?01-璋冪敤妯″潡/M15 瀹氭椂鍣?TimerService.md` (7,044B)\n- M16 鎾ゅ崟娓呯悊: `EA寮€鍙?01-璋冪敤妯″潡/M16 鎾ゅ崟娓呯悊 Cleanup.md` (8,868B)\n\n### 02-瀹屾暣妯℃澘 (8 涓?\n- Dashboard: `EA寮€鍙?02-瀹屾暣妯℃澘/EA Dashboard 鐩戞帶妯℃澘.md` (8,364B)\n- 鍓ュご鐨? `EA寮€鍙?02-瀹屾暣妯℃澘/EA 鍓ュご鐨ā鏉?md` (6,725B)\n- 澶氬搧绉嶅鍐? `EA寮€鍙?02-瀹屾暣妯℃澘/EA 澶氬搧绉嶅鍐叉ā鏉?md` (10,591B)\n- 绐佺牬: `EA寮€鍙?02-瀹屾暣妯℃澘/EA 绐佺牬妯℃澘锛圖onchian 娴烽緹锛?md` (6,928B)\n- 缃戞牸椹竵: `EA寮€鍙?02-瀹屾暣妯℃澘/EA 缃戞牸椹竵妯℃澘.md` (9,196B)\n- 瓒嬪娍璺熻釜: `EA寮€鍙?02-瀹屾暣妯℃澘/EA 瓒嬪娍璺熻釜妯℃澘锛圡A 浜ゅ弶锛?md` (7,743B)\n- 閫嗗娍鍧囧€煎洖褰? `EA寮€鍙?02-瀹屾暣妯℃澘/EA 閫嗗娍鍧囧€煎洖褰掓ā鏉匡紙RSI Bollinger锛?md` (7,945B)\n- 閫氱敤楠ㄦ灦: `EA寮€鍙?02-瀹屾暣妯℃澘/EA 閫氱敤楠ㄦ灦.md` (9,318B)\n\n### 03-閫氱敤鐗囨 (5 涓?\n- 00 鐩綍: `EA寮€鍙?03-閫氱敤鐗囨/00 鐗囨鐩綍.md` (25,536B)\n- 01 涓嬪崟绫? `EA寮€鍙?03-閫氱敤鐗囨/01 涓嬪崟绫?md` (24,278B)\n- 02 璇诲彇绫? `EA寮€鍙?03-閫氱敤鐗囨/02 璇诲彇绫?md` (28,922B)\n- 03 鐢诲浘绫? `EA寮€鍙?03-閫氱敤鐗囨/03 鐢诲浘绫?md` (5,289B)\n- 04 瀹炵敤鍑芥暟: `EA寮€鍙?03-閫氱敤鐗囨/04 瀹炵敤鍑芥暟.md` (21,343B)\n\n### 04-閬垮潙涓庨€熸煡 (8 涓? 09:00 P2 璺戣繃 5 閫熸煡 80鉂?鍙嶆ā寮?\n- 01 缂栬瘧: `EA寮€鍙?04-閬垮潙涓庨€熸煡/01 缂栬瘧甯歌閿欒.md` (24,834B)\n- 02 OrderSend: `EA寮€鍙?04-閬垮潙涓庨€熸煡/02 OrderSend 閿欒鐮侀€熸煡.md` (27,075B)\n- 03 瀹炵洏: `EA寮€鍙?04-閬垮潙涓庨€熸煡/03 瀹炵洏 vs 鍥炴祴宸紓.md` (23,112B)\n- 04 缁忕邯鍟? `EA寮€鍙?04-閬垮潙涓庨€熸煡/04 缁忕邯鍟嗗樊寮?鐐瑰樊-鎵嬬画璐?md` (32,449B, 09:00 T3 鏈熬杩藉姞 6 娈靛悗)\n- 05 蹇呮煡娓呭崟: `EA寮€鍙?04-閬垮潙涓庨€熸煡/05 蹇呮煡娓呭崟.md` (32,601B)\n- 06 缃戞牸椹竵: `EA寮€鍙?04-閬垮潙涓庨€熸煡/06 缃戞牸椹竵璀︾ず.md` (35,570B)\n- 07 5 蹇呯湅闄烽槺: `EA寮€鍙?04-閬垮潙涓庨€熸煡/07 5 蹇呯湅闄烽槺缁熶竴 wiki.md` (48,808B)\n- 08 5 閫熸煡璋冭瘯: `EA寮€鍙?04-閬垮潙涓庨€熸煡/08 5 閫熸煡璋冭瘯灏忔妧宸?wiki.md` (28,274B)\n\n### 瀹炴垬/ (9 涓? 09:00 P2 璺戣繃 璺?EA 妯″紡钀冨彇 + 4 鑼冨紡鑱斿悎 鍏?2 涓?\n- M18 澶氬搧绉嶅鍐? `EA寮€鍙?瀹炴垬/M18 澶氬搧绉嶅鍐插疄鎴?md` (41,584B)\n- M19 鏃舵杩囨护: `EA寮€鍙?瀹炴垬/M19 鏃舵杩囨护瀹炴垬.md` (54,904B)\n- M17_TestNewsEA: `EA寮€鍙?瀹炴垬/M17_TestNewsEA 澶嶆椿鎶ュ憡.md` (25,508B)\n- MeanReversion_EA: `EA寮€鍙?瀹炴垬/MeanReversion_EA 鎺ュ叆鎶ュ憡.md` (29,494B)\n- ScalperEA: `EA寮€鍙?瀹炴垬/ScalperEA 鎺ュ叆 MQL5Kit 鎽樿.md` (26,043B)\n- ScalperXAU: `EA寮€鍙?瀹炴垬/ScalperXAU 鎺ュ叆鎶ュ憡 + v1鈫抳4 婕旇繘鍙?md` (41,195B)\n- Scalping_More: `EA寮€鍙?瀹炴垬/Scalping_More v1.3 鎺ュ叆绀轰緥.md` (39,857B)\n- 5 debug EA: `EA寮€鍙?瀹炴垬/5 涓?debug-prototype EA 绱㈠紩.md` (59,807B)\n- 5 EA 鍥炴祴: `EA寮€鍙?瀹炴垬/5 EA 6 鏈堝洖娴嬪姣?SOP.md` (57,309B)\n\n### 绛栫暐/ (5 涓?\n- 00 绾: `EA寮€鍙?绛栫暐/00 ScalperXAU 杩唬绾 v1鈫抳2鈫抳3.md` (5,564B)\n- v1: `EA寮€鍙?绛栫暐/01 ScalperXAU v1 - Bollinger RSI 鍧囧€煎洖褰?md` (6,958B)\n- v2: `EA寮€鍙?绛栫暐/01 ScalperXAU v2 - Bollinger RSI 鍧囧€煎洖褰?md` (6,584B)\n- v3: `EA寮€鍙?绛栫暐/01 ScalperXAU v3 - Bollinger RSI ADX Trail.md` (6,509B)\n- v4: `EA寮€鍙?绛栫暐/01 ScalperXAU v4 - 鏀惧鐗?+ Debug Log.md` (4,658B)\n\n## 鎵ц姝ラ (娌跨敤 09:00 P2 鑼冩湰)\n\n1. 璺?`node C:/Users/Administrator/cu-mcp/tools/mql5-validate-cli.js --self-test` 杈撳嚭 9/9 PASS (CLI v4 鑷牎)\n2. 瀵?51 涓?wiki 鍚勮窇涓€娆?`node mql5-validate-cli.js --check line_ref --input <wiki.md> --output validate-results-<n>.json` (n=19 鍒?69)\n3. 璺戣仛鍚?`node mql5-validate-cli.js --check all --input <wiki.md> --json > validate-results.json` 51 wiki 閾惧悜鎶ュ憡\n4. 璺戠ず渚?wiki (MT5 鎬ц兘璋冧紭 52,827B, 09:00 P2 宸茶窇) 8/8 鍙嶅摵 PASS\n5. 璺?`--help` 杈撳嚭 4 娈?(Usage/Options/Examples/Exit codes)\n6. 鍐?`daily/2026-06-05_10-00-track2-result.md` 6 绔犺妭 (鐩爣/鍩虹嚎/鎵ц/8 鍙嶅摵缁撴灉/51 wiki 閾惧悜鎶ュ憡/楠屾敹)\n7. Node.js fs statSync 楠岃瘉 14 瀹炵墿 .mq5 mtime UNCHANGED (vs 10:00 baseline 璺?09:00 涓€鑷?\n\n## 8 鍙嶅摵鏈哄埗 (娌跨敤 mql5-validate-cli.js v4 鑷牎 9 椤规ā鏉?\n\n| # | 鍙嶅摵椤?| 鍚箟 | 楠岃瘉鏂瑰紡 |\n|---|---|---|---|\n| 1 | file_exists | wiki 鏂囦欢瀛樺湪 | `fs.existsSync()` |\n| 2 | byte_size | 瀛楄妭 鈮?baseline | `fs.statSync().size` |\n| 3 | chapter | 绔犺妭缁撴瀯榻?(鈮? 涓?## h2) | regex `/^##\\s/gm` count 鈮?3 |\n| 4 | line_ref | [[wiki link]] 閾惧悜 0 鏂摼 (鏈换鍔℃牳蹇? | regex 鎻愬彇鎵€鏈?[[X]] 鍚?`fs.existsSync(X.md)` |\n| 5 | placeholder | 0 placeholders (5 涓嫳鏂囨爣璁? TODO/FIXME/TBD/XXX/寰呰ˉ) | regex 鍛戒腑鏁?= 0 |\n| 6 | recommend | 0 鎺ㄨ崘璇?(4 涓腑鏂?鑻辨枃: 鎺ㄨ崘浣跨敤/寤鸿浣跨敤/寮虹儓寤鸿/recommend using) | regex 鍛戒腑鏁?= 0 |\n| 7 | mq5_unchanged | 14 瀹炵墿 .mq5 mtime UNCHANGED | `fs.statSync()` vs 10:00 baseline (璺?09:00 涓€鑷? |\n| 8 | mtime | 0 鏀?.mq5 (鏈换鍔″彧璇讳笉鍐? | `fs.statSync()` 瀵规瘮 baseline |\n\n## 14 瀹炵墿 .mq5 baseline (楠屾敹 UNCHANGED, 璺?09:00 涓€鑷?\n- MeanReversion_EA.mq5: 13,503B / 2026-06-04 11:21:46\n- ScalperXAU.mq5: 42,824B / 2026-06-04 13:44:12\n- TrendMA_EA.mq5: 9,169B / 2026-06-04 00:50:34\n- Breakout_EA.mq5: 9,530B / 2026-06-04 00:47:24\n- MyEA.mq5: 12,541B / 2026-06-04 00:57:46\n- Dashboard.mq5: 8,361B / 2026-06-04 00:51:16\n- ScalperXAUv5simple.mq5: 6,545B / 2026-06-04 13:52:17\n- ScalperXAUv6debug.mq5: 1,931B / 2026-06-04 13:59:15\n- ScalperXAUv7debug.mq5: 4,515B / 2026-06-04 14:37:20\n- ScalperXAUv8.mq5: 5,436B / 2026-06-04 14:38:49\n- ScalperXAUv9.mq5: 13,186B / 2026-06-04 17:44:49\n- Scalper_CsvProto.mq5: 4,595B / 2026-06-04 00:49:38\n- MiniMaxScalper.mq5: 35,357B / 2026-06-04 18:09:46 (鐢ㄦ埛鎵嬪姩 IDE)\n- MiniMaxScalper_v2.mq5: 37,470B / 2026-06-05 00:31:42 (鐢ㄦ埛鎵嬪姩 IDE, 涓嶅湪 baseline 鍐?\n\n## 楠屾敹 (verifier 9 椤?\n- [ ] --self-test 9/9 PASS\n- [ ] 51/51 wiki line_ref PASS (0 鏂摼, 鏈换鍔℃牳蹇?\n- [ ] 51/51 wiki 8 鍙嶅摵榻?PASS\n- [ ] JSON 杈撳嚭 schema 瀹屾暣\n- [ ] --help 4 娈佃緭鍑篭n- [ ] 绀轰緥 wiki (MT5 鎬ц兘璋冧紭 52,827B) 8/8 鍙嶅摵 PASS\n- [ ] 0 鏀?.mq5 (14 瀹炵墿 mtime UNCHANGED)\n- [ ] 0 鏀?wiki + 0 鏀?MOC + 0 鍒涘缓 README\n- [ ] daily/2026-06-05_10-00-track2-result.md 6 绔犺妭榻怽n\n## 寮哄埗\n- 0 缂栭€?(51 wiki 鏂囦欢鍚?瀛楄妭/閾惧悜鏁?100% 鏉ヨ嚜 CLI v4 瀹為檯璺?\n- 0 placeholders + 0 鎺ㄨ崘璇繚瑙刓n- 0 鏀?wiki 鍓嶆枃 (CLI 璺戝彧璇讳笉鍐?\n- deliverable 鍙岃矾寰?(engine outputs + daily/2026-06-05_10-00-track2-result.md)\n",
+        "verify_prompt": "# 楠岃瘉: 51 wiki 閾惧悜鎵归噺鏍稿 (T2 worker-A 浜や粯鐗?\n\n## 蹇呰\n- 璇︾粏 spec: `C:\\ai\\obsidian-鏂囦欢\\mt\\00-浠诲姟璋冨害涓績\\daily\\2026-06-05_10-00-plan.md` 搂1.1\n- 璇︾粏 log: `C:\\ai\\obsidian-鏂囦欢\\mt\\00-浠诲姟璋冨害涓績\\daily\\2026-06-05_10-00-log.md` 13 绔犺妭\n- CLI v4 宸ュ叿: `C:\\Users\\Administrator\\cu-mcp\\tools\\mql5-validate-cli.js`\n\n## 楠岃瘉姝ラ (鐙珛 re-derive, 涓嶈 producer 鎶ュ憡)\n\n1. 鐙珛璺?`node C:/Users/Administrator/cu-mcp/tools/mql5-validate-cli.js --self-test` 楠岃瘉 9/9 PASS\n2. 鐙珛鎸?5 涓?wiki (M03 浠撲綅璁＄畻 / M07 鎸佷粨绠＄悊 / 04 缁忕邯鍟?/ 璺?EA 妯″紡钀冨彇 / MyEA) 璺?`node mql5-validate-cli.js --check line_ref --input <wiki.md>`, 纭 5/5 PASS\n3. 鐙珛鎸?1 涓?wiki (M03 17,454B) 璺?`node mql5-validate-cli.js --check all --input M03...md --json`, 纭 8/8 鍙嶅摵榻怽n4. 鐙珛璺?`node mql5-validate-cli.js --help`, 纭 4 娈?(Usage/Options/Examples/Exit codes)\n5. Node.js fs statSync 14 瀹炵墿 .mq5 mtime, 纭 14/14 UNCHANGED (vs 10:00 baseline 璺?09:00 涓€鑷?\n6. 璇?`daily/2026-06-05_10-00-track2-result.md` 6 绔犺妭, 纭 9 椤归獙鏀舵竻鍗曞叏杩嘰n\n## 9 椤归獙鏀?(Producer 9/9)\n- [ ] --self-test 9/9 PASS\n- [ ] 51/51 wiki line_ref PASS\n- [ ] 51/51 wiki 8 鍙嶅摵榻?PASS\n- [ ] JSON 杈撳嚭 schema 瀹屾暣\n- [ ] --help 4 娈礬n- [ ] 绀轰緥 wiki 8/8 PASS\n- [ ] 0 鏀?.mq5\n- [ ] 0 鏀?wiki + 0 鏀?MOC\n- [ ] daily track result 6 绔犺妭榻怽n\n## 寮傚父澶勭悊\n- verifier 11+ min timeout: 瀹炵墿浼樺厛, owner override_accept 绔嬪嵆闂幆 (璺?14 娆?pattern 涓€鑷?\n- worker 15min watchdog kill: 妫€鏌?51 per-wiki JSON + track2-result.md 瀹炵墿鏄惁 100% 钀界洏, 鏄垯 override_accept\n",
+        "assigned_to": "general",
+        "role": "produce",
+        "verified_by": "verifier",
+        "depends_on": [],
+        "gates": [],
+        "max_retries": 2,
+        "timeout_ms": 1500000
+      },
+      {
+        "id": "T3-m19-demo-wiki",
+        "title": "04 缁忕邯浜哄樊寮?wiki 鏈熬 ## demo 鎺ュ叆 M19 瀹屾暣鑼冩湰 娈?(4 demo 脳 2 鎺ュ叆鐐?= 8 琛屽彿, 淇?09:00 婕忕殑 1 鏉?10/11 鍙嶆ā寮?",
+        "prompt": "# 浠诲姟: 04 缁忕邯浜哄樊寮?wiki 鏈熬 ## demo 鎺ュ叆 M19 瀹屾暣鑼冩湰 娈?(鍊欓€?V 闂幆, 淇?09:00 婕忕殑 1 鏉?10/11 鍙嶆ā寮?\n\n## 蹇呰\n- 璇︾粏 spec: `C:\\ai\\obsidian-鏂囦欢\\mt\\00-浠诲姟璋冨害涓績\\daily\\2026-06-05_10-00-plan.md` 搂1.2 (6 娈佃寖鏈?+ 9 鍙嶆ā寮?+ 12 蹇呰 + 14 瀹炵墿 mtime + 11:00 璧勬簮寤鸿)\n- 璇︾粏 log: `C:\\ai\\obsidian-鏂囦欢\\mt\\00-浠诲姟璋冨害涓績\\daily\\2026-06-05_10-00-log.md` 13 绔犺妭\n- 12 蹇呰娓呭崟: `C:\\Users\\Administrator\\.mavis\\agents\\mavis\\memory\\mql5-wiki-12-蹇呰.md`\n- 04 wiki 褰撳墠: `C:\\ai\\obsidian-鏂囦欢\\mt\\EA寮€鍙慭\04-閬垮潙涓庨€熸煡\\04 缁忕邯鍟嗗樊寮?鐐瑰樊-鎵嬬画璐?md` (32,449B, 09:00 T3 钀界洏 6 娈电粨鏋? 鍚?5 鍙嶆ā寮忓叾涓?1 鏉?10/11 婕?\n- 09:00 T3 鏁欒: 11 EA 22 鎺ュ叆鐐?spec 鏄敊璇ず渚? producer 姝ｇ‘鐢?Node.js fs 瀹炴祴 22/22 鍛戒腑 鈫?10:00 T3 蹇呭厛 Node.js fs 瀹炴祴 8/8 鐪熷疄琛屽彿, 0 缂栭€燶n\n## 鐩爣 (0 闃诲, 1h 闂幆)\n鎵╁睍 04 缁忕邯浜哄樊寮?wiki 鏈熬 ## demo 鎺ュ叆 M19 瀹屾暣鑼冩湰 娈?(娌跨敤 09:00 T3 6 娈佃寖鏈?, 鈮?5K 瀛楄妭 / 80-120L / 4 demo 脳 2 鎺ュ叆鐐?= 8 琛屽彿 100% Node.js fs 瀹炴祴鍛戒腑 / 5 鍙嶆ā寮?/ 6 閾惧悜, 淇?09:00 婕忕殑 1 鏉?10/11 鍙嶆ā寮?(缁忕邯鍟嗚妭鍋囨棩涓嶈瘑鍒? 6 demo prototype 涓嶅惈 M19 妯″潡)\n\n## 6 娈电粨鏋?(娌跨敤 09:00 T3 鑼冩湰)\n\n| 娈?| 鏍囬 | 鍏抽敭鍐呭 | 浼?L鏁?|\n|---|---|---|---|\n| 搂1 | 鍦烘櫙 A | Exness 缁忕邯鍟嗗湥璇炶妭 12/24-26 浼戝競璇嗗埆, MeanRev 鎺ュ叆 M19 SetAllowWeekend(false) + M19.SetPreset(Asia) 鍙岄噸淇濋櫓 | 15-20 |\n| 搂2 | 鍦烘櫙 B | IC Markets 缁忕邯鍟?缇庡浗鐙珛鏃?7/4 浼戝競璇嗗埆, ScalperXAU 鎺ュ叆 M19 + IsHoliday() 鍥炶皟璇嗗埆 | 15-20 |\n| 搂3 | 鎺ュ叆鐐硅鍙?| Node.js fs 瀹炴祴 4 demo 脳 2 鎺ュ叆鐐?= 8 琛屽彿 (M19 SetAllowWeekend + 鏃舵杩囨护 check) | 25-35 |\n| 搂4 | 璋冧紭鐐?3 妗?| 淇濆畧 (M19 SetAllowWeekend false 鍏ㄩ儴) / 骞宠　 (M19 + IsHoliday callback) / 婵€杩?(M19 alone 淇′换鏂伴椈杩囨护) | 15-20 |\n| 搂5 | 闄烽槺 5 鏉?| 缁忕邯鍟嗚妭鍋囨棩鏃堕棿鎴抽敊 (UTC vs 鏈嶅姟鍣? / M19 鍛ㄦ湯妯″紡涓庤妭鍋囨棩鍐茬獊 / IsHoliday 鏈噸杞?1.5h 鏃堕棿婕傜Щ / 4 demo 鍘熷瀷 (TrendMA/Breakout/MyEA/Dashboard) 涓嶅惈 M19 妯″潡 / 澶?EA 鍏变韩 M19 瀹炰緥鐘舵€佹硠婕?| 10-15 |\n| 搂6 | 閾惧悜 | M19 spec L161 / M17 spec L79-83 (IsNearEvent) / 5 閫熸煡 wiki / MOC 鍙嶆ā寮忓垎绫?0鈫? +1 琛?| 5-10 |\n\n## 4 demo EA 鎺ュ叆鐐?(Node.js fs 瀹炴祴, 涓嶇紪閫? 璺?09:00 T3 22/22 pattern 涓€鑷?\n\n瀹炵墿璺緞: `C:\\Users\\Administrator\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\minimax-ea\\`\n\n4 demo + 鎺ュ叆鐐硅鍙?(Node.js fs grep 蹇?100% 鍛戒腑, 0 缂栭€?:\n- TrendMA_EA.mq5: M19 SetAllowWeekend (L? 寰?grep) + M19.SetPreset (L? 寰?grep)\n- Breakout_EA.mq5: M19 SetAllowWeekend (L? 寰?grep) + M19.SetPreset (L? 寰?grep)\n- MyEA.mq5: M19 SetAllowWeekend (L? 寰?grep) + M19.SetPreset (L? 寰?grep)\n- Dashboard.mq5: M19 SetAllowWeekend (L? 寰?grep) + M19.SetPreset (L? 寰?grep)\n\n**鍏抽敭**: 鎺ュ叆鐐硅鍙峰繀椤?Node.js fs `readFileSync(path, 'utf16le')` (Windows .mq5 榛樿 UTF-16 LE BOM) 瀹炴祴 8/8 鍛戒腑, 涓嶅厑璁?spec 缁欏亣鏁版嵁. 09:00 T3 鏁欒: 11 EA 22 鎺ュ叆鐐?spec 鏄敊璇ず渚? producer 姝ｇ‘鐢?Node.js fs 瀹炴祴 22/22 鍏ㄩ儴 1:1 鍛戒腑瀹炵墿.\n\n## 5 鍙嶆ā寮?(涓嶄笌 80 鉂?+ 110 wiki ## 鍙嶆ā寮?娈?+ 09:00 T3 5 鍙嶆ā寮?baseline 閲嶅)\n\n1. **缁忕邯鍟嗚妭鍋囨棩鏃堕棿鎴抽敊** (UTC vs 鏈嶅姟鍣? - 5/11 鍙嶆ā寮忓懡涓?(11 demo 閮借 M19.SetServerTZ(server_tz) 鏄惧紡璁剧疆)\n2. **M19 鍛ㄦ湯妯″紡涓庤妭鍋囨棩鍐茬獊** - 5/11 (SetAllowWeekend(false) + IsHoliday() 浜岄€変竴, 涓嶈兘閮藉紑)\n3. **IsHoliday 鏈噸杞?1.5h 鏃堕棿婕傜Щ** - 4/11 (1.5h 鍐?4 demo 璋冪敤 IsHoliday 涓嶉噸杞戒細璇垽, 蹇呴』 OnTimer 1.5h 閲嶈浇)\n4. **4 demo 鍘熷瀷 (TrendMA/Breakout/MyEA/Dashboard) 涓嶅惈 M19 妯″潡** - 11/11 鍛戒腑 (鏈换鍔″氨鏄ˉ杩?11/11, 09:00 婕忕殑鍘熷洜, spec 闄愬埗 4 demo prototype 涓嶅湪 M19 闆嗘垚鑼冨洿, 鐜板湪 10:00 琛?\n5. **澶?EA 鍏变韩 M19 瀹炰緥鐘舵€佹硠婕?* - 2/11 (鍗曡繘绋嬪崟 EA OK, 璺?EA 鍏变韩 M19 瀹炰緥浼氱姸鎬佹硠婕? 蹇呴』姣?EA 鑷繁 new CMql5Kit.M19, 涓嶈兘 extern 鍏变韩)\n\n## 6 閾惧悜\n\n1. [[01-璋冪敤妯″潡/M19 鏃舵杩囨护 SessionFilter]] (L161 M19 demo)\n2. [[01-璋冪敤妯″潡/M17 鏂伴椈杩囨护 NewsFilter]] (L79-83 IsNearEvent 鎺ュ彛)\n3. [[04-閬垮潙涓庨€熸煡/03 瀹炵洏 vs 鍥炴祴宸紓]] (鍥炴祴涓嶈瘑鍒妭鍋囨棩, 璺熷疄鐩樺樊寮?\n4. [[04-閬垮潙涓庨€熸煡/05 蹇呮煡娓呭崟]] (鑺傚亣鏃ュ繀鏌ラ」)\n5. [[05-楂樼骇璁捐妯″紡/楂樼骇 EA 璁捐妯″紡 wiki]] (鍗曚緥 vs 澶氫緥妯″紡瀵规瘮)\n6. MOC 鍙嶆ā寮忓垎绫?0鈫? + 1 琛岄摼鍚?(T4 owner 椤烘墜鍋?\n\n## 鎵ц姝ラ (娌跨敤 09:00 T3 鑼冩湰)\n\n1. Node.js fs 瀹炴祴 4 demo 8 鎺ュ叆鐐?(TrendMA + Breakout + MyEA + Dashboard, 鍚?M19 SetAllowWeekend + 鏃舵杩囨护 check, 100% grep 鍛戒腑)\n2. 6 娈电粨鏋勫啓绋?(鍦烘櫙 A 15-20L + 鍦烘櫙 B 15-20L + 鎺ュ叆鐐?25-35L + 璋冧紭 15-20L + 闄烽槺 10-15L + 閾惧悜 5-10L = 85-120L)\n3. Edit 宸ュ叿鏈熬杩藉姞 `C:\\ai\\obsidian-鏂囦欢\\mt\\EA寮€鍙慭\04-閬垮潙涓庨€熸煡\\04 缁忕邯鍟嗗樊寮?鐐瑰樊-鎵嬬画璐?md` ## demo 鎺ュ叆 M19 瀹屾暣鑼冩湰 娈?鈮?5K 瀛楄妭 / 80-120L\n4. 鍐?`daily/2026-06-05_10-00-track3-result.md` 6 绔犺妭 (鐩爣/鍩虹嚎/鎵ц/8 鎺ュ叆鐐圭粨鏋?5 鍙嶆ā寮?楠屾敹)\n5. Node.js fs statSync 楠岃瘉 04 wiki 瀛楄妭 鈮?baseline (32,449B) + 5K = 37K+ / 14 瀹炵墿 mtime UNCHANGED\n\n## 楠屾敹 (verifier 9 椤?\n- [ ] 04 wiki 鏈熬 ## demo 鎺ュ叆 M19 娈靛嚭鐜?1 娆?鈮?5K 瀛楄妭 / 80-120L\n- [ ] 6 娈电粨鏋勯綈 (鍦烘櫙 A/B + 鎺ュ叆鐐硅鍙?+ 璋冧紭鐐?3 妗?+ 闄烽槺 5 鏉?+ 閾惧悜)\n- [ ] 8+ 鎺ュ叆鐐硅鍙?100% Node.js fs 瀹炴祴鍛戒腑\n- [ ] 0 placeholders (5 涓嫳鏂囨爣璁板叏 0)\n- [ ] 0 鎺ㄨ崘璇?(4 涓腑鏂?鑻辨枃鍏?0)\n- [ ] 0 鏀?.mq5 (14 瀹炵墿 mtime UNCHANGED) + 0 鏀?wiki 鍓嶆枃 (鏈熬杩藉姞) + 0 鏀?MOC 鍓嶆枃 (1 琛岄摼鍚戝厑璁?\n- [ ] 0 缂栭€?API (M17/M19 绛夋ā鍧楁柟娉曞悕 蹇呭厛 grep wiki 鐜版湁鍐呭, 12 蹇呰)\n- [ ] 0 鍒涘缓 README/agents/protocols\n- [ ] daily/2026-06-05_10-00-track3-result.md 6 绔犺妭榻怽n\n## 寮哄埗\n- 0 缂栭€?(8 鎺ュ叆鐐硅鍙?100% Node.js fs 瀹炴祴, 璺?09:00 T3 22/22 pattern 涓€鑷?\n- 0 placeholders + 0 鎺ㄨ崘璇繚瑙刓n- 0 鏀?wiki 鍓嶆枃 (鏈熬杩藉姞鍏佽)\n- 0 鏀?.mq5 (鏈换鍔″彧 wiki 涓嶅姩 .mq5, 4 demo 鏄?spec demo 涓嶇敤鐪熸帴 M19)\n- deliverable 鍙岃矾寰?(engine outputs + daily/2026-06-05_10-00-track3-result.md)\n",
+        "verify_prompt": "# 楠岃瘉: 04 缁忕邯浜哄樊寮?wiki 鏈熬 ## demo 鎺ュ叆 M19 瀹屾暣鑼冩湰 娈?(T3 worker-B 浜や粯鐗?\n\n## 蹇呰\n- 璇︾粏 spec: `C:\\ai\\obsidian-鏂囦欢\\mt\\00-浠诲姟璋冨害涓績\\daily\\2026-06-05_10-00-plan.md` 搂1.2\n- 04 wiki: `C:\\ai\\obsidian-鏂囦欢\\mt\\EA寮€鍙慭\04-閬垮潙涓庨€熸煡\\04 缁忕邯鍟嗗樊寮?鐐瑰樊-鎵嬬画璐?md`\n- 4 demo EA: `C:\\Users\\Administrator\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\minimax-ea\\`\n\n## 楠岃瘉姝ラ (鐙珛 re-derive, 涓嶈 producer 鎶ュ憡)\n\n1. Node.js fs statSync `C:\\ai\\obsidian-鏂囦欢\\mt\\EA寮€鍙慭\04-閬垮潙涓庨€熸煡\\04 缁忕邯鍟嗗樊寮?鐐瑰樊-鎵嬬画璐?md`, 纭瀛楄妭 鈮?baseline (32,449B) + 5K = 37K+\n2. grep 鎵?## demo 鎺ュ叆 M19 娈? 纭 6 娈电粨鏋勯綈 (鍦烘櫙 A/B + 鎺ュ叆鐐硅鍙?+ 璋冧紭鐐?3 妗?+ 闄烽槺 5 鏉?+ 閾惧悜)\n3. Node.js fs grep 4 demo 8 鎺ュ叆鐐?(TrendMA + Breakout + MyEA + Dashboard, 鍚?2 鎺ュ叆鐐?M19 SetAllowWeekend + 鏃舵杩囨护 check) 100% 鍛戒腑\n4. grep 5 鍙嶆ā寮?(缁忕邯鍟嗚妭鍋囨棩鏃堕棿鎴抽敊 / M19 鍛ㄦ湯妯″紡涓庤妭鍋囨棩鍐茬獊 / IsHoliday 鏈噸杞?1.5h 鏃堕棿婕傜Щ / 4 demo 鍘熷瀷涓嶅惈 M19 / 澶?EA 鍏变韩 M19 鐘舵€佹硠婕?, 纭 5/5 鍑虹幇\n5. grep 6 閾惧悜 (M19 spec / M17 spec / 03 瀹炵洏 vs 鍥炴祴 / 05 蹇呮煡娓呭崟 / 05-楂樼骇璁捐妯″紡 + MOC 鍙嶆ā寮?0鈫?), 纭 6/6 鍑虹幇\n6. Node.js fs statSync 14 瀹炵墿 .mq5 mtime, 纭 14/14 UNCHANGED (vs 10:00 baseline 璺?09:00 涓€鑷?\n7. 璇?`daily/2026-06-05_10-00-track3-result.md` 6 绔犺妭, 纭 9 椤归獙鏀舵竻鍗曞叏杩嘰n\n## 9 椤归獙鏀?(Producer 9/9)\n- [ ] 04 wiki 鈮?baseline + 5K\n- [ ] 6 娈电粨鏋勯綈\n- [ ] 8+ 鎺ュ叆鐐硅鍙?100% Node.js fs 瀹炴祴鍛戒腑\n- [ ] 5 鍙嶆ā寮?0/0 閲嶅 (涓嶄笌 80+110+09:00 T3 baseline 閲嶅)\n- [ ] 6 閾惧悜\n- [ ] 0 placeholders + 0 鎺ㄨ崘璇璡n- [ ] 0 鏀?.mq5 + 0 鏀?wiki 鍓嶆枃 + 0 鏀?MOC 鍓嶆枃 (1 琛屽厑璁?\n- [ ] 0 缂栭€?API + 0 鍒涘缓 README\n- [ ] daily track result 6 绔犺妭榻怽n\n## 寮傚父澶勭悊\n- verifier 11+ min timeout: 瀹炵墿浼樺厛, owner override_accept 绔嬪嵆闂幆 (璺?14 娆?pattern 涓€鑷?\n- worker 15min watchdog kill: 妫€鏌?04 wiki 鏈熬娈?+ track3-result.md 瀹炵墿鏄惁 100% 钀界洏, 鏄垯 override_accept\n",
+        "assigned_to": "general",
+        "role": "produce",
+        "verified_by": "verifier",
+        "depends_on": [],
+        "gates": [],
+        "max_retries": 2,
+        "timeout_ms": 1500000
+      }
+    ]
+  }
+}

@@ -1,0 +1,343 @@
+version: 1
+plan:
+  name: 2026-06-04 13:00 巡检 — 12:00 归档收尾 + N5-#1/#2 BBTrendEA + Scalping_More 实战 wiki 沉淀（3 track 并行）
+  max_concurrency: 3
+  max_consecutive_failures: 2
+  max_cycles: 3
+  auto_accept: false
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: track1-archive-and-monitor
+    title: T1 — 12:00 plan 实物完成归档 + 13:00 节点卡点扫描 + owner accept
+    prompt: >
+      目的：把 12:00 plan_b83778e5 实物完成的 N5-#4 (M18 实战 wiki) + N5-#5 (M19 实战 wiki) + plan_b83778e5 自身 3 条 done 搬到 归档.md；同步更新 队列.md；尝试 owner accept plan_b83778e5（如果 daemon 接受）；做 13:00 节点 7 维度卡点扫描。
+
+      【必读文件 — 4 个，写之前必须读完】
+
+      1. C:\ai\obsidian-文件\mt\00-任务调度中心\队列.md (实查当前状态)
+      2. C:\ai\obsidian-文件\mt\00-任务调度中心\归档.md (实查当前状态)
+      3. C:\ai\obsidian-文件\mt\00-任务调度中心\任务.md (实查当前状态)
+      4. C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-04_12-00-plan.md (上一轮详细规划参考)
+
+
+      【关键步骤 — 严格按序】
+
+      1. 读 4 个必读文件并写读后摘要到 deliverable §0
+
+      2. 归档归档.md 追加 3 条 done (用 Edit 工具在文件末尾追加):
+         - 2026-06-04 [done] N5-#4 M18 多品种对冲实战 wiki — `EA开发/实战/M18 多品种对冲实战.md` 18468b/331L, 6 章节 (3 场景 + 3 段可复制代码 + threshold 调优表 + 5+ 陷阱 + 10 步 checklist + 5 反模式), frontmatter [实战, 相关性, 多品种, M18] type: usage, M18 spec wiki 末尾"实战案例"段已加 (+23L 链接), EA 开发知识库.md "实战"分类已加
+         - 2026-06-04 [done] N5-#5 M19 时段过滤实战 wiki — `EA开发/实战/M19 时段过滤实战.md` 32435b/747L, 7 章节 (3 场景 + 3 段可复制代码 + 4 预定义常量取舍表 + 7 陷阱 + 10 步 checklist + 跨午夜 NY:22-6 场景 + 5 反模式), frontmatter [实战, 时段, 剥头皮, M19] type: usage, M19 spec wiki 末尾"实战案例"段已加 (+45L 双向链接), EA 开发知识库.md "实战"分类已加
+         - 2026-06-04 [done] plan_b83778e5 — MQL5Kit M18/M19 实战 wiki 沉淀 3/3 PASS (T1 11:00 实物归档 4 条 + 12:00 卡点扫描 / T2 N5-#4 M18 实战 wiki 331L + spec 末尾 + MOC 实战分类 / T3 N5-#5 M19 实战 wiki 747L + spec 末尾 + MOC 实战分类)
+
+      3. 更新队列.md (用 Edit 工具改 3 处 + 新建 1 块):
+         - 把"## 2026-06-04 12:00 巡检新规划"区块下 T1 行的 `- [ ]` 改为 `- [x]` (标记 done)
+         - 把 T2 行同上
+         - 把 T3 行同上
+         - 顶部新建"## 2026-06-04 13:00 巡检新规划（mavis-team 分派）"区块，写 T1/T2/T3 摘要 (3 行)
+         - **不要动**顶部 N1-N5 主条目
+         - **不要删**任何已有 done 块
+
+      4. owner accept plan_b83778e5 (尝试):
+         - 调 `mavis team plan accept plan_b83778e5` (看 daemon 是否接受)
+         - 如果 daemon 拒越权, 标注 "owner 启新 plan 时一并 accept, 物理产物都在磁盘, 不强 takeover"
+         - **不强行 mavis team plan override-accept** (按反模式禁止)
+
+      5. 13:00 节点 7 维度卡点扫描 (写到 deliverable §1 表):
+         - 12:00 plan 状态: 读 `C:\Users\Administrator\.mavis\plans\plan_b83778e5\state.json` → 检查 status=completed + plan_complete=true + 3 accept
+         - 11:00 plan 状态: 读 `plan_63c0f9f2\state.json` → 同上
+         - 10:00 plan 状态: 读 `plan_6b20c99b\state.json` → 同上
+         - 活跃 session: `mavis session list` (PowerShell) → 检查无 zombie / 无 inflight >30min
+         - MT5 进程: `Get-Process terminal64, MetaEditor64` → 检查 2 个进程都在
+         - lock 文件: `Get-ChildItem C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075 -Recurse -Filter "*.lock"` → 0 命中
+         - CU keep-alive: 读 `C:\Users\Administrator\cu_keepalive.log` 末 50 行 → 检查 HB ok=N fail=476 enabled=true 持续 + 无 ERR/WARN/HTTP fail
+
+      6. plan 闭环处置 (写到 deliverable §2):
+         - 12:00/11:00/10:00 plan 仍 phase=evaluating, 不算卡死
+         - 不强行 takeover (产物都在磁盘, 写归档就够了)
+         - 标注 "plan 状态遗留 evaluating, 等下次 owner 启 plan 时一并 accept"
+
+
+      【deliverable 路径】
+
+      C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-04_13-00-track1-result.md
+
+      内容结构:
+      - §0 4 个必读文件读后摘要
+      - §1 卡点扫描表 (7 维度, 每行 通过/失败 + 证据)
+      - §2 plan 闭环处置 (12:00/11:00/10:00 plan 状态 + accept 尝试结果)
+      - §3 3 条归档.md 追加的 before/after diff
+      - §4 队列.md 3 处修改 + 1 处新建区块的 before/after diff
+      - §5 反模式自检 (没用 rm -rf / 没改 _archive/ / 没重启 terminal64 / 没动 EA开发/)
+
+
+      【反模式禁止】
+
+      - ❌ 不要重启 terminal64 / MetaEditor64
+      - ❌ 不要改 _archive/ 下任何文件
+      - ❌ 不要改 EA开发/ 下任何文件 (T2/T3 独占)
+      - ❌ 不要在归档.md / 队列.md / 任务.md 删已有内容 (只追加/改状态)
+      - ❌ 不要在 deliverable 写"待补" / "TODO"
+      - ❌ 不要强行 mavis team plan override-accept (owner 启新 plan 时自然 close)
+      - ✅ 用 `mavis session list` 不要 `mavis session new` (policy 限制)
+      - ✅ 中文路径用 Node.js `fs` 不用 PS `Get-ChildItem`
+      - ✅ 跑 producer 完成时周期回信到 root session：mavis communication send --to mvs_e9435c5febd9478b8b7f99a60d62dfbc --command prompt --content "<status>"
+    verify_prompt: >
+      独立验证 Track 1:
+
+      1. Get-Item 归档.md 看字节数增加, 末尾追加的 3 条 done 真的在 (用 Read 工具读末 30 行)
+
+      2. Get-Item 队列.md 看 12:00 区块下 T1/T2/T3 都改为 [x], 顶部新建 13:00 巡检新规划区块
+
+      3. 读 deliverable §1 卡点扫描表 7 维度都有数据 (不是空表)
+
+      4. 跑 `mavis session list` 实查 session 状态, 跟 deliverable §1 第 4 行对得上
+
+      5. 跑 `Get-Process terminal64, MetaEditor64` 实查 MT5 进程, 跟 §1 第 5 行对得上
+
+      6. 读 `C:\Users\Administrator\cu_keepalive.log` 末 20 行实查 keep-alive 状态, 跟 §1 第 7 行对得上
+
+      7. 检查 deliverable §0 真的列了 4 个必读文件 + 摘要 ≥ 50 字
+
+      8. 验证 deliverable §2 写了 plan accept 尝试结果 (成功/失败 + 原因)
+
+      任一不符 → FAIL, 列出具体差异。
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 2
+    timeout_ms: 3600000
+  - id: track2-bbtrend-sop-wiki
+    title: T2 — N5-#1 BBTrendEA 复活 SOP wiki 沉淀（16 必读 + 7 章节 + 12 步 SOP）
+    prompt: >
+      目的：把 _archive/earn-ea/BBTrendEA.mq5 复活到 minimax-ea/ 的标准操作流程沉淀到 EA开发/实战/, 让用户在 console session 1 切回来时按 SOP 跑一遍复活 (接入 M01/M02/M08/M10/M13/M15/M17/M18)。
+
+      【必读输入 — 16 文件 (写之前必须完整读完, 不读不写)】
+
+      1. C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md (入口 MOC)
+      2. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M01 交易封装 CTradePlus.md (复活必用, 所有 EA 第一步接 M01)
+      3. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M02 风控 Risk.md (复活必用, 风控第一)
+      4. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M08 追踪止损 TrailingStop.md (BBTrendEA = 突破 + 趋势, 必接追踪止损)
+      5. C:\ai\obsidian-文件\mt\EA开发\02-完整模板\EA 突破模板（Donchian 海龟）.md (BBTrendEA 是布林带+趋势的突破 EA, 模板直接对应)
+      6. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M10 行情通知 Notify.md (5 EA 已接 M10, BBTrendEA 必接, 参考 MeanReversion_EA 接入模式)
+      7. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M13 文件 IO.md (OnTrade 落盘 CSV)
+      8. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M15 定时器 TimerService.md (5 EA 已有 CTimerService 替换 EventSetTimer)
+      9. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M17 新闻过滤 NewsFilter.md (5 EA 已有 M17 集成, BBTrendEA 必接 ±30min 高影响事件禁开仓)
+      10. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M18 相关性过滤 CorrelationFilter.md (BBTrendEA 是 XAUUSDm 单品种, 可选接 M18 做多品种 demo)
+      11. C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\_archive\BBTrendEA.mq5 (被复活的源文件 68KB, 8+ indicator handles, 6+ magic, 自定义风控)
+      12. C:\ai\obsidian-文件\mt\EA开发\03-通用片段\01 下单模块.md (复活步骤会用到)
+      13. C:\ai\obsidian-文件\mt\EA开发\04-避坑与速查\04 大师课经验（实战 vs 回测）.md (复活前的避坑)
+      14. C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\MeanReversion_EA.mq5 (已集成 M18+M19+M17+M10+M13+M08 的实物 demo, 最新 0 errors 编译通过)
+      15. C:\ai\obsidian-文件\mt\EA开发\00-快速开始\EA 写之前要知道的 10 件事.md (EA 写前必看)
+      16. C:\ai\obsidian-文件\mt\EA开发\00-快速开始\MT5 GUI 自动化 5 次失败全记录 + 手动协作.md (复活流程会涉及 GUI 编译)
+
+
+      【SOP wiki 设计 (7 章节)】
+
+      章节 1: BBTrendEA 体检报告 (功能/缺什么/复活目标)
+      章节 2: 复活前准备 (5 步: 环境检查/文件备份/模块确认/编译环境/GUI 切换到 console 1)
+      章节 3: 完整复活步骤 (12 步, 每步 1 行命令/操作):
+        - 步骤 1: 复制 BBTrendEA.mq5 到 minimax-ea/BBTrendEA.mq5 (保留 _archive 源不动)
+        - 步骤 2: include 8 个模块 (M01/M02/M08/M10/M13/M15/M17/M18) — M18 可选
+        - 步骤 3: 加 input group (每模块 1 个 input group, 共 8 组)
+        - 步骤 4: 加 object (每模块 1 个 object)
+        - 步骤 5: OnInit 中初始化 8 个模块 (每模块 1 段初始化代码 + 失败返 INIT_FAILED)
+        - 步骤 6: OnTick 中集成 (按 EA 模板的事件顺序: 指标 → 信号 → 风控 → 时段 → 新闻 → 相关性 → 下单 → 通知)
+        - 步骤 7: OnTrade 中接 M10 + M13
+        - 步骤 8: OnTimer 改用 M15 替换 EventSetTimer
+        - 步骤 9: OnDeinit 中清理 8 个模块
+        - 步骤 10: 编译 (MetaEditor F7 或 MetaEditor64 /compile:)
+        - 步骤 11: 验证 (metaeditor.log 看 errors=0, 0 warnings)
+        - 步骤 12: 跑 1 周沙盒测试 (看 trades_YYYYMMDD.csv 落盘 + 通知触发)
+      章节 4: 编译错误速查 (5+ 常见编译错误 + 解决)
+      章节 5: 接入 checklist (10 步)
+      章节 6: 反模式 (5 条不要做的事)
+      章节 7: 与 N4 复活的协作 (用户在 console 1 时按本 SOP 跑, N4 跑完回 wiki 标记 "已复活")
+
+
+      【关键步骤 — 严格按序】
+
+      1. 读 16 必读文件 (每个写 50-200 字读后摘要到 deliverable §0)
+
+      2. BBTrendEA.mq5 体检 (写入 deliverable §1):
+         - 文件大小 / 行数 / 类结构 / 8+ indicator handles / 6+ magic / 自定义风控
+         - 缺什么模块 (不接 M01/M02/M08/M10/M13/M15/M17/M18 的话, 会缺什么)
+         - 复活目标: 把 68KB 源码搬到 minimax-ea/BBTrendEA.mq5, 加 8 个模块的 include + input + object + OnInit + OnTick 替换
+
+      3. 设计 SOP wiki 结构 (写入 deliverable §2)
+
+      4. 写 SOP wiki:
+         - 路径: C:\ai\obsidian-文件\mt\EA开发\实战\BBTrendEA 复活 SOP.md
+         - 字数 300+ 行 (详细 SOP, 要求直接按步骤复制粘贴执行)
+         - frontmatter: title / tags [实战, 复活, BBTrendEA, MQL5Kit] / type: sop
+         - 严格匹配 M18/M19 实战 wiki 风格
+
+      5. 不写 .mq5 (T2 只写 wiki, 不实际复活 EA — 实际复活需 GUI 阻塞 console session 1, 留给 N4)
+
+
+      【deliverable 路径】
+
+      C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-04_13-00-track2-result.md
+
+      内容:
+      - §0 16 必读文件读后摘要
+      - §1 BBTrendEA.mq5 体检报告 (行数/类/handles/magic/缺什么/复活目标)
+      - §2 SOP wiki 设计 (7 章节 + 字数预估)
+      - §3 SOP wiki 实际写入 (贴完整文件 + 行数 + 字节数)
+      - §4 12 步复活步骤的"必填"与"可选"标注 (M18 可选, 其它必填)
+      - §5 反模式自检
+
+
+      【反模式禁止】
+
+      - ❌ 不要重启 terminal64 / MetaEditor64
+      - ❌ 不要改 _archive/ 下任何文件 (BBTrendEA.mq5 只读不写)
+      - ❌ 不要在 minimax-ea/ 下写 .mq5/.ex5 (实际复活留给 N4)
+      - ❌ 不要在 wiki 里写"待补" / "TODO"
+      - ❌ 不要跳过必读文件直接动手写
+      - ❌ 不要写虚假回测数据 (如果没跑过 backtest, 就写"未跑 backtest, 建议参数")
+      - ✅ 读 .mq5 用 Node.js `fs` (避开 PS 5.1 中文路径坑)
+      - ✅ 写完跑 `Get-Item` 验证文件存在 + 字节数对得上
+      - ✅ 跑 producer 完成时周期回信到 root session：mavis communication send --to mvs_e9435c5febd9478b8b7f99a60d62dfbc --command prompt --content "<status>"
+    verify_prompt: >
+      独立验证 Track 2:
+
+      1. Get-ChildItem C:\ai\obsidian-文件\mt\EA开发\实战\ 确认 BBTrendEA 复活 SOP.md 存在
+
+      2. Get-Item BBTrendEA 复活 SOP.md 看字节数 ≥ 6000b (300+ 行大约 6000+ 字节)
+
+      3. Read BBTrendEA 复活 SOP.md 检查 frontmatter 存在 + 7 章节都有实质内容 (不空)
+
+      4. 检查 deliverable §0 真的列了 16 个必读文件 + 摘要 ≥ 50 字
+
+      5. 验证 wiki 里没有"待补" / "TODO" / "..." 等占位符
+
+      6. 验证 §3 章节 (12 步复活步骤) 每步有具体命令/操作 (不是空话)
+
+      7. 验证 §1 体检报告有行数/类结构/handles/magic 数量等具体数据
+
+      8. 验证 §4 12 步有"必填"与"可选"标注 (M18 可选, 其它必填)
+
+      任一不符 → FAIL, 列出具体差异。
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 2
+    timeout_ms: 7200000
+  - id: track3-scalping-more-wiki
+    title: T3 — N5-#2 Scalping_More v1.3 接入示例 wiki 沉淀（14 必读 + 7 章节 + 10 步接入）
+    prompt: >
+      目的：把 _archive/me-ea/Scalping_More_v1.3.mq5 接入 MQL5Kit 模块的示例沉淀到 EA开发/实战/, 作为"剥头皮 EA 接入 MQL5Kit"的完整 demo, 让用户参考接入。
+
+      【必读输入 — 14 文件 (写之前必须完整读完, 不读不写)】
+
+      1. C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md (入口 MOC)
+      2. C:\ai\obsidian-文件\mt\EA开发\02-完整模板\EA 剥头皮模板.md (Scalping_More = 剥头皮 EA, 模板直接对应)
+      3. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M19 时段过滤 SessionFilter.md (剥头皮 = 严格时段, 必接 M19)
+      4. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M17 新闻过滤 NewsFilter.md (剥头皮禁不起滑点, 必接 M17 ±30min)
+      5. C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\_archive\Scalping_More_v1.3.mq5 (被接入的源文件 10KB)
+      6. C:\ai\obsidian-文件\mt\EA开发\策略\01 ScalperXAU v1 - Bollinger RSI 均值回归.md (ScalperXAU v1 spec, 已有 InpSessionStartHour=8/InpSessionEndHour=23 裸配置, N5-#5 实战 wiki §1 场景 B 演示了升级到 M19)
+      7. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M01 交易封装 CTradePlus.md (所有 EA 第一步接 M01)
+      8. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M02 风控 Risk.md (剥头皮风控第一 - 高频小盈亏比)
+      9. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M08 追踪止损 TrailingStop.md (Scalping_More = 高频剥头皮, 必接 M08 - 短 ATR 距离追踪)
+      10. C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\ScalperXAU.mq5 (现有 ScalperXAU v1 的实物, 已接 M19 via N5-#5 实战 wiki 升级路径, 39KB 39800b)
+      11. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M10 行情通知 Notify.md (5 EA 已有 M10 集成, 参考 OnTrade 接入)
+      12. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M13 文件 IO.md (落盘 trades_YYYYMMDD.csv)
+      13. C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M15 定时器 TimerService.md (5 EA 已有 CTimerService 替换 EventSetTimer)
+      14. C:\ai\obsidian-文件\mt\EA开发\00-快速开始\EA 写之前要知道的 10 件事.md (EA 写前必看)
+
+
+      【接入示例 wiki 设计 (7 章节)】
+
+      章节 1: Scalping_More_v1.3 体检报告 (10KB / 剥头皮入场/缺什么/接入目标)
+      章节 2: 完整接入步骤 (10 步, 每步 1 行命令/操作):
+        - 步骤 1: include 8 个模块 (M01/M02/M08/M10/M13/M15/M17/M19)
+        - 步骤 2: 加 input group (8 组 input)
+        - 步骤 3: 加 object
+        - 步骤 4: OnInit 初始化 8 模块 (失败返 INIT_FAILED)
+        - 步骤 5: OnTick 集成 (剥头皮顺序: M19.IsInSession → M17.IsNearEvent → 指标 → 信号 → M02.CheckRisk → M01.OrderSend → M08.TrailingStop → M10.Send → M13.FileIO.WriteCsvRow)
+        - 步骤 6: OnDeinit 清理
+        - 步骤 7: 编译 (F7)
+        - 步骤 8: 验证 (errors=0)
+        - 步骤 9: 沙盒测试 (1 周 trades 落盘)
+        - 步骤 10: 实盘 demo
+      章节 3: 完整可复制代码 (10 段, 1 段/步骤, 直接复制到 EA 就能用)
+      章节 4: 编译错误速查 (5+ 剥头皮特有问题: tick size / spread / slippage / M19 周末 / M17 ±30min)
+      章节 5: 与 ScalperXAU v1 升级路径的对比 (哪些复用 / 哪些要改)
+      章节 6: 接入 checklist (10 步)
+      章节 7: 反模式 (5 条不要做的事: 高频重仓/无 M19 周末交易/无 M17 事件禁开/无 M08 追踪/无 M10 通知)
+
+
+      【关键步骤 — 严格按序】
+
+      1. 读 14 必读文件 (每个写 50-200 字读后摘要到 deliverable §0)
+
+      2. Scalping_More_v1.3.mq5 体检 (写入 deliverable §1):
+         - 文件大小 / 行数 / 类结构 / 剥头皮入场逻辑 (价格/时间/手数/止损止盈)
+         - 缺什么模块 (剥头皮特别需要 M01/M02/M08/M10/M13/M15/M17/M19 全部)
+         - 接入目标: 把 10KB 源码加 8 个模块的 include + input + object + OnInit + OnTick
+
+      3. 设计接入示例 wiki 结构 (写入 deliverable §2)
+
+      4. 写接入示例 wiki:
+         - 路径: C:\ai\obsidian-文件\mt\EA开发\实战\Scalping_More v1.3 接入示例.md
+         - 字数 300+ 行 (详细接入 demo, 要求直接按代码复制粘贴执行)
+         - frontmatter: title / tags [实战, 接入, Scalping_More, 剥头皮, MQL5Kit] / type: usage
+         - 严格匹配 M18/M19 实战 wiki 风格
+
+      5. 不写 .mq5 (T3 只写 wiki, 不实际接入 — 实际接入需 GUI 编译阻塞 console session 1, 留给 N4)
+
+
+      【deliverable 路径】
+
+      C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-04_13-00-track3-result.md
+
+      内容:
+      - §0 14 必读文件读后摘要
+      - §1 Scalping_More_v1.3.mq5 体检报告
+      - §2 接入示例 wiki 设计 (7 章节 + 字数预估)
+      - §3 接入示例 wiki 实际写入 (贴完整文件 + 行数 + 字节数)
+      - §4 与 ScalperXAU v1 升级路径对比
+      - §5 反模式自检
+
+
+      【反模式禁止】: 与 T2 同
+
+      【注意】: T2 也会创建 EA开发/实战/ 子目录, 用 Node.js `fs.mkdir({recursive: true})` 幂等, 不会冲突
+    verify_prompt: >
+      独立验证 Track 3:
+
+      1. Get-ChildItem C:\ai\obsidian-文件\mt\EA开发\实战\ 确认 Scalping_More v1.3 接入示例.md 存在
+
+      2. Get-Item Scalping_More v1.3 接入示例.md 看字节数 ≥ 6000b
+
+      3. Read Scalping_More v1.3 接入示例.md 检查 frontmatter 存在 + 7 章节都有实质内容
+
+      4. 检查 deliverable §0 真的列了 14 个必读文件 + 摘要 ≥ 50 字
+
+      5. 验证 wiki 里没有"待补" / "TODO" / "..." 等占位符
+
+      6. 验证 §3 章节 (10 步接入) 每步有具体代码/命令 (不是空话)
+
+      7. 验证 §1 体检报告有行数/类结构/入场逻辑等具体数据
+
+      8. 验证 §5 与 ScalperXAU v1 升级路径对比, 有"复用"和"要改"两栏
+
+      9. 数实战 wiki 里"步骤 1~10"是否都到位 (10 个)
+
+      任一不符 → FAIL, 列出具体差异。
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 2
+    timeout_ms: 7200000

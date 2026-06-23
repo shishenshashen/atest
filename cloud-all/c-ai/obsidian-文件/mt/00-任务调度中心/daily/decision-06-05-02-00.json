@@ -1,0 +1,25 @@
+{
+  "last_cycle": [
+    {
+      "task_id": "track2-five-quick-refs-cases",
+      "verdict": "manual_retry",
+      "reason": "实物 0 改动: 5 速查 wiki 末尾 ## 实战案例 段 全 0 加, 04 经纪商 wiki 没 Write 新建, 05 wiki 文件名是 '05 必查清单.md' 不是 '05 回测必查清单.md' (我之前 prompt 文件名错, worker 也跟着摸不清). worker 15 min 全程在 workspace 写 9 个 Node.js fs 验证脚本 (baseline-80err.js / baseline-simple.js / find-correct-lines.js / list-dir.js / list-dir2.js / read-baseline.js / test-simple.js / verify-ea-lines.js / verify-meanrev.js) + 2 个 case 草稿 (case-01-compile.md 12,630B + case-02-ordersend.md 12,811B), 没 Edit 实物 wiki. 02:00 实物 wiki mtime baseline 验证: 01 编译 12,203B (mtime 2026-06-04 13:20:03) / 02 OrderSend 14,281B (13:20:45) / 03 实盘 10,692B (13:21:17) 全部 UNCHANGED. cycle 2 retry 必须紧 scope 复用 workspace 已写好的 case-01/02 草稿, 3 min 写 case-03/04/05 + 04 经纪商 wiki 主体, 5 min Edit 5 wiki 末尾 ## 实战案例 段, 2 min 写 deliverable, 12 min hard cap (不再写新 Node.js fs 脚本)."
+    }
+  ],
+  "next_cycle": [
+    {
+      "task_id": "track2-five-quick-refs-cases",
+      "title": "T2 - 5 速查 wiki ## 实战案例 段扩展 (14:00 §3 维度 3 续 候选 F 闭环, cycle 2 retry 12min 紧 scope)",
+      "assigned_to": "general",
+      "role": "produce",
+      "verified_by": "verifier",
+      "max_retries": 1,
+      "timeout_minutes": 12,
+      "depends_on": [],
+      "gates": [],
+      "prompt": "# 任务 (cycle 2 retry): 5 速查 wiki ## 实战案例 段扩展 (06-05 02:00 巡检 T2) — 12 min 严格限时\n\n## ⚠️ 上轮失败根因 (cycle 1 0 改动)\nworker 15 min 全程在 workspace 写 9 个 Node.js fs 验证脚本 + 2 个 case 草稿 (case-01-compile.md 12,630B + case-02-ordersend.md 12,811B), **没 Edit 任何实物 wiki**。本轮严格限时 12 min, **不许再写新 Node.js fs 脚本**, 复用 workspace 已写好的 case 草稿。\n\n## 必复用 (workspace 现成, 不许重写)\n- `C:\\Users\\Administrator\\.mavis\\plans\\plan_72db98b6\\workspace\\case-01-compile.md` (12,630B) → 末尾追加到 01 编译常见错误.md\n- `C:\\Users\\Administrator\\.mavis\\plans\\plan_72db98b6\\workspace\\case-02-ordersend.md` (12,811B) → 末尾追加到 02 OrderSend 错误码速查.md\n\n## 3 min 必写 (cycle 2 新增, 不许 Node.js fs 验证)\n- case-03-live-vs-backtest.md (3-5K) → 末尾追加到 03 实盘 vs 回测差异.md\n- case-04-broker.md (3-5K) → 末尾追加到 04 经纪商 wiki (新建 04 经纪商差异(点差/手续费).md 主体 7 章节 + 实战案例段 6 段)\n- case-05-checklist.md (3-5K) → 末尾追加到 05 必查清单.md (文件名是 '05 必查清单.md' 不是 '05 回测必查清单.md'!)\n\n## 5 必查 (Node.js fs statSync 一次性, 不要再写脚本)\n```bash\nnode -e \"const fs=require('fs'); const p='C:/ai/obsidian-文件/mt/EA开发/04-避坑与速查/'; for (const f of ['01 编译常见错误.md','02 OrderSend 错误码速查.md','03 实盘 vs 回测差异.md','04 经纪商差异(点差/手续费).md','05 必查清单.md']) try { const st=fs.statSync(p+f); console.log(f, st.size, st.mtime.toISOString()); } catch(e) { console.log(f, 'NOFILE'); }\"\n```\n\n## 5 min Edit (必须用 Edit 工具, 不用 Write 改前文)\n- 01 编译常见错误.md: Read 全文 → Edit 末尾追加 ## 实战案例 段 (case-01 草稿内容, 6 段结构: 场景 A / 场景 B / 接入点行号 / 调优点 3 档 / 陷阱 5 条 / 链向)\n- 02 OrderSend 错误码速查.md: Read 全文 → Edit 末尾追加 ## 实战案例 段 (case-02 草稿内容)\n- 03 实盘 vs 回测差异.md: Read 全文 → Edit 末尾追加 ## 实战案例 段 (case-03 草稿内容)\n- 04 经纪商差异(点差/手续费).md: Write 新建 (主体 7 章节 + 实战案例段 case-04)\n- 05 必查清单.md: Read 全文 → Edit 末尾追加 ## 实战案例 段 (case-05 草稿内容)\n\n## 2 min 写 deliverable 双路径\n- engine outputs: `C:\\Users\\Administrator\\.mavis\\plans\\plan_72db98b6\\outputs\\track2-five-quick-refs-cases\\deliverable.md`\n- daily: `C:\\ai\\obsidian-文件\\mt\\00-任务调度中心\\daily\\2026-06-05_02-00-track2-result.md`\n\n## 12 min 严格限时 (timeout_minutes: 12)\n- 0 改 .mq5 (0 涉及)\n- 0 改前文 (5 wiki 末尾追加, 0 改前 1-N 行)\n- 0 改 MOC 前文 (T3 owner 顺手做, 1 行标注允许)\n- 0 创建 README/agents/protocols\n- 0 placeholders (待补/TODO/FIXME/TBD/XXX)\n- 0 推荐语违规 (推荐/建议使用/强烈建议)\n- 不许再写 Node.js fs 验证脚本 (用 Read 工具即可)\n- 不许再 Write 实物 wiki 全部 (用 Edit 追加, 04 用 Write 新建)\n\n## 阻塞\n无 (纯 Read + Edit 工具 + Write 1 个新文件, 不动 .mq5, 不动 console 1, 不动 MOC 前文)\n\n## 时间\n12 min (8 min Edit + 2 min deliverable + 2 min buffer), owner 06-05 03:00 cron 接续 review\n\n## workspace\nC:\\ai\\obsidian-文件\\mt\\"
+    }
+  ],
+  "plan_complete": false,
+  "message_to_user": "T2 cycle 1 worker 15 min 全程写 Node.js fs 验证脚本, 实物 5 wiki 末尾 0 改动. owner 启 cycle 2 retry 紧 scope (12 min 限时 + 复用 case-01/02 workspace 草稿 + 3 min 写 case-03/04/05 + 5 min Edit 5 wiki + 2 min 写 deliverable + 严禁再写新 Node.js fs 脚本)."
+}

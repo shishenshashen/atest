@@ -1,0 +1,1273 @@
+2026-06-09 14:10:46,609 INFO gateway.run: Starting Hermes Gateway...
+2026-06-09 14:10:46,610 INFO gateway.run: Session storage: C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home\sessions
+2026-06-09 14:10:46,611 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-06-09 14:10:46,612 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-06-09 14:10:49,405 INFO gateway.run: Connecting to feishu...
+2026-06-09 14:10:50,186 INFO gateway.platforms.feishu: [Feishu] Connected in websocket mode (feishu)
+2026-06-09 14:10:50,206 INFO gateway.run: ✓ feishu connected
+2026-06-09 14:10:50,220 INFO gateway.run: Gateway running with 1 platform(s)
+2026-06-09 14:10:50,227 INFO gateway.run: Channel directory built: 0 target(s)
+2026-06-09 14:10:51,229 INFO gateway.run: Press Ctrl+C to stop
+2026-06-09 14:10:51,252 INFO gateway.run: Cron ticker started (interval=60s)
+2026-06-09 14:10:56,245 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-06-09 14:28:16,815 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d4f6931c08cc4f67d460e70b8e
+2026-06-09 14:28:16,816 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d4f6931c08cc4f67d460e70b8e type=text chat_id=oc_d82e2123944957229a09558191424fad sender=user:ou_37e4317b261c9cc5d7aa4297f26ce4f0 text='在吗' media=0
+2026-06-09 14:28:19,224 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_d82e2123944957229a09558191424fad (2 chars)
+2026-06-09 14:28:20,055 WARNING gateway.run: Unauthorized user: 22595c7d (万东方) on feishu
+2026-06-09 14:28:32,699 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d4f66372cbcc1edb65aee4435c
+2026-06-09 14:28:32,700 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d4f66372cbcc1edb65aee4435c type=text chat_id=oc_d82e2123944957229a09558191424fad sender=user:ou_37e4317b261c9cc5d7aa4297f26ce4f0 text='在不在' media=0
+2026-06-09 14:28:33,303 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_d82e2123944957229a09558191424fad (3 chars)
+2026-06-09 14:28:34,221 WARNING gateway.run: Unauthorized user: 22595c7d (万东方) on feishu
+2026-06-09 14:30:21,483 INFO gateway.run: Starting Hermes Gateway...
+2026-06-09 14:30:21,484 INFO gateway.run: Session storage: C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home\sessions
+2026-06-09 14:30:21,485 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-06-09 14:30:21,486 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-06-09 14:30:24,181 INFO gateway.run: Connecting to feishu...
+2026-06-09 14:30:25,079 INFO gateway.platforms.feishu: [Feishu] Connected in websocket mode (feishu)
+2026-06-09 14:30:25,098 INFO gateway.run: ✓ feishu connected
+2026-06-09 14:30:25,113 INFO gateway.run: Gateway running with 1 platform(s)
+2026-06-09 14:30:25,117 INFO gateway.run: Channel directory built: 0 target(s)
+2026-06-09 14:30:26,119 INFO gateway.run: Press Ctrl+C to stop
+2026-06-09 14:30:26,142 INFO gateway.run: Cron ticker started (interval=60s)
+2026-06-09 14:30:31,145 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-06-09 14:30:34,309 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d4f6155e4b0c2dcfe3045e6620
+2026-06-09 14:30:34,310 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d4f6155e4b0c2dcfe3045e6620 type=text chat_id=oc_19ee985ec36e4073279cd882768082bb sender=user:ou_270b36f1321bbca0b68e94d13fb6d4f1 text='在吗' media=0
+2026-06-09 14:30:36,484 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_19ee985ec36e4073279cd882768082bb (2 chars)
+2026-06-09 14:30:37,533 INFO gateway.run: inbound message: platform=feishu user=ou_270b36f1321bbca0b68e94d13fb6d4f1 chat=oc_19ee985ec36e4073279cd882768082bb msg='在吗'
+2026-06-09 14:30:44,147 INFO gateway.run: response ready: platform=feishu chat=oc_19ee985ec36e4073279cd882768082bb time=6.6s api_calls=1 response=13 chars
+2026-06-09 14:30:44,223 INFO gateway.platforms.base: [Feishu] Sending response (13 chars) to oc_19ee985ec36e4073279cd882768082bb
+2026-06-09 14:32:00,594 INFO gateway.run: Starting Hermes Gateway...
+2026-06-09 14:32:00,595 INFO gateway.run: Session storage: C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home\sessions
+2026-06-09 14:32:00,596 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-06-09 14:32:00,597 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-06-09 14:32:00,610 INFO gateway.run: Marked 1 in-flight session(s) as resumable from previous run
+2026-06-09 14:32:03,340 INFO gateway.run: Connecting to feishu...
+2026-06-09 14:32:04,139 INFO gateway.platforms.feishu: [Feishu] Connected in websocket mode (feishu)
+2026-06-09 14:32:04,157 INFO gateway.run: ✓ feishu connected
+2026-06-09 14:32:04,175 INFO gateway.run: Connecting to weixin...
+2026-06-09 14:32:04,977 INFO gateway.platforms.weixin: [Weixin] Connected account=4a53c837 base=https://ilinkai.weixin.qq.com
+2026-06-09 14:32:04,995 INFO gateway.run: ✓ weixin connected
+2026-06-09 14:32:05,007 INFO gateway.run: Gateway running with 2 platform(s)
+2026-06-09 14:32:05,017 INFO gateway.run: Channel directory built: 1 target(s)
+2026-06-09 14:32:05,304 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 14:32:06,010 INFO gateway.run: Scheduled auto-resume for 1 restart-interrupted session(s)
+2026-06-09 14:32:06,011 INFO gateway.run: Press Ctrl+C to stop
+2026-06-09 14:32:06,053 INFO gateway.run: Cron ticker started (interval=60s)
+2026-06-09 14:32:06,364 INFO gateway.run: inbound message: platform=feishu user=ou_270b36f1321bbca0b68e94d13fb6d4f1 chat=oc_19ee985ec36e4073279cd882768082bb msg=''
+2026-06-09 14:32:08,303 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='你好'
+2026-06-09 14:32:11,014 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-06-09 14:32:11,996 INFO gateway.run: response ready: platform=feishu chat=oc_19ee985ec36e4073279cd882768082bb time=5.6s api_calls=1 response=35 chars
+2026-06-09 14:32:12,031 INFO gateway.platforms.base: [Feishu] Sending response (35 chars) to oc_19ee985ec36e4073279cd882768082bb
+2026-06-09 14:32:12,827 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=4.5s api_calls=1 response=92 chars
+2026-06-09 14:32:13,090 INFO gateway.platforms.base: [Weixin] Sending response (92 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-09 14:34:48,229 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d4f620d1880c495388334ac76f
+2026-06-09 14:34:48,230 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d4f620d1880c495388334ac76f type=text chat_id=oc_19ee985ec36e4073279cd882768082bb sender=user:ou_270b36f1321bbca0b68e94d13fb6d4f1 text='在吗' media=0
+2026-06-09 14:34:50,250 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_19ee985ec36e4073279cd882768082bb (2 chars)
+2026-06-09 14:34:51,039 INFO gateway.run: inbound message: platform=feishu user=ou_270b36f1321bbca0b68e94d13fb6d4f1 chat=oc_19ee985ec36e4073279cd882768082bb msg='在吗'
+2026-06-09 14:34:53,607 INFO gateway.run: response ready: platform=feishu chat=oc_19ee985ec36e4073279cd882768082bb time=2.6s api_calls=1 response=13 chars
+2026-06-09 14:34:53,620 INFO gateway.platforms.base: [Feishu] Sending response (13 chars) to oc_19ee985ec36e4073279cd882768082bb
+2026-06-09 15:33:09,441 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3657s)
+2026-06-09 15:33:09,442 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-09 15:38:09,759 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:feishu:dm:oc_19ee985ec36e4073279cd882768082bb (idle=3796s)
+2026-06-09 15:38:09,760 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-09 17:12:03,022 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 17:12:06,024 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='我现在语音输入，你能不能识别我的命令'
+2026-06-09 17:12:13,280 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=7.3s api_calls=1 response=230 chars
+2026-06-09 17:12:13,293 INFO gateway.platforms.base: [Weixin] Sending response (230 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-09 17:12:34,507 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 17:12:37,518 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='你看一下那个欧斯TE本地文件跟你的obin skills能不能融合，就是先把OB斯in本地的这个文件啊，沉淀到你的知识里面'
+2026-06-09 17:14:23,541 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 17:14:44,180 INFO gateway.run: Queued follow-up for session agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat: final stream delivery not confirmed; sending first response before continuing.
+2026-06-09 17:17:25,726 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:17:28,902 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:17:32,073 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:17:35,043 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:17:35,256 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:17:38,168 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:17:38,430 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 17:17:41,296 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:17:44,440 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:17:47,581 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 17:18:55,641 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 17:19:04,639 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 17:24:17,742 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 17:27:00,599 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 17:28:52,651 INFO gateway.run: Queued follow-up for session agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat: final stream delivery not confirmed; sending first response before continuing.
+2026-06-09 17:29:39,712 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:29:42,873 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:29:46,015 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:29:49,148 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:29:52,311 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 17:34:59,740 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=1342.2s api_calls=6 response=498 chars
+2026-06-09 17:34:59,754 INFO gateway.platforms.base: [Weixin] Sending response (498 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-09 17:34:59,993 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:35:03,164 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:35:06,333 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:35:09,475 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:35:12,656 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 17:35:12,657 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-09 17:35:12,800 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:35:15,922 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:35:19,060 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:35:22,197 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 17:35:25,365 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 17:35:25,367 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 18:38:17,283 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3798s)
+2026-06-09 18:38:17,284 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-09 21:01:40,107 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 21:01:43,116 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='整理记忆和知识库'
+2026-06-09 21:03:56,149 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:03:59,260 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:02,420 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:05,566 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:08,738 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:04:11,330 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:14,491 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:17,649 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:20,773 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:21,534 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:23,913 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:04:24,766 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:27,901 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:30,104 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:31,055 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:33,342 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:34,213 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:04:36,503 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:36,682 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:36,692 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:39,659 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:39,842 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:39,854 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:42,813 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:04:42,963 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:43,016 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:46,103 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:46,161 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:04:49,227 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:04:49,321 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:10:01,498 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:10:02,005 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:10:04,620 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:10:05,161 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:10:07,766 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:10:08,295 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:10:10,909 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:10:11,428 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:10:14,055 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:10:14,561 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:15:22,145 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:25,303 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:28,443 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:31,596 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:33,154 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=830.0s api_calls=18 response=777 chars
+2026-06-09 21:15:33,165 INFO gateway.platforms.base: [Weixin] Sending response (777 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-09 21:15:33,305 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:34,744 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:15:36,464 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:39,632 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:42,782 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:45,935 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:15:45,936 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-09 21:15:46,080 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:49,227 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:52,379 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:55,535 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 21:15:58,704 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:15:58,705 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 21:43:03,641 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 21:43:06,641 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='怎么样了'
+2026-06-09 21:43:20,474 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=13.8s api_calls=1 response=661 chars
+2026-06-09 21:43:20,485 INFO gateway.platforms.base: [Weixin] Sending response (661 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-09 21:43:28,777 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 21:43:31,774 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='你现在没事的时候尝试搜一下mt5的skills'
+2026-06-09 22:05:17,939 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:05:21,103 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:05:24,257 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:05:27,421 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:05:30,586 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:05:31,799 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:05:34,954 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:05:38,112 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:05:41,265 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:05:44,402 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:06:01,010 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:04,168 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:07,321 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:10,471 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:13,640 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:06:26,749 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:29,900 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:33,057 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:36,215 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:39,346 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:06:56,641 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:56,646 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:59,798 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:06:59,809 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:07:02,938 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:07:02,973 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:07:06,093 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:07:06,116 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:07:09,219 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:07:09,252 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:12:20,461 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:12:23,601 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:12:26,719 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:12:29,852 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:12:33,027 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:12:45,203 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:12:48,349 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:12:51,511 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:12:54,652 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:12:57,804 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:13:05,884 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=1774.1s api_calls=14 response=1670 chars
+2026-06-09 22:13:05,894 INFO gateway.platforms.base: [Weixin] Sending response (1670 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-09 22:13:06,045 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:13:09,214 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:13:12,372 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:13:15,533 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:13:18,684 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:13:18,684 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-09 22:13:18,846 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:13:22,012 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:13:25,161 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:13:28,299 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-09 22:13:31,457 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 22:13:31,458 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-09 23:13:29,413 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3624s)
+2026-06-09 23:13:29,414 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-09 23:50:13,975 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-09 23:50:16,981 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='always没用吗'
+2026-06-09 23:50:35,999 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=19.0s api_calls=1 response=1067 chars
+2026-06-09 23:50:36,010 INFO gateway.platforms.base: [Weixin] Sending response (1067 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-10 00:53:34,633 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3779s)
+2026-06-10 00:53:34,634 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-10 04:03:44,769 INFO gateway.run: Session expiry: 2 sessions to finalize (feishu:1, weixin:1)
+2026-06-10 04:03:44,774 INFO gateway.run: Session expiry done: 2 finalized
+2026-06-10 12:36:36,329 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-10 12:36:39,336 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='https://mp.weixin.qq.com/s/LyC-UCccObAeyERhzNdzcw'
+2026-06-10 12:38:09,553 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=90.2s api_calls=7 response=1194 chars
+2026-06-10 12:38:09,570 INFO gateway.platforms.base: [Weixin] Sending response (1194 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-10 13:39:16,120 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3667s)
+2026-06-10 13:39:16,121 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-10 13:53:06,524 INFO gateway.run: Starting Hermes Gateway...
+2026-06-10 13:53:06,525 INFO gateway.run: Session storage: C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home\sessions
+2026-06-10 13:53:06,544 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-06-10 13:53:06,545 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-06-10 13:53:06,753 WARNING gateway.run: Feishu: lark-oapi not installed or FEISHU_APP_ID/SECRET not set
+2026-06-10 13:53:06,754 WARNING gateway.run: No adapter available for feishu
+2026-06-10 13:53:07,053 INFO gateway.run: Connecting to weixin...
+2026-06-10 13:53:07,428 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-10 13:53:07,432 INFO gateway.platforms.weixin: [Weixin] Connected account=4a53c837 base=https://ilinkai.weixin.qq.com
+2026-06-10 13:53:07,445 INFO gateway.run: ✓ weixin connected
+2026-06-10 13:53:07,459 INFO gateway.run: Gateway running with 1 platform(s)
+2026-06-10 13:53:07,491 INFO gateway.run: Channel directory built: 2 target(s)
+2026-06-10 13:53:08,504 INFO gateway.run: Press Ctrl+C to stop
+2026-06-10 13:53:08,791 INFO gateway.run: Cron ticker started (interval=60s)
+2026-06-10 13:53:13,524 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-06-10 14:03:57,072 INFO gateway.run: Starting Hermes Gateway...
+2026-06-10 14:03:57,073 INFO gateway.run: Session storage: C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home\sessions
+2026-06-10 14:03:57,074 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-06-10 14:03:57,075 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-06-10 14:05:08,815 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-10 14:05:11,813 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='https://mp.weixin.qq.com/s/WJAE-lB7hHhtmlrVSMPESg'
+2026-06-10 14:05:45,612 INFO gateway.run: Connecting to feishu...
+2026-06-10 14:05:46,174 INFO gateway.platforms.feishu: [Feishu] Connected in websocket mode (feishu)
+2026-06-10 14:05:46,189 INFO gateway.run: ✓ feishu connected
+2026-06-10 14:05:46,212 INFO gateway.run: Connecting to weixin...
+2026-06-10 14:05:46,266 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-10 14:05:46,280 INFO gateway.platforms.weixin: [Weixin] Connected account=4a53c837 base=https://ilinkai.weixin.qq.com
+2026-06-10 14:05:46,296 INFO gateway.run: ✓ weixin connected
+2026-06-10 14:05:46,309 INFO gateway.run: Gateway running with 2 platform(s)
+2026-06-10 14:05:46,319 INFO gateway.run: Channel directory built: 2 target(s)
+2026-06-10 14:05:47,319 INFO gateway.run: Press Ctrl+C to stop
+2026-06-10 14:05:47,345 INFO gateway.run: Cron ticker started (interval=60s)
+2026-06-10 14:05:52,338 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-06-10 14:11:26,670 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:11:29,813 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:11:32,957 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:11:36,119 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:11:39,267 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 14:12:41,585 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=449.8s api_calls=23 response=1637 chars
+2026-06-10 14:12:41,599 INFO gateway.platforms.base: [Weixin] Sending response (1637 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-10 14:12:41,783 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:12:44,925 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:12:48,094 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:12:51,253 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:12:54,401 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 14:12:54,402 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-10 14:12:54,547 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:12:57,700 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:13:00,861 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:13:04,008 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 14:13:07,160 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 14:13:07,161 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 15:14:21,407 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3700s)
+2026-06-10 15:14:21,408 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-10 17:28:03,157 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-10 17:28:03,221 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-10 17:28:06,168 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='https://mp.weixin.qq.com/s/4O01Zm-zCpOkJchVhkFZdA  你看看这个文章，有没有可以借鉴的地方'
+2026-06-10 17:28:07,487 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='https://mp.weixin.qq.com/s/4O01Zm-zCpOkJchVhkFZdA  你看看这个文章，有没有可以借鉴的地方'
+2026-06-10 17:28:56,454 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=50.3s api_calls=4 response=2666 chars
+2026-06-10 17:28:56,465 INFO gateway.platforms.base: [Weixin] Sending response (2666 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-10 17:29:21,653 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=74.2s api_calls=3 response=3139 chars
+2026-06-10 17:29:21,730 INFO gateway.platforms.base: [Weixin] Sending response (3139 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-10 18:29:30,431 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3634s)
+2026-06-10 18:29:30,432 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-10 18:42:22,295 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-10 18:42:25,303 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='[引用: - **值得抄的3 点**： 1. **L0~L3 分层**：我们现在的 memory 是扁平条目，老大之前已经踩过"一堆相似条目、真正想要的沉在底下'
+2026-06-10 18:45:30,325 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=185.0s api_calls=24 response=4256 chars
+2026-06-10 18:45:30,339 INFO gateway.platforms.base: [Weixin] Sending response (4256 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-10 19:49:34,055 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3844s)
+2026-06-10 19:49:34,056 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-10 20:49:20,723 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-10 20:49:23,728 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='你自己按照最优的方案去一步步做'
+2026-06-10 20:52:18,223 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:21,371 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:22,680 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:24,531 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:25,853 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:26,386 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:27,693 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:28,998 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:29,548 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:30,832 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:52:32,136 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:32,676 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:33,755 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:35,282 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:52:35,835 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:36,906 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:38,624 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:38,992 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:52:40,033 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:41,790 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:43,159 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:44,932 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:46,302 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:52:48,089 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:51,254 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:52:54,804 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:52:57,978 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:01,130 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:04,268 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:07,413 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:53:12,061 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:15,212 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:18,356 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:21,503 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:21,912 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:24,662 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:53:25,046 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:28,192 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:31,330 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:34,478 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:53:34,486 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:37,626 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:40,709 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:40,792 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:43,863 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:43,917 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:47,028 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:47,091 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:53:48,995 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:50,155 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:52,120 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:53,332 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:53:55,252 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:53:58,372 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:01,517 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:54:15,960 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:19,107 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:21,898 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:22,292 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:25,039 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:25,533 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:27,348 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:28,197 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:28,677 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:54:30,507 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:31,340 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:33,224 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:33,653 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:34,461 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:54:36,359 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:36,798 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:39,496 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:39,942 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:54:42,594 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:42,634 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:45,733 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:45,806 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:54:48,876 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:48,913 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:52,054 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:52,078 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:55,195 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:54:55,237 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:57,419 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:54:58,361 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:00,558 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:01,483 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:55:02,524 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:03,694 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:05,675 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:06,860 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:08,622 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:08,861 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:10,005 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:55:11,783 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:12,086 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:14,596 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:14,983 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:15,234 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:55:17,880 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:18,100 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:21,018 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:21,242 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:55:24,135 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:25,210 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:27,296 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:55:28,334 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:31,462 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:34,599 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:37,763 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:55:40,457 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:43,605 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:46,733 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:48,896 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:50,140 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:52,033 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:53,380 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:55:55,204 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:55:58,353 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:01,535 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:56:01,644 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:04,862 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:07,996 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:11,153 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:14,290 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:56:20,257 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:23,427 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:26,584 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:29,629 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:29,714 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:32,770 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:32,863 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:56:35,929 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:39,094 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:39,695 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:42,235 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:56:42,951 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:46,253 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:49,395 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:56:52,552 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:57:30,945 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:57:34,113 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:57:37,289 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:57:40,456 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:57:43,594 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:58:17,815 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:20,961 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:22,872 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:24,135 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:26,064 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:27,294 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:29,397 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:30,452 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:58:32,612 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:32,937 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:35,759 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:58:36,078 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:39,228 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:39,936 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:42,355 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:43,061 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:45,511 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:58:46,213 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:48,630 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:49,383 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:51,772 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:52,632 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:58:54,846 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:54,970 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:57,967 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:58:58,231 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:01,091 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:01,343 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:59:04,126 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:04,224 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:07,278 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:07,404 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:59:10,422 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:13,555 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:16,720 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:59:28,074 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:31,210 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:34,367 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:37,194 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:37,625 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:40,365 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:40,814 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:59:43,520 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:46,651 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:49,796 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 20:59:53,175 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:56,290 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 20:59:59,454 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:02,605 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:05,768 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:00:09,198 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:12,345 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:15,503 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:18,641 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:20,570 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:21,887 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:00:23,708 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:26,861 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:30,003 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:32,340 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:33,151 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:00:35,494 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:38,654 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:41,789 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:44,912 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:00:48,829 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:51,971 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:55,090 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:00:58,217 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:01,427 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:01:09,135 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:12,275 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:13,848 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:15,438 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:16,973 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:18,594 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:20,125 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:21,725 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:01:23,271 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:26,396 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:01:30,302 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:33,442 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:36,590 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:39,711 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:39,926 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:42,859 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:01:43,064 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:46,231 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:49,383 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:01:52,520 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:01:59,284 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:02,410 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:05,544 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:08,682 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:11,654 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:11,852 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:02:14,798 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:17,916 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:21,058 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:24,222 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:02:34,363 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:37,506 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:40,664 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:43,805 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:46,974 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:02:47,388 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:50,529 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:53,699 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:02:56,851 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:03:00,008 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:03:41,329 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:03:44,477 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:03:47,635 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:03:50,806 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:03:53,975 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:04:11,542 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:14,675 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:17,819 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:20,960 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:24,125 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:04:41,194 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:44,357 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:47,510 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:48,027 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:50,671 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:51,198 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:53,800 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:04:54,344 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:04:57,467 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:00,612 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:05:07,522 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:07,673 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:10,654 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:10,792 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:13,806 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:13,945 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:16,957 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:17,099 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:20,090 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:05:20,214 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:05:40,708 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=977.0s api_calls=90 response=2383 chars
+2026-06-10 21:05:40,720 INFO gateway.platforms.base: [Weixin] Sending response (2383 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-10 21:05:40,967 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:44,111 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:47,263 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:50,425 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:53,577 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:05:53,577 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-10 21:05:53,727 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:05:56,880 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:06:00,033 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:06:03,209 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-10 21:06:06,342 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 21:06:06,343 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-10 22:09:40,111 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3873s)
+2026-06-10 22:09:40,112 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-11 04:04:58,966 INFO gateway.run: Session expiry: 1 sessions to finalize (weixin:1)
+2026-06-11 04:04:58,969 INFO gateway.run: Session expiry done: 1 finalized
+2026-06-11 06:48:15,814 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 06:48:18,814 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='怎么样了呀？你昨天而且你那个定时推送，你每天做了什么？你好像也没发给我'
+2026-06-11 06:49:11,690 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=52.9s api_calls=8 response=821 chars
+2026-06-11 06:49:11,705 INFO gateway.platforms.base: [Weixin] Sending response (821 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 06:49:36,696 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 06:49:39,694 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='你昨天已经说过了，我说能不能把落地后的那个markdown文件，你推送飞书或者是微信的时候，用PDF图片的形式发过来。我是不是这样说的？你也说了呀，你要去做'
+2026-06-11 06:50:20,846 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=41.2s api_calls=3 response=875 chars
+2026-06-11 06:50:20,859 INFO gateway.platforms.base: [Weixin] Sending response (875 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 06:50:58,448 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 06:51:01,449 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='你现在还问我该怎么做？你不应该继续完成昨天的任务吗？哪一步没做完，继续那一步啊'
+2026-06-11 06:52:18,341 WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/Daily/_pdf/2026-06-10.pdf
+2026-06-11 06:52:24,404 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 06:52:44,080 INFO gateway.run: Queued follow-up for session agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat: final stream delivery not confirmed; sending first response before continuing.
+2026-06-11 06:53:04,466 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 06:53:25,767 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 06:57:17,705 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:57:20,849 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:57:24,021 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:57:27,179 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:57:30,351 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 06:57:45,516 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:57:48,680 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:57:51,840 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:57:54,990 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:57:58,144 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 06:58:01,347 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:04,517 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:07,664 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:10,792 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:13,926 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 06:58:32,342 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:35,527 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:38,683 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:41,844 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:45,000 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 06:58:52,532 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:55,699 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:58:58,829 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:01,982 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:03,002 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:05,150 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 06:59:06,157 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:09,305 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:12,461 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:15,619 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 06:59:16,201 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:19,366 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:22,517 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:25,693 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:28,850 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 06:59:30,982 INFO gateway.run: Queued follow-up for session agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat: final stream delivery not confirmed; sending first response before continuing.
+2026-06-11 06:59:31,132 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:34,281 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:37,443 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:40,612 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:43,789 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 06:59:50,806 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:53,946 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 06:59:57,098 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:00,227 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:03,383 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 07:00:17,005 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=555.6s api_calls=3 response=246 chars
+2026-06-11 07:00:17,015 WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/Daily/_pdf/2026-06-10.pdf
+2026-06-11 07:00:17,016 INFO gateway.platforms.base: [Weixin] Sending response (168 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 07:00:17,178 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:20,358 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:23,506 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:26,665 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:29,829 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 07:00:29,830 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-11 07:00:29,980 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:33,098 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:36,242 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:39,389 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 07:00:42,533 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 07:00:42,534 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 08:05:10,966 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3894s)
+2026-06-11 08:05:10,967 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-11 09:27:44,215 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 09:27:47,221 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='你还在处理吗'
+2026-06-11 09:29:10,215 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=83.0s api_calls=2 response=934 chars
+2026-06-11 09:29:10,227 WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/Daily/_pdf/2026-06-10.pdf
+2026-06-11 09:29:10,228 INFO gateway.platforms.base: [Weixin] Sending response (856 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 09:56:56,640 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 09:56:57,690 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 09:57:00,688 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='没看到 你发给我啊'
+2026-06-11 09:57:17,925 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 09:57:37,286 INFO gateway.run: Queued follow-up for session agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat: final stream delivery not confirmed; sending first response before continuing.
+2026-06-11 09:58:40,391 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=99.7s api_calls=7 response=884 chars
+2026-06-11 09:58:40,405 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-01.png
+2026-06-11 09:58:40,406 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-02.png
+2026-06-11 09:58:40,406 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-03.png
+2026-06-11 09:58:40,407 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-04.png
+2026-06-11 09:58:40,408 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-05.png
+2026-06-11 09:58:40,408 INFO gateway.platforms.base: [Weixin] Sending response (884 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 09:58:40,409 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-01.png
+2026-06-11 09:58:40,410 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-02.png
+2026-06-11 09:58:40,411 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-03.png
+2026-06-11 09:58:40,412 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-04.png
+2026-06-11 09:58:40,412 INFO gateway.platforms.base: Skipping bare file path in reply (no file on disk): /c/hermes-daily-2026-06-10-images/page-05.png
+2026-06-11 09:59:31,476 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 09:59:34,477 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='看不到啊'
+2026-06-11 09:59:56,073 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=21.6s api_calls=4 response=887 chars
+2026-06-11 09:59:56,086 WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-01.png
+2026-06-11 09:59:56,087 WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-02.png
+2026-06-11 09:59:56,088 WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-03.png
+2026-06-11 09:59:56,088 WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-04.png
+2026-06-11 09:59:56,089 WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-05.png
+2026-06-11 09:59:56,091 INFO gateway.platforms.base: [Weixin] Sending response (622 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 10:00:01,745 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 10:00:04,747 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='我是在微信里面 访问不了你的服务器文件地址'
+2026-06-11 10:01:31,120 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=86.4s api_calls=6 response=940 chars
+2026-06-11 10:01:31,148 INFO gateway.platforms.base: [Weixin] extract_images found 5 image(s) in response (940 chars)
+2026-06-11 10:01:31,149 INFO gateway.platforms.base: [Weixin] Sending response (720 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 10:01:31,375 INFO gateway.platforms.base: [Weixin] Extracted 5 image(s) to send as attachments
+2026-06-11 10:01:31,376 INFO gateway.platforms.base: [Weixin] Sending image: https://n.uguu.se/.../lqWTlqlS.png (alt=daily p1)
+2026-06-11 10:01:35,103 INFO gateway.platforms.base: [Weixin] Sending image: https://h.uguu.se/.../SXBEdOdo.png (alt=daily p2)
+2026-06-11 10:01:37,924 INFO gateway.platforms.base: [Weixin] Sending image: https://o.uguu.se/.../bhaWEeVm.png (alt=daily p3)
+2026-06-11 10:01:40,580 INFO gateway.platforms.base: [Weixin] Sending image: https://h.uguu.se/.../vcfgUqGC.png (alt=daily p4)
+2026-06-11 10:01:41,706 INFO gateway.platforms.base: [Weixin] Sending image: https://o.uguu.se/.../ojwOYBds.png (alt=daily p5)
+2026-06-11 10:02:14,147 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 10:02:17,145 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='漂亮 目标实现了  但是有两个问题 1.图片的私密性 2.pdf你看 有好多文字乱码'
+2026-06-11 10:05:12,574 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:15,721 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:18,850 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:21,992 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:25,141 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 10:05:28,582 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:31,747 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:34,987 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:38,127 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:41,270 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 10:05:50,642 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=213.5s api_calls=24 response=1071 chars
+2026-06-11 10:05:50,653 INFO gateway.platforms.base: [Weixin] Sending response (1071 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 10:05:50,794 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:53,944 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:05:57,108 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:00,291 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:03,426 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 10:06:03,427 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-11 10:06:03,568 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:06,701 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:09,835 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:12,979 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:16,126 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 10:06:16,127 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 10:06:16,309 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:19,452 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:22,594 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:25,742 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 10:06:28,852 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 10:55:10,549 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 10:55:13,543 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='怎么没动静了'
+2026-06-11 10:56:23,195 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=69.7s api_calls=8 response=1548 chars
+2026-06-11 10:56:23,207 INFO gateway.platforms.base: [Weixin] extract_images found 5 image(s) in response (1548 chars)
+2026-06-11 10:56:23,208 INFO gateway.platforms.base: [Weixin] Sending response (1312 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 10:56:23,448 INFO gateway.platforms.base: [Weixin] Extracted 5 image(s) to send as attachments
+2026-06-11 10:56:23,449 INFO gateway.platforms.base: [Weixin] Sending image: https://n.uguu.se/.../fcffdf7d.png (alt=daily p1 v2)
+2026-06-11 10:56:24,114 ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/fcffdf7d.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/fcffdf7d.png'
+2026-06-11 10:56:24,117 INFO gateway.platforms.base: [Weixin] Sending image: https://n.uguu.se/.../e05f19f7.png (alt=daily p2 v2)
+2026-06-11 10:56:24,333 ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/e05f19f7.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/e05f19f7.png'
+2026-06-11 10:56:24,336 INFO gateway.platforms.base: [Weixin] Sending image: https://n.uguu.se/.../0bef3b40.png (alt=daily p3 v2)
+2026-06-11 10:56:24,552 ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/0bef3b40.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/0bef3b40.png'
+2026-06-11 10:56:24,554 INFO gateway.platforms.base: [Weixin] Sending image: https://n.uguu.se/.../46216d65.png (alt=daily p4 v2)
+2026-06-11 10:56:24,771 ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/46216d65.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/46216d65.png'
+2026-06-11 10:56:24,773 INFO gateway.platforms.base: [Weixin] Sending image: https://n.uguu.se/.../93981255.png (alt=daily p5 v2)
+2026-06-11 10:56:25,508 ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/93981255.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/93981255.png'
+2026-06-11 11:08:31,499 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 11:08:34,501 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='推给我'
+2026-06-11 11:09:15,038 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=40.5s api_calls=3 response=1144 chars
+2026-06-11 11:09:15,050 INFO gateway.platforms.base: [Weixin] extract_images found 5 image(s) in response (1144 chars)
+2026-06-11 11:09:15,050 INFO gateway.platforms.base: [Weixin] Sending response (909 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 11:09:15,289 INFO gateway.platforms.base: [Weixin] Extracted 5 image(s) to send as attachments
+2026-06-11 11:09:15,290 INFO gateway.platforms.base: [Weixin] Sending image: https://d.uguu.se/.../Hynroduv.png (alt=daily p1 v2)
+2026-06-11 11:09:18,017 INFO gateway.platforms.base: [Weixin] Sending image: https://o.uguu.se/.../VYwLiMNB.png (alt=daily p2 v2)
+2026-06-11 11:09:21,222 INFO gateway.platforms.base: [Weixin] Sending image: https://n.uguu.se/.../MrjXqHZP.png (alt=daily p3 v2)
+2026-06-11 11:09:25,473 INFO gateway.platforms.base: [Weixin] Sending image: https://d.uguu.se/.../adFUASyU.png (alt=daily p4 v2)
+2026-06-11 11:09:27,025 INFO gateway.platforms.base: [Weixin] Sending image: https://h.uguu.se/.../HiJGCfVr.png (alt=daily p5 v2)
+2026-06-11 11:11:49,652 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 11:11:52,657 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='可以 这个效果好多了 这个图片你是放在哪里了 ？ 你需要考虑2个问题。 1.现在中文不乱码了 是个好现象 2.格式的优化 布局等等 你看看有没有pdf类的ski'
+2026-06-11 11:12:44,033 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=51.4s api_calls=4 response=2168 chars
+2026-06-11 11:12:44,044 INFO gateway.platforms.base: [Weixin] Sending response (2168 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 11:18:05,875 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 11:18:08,878 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='A2 b3 cd'
+2026-06-11 11:20:34,559 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:20:37,719 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:20:40,865 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:20:44,032 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:20:47,282 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:20:53,227 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:20:56,494 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:20:56,742 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:20:59,736 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:00,019 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:00,471 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:02,870 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:03,141 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:03,696 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:06,025 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:21:06,258 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:06,842 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:09,388 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:21:09,979 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:11,992 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:13,139 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:21:15,135 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:18,265 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:19,466 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:21,423 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:22,630 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:24,575 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:21:25,804 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:28,950 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:30,117 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:32,114 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:21:33,341 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:33,573 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:36,481 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:36,731 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:39,623 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:39,791 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:39,866 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:42,760 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:21:42,912 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:42,983 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:46,044 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:46,120 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:21:47,404 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:49,188 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:50,570 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:52,306 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:21:53,725 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:21:56,863 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:22:00,002 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:22:32,173 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:22:35,338 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:22:38,515 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:22:41,668 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:22:44,852 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:23:59,844 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:02,988 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:04,184 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:06,130 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:07,325 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:09,262 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:09,329 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:10,579 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:12,418 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:12,491 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:24:13,786 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:15,587 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:16,936 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:24:18,833 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:20,650 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:22,095 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:24:23,818 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:27,051 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:30,195 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:33,332 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:24:36,140 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:39,290 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:42,434 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:45,570 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:47,669 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:48,722 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:24:50,853 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:54,007 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:24:57,156 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:00,327 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:25:05,850 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:09,081 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:12,200 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:15,363 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:18,498 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:25:22,983 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:26,132 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:29,292 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:32,437 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:35,595 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:25:38,425 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:41,577 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:44,726 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:47,864 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:25:50,998 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:26:11,643 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=482.8s api_calls=46 response=1735 chars
+2026-06-11 11:26:11,657 INFO gateway.platforms.base: [Weixin] Sending response (1735 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 11:26:11,863 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:26:15,029 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:26:18,180 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:26:21,318 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:26:24,466 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:26:24,466 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-11 11:26:24,637 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:26:27,783 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:26:30,936 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:26:34,086 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:26:37,231 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:26:37,232 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:30:21,337 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 11:30:24,338 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='你要处理下 这个hermes吞字的情况 问题有点严重'
+2026-06-11 11:32:08,389 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=104.1s api_calls=7 response=595 chars
+2026-06-11 11:32:08,401 INFO gateway.platforms.base: [Weixin] Sending response (595 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 11:33:04,185 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 11:33:07,191 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='3'
+2026-06-11 11:33:18,494 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 11:36:42,943 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:36:46,128 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:36:49,279 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:36:52,422 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:36:55,584 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:37:08,750 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:11,900 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:15,039 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:18,182 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:18,412 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:21,358 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:37:21,642 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:24,787 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:27,896 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:30,528 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:31,060 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:37:33,766 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:36,890 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:40,029 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:41,828 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:43,183 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:37:45,023 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:48,171 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:51,319 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:54,468 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:37:55,721 INFO gateway.run: Queued follow-up for session agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat: final stream delivery not confirmed; sending first response before continuing.
+2026-06-11 11:37:55,896 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:37:59,051 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:02,208 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:05,341 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:08,483 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:38:25,865 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:29,076 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:31,249 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:32,230 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:34,497 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:35,344 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:37,652 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:38,500 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:38:39,403 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:40,782 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:42,651 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:43,915 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:38:45,789 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:48,941 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:52,095 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:38:53,340 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:56,608 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:38:59,750 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:02,873 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:06,001 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:39:23,029 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:26,193 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:29,353 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:32,501 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:35,665 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:39:41,213 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:44,455 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:47,596 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:49,333 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:50,730 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:52,492 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:53,870 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:39:55,613 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:58,769 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:39:58,891 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:01,917 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:40:02,073 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:05,242 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:08,412 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:11,576 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:40:30,995 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:34,144 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:37,289 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:40,425 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:43,580 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:40:44,926 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:48,079 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:51,250 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:51,924 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:54,386 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:55,183 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:40:57,526 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:40:58,352 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:01,492 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:03,082 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=475.9s api_calls=15 response=917 chars
+2026-06-11 11:41:03,096 INFO gateway.platforms.base: [Weixin] Sending response (917 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 11:41:03,237 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:04,632 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:41:06,390 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:09,535 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:12,706 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:15,844 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:41:15,845 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-11 11:41:15,989 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:19,119 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:22,255 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:25,411 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-11 11:41:28,554 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 11:41:28,555 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-11 12:45:25,434 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3862s)
+2026-06-11 12:45:25,435 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-11 17:34:43,884 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 17:34:46,892 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='又卡死了'
+2026-06-11 17:34:46,929 INFO gateway.run: Session hygiene: 409 messages, ~166,434 tokens (actual) — auto-compressing (threshold: 85% of 1,000,000 = 850,000 tokens)
+2026-06-11 17:35:40,331 INFO gateway.run: Session hygiene: compressed 409 → 16 msgs, ~166,434 → ~2,765 tokens
+2026-06-11 17:37:10,341 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=143.4s api_calls=13 response=877 chars
+2026-06-11 17:37:10,354 INFO gateway.platforms.base: [Weixin] Sending response (877 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 17:45:21,740 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-11 17:45:24,733 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='梳理一下今天做了什么东西'
+2026-06-11 17:46:05,498 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=40.8s api_calls=2 response=3035 chars
+2026-06-11 17:46:05,510 INFO gateway.platforms.base: [Weixin] Sending response (3035 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-11 18:50:44,645 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3879s)
+2026-06-11 18:50:44,646 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-12 22:05:50,696 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-12 22:05:53,874 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-12 22:05:57,029 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-12 22:06:00,181 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-12 22:06:03,343 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-12 22:06:03,364 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-12 22:06:03,791 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-12 22:06:06,930 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-12 22:06:10,105 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-12 22:06:13,246 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-12 22:06:16,392 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-14 22:06:36,563 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:06:39,721 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:06:42,875 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:06:46,032 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:06:49,185 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-14 22:06:49,198 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-14 22:06:49,616 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:06:52,781 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:06:55,935 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:06:59,081 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:07:02,262 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-14 22:08:15,096 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:08:18,236 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:08:21,404 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:08:24,537 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:08:27,704 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-14 22:08:27,707 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-14 22:08:28,112 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:08:31,275 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:08:34,426 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:08:37,585 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-14 22:08:40,745 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-15 22:03:42,200 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-15 22:03:45,370 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-15 22:03:48,509 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-15 22:03:51,681 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-15 22:03:54,812 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-15 22:03:54,829 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-15 22:03:55,320 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-15 22:03:58,459 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-15 22:04:01,603 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-15 22:04:04,744 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-15 22:04:07,895 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-16 15:32:23,581 INFO gateway.run: curator: curator: snapshot created (2026-06-16T07-32-16Z)
+2026-06-16 16:25:26,294 INFO [20260616_153225_ab1889] gateway.run: curator: curator: auto: no changes; llm: Most are at v1.0.0. Nothing indicates obsolescence. The library is just fresh.
+
+Let me also look at the description fields one more time to confirm none look like salvage/audit artifacts:
+archived 1 skill(s):
+  • nano-pdf — pruned (stale)
+full report: hermes curator status
+2026-06-16 22:05:06,657 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-16 22:05:09,803 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-16 22:05:12,944 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-16 22:05:16,082 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-16 22:05:19,218 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-16 22:05:19,230 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-16 22:05:19,647 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-16 22:05:22,791 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-16 22:05:25,973 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-16 22:05:29,137 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-16 22:05:32,308 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-17 22:06:00,205 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-17 22:06:03,367 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-17 22:06:06,516 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-17 22:06:09,666 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-17 22:06:12,827 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-17 22:06:12,840 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-17 22:06:13,258 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-17 22:06:16,427 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-17 22:06:19,598 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-17 22:06:22,768 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-17 22:06:25,928 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-18 11:11:48,527 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-18 11:11:51,516 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='看看这个文章 https://mp.weixin.qq.com/s/tK-rmycXiZXfrQhtYHSjiw'
+2026-06-18 11:12:39,232 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=47.7s api_calls=6 response=1611 chars
+2026-06-18 11:12:39,246 INFO gateway.platforms.base: [Weixin] Sending response (1611 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-18 12:13:23,857 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3645s)
+2026-06-18 12:13:23,858 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-18 13:04:10,497 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-18 13:04:13,504 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='https://mp.weixin.qq.com/s/r7p5cnyoHun1ddiyBU9OCg 又一篇文章'
+2026-06-18 13:05:14,542 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=61.0s api_calls=5 response=2673 chars
+2026-06-18 13:05:14,554 INFO gateway.platforms.base: [Weixin] Sending response (2673 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-18 13:08:48,516 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-18 13:08:51,522 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='测试看看'
+2026-06-18 13:12:26,316 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:29,479 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:32,015 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:32,650 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:35,155 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:35,792 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:38,255 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:38,939 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-18 13:12:41,409 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:44,547 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-18 13:12:49,414 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=237.9s api_calls=14 response=1380 chars
+2026-06-18 13:12:49,426 INFO gateway.platforms.base: [Weixin] Sending response (1380 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-18 13:12:49,571 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:52,731 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:55,872 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:12:59,014 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:13:02,157 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-18 13:13:02,158 WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+2026-06-18 13:13:02,317 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:13:05,462 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:13:08,626 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:13:11,796 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-18 13:13:14,968 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-18 13:13:14,969 ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-18 13:32:15,918 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-18 13:32:18,927 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='那你装一个docker啊'
+2026-06-18 13:34:05,472 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=106.5s api_calls=6 response=1495 chars
+2026-06-18 13:34:05,487 INFO gateway.platforms.base: [Weixin] Sending response (1495 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-18 13:38:32,080 INFO gateway.platforms.weixin: [Weixin] inbound from=o9cq801D type=dm media=0
+2026-06-18 13:38:35,083 INFO gateway.run: inbound message: platform=weixin user=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat msg='b吧 你快速尝试'
+2026-06-18 13:45:06,305 INFO gateway.run: response ready: platform=weixin chat=o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat time=391.2s api_calls=7 response=2690 chars
+2026-06-18 13:45:06,317 INFO gateway.platforms.base: [Weixin] Sending response (2690 chars) to o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat
+2026-06-18 14:48:31,878 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:weixin:dm:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat (idle=3806s)
+2026-06-18 14:48:31,879 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-06-19 04:04:09,077 INFO gateway.run: Session expiry: 1 sessions to finalize (weixin:1)
+2026-06-19 04:04:09,080 INFO gateway.run: Session expiry done: 1 finalized
+2026-06-19 22:09:15,146 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-19 22:09:18,314 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-19 22:09:21,449 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-19 22:09:24,598 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-19 22:09:27,758 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-19 22:09:27,772 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-19 22:09:28,204 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-19 22:09:31,359 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-19 22:09:34,508 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-19 22:09:37,663 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-19 22:09:40,807 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-20 22:04:11,260 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-20 22:04:14,410 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-20 22:04:17,576 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-20 22:04:20,761 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-20 22:04:23,902 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-20 22:04:23,915 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-20 22:04:24,323 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-20 22:04:27,477 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-20 22:04:30,640 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-20 22:04:33,792 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-20 22:04:36,942 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-21 22:09:33,788 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:09:36,937 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:09:40,091 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:09:43,240 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:09:46,394 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-21 22:09:46,406 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-21 22:09:46,813 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:09:49,966 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:09:53,112 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:09:56,268 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:09:59,425 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-21 22:11:03,765 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:11:06,929 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:11:10,093 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:11:13,252 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:11:16,400 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-21 22:11:16,403 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-21 22:11:16,824 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:11:19,968 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:11:23,138 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:11:26,278 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-21 22:11:29,415 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-22 22:04:21,169 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-22 22:04:24,323 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-22 22:04:27,490 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-22 22:04:30,640 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-22 22:04:33,795 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-22 22:04:33,808 INFO gateway.platforms.weixin: weixin: restored 1 context token(s) for 4a53c837
+2026-06-22 22:04:34,199 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-22 22:04:37,323 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-22 22:04:40,491 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-22 22:04:43,646 WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+2026-06-22 22:04:46,794 ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+2026-06-23 15:33:43,176 INFO gateway.run: curator: curator: snapshot created (2026-06-23T07-33-34Z)
+2026-06-23 15:57:19,429 INFO [20260623_153343_aec9b0] gateway.run: curator: curator: auto: no changes; llm: Let me write the final summary.
+
+## Summary
+
+I scanned all 50+ installed skills and 73 candidates in the prompt, looking for prefix clusters and umbrella-class opportunities. After rigorous review, I found **one genuine consolidation target…
+archived 2 skill(s):
+  • kanban-orchestrator — pruned (stale)
+  • kanban-worker — pruned (stale)
+full report: hermes curator status

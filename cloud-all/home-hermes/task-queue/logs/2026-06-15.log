@@ -1,0 +1,618 @@
+[11:00:34] ENQUEUE t-20260615-110034-4cda17 role=ops level=S timeout=30s hb=30s
+[11:00:34] HEARTBEAT t-20260615-110034-4cda17 status=running progress=None/None msg=
+[11:00:34] DONE t-20260615-110034-4cda17 result_keys=['summary', 'artifacts']
+[11:00:34] ENQUEUE t-20260615-110034-352b67 role=ops level=S timeout=30s hb=30s
+[11:00:34] HEARTBEAT t-20260615-110034-352b67 status=running progress=None/None msg=
+[11:00:34] DONE t-20260615-110034-352b67 result_keys=['summary']
+[11:00:34] ENQUEUE t-20260615-110034-0917d7 role=ops level=S timeout=30s hb=30s
+[11:00:34] HEARTBEAT t-20260615-110034-0917d7 status=running progress=None/None msg=
+[11:00:34] DONE t-20260615-110034-0917d7 result_keys=['artifacts']
+[11:00:34] ENQUEUE t-20260615-110034-66f23a role=general level=M timeout=600s hb=60s
+[11:00:34] HEARTBEAT t-20260615-110034-66f23a status=running progress=None/None msg=
+[11:00:34] DONE t-20260615-110034-66f23a result_keys=['artifacts']
+[11:00:34] ENQUEUE t-20260615-110034-3ecb58 role=ops level=S timeout=30s hb=30s
+[11:00:34] HEARTBEAT t-20260615-110034-3ecb58 status=running progress=None/None msg=
+[11:00:34] FAILED t-20260615-110034-3ecb58 reason=test error=测试失败原因
+[11:00:34] ENQUEUE t-20260615-110034-f3ea24 role=ops level=S timeout=30s hb=30s
+[11:00:34] HEARTBEAT t-20260615-110034-f3ea24 status=running progress=None/None msg=
+[11:00:34] TIMEOUT t-20260615-110034-f3ea24
+[11:00:34] ENQUEUE t-20260615-110034-3a1511 role=ops level=S timeout=30s hb=30s
+[11:00:34] HEARTBEAT t-20260615-110034-3a1511 status=running progress=None/None msg=
+[11:00:34] DONE t-20260615-110034-3a1511 result_keys=['artifacts']
+[11:00:34] ENQUEUE t-20260615-110034-84e9eb role=ops level=S timeout=30s hb=30s
+[11:00:34] HEARTBEAT t-20260615-110034-84e9eb status=running progress=None/None msg=
+[11:00:34] DONE t-20260615-110034-84e9eb result_keys=['artifacts']
+[11:00:34] ENQUEUE t-20260615-110034-449fde role=ops level=S timeout=30s hb=30s
+[11:00:34] HEARTBEAT t-20260615-110034-449fde status=running progress=None/None msg=
+[11:00:34] DONE t-20260615-110034-449fde result_keys=['artifacts']
+[11:00:37] ENQUEUE t-20260615-110037-40d3ea role=ops level=S timeout=30s hb=5s
+[11:00:37] NUDGE_WRITE t-20260615-110037-40d3ea kind=nudge gap=10s
+[11:00:37] NUDGE_CONSUME t-20260615-110037-40d3ea kind=nudge
+[11:00:37] NUDGE_WRITE t-20260615-110037-40d3ea kind=ping gap=20s
+[11:00:37] NUDGE_CONSUME t-20260615-110037-40d3ea kind=ping
+[11:00:37] ENQUEUE t-20260615-110037-6c3d61 role=ops level=S timeout=30s hb=2s
+[11:00:37] HEARTBEAT t-20260615-110037-6c3d61 status=running progress=None/None msg=刚跑
+[11:00:37] ENQUEUE t-20260615-110037-a6061f role=ops level=S timeout=30s hb=2s
+[11:00:37] HEARTBEAT t-20260615-110037-a6061f status=running progress=None/None msg=
+[11:00:37] ENQUEUE t-20260615-110037-3b4fab role=ops level=S timeout=30s hb=2s
+[11:00:37] HEARTBEAT t-20260615-110037-3b4fab status=running progress=None/None msg=
+[11:00:37] ENQUEUE t-20260615-110037-8acd49 role=ops level=S timeout=30s hb=2s
+[11:00:37] HEARTBEAT t-20260615-110037-8acd49 status=running progress=None/None msg=
+[11:00:37] ENQUEUE t-20260615-110037-143056 role=ops level=S timeout=5s hb=2s
+[11:00:37] HEARTBEAT t-20260615-110037-143056 status=running progress=None/None msg=
+[11:00:37] NUDGE_WRITE t-20260615-110037-a6061f kind=nudge gap=3s
+[11:00:37] NUDGE_WRITE t-20260615-110037-3b4fab kind=ping gap=5s
+[11:00:37] NUDGE_WRITE t-20260615-110037-8acd49 kind=escalate gap=7s
+[11:00:37] TIMEOUT_BATCH 1 tasks
+[11:00:37] ENQUEUE t-20260615-110037-763fe5 role=ops level=S timeout=30s hb=2s
+[11:00:37] NUDGE_WRITE t-20260615-110037-763fe5 kind=nudge gap=3s
+[11:00:37] NUDGE_CONSUME t-20260615-110037-763fe5 kind=nudge
+[11:00:37] HEARTBEAT t-20260615-110037-763fe5 status=running progress=None/None msg=RESPONDING_TO_NUDGE: 正在跑第 2 步
+[11:00:38] ENQUEUE t-20260615-110038-e5493d role=ops level=S timeout=30s hb=2s
+[11:00:38] HEARTBEAT t-20260615-110038-e5493d status=running progress=None/None msg=
+[11:00:38] NUDGE_WRITE t-20260615-110038-e5493d kind=nudge gap=2s
+[11:00:38] NUDGE_WRITE t-20260615-110038-e5493d kind=ping gap=4s
+[11:00:38] NUDGE_WRITE t-20260615-110038-e5493d kind=escalate gap=7s
+[11:00:38] NUDGE_CONSUME t-20260615-110038-e5493d kind=escalate
+[11:00:38] ENQUEUE t-20260615-110038-e3db00 role=ops level=S timeout=30s hb=5s
+[11:00:38] HEARTBEAT t-20260615-110038-e3db00 status=running progress=None/None msg=
+[11:00:38] ENQUEUE t-20260615-110038-9a604c role=ops level=S timeout=30s hb=2s
+[11:00:38] NUDGE_WRITE t-20260615-110038-9a604c kind=nudge gap=0s
+[11:00:38] NUDGE_CONSUME t-20260615-110038-9a604c kind=nudge
+[11:00:38] ENQUEUE t-20260615-110038-92debf role=ops level=S timeout=30s hb=2s
+[11:00:38] HEARTBEAT t-20260615-110038-92debf status=running progress=None/None msg=
+[11:00:38] ENQUEUE t-20260615-110038-63b3ea role=ops level=S timeout=30s hb=2s
+[11:00:38] HEARTBEAT t-20260615-110038-63b3ea status=running progress=None/None msg=
+[11:00:38] ENQUEUE t-20260615-110038-e9dad2 role=ops level=S timeout=30s hb=2s
+[11:00:38] HEARTBEAT t-20260615-110038-e9dad2 status=running progress=None/None msg=
+[11:00:38] ENQUEUE t-20260615-110038-9ee771 role=ops level=S timeout=120s hb=30s
+[11:00:38] ENQUEUE t-20260615-110038-c5d6ef role=tester level=M timeout=600s hb=60s
+[11:00:38] ENQUEUE t-20260615-110038-031ac3 role=general level=M timeout=600s hb=60s
+[11:00:38] ENQUEUE t-20260615-110038-8027cc role=researcher level=L timeout=1800s hb=120s
+[11:00:38] ENQUEUE t-20260615-110038-dda470 role=coder level=L timeout=3600s hb=120s
+[11:00:38] ENQUEUE t-20260615-110038-8a1287 role=coder level=S timeout=3600s hb=120s
+[11:00:38] ENQUEUE t-20260615-110038-b0764f role=ops level=CRITICAL timeout=120s hb=30s
+[11:00:38] ENQUEUE t-20260615-110038-1fb943 role=ops level=S timeout=120s hb=30s
+[11:00:38] ENQUEUE t-20260615-110038-b3cbe5 role=general level=M timeout=600s hb=60s
+[11:00:38] ENQUEUE t-20260615-110038-6c8245 role=researcher level=L timeout=1800s hb=120s
+[11:00:38] ENQUEUE t-20260615-110038-afc785 role=general level=CRITICAL timeout=600s hb=60s
+[11:00:38] ENQUEUE t-20260615-110038-365118 role=ops level=S timeout=60s hb=30s
+[11:00:38] ENQUEUE t-20260615-110038-6776ed role=ops level=S timeout=300s hb=30s
+[11:00:38] ENQUEUE t-20260615-110038-b06b7b role=ops level=S timeout=999s hb=30s
+[11:00:38] ENQUEUE t-20260615-110038-968586 role=ops level=S timeout=10s hb=2s
+[11:00:38] HEARTBEAT t-20260615-110038-968586 status=running progress=None/None msg=
+[11:00:38] TIMEOUT_BATCH 1 tasks
+[11:00:38] ENQUEUE t-20260615-110038-a292ee role=ops level=S timeout=10s hb=2s
+[11:00:38] HEARTBEAT t-20260615-110038-a292ee status=running progress=None/None msg=
+[11:00:38] TIMEOUT_BATCH 1 tasks
+[11:00:38] ENQUEUE t-20260615-110038-a8a932 role=ops level=S timeout=10s hb=2s
+[11:00:38] HEARTBEAT t-20260615-110038-a8a932 status=running progress=None/None msg=
+[11:00:38] TIMEOUT_BATCH 1 tasks
+[11:00:38] ENQUEUE t-20260615-110038-24c9e0 role=ops level=S timeout=10s hb=2s
+[11:00:38] HEARTBEAT t-20260615-110038-24c9e0 status=running progress=None/None msg=
+[11:00:38] TIMEOUT_BATCH 1 tasks
+[11:00:39] ENQUEUE t-20260615-110039-426512 role=ops level=S timeout=120s hb=30s
+[11:00:39] ENQUEUE t-20260615-110039-47e9b7 role=general level=M timeout=600s hb=60s
+[11:00:39] ENQUEUE t-20260615-110039-506c8e role=researcher level=L timeout=1800s hb=120s
+[11:00:39] DONE t-20260615-110039-426512 result_keys=['artifacts']
+[11:00:39] DONE t-20260615-110039-47e9b7 result_keys=['artifacts']
+[11:00:39] DONE t-20260615-110039-506c8e result_keys=['artifacts']
+[11:00:39] ENQUEUE t-20260615-110039-b95677 role=ops level=S timeout=120s hb=30s
+[11:00:39] HEARTBEAT t-20260615-110039-b95677 status=started progress=None/None msg=子 agent 已起
+[11:00:39] HEARTBEAT t-20260615-110039-b95677 status=running progress=1/3 msg=扫描第 1 批
+[11:00:39] HEARTBEAT t-20260615-110039-b95677 status=running progress=2/3 msg=扫描第 2 批
+[11:00:39] HEARTBEAT t-20260615-110039-b95677 status=running progress=3/3 msg=扫描第 3 批
+[11:00:39] DONE t-20260615-110039-b95677 result_keys=['summary', 'artifacts']
+[11:00:39] ENQUEUE t-20260615-110039-67ed98 role=tester level=M timeout=600s hb=60s
+[11:00:39] DONE t-20260615-110039-67ed98 result_keys=['artifacts']
+[11:00:39] ENQUEUE t-20260615-110039-bd04ab role=stresstest level=M timeout=2s hb=1s
+[11:00:39] ENQUEUE t-20260615-110039-14ab3b role=stresstest level=M timeout=2s hb=1s
+[11:00:39] ENQUEUE t-20260615-110039-f4c748 role=stresstest level=M timeout=2s hb=1s
+[11:00:39] ENQUEUE t-20260615-110039-9d1421 role=stresstest level=M timeout=2s hb=1s
+[11:00:39] ENQUEUE t-20260615-110039-ecdcbd role=stresstest level=M timeout=2s hb=1s
+[11:00:43] TIMEOUT_BATCH 5 tasks
+[11:00:43] ENQUEUE t-20260615-110043-859e05 role=ops level=S timeout=120s hb=30s
+[11:00:43] FAILED t-20260615-110043-859e05 reason=dispatch_no_hermes_cli error=hermes CLI not in PATH; cannot dispatch
+[11:00:43] ENQUEUE t-20260615-110043-f6f156 role=general level=M timeout=600s hb=60s
+[11:00:43] DONE t-20260615-110043-f6f156 result_keys=['artifacts']
+[11:00:43] ENQUEUE t-20260615-110043-b0acbf role=ops level=S timeout=120s hb=30s
+[11:00:43] ENQUEUE t-20260615-110043-2613e5 role=tester level=M timeout=600s hb=60s
+[11:00:43] ENQUEUE t-20260615-110043-8975af role=general level=M timeout=600s hb=60s
+[11:00:43] ENQUEUE t-20260615-110043-e0731f role=researcher level=L timeout=1800s hb=120s
+[11:00:43] ENQUEUE t-20260615-110043-ecf8fc role=coder level=L timeout=3600s hb=120s
+[11:00:43] ENQUEUE t-20260615-110043-c7a2f8 role=ops level=S timeout=10s hb=2s
+[11:00:43] ENQUEUE t-20260615-110043-65972e role=watchdogtest level=M timeout=3s hb=1s
+[11:00:47] TIMEOUT_BATCH 1 tasks
+[11:00:52] ENQUEUE t-20260615-110052-abce38 role=ops level=S timeout=120s hb=30s
+[11:00:52] HEARTBEAT t-20260615-110052-abce38 status=started progress=None/None msg=子 agent 已起
+[11:00:52] HEARTBEAT t-20260615-110052-abce38 status=running progress=1/3 msg=扫描第 1 批
+[11:00:53] HEARTBEAT t-20260615-110052-abce38 status=running progress=2/3 msg=扫描第 2 批
+[11:00:53] HEARTBEAT t-20260615-110052-abce38 status=running progress=3/3 msg=扫描第 3 批
+[11:00:53] DONE t-20260615-110052-abce38 result_keys=['summary', 'artifacts']
+[11:00:53] ENQUEUE t-20260615-110053-a6e083 role=tester level=M timeout=600s hb=60s
+[11:00:53] DONE t-20260615-110053-a6e083 result_keys=['artifacts']
+[11:00:53] ENQUEUE t-20260615-110053-5deafd role=stresstest level=M timeout=2s hb=1s
+[11:00:53] ENQUEUE t-20260615-110053-03dc53 role=stresstest level=M timeout=2s hb=1s
+[11:00:53] ENQUEUE t-20260615-110053-0d5ffc role=stresstest level=M timeout=2s hb=1s
+[11:00:53] ENQUEUE t-20260615-110053-77de86 role=stresstest level=M timeout=2s hb=1s
+[11:00:53] ENQUEUE t-20260615-110053-6b5695 role=stresstest level=M timeout=2s hb=1s
+[11:00:57] TIMEOUT_BATCH 5 tasks
+[11:00:57] ENQUEUE t-20260615-110057-dceb4e role=ops level=S timeout=120s hb=30s
+[11:00:57] FAILED t-20260615-110057-dceb4e reason=dispatch_no_hermes_cli error=hermes CLI not in PATH; cannot dispatch
+[11:00:57] ENQUEUE t-20260615-110057-05e158 role=general level=M timeout=600s hb=60s
+[11:00:57] DONE t-20260615-110057-05e158 result_keys=['artifacts']
+[11:00:57] ENQUEUE t-20260615-110057-475c7a role=ops level=S timeout=120s hb=30s
+[11:00:57] ENQUEUE t-20260615-110057-d76aec role=tester level=M timeout=600s hb=60s
+[11:00:57] ENQUEUE t-20260615-110057-a8f37a role=general level=M timeout=600s hb=60s
+[11:00:57] ENQUEUE t-20260615-110057-3e29e0 role=researcher level=L timeout=1800s hb=120s
+[11:00:57] ENQUEUE t-20260615-110057-fe557b role=coder level=L timeout=3600s hb=120s
+[11:00:57] ENQUEUE t-20260615-110057-709e53 role=ops level=S timeout=10s hb=2s
+[11:00:57] ENQUEUE t-20260615-110057-96ca5c role=watchdogtest level=M timeout=3s hb=1s
+[11:01:01] TIMEOUT_BATCH 1 tasks
+[11:02:14] ENQUEUE t-20260615-110214-c0a8c4 role=ops level=S timeout=120s hb=30s
+[11:02:14] HEARTBEAT t-20260615-110214-c0a8c4 status=started progress=None/None msg=子 agent 已起
+[11:02:14] HEARTBEAT t-20260615-110214-c0a8c4 status=running progress=1/3 msg=扫描第 1 批
+[11:02:15] HEARTBEAT t-20260615-110214-c0a8c4 status=running progress=2/3 msg=扫描第 2 批
+[11:02:15] HEARTBEAT t-20260615-110214-c0a8c4 status=running progress=3/3 msg=扫描第 3 批
+[11:02:15] DONE t-20260615-110214-c0a8c4 result_keys=['summary', 'artifacts']
+[11:02:15] ENQUEUE t-20260615-110215-30bcb8 role=ops level=S timeout=120s hb=30s
+[11:02:15] ENQUEUE t-20260615-110215-6aa0e3 role=tester level=M timeout=600s hb=60s
+[11:02:15] ENQUEUE t-20260615-110215-2668bf role=general level=M timeout=600s hb=60s
+[11:02:15] ENQUEUE t-20260615-110215-166dad role=researcher level=L timeout=1800s hb=120s
+[11:02:15] ENQUEUE t-20260615-110215-0a449b role=coder level=L timeout=3600s hb=120s
+[11:02:15] ENQUEUE t-20260615-110215-1b5d04 role=coder level=S timeout=3600s hb=120s
+[11:02:15] ENQUEUE t-20260615-110215-fa31e1 role=ops level=CRITICAL timeout=120s hb=30s
+[11:02:15] ENQUEUE t-20260615-110215-762970 role=ops level=S timeout=120s hb=30s
+[11:02:15] ENQUEUE t-20260615-110215-69b194 role=general level=M timeout=600s hb=60s
+[11:02:15] ENQUEUE t-20260615-110215-4eadec role=researcher level=L timeout=1800s hb=120s
+[11:02:15] ENQUEUE t-20260615-110215-e90385 role=general level=CRITICAL timeout=600s hb=60s
+[11:02:15] ENQUEUE t-20260615-110215-c8dc11 role=ops level=S timeout=60s hb=30s
+[11:02:15] ENQUEUE t-20260615-110215-dd49f3 role=ops level=S timeout=300s hb=30s
+[11:02:15] ENQUEUE t-20260615-110215-64de58 role=ops level=S timeout=999s hb=30s
+[11:02:15] ENQUEUE t-20260615-110215-9cf94c role=ops level=S timeout=10s hb=2s
+[11:02:15] HEARTBEAT t-20260615-110215-9cf94c status=running progress=None/None msg=
+[11:02:15] TIMEOUT_BATCH 1 tasks
+[11:02:15] ENQUEUE t-20260615-110215-89494c role=ops level=S timeout=10s hb=2s
+[11:02:15] HEARTBEAT t-20260615-110215-89494c status=running progress=None/None msg=
+[11:02:15] TIMEOUT_BATCH 1 tasks
+[11:02:15] ENQUEUE t-20260615-110215-6dbe3d role=ops level=S timeout=10s hb=2s
+[11:02:15] HEARTBEAT t-20260615-110215-6dbe3d status=running progress=None/None msg=
+[11:02:15] TIMEOUT_BATCH 1 tasks
+[11:02:15] ENQUEUE t-20260615-110215-5ce326 role=ops level=S timeout=10s hb=2s
+[11:02:15] HEARTBEAT t-20260615-110215-5ce326 status=running progress=None/None msg=
+[11:02:15] TIMEOUT_BATCH 1 tasks
+[11:02:15] ENQUEUE t-20260615-110215-797301 role=ops level=S timeout=120s hb=30s
+[11:02:15] ENQUEUE t-20260615-110215-3cd2fc role=general level=M timeout=600s hb=60s
+[11:02:15] ENQUEUE t-20260615-110215-35a3b0 role=researcher level=L timeout=1800s hb=120s
+[11:02:15] DONE t-20260615-110215-35a3b0 result_keys=['artifacts']
+[11:02:15] DONE t-20260615-110215-3cd2fc result_keys=['artifacts']
+[11:02:15] DONE t-20260615-110215-797301 result_keys=['artifacts']
+[11:02:16] ENQUEUE t-20260615-110216-c233b3 role=ops level=S timeout=120s hb=30s
+[11:02:16] HEARTBEAT t-20260615-110216-c233b3 status=running progress=None/None msg=
+[11:02:16] DONE t-20260615-110216-c233b3 result_keys=['summary', 'artifacts']
+[11:02:16] ENQUEUE t-20260615-110216-603a51 role=ops level=S timeout=120s hb=30s
+[11:02:16] HEARTBEAT t-20260615-110216-603a51 status=running progress=None/None msg=
+[11:02:16] DONE t-20260615-110216-603a51 result_keys=['summary']
+[11:02:16] ENQUEUE t-20260615-110216-f8335a role=ops level=S timeout=120s hb=30s
+[11:02:16] HEARTBEAT t-20260615-110216-f8335a status=running progress=None/None msg=
+[11:02:16] DONE t-20260615-110216-f8335a result_keys=['artifacts']
+[11:02:16] ENQUEUE t-20260615-110216-f0b959 role=general level=M timeout=600s hb=60s
+[11:02:16] HEARTBEAT t-20260615-110216-f0b959 status=running progress=None/None msg=
+[11:02:16] DONE t-20260615-110216-f0b959 result_keys=['artifacts']
+[11:02:16] ENQUEUE t-20260615-110216-510608 role=ops level=S timeout=120s hb=30s
+[11:02:16] HEARTBEAT t-20260615-110216-510608 status=running progress=None/None msg=
+[11:02:16] FAILED t-20260615-110216-510608 reason=test error=测试失败原因
+[11:02:16] ENQUEUE t-20260615-110216-f0e020 role=ops level=S timeout=120s hb=30s
+[11:02:16] HEARTBEAT t-20260615-110216-f0e020 status=running progress=None/None msg=
+[11:02:16] TIMEOUT t-20260615-110216-f0e020
+[11:02:16] ENQUEUE t-20260615-110216-348cf3 role=ops level=S timeout=120s hb=30s
+[11:02:16] HEARTBEAT t-20260615-110216-348cf3 status=running progress=None/None msg=
+[11:02:16] DONE t-20260615-110216-348cf3 result_keys=['artifacts']
+[11:02:16] ENQUEUE t-20260615-110216-7cb476 role=ops level=S timeout=120s hb=30s
+[11:02:16] HEARTBEAT t-20260615-110216-7cb476 status=running progress=None/None msg=
+[11:02:16] DONE t-20260615-110216-7cb476 result_keys=['artifacts']
+[11:02:16] ENQUEUE t-20260615-110216-731dc7 role=ops level=S timeout=120s hb=30s
+[11:02:16] HEARTBEAT t-20260615-110216-731dc7 status=running progress=None/None msg=
+[11:02:16] DONE t-20260615-110216-731dc7 result_keys=['artifacts']
+[11:02:24] ENQUEUE t-20260615-110224-341105 role=ops level=S timeout=120s hb=30s
+[11:02:24] HEARTBEAT t-20260615-110224-341105 status=started progress=None/None msg=子 agent 已起
+[11:02:24] HEARTBEAT t-20260615-110224-341105 status=running progress=1/3 msg=扫描第 1 批
+[11:02:24] HEARTBEAT t-20260615-110224-341105 status=running progress=2/3 msg=扫描第 2 批
+[11:02:24] HEARTBEAT t-20260615-110224-341105 status=running progress=3/3 msg=扫描第 3 批
+[11:02:24] DONE t-20260615-110224-341105 result_keys=['summary', 'artifacts']
+[11:02:24] ENQUEUE t-20260615-110224-ea509a role=tester level=M timeout=600s hb=60s
+[11:02:24] DONE t-20260615-110224-ea509a result_keys=['artifacts']
+[11:02:24] ENQUEUE t-20260615-110224-adf390 role=stresstest level=M timeout=2s hb=1s
+[11:02:24] ENQUEUE t-20260615-110224-c09acd role=stresstest level=M timeout=2s hb=1s
+[11:02:24] ENQUEUE t-20260615-110224-621186 role=stresstest level=M timeout=2s hb=1s
+[11:02:24] ENQUEUE t-20260615-110224-7ea417 role=stresstest level=M timeout=2s hb=1s
+[11:02:24] ENQUEUE t-20260615-110224-6b3bd3 role=stresstest level=M timeout=2s hb=1s
+[11:02:28] TIMEOUT_BATCH 5 tasks
+[11:02:28] ENQUEUE t-20260615-110228-740dab role=ops level=S timeout=120s hb=30s
+[11:02:28] FAILED t-20260615-110228-740dab reason=dispatch_no_hermes_cli error=hermes CLI not in PATH; cannot dispatch
+[11:02:28] ENQUEUE t-20260615-110228-2631f2 role=general level=M timeout=600s hb=60s
+[11:02:28] DONE t-20260615-110228-2631f2 result_keys=['artifacts']
+[11:02:28] ENQUEUE t-20260615-110228-a36c9e role=ops level=S timeout=120s hb=30s
+[11:02:28] ENQUEUE t-20260615-110228-5d758c role=tester level=M timeout=600s hb=60s
+[11:02:28] ENQUEUE t-20260615-110228-ad11ef role=general level=M timeout=600s hb=60s
+[11:02:28] ENQUEUE t-20260615-110228-4ec4b1 role=researcher level=L timeout=1800s hb=120s
+[11:02:28] ENQUEUE t-20260615-110228-9e5527 role=coder level=L timeout=3600s hb=120s
+[11:02:28] ENQUEUE t-20260615-110228-b98837 role=ops level=S timeout=10s hb=2s
+[11:02:28] ENQUEUE t-20260615-110228-f98385 role=watchdogtest level=M timeout=3s hb=1s
+[11:02:32] TIMEOUT_BATCH 1 tasks
+[11:02:36] ENQUEUE t-20260615-110236-98a7cb role=ops level=S timeout=120s hb=30s
+[11:02:36] HEARTBEAT t-20260615-110236-98a7cb status=started progress=None/None msg=子 agent 已起
+[11:02:36] HEARTBEAT t-20260615-110236-98a7cb status=running progress=1/3 msg=扫描第 1 批
+[11:02:36] HEARTBEAT t-20260615-110236-98a7cb status=running progress=2/3 msg=扫描第 2 批
+[11:02:36] HEARTBEAT t-20260615-110236-98a7cb status=running progress=3/3 msg=扫描第 3 批
+[11:02:36] DONE t-20260615-110236-98a7cb result_keys=['summary', 'artifacts']
+[11:02:36] ENQUEUE t-20260615-110236-07e622 role=tester level=M timeout=600s hb=60s
+[11:02:36] DONE t-20260615-110236-07e622 result_keys=['artifacts']
+[11:02:36] ENQUEUE t-20260615-110236-d72854 role=stresstest level=M timeout=2s hb=1s
+[11:02:36] ENQUEUE t-20260615-110236-2743a5 role=stresstest level=M timeout=2s hb=1s
+[11:02:36] ENQUEUE t-20260615-110236-8b3898 role=stresstest level=M timeout=2s hb=1s
+[11:02:36] ENQUEUE t-20260615-110236-20cbdf role=stresstest level=M timeout=2s hb=1s
+[11:02:36] ENQUEUE t-20260615-110236-24d798 role=stresstest level=M timeout=2s hb=1s
+[11:02:40] TIMEOUT_BATCH 5 tasks
+[11:02:40] ENQUEUE t-20260615-110240-328eb3 role=ops level=S timeout=120s hb=30s
+[11:02:40] FAILED t-20260615-110240-328eb3 reason=dispatch_no_hermes_cli error=hermes CLI not in PATH; cannot dispatch
+[11:02:40] ENQUEUE t-20260615-110240-3af866 role=general level=M timeout=600s hb=60s
+[11:02:40] DONE t-20260615-110240-3af866 result_keys=['artifacts']
+[11:02:40] ENQUEUE t-20260615-110240-c3a7a1 role=ops level=S timeout=120s hb=30s
+[11:02:40] ENQUEUE t-20260615-110240-6e6ad6 role=tester level=M timeout=600s hb=60s
+[11:02:40] ENQUEUE t-20260615-110240-90b90c role=general level=M timeout=600s hb=60s
+[11:02:40] ENQUEUE t-20260615-110240-a2e7ca role=researcher level=L timeout=1800s hb=120s
+[11:02:40] ENQUEUE t-20260615-110240-4d226a role=coder level=L timeout=3600s hb=120s
+[11:02:40] ENQUEUE t-20260615-110240-7194f0 role=ops level=S timeout=10s hb=2s
+[11:02:41] ENQUEUE t-20260615-110240-5d8612 role=watchdogtest level=M timeout=3s hb=1s
+[11:02:45] TIMEOUT_BATCH 1 tasks
+[11:02:49] ENQUEUE t-20260615-110249-d307c8 role=ops level=S timeout=120s hb=30s
+[11:02:49] ENQUEUE t-20260615-110249-e9d094 role=tester level=M timeout=600s hb=60s
+[11:02:49] ENQUEUE t-20260615-110249-8207e6 role=general level=M timeout=600s hb=60s
+[11:02:49] ENQUEUE t-20260615-110249-abf614 role=researcher level=L timeout=1800s hb=120s
+[11:02:49] ENQUEUE t-20260615-110249-0c6745 role=coder level=L timeout=3600s hb=120s
+[11:02:49] ENQUEUE t-20260615-110249-605951 role=coder level=S timeout=3600s hb=120s
+[11:02:49] ENQUEUE t-20260615-110249-f403ea role=ops level=CRITICAL timeout=120s hb=30s
+[11:02:49] ENQUEUE t-20260615-110249-3e5bff role=ops level=S timeout=120s hb=30s
+[11:02:49] ENQUEUE t-20260615-110249-275903 role=general level=M timeout=600s hb=60s
+[11:02:49] ENQUEUE t-20260615-110249-70ab3b role=researcher level=L timeout=1800s hb=120s
+[11:02:49] ENQUEUE t-20260615-110249-02099b role=general level=CRITICAL timeout=600s hb=60s
+[11:02:49] ENQUEUE t-20260615-110249-69bb92 role=ops level=S timeout=60s hb=30s
+[11:02:49] ENQUEUE t-20260615-110249-7a787e role=ops level=S timeout=300s hb=30s
+[11:02:49] ENQUEUE t-20260615-110249-619002 role=ops level=S timeout=999s hb=30s
+[11:02:49] ENQUEUE t-20260615-110249-4b12fe role=ops level=S timeout=10s hb=2s
+[11:02:49] HEARTBEAT t-20260615-110249-4b12fe status=running progress=None/None msg=
+[11:02:49] TIMEOUT_BATCH 1 tasks
+[11:02:49] ENQUEUE t-20260615-110249-e8207a role=ops level=S timeout=10s hb=2s
+[11:02:49] HEARTBEAT t-20260615-110249-e8207a status=running progress=None/None msg=
+[11:02:49] TIMEOUT_BATCH 1 tasks
+[11:02:49] ENQUEUE t-20260615-110249-f1d9f9 role=ops level=S timeout=10s hb=2s
+[11:02:49] HEARTBEAT t-20260615-110249-f1d9f9 status=running progress=None/None msg=
+[11:02:49] TIMEOUT_BATCH 1 tasks
+[11:02:49] ENQUEUE t-20260615-110249-142854 role=ops level=S timeout=10s hb=2s
+[11:02:49] HEARTBEAT t-20260615-110249-142854 status=running progress=None/None msg=
+[11:02:49] TIMEOUT_BATCH 1 tasks
+[11:02:49] ENQUEUE t-20260615-110249-150ae5 role=ops level=S timeout=120s hb=30s
+[11:02:49] ENQUEUE t-20260615-110249-67df9a role=general level=M timeout=600s hb=60s
+[11:02:49] ENQUEUE t-20260615-110249-9746a6 role=researcher level=L timeout=1800s hb=120s
+[11:02:49] DONE t-20260615-110249-150ae5 result_keys=['artifacts']
+[11:02:49] DONE t-20260615-110249-67df9a result_keys=['artifacts']
+[11:02:49] DONE t-20260615-110249-9746a6 result_keys=['artifacts']
+[11:02:53] ENQUEUE t-20260615-110253-f52ea3 role=ops level=S timeout=30s hb=5s
+[11:02:53] NUDGE_WRITE t-20260615-110253-f52ea3 kind=nudge gap=10s
+[11:02:53] NUDGE_CONSUME t-20260615-110253-f52ea3 kind=nudge
+[11:02:53] NUDGE_WRITE t-20260615-110253-f52ea3 kind=ping gap=20s
+[11:02:53] NUDGE_CONSUME t-20260615-110253-f52ea3 kind=ping
+[11:02:53] ENQUEUE t-20260615-110253-15a6c8 role=ops level=S timeout=30s hb=2s
+[11:02:53] HEARTBEAT t-20260615-110253-15a6c8 status=running progress=None/None msg=刚跑
+[11:02:53] ENQUEUE t-20260615-110253-5bdb8d role=ops level=S timeout=30s hb=2s
+[11:02:53] HEARTBEAT t-20260615-110253-5bdb8d status=running progress=None/None msg=
+[11:02:53] ENQUEUE t-20260615-110253-e4a01d role=ops level=S timeout=30s hb=2s
+[11:02:53] HEARTBEAT t-20260615-110253-e4a01d status=running progress=None/None msg=
+[11:02:53] ENQUEUE t-20260615-110253-6dd2da role=ops level=S timeout=30s hb=2s
+[11:02:53] HEARTBEAT t-20260615-110253-6dd2da status=running progress=None/None msg=
+[11:02:53] ENQUEUE t-20260615-110253-ef3462 role=ops level=S timeout=5s hb=2s
+[11:02:53] HEARTBEAT t-20260615-110253-ef3462 status=running progress=None/None msg=
+[11:02:53] NUDGE_WRITE t-20260615-110253-5bdb8d kind=nudge gap=3s
+[11:02:53] NUDGE_WRITE t-20260615-110253-e4a01d kind=ping gap=5s
+[11:02:53] NUDGE_WRITE t-20260615-110253-6dd2da kind=escalate gap=7s
+[11:02:53] TIMEOUT_BATCH 1 tasks
+[11:02:53] ENQUEUE t-20260615-110253-9d4bb7 role=ops level=S timeout=30s hb=2s
+[11:02:53] NUDGE_WRITE t-20260615-110253-9d4bb7 kind=nudge gap=3s
+[11:02:53] NUDGE_CONSUME t-20260615-110253-9d4bb7 kind=nudge
+[11:02:53] HEARTBEAT t-20260615-110253-9d4bb7 status=running progress=None/None msg=RESPONDING_TO_NUDGE: 正在跑第 2 步
+[11:02:53] ENQUEUE t-20260615-110253-3bb56d role=ops level=S timeout=30s hb=2s
+[11:02:53] HEARTBEAT t-20260615-110253-3bb56d status=running progress=None/None msg=
+[11:02:53] NUDGE_WRITE t-20260615-110253-3bb56d kind=nudge gap=2s
+[11:02:53] NUDGE_WRITE t-20260615-110253-3bb56d kind=ping gap=4s
+[11:02:53] NUDGE_WRITE t-20260615-110253-3bb56d kind=escalate gap=7s
+[11:02:53] NUDGE_CONSUME t-20260615-110253-3bb56d kind=escalate
+[11:02:53] ENQUEUE t-20260615-110253-932dc2 role=ops level=S timeout=30s hb=5s
+[11:02:53] HEARTBEAT t-20260615-110253-932dc2 status=running progress=None/None msg=
+[11:02:53] ENQUEUE t-20260615-110253-243794 role=ops level=S timeout=30s hb=2s
+[11:02:53] NUDGE_WRITE t-20260615-110253-243794 kind=nudge gap=0s
+[11:02:53] NUDGE_CONSUME t-20260615-110253-243794 kind=nudge
+[11:02:53] ENQUEUE t-20260615-110253-cc6fa2 role=ops level=S timeout=30s hb=2s
+[11:02:53] HEARTBEAT t-20260615-110253-cc6fa2 status=running progress=None/None msg=
+[11:02:53] ENQUEUE t-20260615-110253-1126fd role=ops level=S timeout=30s hb=2s
+[11:02:53] HEARTBEAT t-20260615-110253-1126fd status=running progress=None/None msg=
+[11:02:54] ENQUEUE t-20260615-110254-abc113 role=ops level=S timeout=30s hb=2s
+[11:02:54] HEARTBEAT t-20260615-110254-abc113 status=running progress=None/None msg=
+[11:02:57] ENQUEUE t-20260615-110257-c8b248 role=ops level=S timeout=30s hb=5s
+[11:02:57] NUDGE_WRITE t-20260615-110257-c8b248 kind=nudge gap=10s
+[11:02:57] NUDGE_CONSUME t-20260615-110257-c8b248 kind=nudge
+[11:02:57] NUDGE_WRITE t-20260615-110257-c8b248 kind=ping gap=20s
+[11:02:57] NUDGE_CONSUME t-20260615-110257-c8b248 kind=ping
+[11:02:57] ENQUEUE t-20260615-110257-fc924c role=ops level=S timeout=30s hb=2s
+[11:02:57] HEARTBEAT t-20260615-110257-fc924c status=running progress=None/None msg=刚跑
+[11:02:57] ENQUEUE t-20260615-110257-4bd94c role=ops level=S timeout=30s hb=2s
+[11:02:57] HEARTBEAT t-20260615-110257-4bd94c status=running progress=None/None msg=
+[11:02:57] ENQUEUE t-20260615-110257-ac8d1f role=ops level=S timeout=30s hb=2s
+[11:02:57] HEARTBEAT t-20260615-110257-ac8d1f status=running progress=None/None msg=
+[11:02:57] ENQUEUE t-20260615-110257-6ea876 role=ops level=S timeout=30s hb=2s
+[11:02:57] HEARTBEAT t-20260615-110257-6ea876 status=running progress=None/None msg=
+[11:02:57] ENQUEUE t-20260615-110257-965925 role=ops level=S timeout=5s hb=2s
+[11:02:57] HEARTBEAT t-20260615-110257-965925 status=running progress=None/None msg=
+[11:02:57] NUDGE_WRITE t-20260615-110257-4bd94c kind=nudge gap=3s
+[11:02:57] NUDGE_WRITE t-20260615-110257-ac8d1f kind=ping gap=5s
+[11:02:57] NUDGE_WRITE t-20260615-110257-6ea876 kind=escalate gap=7s
+[11:02:57] TIMEOUT_BATCH 1 tasks
+[11:02:57] ENQUEUE t-20260615-110257-af1e71 role=ops level=S timeout=30s hb=2s
+[11:02:57] NUDGE_WRITE t-20260615-110257-af1e71 kind=nudge gap=3s
+[11:02:57] NUDGE_CONSUME t-20260615-110257-af1e71 kind=nudge
+[11:02:57] HEARTBEAT t-20260615-110257-af1e71 status=running progress=None/None msg=RESPONDING_TO_NUDGE: 正在跑第 2 步
+[11:02:57] ENQUEUE t-20260615-110257-522042 role=ops level=S timeout=30s hb=2s
+[11:02:57] HEARTBEAT t-20260615-110257-522042 status=running progress=None/None msg=
+[11:02:57] NUDGE_WRITE t-20260615-110257-522042 kind=nudge gap=2s
+[11:02:57] NUDGE_WRITE t-20260615-110257-522042 kind=ping gap=4s
+[11:02:57] NUDGE_WRITE t-20260615-110257-522042 kind=escalate gap=7s
+[11:02:57] NUDGE_CONSUME t-20260615-110257-522042 kind=escalate
+[11:02:57] ENQUEUE t-20260615-110257-e0a038 role=ops level=S timeout=30s hb=5s
+[11:02:57] HEARTBEAT t-20260615-110257-e0a038 status=running progress=None/None msg=
+[11:02:57] ENQUEUE t-20260615-110257-10e8ac role=ops level=S timeout=30s hb=2s
+[11:02:57] NUDGE_WRITE t-20260615-110257-10e8ac kind=nudge gap=0s
+[11:02:57] NUDGE_CONSUME t-20260615-110257-10e8ac kind=nudge
+[11:02:57] ENQUEUE t-20260615-110257-fc8ef8 role=ops level=S timeout=30s hb=2s
+[11:02:57] HEARTBEAT t-20260615-110257-fc8ef8 status=running progress=None/None msg=
+[11:02:57] ENQUEUE t-20260615-110257-f37170 role=ops level=S timeout=30s hb=2s
+[11:02:57] HEARTBEAT t-20260615-110257-f37170 status=running progress=None/None msg=
+[11:02:57] ENQUEUE t-20260615-110257-d28913 role=ops level=S timeout=30s hb=2s
+[11:02:57] HEARTBEAT t-20260615-110257-d28913 status=running progress=None/None msg=
+[11:03:00] ENQUEUE t-20260615-110300-c5b555 role=ops level=S timeout=30s hb=5s
+[11:03:00] NUDGE_WRITE t-20260615-110300-c5b555 kind=nudge gap=10s
+[11:03:00] NUDGE_CONSUME t-20260615-110300-c5b555 kind=nudge
+[11:03:00] NUDGE_WRITE t-20260615-110300-c5b555 kind=ping gap=20s
+[11:03:00] NUDGE_CONSUME t-20260615-110300-c5b555 kind=ping
+[11:03:00] ENQUEUE t-20260615-110300-701ee8 role=ops level=S timeout=30s hb=2s
+[11:03:00] HEARTBEAT t-20260615-110300-701ee8 status=running progress=None/None msg=刚跑
+[11:03:00] ENQUEUE t-20260615-110300-4f1464 role=ops level=S timeout=30s hb=2s
+[11:03:00] HEARTBEAT t-20260615-110300-4f1464 status=running progress=None/None msg=
+[11:03:00] ENQUEUE t-20260615-110300-66bc26 role=ops level=S timeout=30s hb=2s
+[11:03:00] HEARTBEAT t-20260615-110300-66bc26 status=running progress=None/None msg=
+[11:03:00] ENQUEUE t-20260615-110300-d0905d role=ops level=S timeout=30s hb=2s
+[11:03:00] HEARTBEAT t-20260615-110300-d0905d status=running progress=None/None msg=
+[11:03:00] ENQUEUE t-20260615-110300-368d14 role=ops level=S timeout=5s hb=2s
+[11:03:00] HEARTBEAT t-20260615-110300-368d14 status=running progress=None/None msg=
+[11:03:00] NUDGE_WRITE t-20260615-110300-4f1464 kind=nudge gap=3s
+[11:03:00] NUDGE_WRITE t-20260615-110300-66bc26 kind=ping gap=5s
+[11:03:00] NUDGE_WRITE t-20260615-110300-d0905d kind=escalate gap=7s
+[11:03:00] TIMEOUT_BATCH 1 tasks
+[11:03:00] ENQUEUE t-20260615-110300-2472f7 role=ops level=S timeout=30s hb=2s
+[11:03:00] NUDGE_WRITE t-20260615-110300-2472f7 kind=nudge gap=3s
+[11:03:00] NUDGE_CONSUME t-20260615-110300-2472f7 kind=nudge
+[11:03:00] HEARTBEAT t-20260615-110300-2472f7 status=running progress=None/None msg=RESPONDING_TO_NUDGE: 正在跑第 2 步
+[11:03:00] ENQUEUE t-20260615-110300-4c9bae role=ops level=S timeout=30s hb=2s
+[11:03:00] HEARTBEAT t-20260615-110300-4c9bae status=running progress=None/None msg=
+[11:03:00] NUDGE_WRITE t-20260615-110300-4c9bae kind=nudge gap=2s
+[11:03:00] NUDGE_WRITE t-20260615-110300-4c9bae kind=ping gap=4s
+[11:03:00] NUDGE_WRITE t-20260615-110300-4c9bae kind=escalate gap=7s
+[11:03:00] NUDGE_CONSUME t-20260615-110300-4c9bae kind=escalate
+[11:03:00] ENQUEUE t-20260615-110300-956cc5 role=ops level=S timeout=30s hb=5s
+[11:03:00] HEARTBEAT t-20260615-110300-956cc5 status=running progress=None/None msg=
+[11:03:00] ENQUEUE t-20260615-110300-671d9c role=ops level=S timeout=30s hb=2s
+[11:03:00] NUDGE_WRITE t-20260615-110300-671d9c kind=nudge gap=0s
+[11:03:00] NUDGE_CONSUME t-20260615-110300-671d9c kind=nudge
+[11:03:00] ENQUEUE t-20260615-110300-95f529 role=ops level=S timeout=30s hb=2s
+[11:03:00] HEARTBEAT t-20260615-110300-95f529 status=running progress=None/None msg=
+[11:03:00] ENQUEUE t-20260615-110300-1c6fbd role=ops level=S timeout=30s hb=2s
+[11:03:00] HEARTBEAT t-20260615-110300-1c6fbd status=running progress=None/None msg=
+[11:03:00] ENQUEUE t-20260615-110300-d328e4 role=ops level=S timeout=30s hb=2s
+[11:03:00] HEARTBEAT t-20260615-110300-d328e4 status=running progress=None/None msg=
+[11:03:03] ENQUEUE t-20260615-110303-48e5ac role=ops level=S timeout=30s hb=5s
+[11:03:03] NUDGE_WRITE t-20260615-110303-48e5ac kind=nudge gap=10s
+[11:03:03] NUDGE_CONSUME t-20260615-110303-48e5ac kind=nudge
+[11:03:03] NUDGE_WRITE t-20260615-110303-48e5ac kind=ping gap=20s
+[11:03:03] NUDGE_CONSUME t-20260615-110303-48e5ac kind=ping
+[11:03:03] ENQUEUE t-20260615-110303-5e4292 role=ops level=S timeout=30s hb=2s
+[11:03:03] HEARTBEAT t-20260615-110303-5e4292 status=running progress=None/None msg=刚跑
+[11:03:03] ENQUEUE t-20260615-110303-5e1322 role=ops level=S timeout=30s hb=2s
+[11:03:03] HEARTBEAT t-20260615-110303-5e1322 status=running progress=None/None msg=
+[11:03:03] ENQUEUE t-20260615-110303-4f6de0 role=ops level=S timeout=30s hb=2s
+[11:03:03] HEARTBEAT t-20260615-110303-4f6de0 status=running progress=None/None msg=
+[11:03:03] ENQUEUE t-20260615-110303-bd00c5 role=ops level=S timeout=30s hb=2s
+[11:03:03] HEARTBEAT t-20260615-110303-bd00c5 status=running progress=None/None msg=
+[11:03:03] ENQUEUE t-20260615-110303-6960ee role=ops level=S timeout=5s hb=2s
+[11:03:03] HEARTBEAT t-20260615-110303-6960ee status=running progress=None/None msg=
+[11:03:03] NUDGE_WRITE t-20260615-110303-5e1322 kind=nudge gap=3s
+[11:03:03] NUDGE_WRITE t-20260615-110303-4f6de0 kind=ping gap=5s
+[11:03:03] NUDGE_WRITE t-20260615-110303-bd00c5 kind=escalate gap=7s
+[11:03:03] TIMEOUT_BATCH 1 tasks
+[11:03:03] ENQUEUE t-20260615-110303-0edad4 role=ops level=S timeout=30s hb=2s
+[11:03:03] NUDGE_WRITE t-20260615-110303-0edad4 kind=nudge gap=3s
+[11:03:03] NUDGE_CONSUME t-20260615-110303-0edad4 kind=nudge
+[11:03:03] HEARTBEAT t-20260615-110303-0edad4 status=running progress=None/None msg=RESPONDING_TO_NUDGE: 正在跑第 2 步
+[11:03:03] ENQUEUE t-20260615-110303-f9beee role=ops level=S timeout=30s hb=2s
+[11:03:03] HEARTBEAT t-20260615-110303-f9beee status=running progress=None/None msg=
+[11:03:03] NUDGE_WRITE t-20260615-110303-f9beee kind=nudge gap=2s
+[11:03:03] NUDGE_WRITE t-20260615-110303-f9beee kind=ping gap=4s
+[11:03:03] NUDGE_WRITE t-20260615-110303-f9beee kind=escalate gap=7s
+[11:03:03] NUDGE_CONSUME t-20260615-110303-f9beee kind=escalate
+[11:03:03] ENQUEUE t-20260615-110303-c7d58d role=ops level=S timeout=30s hb=5s
+[11:03:03] HEARTBEAT t-20260615-110303-c7d58d status=running progress=None/None msg=
+[11:03:03] ENQUEUE t-20260615-110303-80e2df role=ops level=S timeout=30s hb=2s
+[11:03:03] NUDGE_WRITE t-20260615-110303-80e2df kind=nudge gap=0s
+[11:03:03] NUDGE_CONSUME t-20260615-110303-80e2df kind=nudge
+[11:03:03] ENQUEUE t-20260615-110303-a025bc role=ops level=S timeout=30s hb=2s
+[11:03:03] HEARTBEAT t-20260615-110303-a025bc status=running progress=None/None msg=
+[11:03:03] ENQUEUE t-20260615-110303-fbb6b4 role=ops level=S timeout=30s hb=2s
+[11:03:03] HEARTBEAT t-20260615-110303-fbb6b4 status=running progress=None/None msg=
+[11:03:03] ENQUEUE t-20260615-110303-c6ae3b role=ops level=S timeout=30s hb=2s
+[11:03:03] HEARTBEAT t-20260615-110303-c6ae3b status=running progress=None/None msg=
+[11:03:20] NUDGE_WRITE t-20260615-110303-a025bc kind=escalate gap=20s
+[11:03:20] NUDGE_WRITE t-20260615-110303-c6ae3b kind=escalate gap=24s
+[11:03:20] NUDGE_WRITE t-20260615-110303-fbb6b4 kind=escalate gap=22s
+[11:04:20] TIMEOUT_BATCH 3 tasks
+[16:36:34] ENQUEUE t-20260615-163634-d1b543 role=ops level=S timeout=5s hb=2s
+[16:36:34] TIMEOUT t-20260615-163634-d1b543
+[16:37:47] ENQUEUE t-20260615-163747-983841 role=ops level=S timeout=5s hb=2s
+[16:37:47] TIMEOUT t-20260615-163747-983841
+[16:37:47] PULL_BACK t-20260615-163747-983841 from=2026-06-15
+[16:41:30] ENQUEUE t-20260615-164130-014162 role=ops level=S timeout=5s hb=2s
+[16:41:30] TIMEOUT t-20260615-164130-014162
+[16:41:30] REQUEUE_FROM_ARCHIVE t-20260615-164130-014162 strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=first timeout
+[16:41:30] TIMEOUT t-20260615-164130-014162
+[16:41:30] REQUEUE_FROM_ARCHIVE t-20260615-164130-014162 strategy=extend_timeout retry_count=2 from=2026-06-15 reason=still hanging
+[16:41:30] TIMEOUT t-20260615-164130-014162
+[16:41:30] REQUEUE_FROM_ARCHIVE t-20260615-164130-014162 strategy=downgrade_role retry_count=3 from=2026-06-15 reason=ops not working
+[16:41:30] TIMEOUT t-20260615-164130-014162
+[16:41:30] REQUEUE_FROM_ARCHIVE t-20260615-164130-014162 strategy=extend_timeout retry_count=4 from=2026-06-15 reason=over
+[16:41:30] CANCEL t-20260615-164130-014162
+[16:41:51] ENQUEUE t-20260615-164151-89da3c role=ops level=S timeout=5s hb=2s
+[16:41:51] TIMEOUT t-20260615-164151-89da3c
+[16:41:51] REQUEUE_FROM_ARCHIVE t-20260615-164151-89da3c strategy=extend_timeout retry_count=1 from=2026-06-15 reason=attempt 0
+[16:41:51] TIMEOUT t-20260615-164151-89da3c
+[16:41:51] REQUEUE_FROM_ARCHIVE t-20260615-164151-89da3c strategy=extend_timeout retry_count=2 from=2026-06-15 reason=attempt 1
+[16:41:51] TIMEOUT t-20260615-164151-89da3c
+[16:41:51] REQUEUE_FROM_ARCHIVE t-20260615-164151-89da3c strategy=extend_timeout retry_count=3 from=2026-06-15 reason=attempt 2
+[16:41:51] TIMEOUT t-20260615-164151-89da3c
+[16:41:51] REQUEUE_FROM_ARCHIVE t-20260615-164151-89da3c strategy=extend_timeout retry_count=4 from=2026-06-15 reason=over
+[16:41:51] CANCEL t-20260615-164151-89da3c
+[16:42:02] ENQUEUE t-20260615-164202-2011aa role=ops level=S timeout=5s hb=2s
+[16:42:10] ENQUEUE t-20260615-164210-cf563c role=general level=M timeout=5s hb=2s
+[16:42:10] TIMEOUT t-20260615-164210-cf563c
+[16:42:10] REQUEUE_FROM_ARCHIVE t-20260615-164210-cf563c strategy=extend_timeout retry_count=1 from=2026-06-15 reason=attempt 0
+[16:42:10] TIMEOUT t-20260615-164210-cf563c
+[16:42:10] REQUEUE_FROM_ARCHIVE t-20260615-164210-cf563c strategy=extend_timeout retry_count=2 from=2026-06-15 reason=attempt 1
+[16:42:10] TIMEOUT t-20260615-164210-cf563c
+[16:42:10] REQUEUE_FROM_ARCHIVE t-20260615-164210-cf563c strategy=extend_timeout retry_count=3 from=2026-06-15 reason=attempt 2
+[16:42:10] TIMEOUT t-20260615-164210-cf563c
+[16:42:20] TIMEOUT_BATCH 1 tasks
+[16:44:03] ENQUEUE t-20260615-164403-61c870 role=general level=M timeout=5s hb=2s
+[16:44:03] TIMEOUT t-20260615-164403-61c870
+[16:44:03] REQUEUE_FROM_ARCHIVE t-20260615-164403-61c870 strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=watchdog_escalate|retry#1=rewrite_prompt
+[16:44:03] TIMEOUT t-20260615-164403-61c870
+[16:44:03] REQUEUE_FROM_ARCHIVE t-20260615-164403-61c870 strategy=extend_timeout retry_count=2 from=2026-06-15 reason=watchdog_escalate|retry#2=extend_timeout
+[16:44:03] TIMEOUT t-20260615-164403-61c870
+[16:44:03] REQUEUE_FROM_ARCHIVE t-20260615-164403-61c870 strategy=downgrade_role retry_count=3 from=2026-06-15 reason=watchdog_escalate|retry#3=downgrade general→ops
+[16:44:03] TIMEOUT t-20260615-164403-61c870
+[16:45:29] ENQUEUE t-20260615-164529-58603e role=general level=M timeout=30s hb=2s
+[16:45:36] FAILED t-20260615-164529-58603e reason=auto_retry_then_escalate error=escalate_gap=7s
+[16:45:36] REQUEUE_FROM_ARCHIVE t-20260615-164529-58603e strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=watchdog_escalate_gap=7s|retry#1=rewrite_prompt
+[16:45:36] NUDGE_WRITE t-20260615-164529-58603e kind=nudge gap=0s
+[16:45:57] ENQUEUE t-20260615-164557-389423 role=general level=M timeout=30s hb=2s
+[16:46:04] FAILED t-20260615-164529-58603e reason=auto_retry_then_escalate error=escalate_gap=28s
+[16:46:04] REQUEUE_FROM_ARCHIVE t-20260615-164529-58603e strategy=extend_timeout retry_count=2 from=2026-06-15 reason=watchdog_escalate_gap=28s|retry#2=extend_timeout
+[16:46:04] NUDGE_WRITE t-20260615-164529-58603e kind=nudge gap=0s
+[16:46:04] FAILED t-20260615-164557-389423 reason=auto_retry_then_escalate error=escalate_gap=7s
+[16:46:04] REQUEUE_FROM_ARCHIVE t-20260615-164557-389423 strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=watchdog_escalate_gap=7s|retry#1=rewrite_prompt
+[16:46:04] NUDGE_WRITE t-20260615-164557-389423 kind=nudge gap=0s
+[16:46:20] NUDGE_WRITE t-20260615-164529-58603e kind=escalate gap=16s
+[16:46:20] NUDGE_WRITE t-20260615-164557-389423 kind=escalate gap=16s
+[16:47:20] TIMEOUT_BATCH 2 tasks
+[16:50:33] ENQUEUE t-20260615-165033-1c3f5f role=general level=M timeout=5s hb=2s
+[16:50:33] TIMEOUT t-20260615-165033-1c3f5f
+[16:50:33] REQUEUE_FROM_ARCHIVE t-20260615-165033-1c3f5f strategy=extend_timeout retry_count=1 from=2026-06-15 reason=test_skip_rewrite|retry#2=extend_timeout
+[16:51:20] TIMEOUT_BATCH 1 tasks
+[16:55:12] ENQUEUE t-20260615-165512-b18159 role=ops level=S timeout=30s hb=5s
+[16:55:12] CANCEL t-20260615-165512-b18159
+[16:57:44] ENQUEUE t-20260615-165744-50865d role=general level=M timeout=10s hb=2s
+[16:57:44] TIMEOUT t-20260615-165744-50865d
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-50865d strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=unit test
+[16:57:44] CANCEL t-20260615-165744-50865d
+[16:57:44] ENQUEUE t-20260615-165744-70cc2d role=general level=M timeout=10s hb=2s
+[16:57:44] TIMEOUT t-20260615-165744-70cc2d
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-70cc2d strategy=extend_timeout retry_count=1 from=2026-06-15 reason=unit
+[16:57:44] CANCEL t-20260615-165744-70cc2d
+[16:57:44] ENQUEUE t-20260615-165744-2a0398 role=researcher level=L timeout=10s hb=2s
+[16:57:44] TIMEOUT t-20260615-165744-2a0398
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-2a0398 strategy=downgrade_role retry_count=1 from=2026-06-15 reason=unit
+[16:57:44] CANCEL t-20260615-165744-2a0398
+[16:57:44] ENQUEUE t-20260615-165744-26e1aa role=general level=M timeout=10s hb=2s
+[16:57:44] TIMEOUT t-20260615-165744-26e1aa
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-26e1aa strategy=extend_timeout retry_count=1 from=2026-06-15 reason=attempt 0
+[16:57:44] TIMEOUT t-20260615-165744-26e1aa
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-26e1aa strategy=extend_timeout retry_count=2 from=2026-06-15 reason=attempt 1
+[16:57:44] TIMEOUT t-20260615-165744-26e1aa
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-26e1aa strategy=extend_timeout retry_count=3 from=2026-06-15 reason=attempt 2
+[16:57:44] TIMEOUT t-20260615-165744-26e1aa
+[16:57:44] ENQUEUE t-20260615-165744-5e26c6 role=coder level=CRITICAL timeout=10s hb=2s
+[16:57:44] TIMEOUT t-20260615-165744-5e26c6
+[16:57:44] ENQUEUE t-20260615-165744-02b595 role=general level=M timeout=10s hb=2s
+[16:57:44] TIMEOUT t-20260615-165744-02b595
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-02b595 strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=test|retry#1=rewrite_prompt
+[16:57:44] TIMEOUT t-20260615-165744-02b595
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-02b595 strategy=extend_timeout retry_count=2 from=2026-06-15 reason=test|retry#2=extend_timeout
+[16:57:44] TIMEOUT t-20260615-165744-02b595
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-02b595 strategy=downgrade_role retry_count=3 from=2026-06-15 reason=test|retry#3=downgrade general→ops
+[16:57:44] TIMEOUT t-20260615-165744-02b595
+[16:57:44] ENQUEUE t-20260615-165744-7f460f role=coder level=CRITICAL timeout=10s hb=2s
+[16:57:44] TIMEOUT t-20260615-165744-7f460f
+[16:57:44] ENQUEUE t-20260615-165744-aa700a role=general level=M timeout=10s hb=2s
+[16:57:44] TIMEOUT t-20260615-165744-aa700a
+[16:57:44] REQUEUE_FROM_ARCHIVE t-20260615-165744-aa700a strategy=extend_timeout retry_count=1 from=2026-06-15 reason=hint_test|retry#2=extend_timeout
+[16:57:44] CANCEL t-20260615-165744-aa700a
+[16:57:44] ENQUEUE t-20260615-165744-373322 role=general level=M timeout=30s hb=2s
+[16:57:51] FAILED t-20260615-165744-373322 reason=auto_retry_then_escalate error=escalate_gap=7s
+[16:57:51] REQUEUE_FROM_ARCHIVE t-20260615-165744-373322 strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=watchdog_escalate_gap=7s|retry#1=rewrite_prompt
+[16:57:51] NUDGE_WRITE t-20260615-165744-373322 kind=nudge gap=0s
+[16:57:51] CANCEL t-20260615-165744-373322
+[16:57:52] ENQUEUE t-20260615-165752-1a4101 role=ops level=S timeout=30s hb=5s
+[16:57:52] CANCEL t-20260615-165752-1a4101
+[16:57:59] ENQUEUE t-20260615-165759-052dfb role=general level=M timeout=10s hb=2s
+[16:57:59] TIMEOUT t-20260615-165759-052dfb
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-052dfb strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=unit test
+[16:57:59] CANCEL t-20260615-165759-052dfb
+[16:57:59] ENQUEUE t-20260615-165759-6af665 role=general level=M timeout=10s hb=2s
+[16:57:59] TIMEOUT t-20260615-165759-6af665
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-6af665 strategy=extend_timeout retry_count=1 from=2026-06-15 reason=unit
+[16:57:59] CANCEL t-20260615-165759-6af665
+[16:57:59] ENQUEUE t-20260615-165759-5c6242 role=researcher level=L timeout=10s hb=2s
+[16:57:59] TIMEOUT t-20260615-165759-5c6242
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-5c6242 strategy=downgrade_role retry_count=1 from=2026-06-15 reason=unit
+[16:57:59] CANCEL t-20260615-165759-5c6242
+[16:57:59] ENQUEUE t-20260615-165759-00e0cf role=general level=M timeout=10s hb=2s
+[16:57:59] TIMEOUT t-20260615-165759-00e0cf
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-00e0cf strategy=extend_timeout retry_count=1 from=2026-06-15 reason=attempt 0
+[16:57:59] TIMEOUT t-20260615-165759-00e0cf
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-00e0cf strategy=extend_timeout retry_count=2 from=2026-06-15 reason=attempt 1
+[16:57:59] TIMEOUT t-20260615-165759-00e0cf
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-00e0cf strategy=extend_timeout retry_count=3 from=2026-06-15 reason=attempt 2
+[16:57:59] TIMEOUT t-20260615-165759-00e0cf
+[16:57:59] ENQUEUE t-20260615-165759-3e89fd role=coder level=CRITICAL timeout=10s hb=2s
+[16:57:59] TIMEOUT t-20260615-165759-3e89fd
+[16:57:59] ENQUEUE t-20260615-165759-b7dcb3 role=general level=M timeout=10s hb=2s
+[16:57:59] TIMEOUT t-20260615-165759-b7dcb3
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-b7dcb3 strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=test|retry#1=rewrite_prompt
+[16:57:59] TIMEOUT t-20260615-165759-b7dcb3
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-b7dcb3 strategy=extend_timeout retry_count=2 from=2026-06-15 reason=test|retry#2=extend_timeout
+[16:57:59] TIMEOUT t-20260615-165759-b7dcb3
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-b7dcb3 strategy=downgrade_role retry_count=3 from=2026-06-15 reason=test|retry#3=downgrade general→ops
+[16:57:59] TIMEOUT t-20260615-165759-b7dcb3
+[16:57:59] ENQUEUE t-20260615-165759-88e827 role=coder level=CRITICAL timeout=10s hb=2s
+[16:57:59] TIMEOUT t-20260615-165759-88e827
+[16:57:59] ENQUEUE t-20260615-165759-b0c624 role=general level=M timeout=10s hb=2s
+[16:57:59] TIMEOUT t-20260615-165759-b0c624
+[16:57:59] REQUEUE_FROM_ARCHIVE t-20260615-165759-b0c624 strategy=extend_timeout retry_count=1 from=2026-06-15 reason=hint_test|retry#2=extend_timeout
+[16:57:59] CANCEL t-20260615-165759-b0c624
+[16:57:59] ENQUEUE t-20260615-165759-4bff63 role=general level=M timeout=30s hb=2s
+[16:58:07] FAILED t-20260615-165759-4bff63 reason=auto_retry_then_escalate error=escalate_gap=7s
+[16:58:07] REQUEUE_FROM_ARCHIVE t-20260615-165759-4bff63 strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=watchdog_escalate_gap=7s|retry#1=rewrite_prompt
+[16:58:07] NUDGE_WRITE t-20260615-165759-4bff63 kind=nudge gap=0s
+[16:58:07] CANCEL t-20260615-165759-4bff63
+[16:58:07] ENQUEUE t-20260615-165807-2ede97 role=ops level=S timeout=30s hb=5s
+[16:58:07] CANCEL t-20260615-165807-2ede97
+[16:58:33] ENQUEUE t-20260615-165833-582986 role=general level=M timeout=30s hb=2s
+[16:58:42] FAILED t-20260615-165833-582986 reason=auto_retry_then_escalate error=escalate_gap=9s
+[16:58:42] REQUEUE_FROM_ARCHIVE t-20260615-165833-582986 strategy=rewrite_prompt retry_count=1 from=2026-06-15 reason=watchdog_escalate_gap=9s|retry#1=rewrite_prompt
+[16:58:42] NUDGE_WRITE t-20260615-165833-582986 kind=nudge gap=0s
+[16:58:42] CANCEL t-20260615-165833-582986

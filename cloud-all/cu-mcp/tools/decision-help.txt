@@ -1,0 +1,8 @@
+﻿Usage: mavis team plan decision [options] <id>
+
+Submit owner decision for a plan cycle (owner only)
+
+Options:
+  --file <path>     Path to decision JSON file
+  --from <session>  Your session ID (default: __MAVIS_PARENT_SESSION_ID env)
+  -h, --help        display help for command

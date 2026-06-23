@@ -1,0 +1,1227 @@
+
+=== desktop managed gateway restart 1780985233763 ===
+executable=C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\versions\0.16.0-cn.6\hermes-agent-cn-runtime-win32-x64.exe
+HERMES_HOME=C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home
+HERMES_GATEWAY_RUNTIME_DIR=C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\gateway-runtime
+
+preflight=stop_attempted=false, stop_exit_code=None, stop_timed_out=false, force_killed_pids=[], stale_files_removed=0, remaining_pids=[], lock_active=false
+
+┌─────────────────────────────────────────────────────────┐
+│           ⚕ Hermes Gateway Starting...                 │
+├─────────────────────────────────────────────────────────┤
+│  Messaging platforms + cron scheduler                    │
+│  Press Ctrl+C to stop                                   │
+└─────────────────────────────────────────────────────────┘
+
+[Lark] [2026-06-09 14:10:50,941] [INFO] connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7649274206384458700&access_key=34d18f69cef7e90bb8a7f224b5220e61&service_id=33554678&ticket=c4813662-4495-49ab-aa8e-1b8708fb74b9 [conn_id=7649274206384458700]
+WARNING gateway.run: Unauthorized user: 22595c7d (万东方) on feishu
+WARNING gateway.run: Unauthorized user: 22595c7d (万东方) on feishu
+
+=== desktop managed gateway restart 1780986603712 ===
+executable=C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\versions\0.16.0-cn.6\hermes-agent-cn-runtime-win32-x64.exe
+HERMES_HOME=C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home
+HERMES_GATEWAY_RUNTIME_DIR=C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\gateway-runtime
+
+preflight=stop_attempted=true, stop_exit_code=Some(0), stop_timed_out=false, force_killed_pids=[3272], stale_files_removed=0, remaining_pids=[], lock_active=false
+
+┌─────────────────────────────────────────────────────────┐
+│           ⚕ Hermes Gateway Starting...                 │
+├─────────────────────────────────────────────────────────┤
+│  Messaging platforms + cron scheduler                    │
+│  Press Ctrl+C to stop                                   │
+└─────────────────────────────────────────────────────────┘
+
+[Lark] [2026-06-09 14:30:25,832] [INFO] connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7649279264860261333&access_key=4e648fd69f9b83dfd8fdea89563261db&service_id=33554678&ticket=1f6deb20-fcd3-4cec-ac96-fe6ff0195158 [conn_id=7649279264860261333]
+
+=== desktop managed gateway restart 1780986703131 ===
+executable=C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\versions\0.16.0-cn.6\hermes-agent-cn-runtime-win32-x64.exe
+HERMES_HOME=C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home
+HERMES_GATEWAY_RUNTIME_DIR=C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\gateway-runtime
+
+preflight=stop_attempted=true, stop_exit_code=Some(0), stop_timed_out=false, force_killed_pids=[1060], stale_files_removed=0, remaining_pids=[], lock_active=false
+
+┌─────────────────────────────────────────────────────────┐
+│           ⚕ Hermes Gateway Starting...                 │
+├─────────────────────────────────────────────────────────┤
+│  Messaging platforms + cron scheduler                    │
+│  Press Ctrl+C to stop                                   │
+└─────────────────────────────────────────────────────────┘
+
+[Lark] [2026-06-09 14:32:05,293] [INFO] connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7649279709699935201&access_key=1f5ee7bd433b6ab46acb51bafada45b5&service_id=33554678&ticket=f818c422-ecb1-4143-b34d-d848f026ee77 [conn_id=7649279709699935201]
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "---\n---", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.18s): {"output": "---", "exit_code": 2, "error": null}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool read_file returned error (0.35s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: C:\\ai\\obsidian-文件\\mt\\EA开发\\01-调用模块", "similar_files": ["C:\\a
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 818/1,375 chars. Adding this entry (696 chars) would exceed the limit. Replace or remove existing entries first.", "current_entries": ["用户名：万东方（老大）。称呼偏好：必须叫\"老大\
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 1,473/1,375 chars. Shorten the new content or remove other entries first."}
+WARNING agent.tool_executor: Tool terminal returned error (300.27s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+WARNING agent.tool_executor: Tool memory returned error (0.02s): {"success": false, "error": "No entry matched '用户名：万东方（老大）。称呼偏好：必须叫\"老大\"，不要叫\"您\"或直呼其名。\n对响应速度非常敏感，明确抱怨过\"半小时\"的任务延迟，期望小神龙执行任务要快、出问题要排查说明。\n对系统运维/存储/资源使用情况有实际管理需求（查过 C 盘存储），会关注任务执行是否真的成功。\nCommunicat
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (312.86s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (0.40s): {"output": "=== ~/.hermes 是否被任何配置引用 ===\n\n=== 当前 PID 6480 hermes-agent 是否在用 ~/.hermes ===", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "No entry matched '用户名：万东方（老大）。称呼偏好：必须叫\"老大\"，不要叫\"您\"或直呼其名。\n对响应速度非常敏感，明确抱怨过\"半小时\"的任务延迟，期望小神龙执行任务要快、出问题要排查说明。\n对系统运维/存储/资源使用情况有实际管理需求（查过 C 盘存储），会关注任务执行是否真的成功。'."}
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "No entry matched '对响应速度非常敏感，明确抱怨过\"半小时\"的任务延迟，期望小神龙执行任务要快、出问题要排查说明。\n对系统运维/存储/资源使用情况有实际管理需求（查过 C 盘存储），会关注任务执行是否真的成功。'."}
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "No entry matched '对响应速度非常敏感，明确抱怨过\"半小时\"的任务延迟，期望小神龙执行任务要快、出问题要排查说明。\n对系统运维/存储/资源使用情况有实际管理需求（查过 C 盘存储），会关注任务执行是否真的成功。'."}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (312.79s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (313.29s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (300.25s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+WARNING tools.delegate_tool: Subagent 0 timed out after 600.0s
+WARNING agent.tool_executor: Tool delegate_task returned error (601.15s): {"results": [{"task_index": 0, "status": "timeout", "summary": null, "error": "Subagent timed out after 600.0s with 1 API call(s) completed — likely stuck on a slow API call or unresponsive network re
+WARNING agent.tool_executor: Tool terminal returned error (300.32s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+WARNING agent.tool_executor: Tool terminal returned error (300.24s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+WARNING agent.tool_executor: Tool terminal returned error (10.85s): {"output": "=== 试 1: MetaQuotes 官方 MQL5 docs ===\nHTTP 000 | size 0B | https://www.mql5.com/en/docs", "exit_code": 28, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (300.31s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (312.83s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+[subagent-0] ⚡ Interrupt: skipping 1 remaining tool call(s)
+[Lark] [2026-06-10 11:50:29,587] [ERROR] receive message loop exit, err: no close frame received or sent [conn_id=7649279709699935201]
+ERROR Lark: receive message loop exit, err: no close frame received or sent [conn_id=7649279709699935201]
+[Lark] [2026-06-10 11:50:29,588] [INFO] disconnected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7649279709699935201&access_key=1f5ee7bd433b6ab46acb51bafada45b5&service_id=33554678&ticket=f818c422-ecb1-4143-b34d-d848f026ee77 [conn_id=7649279709699935201]
+[Lark] [2026-06-10 11:50:43,643] [INFO] trying to reconnect for the 1st time
+[Lark] [2026-06-10 11:50:44,375] [INFO] connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7649609205184875490&access_key=09650a558708b0371277db6a55f7067b&service_id=33554678&ticket=6567bb26-8ffb-4558-bae1-7715f4e2423e [conn_id=7649609205184875490]
+WARNING hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\: OSError: [WinError 193] %1 不是有效的 Win32 应用程序。
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool terminal returned error (1.82s): {"output": "OBSIDIAN_VAULT_PATH=\nls: cannot access '': No such file or directory\nls: cannot access '/c/Users/Administrator/Documents/Obsidian': No such file or directory\nls: cannot access 'C:/Users
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "Traceback (most recent call last):\r\n  File \"C:\\Users\\Administrator\\AppData\\Local\\Temp\\parse_wx2.py\", line 4, in <module>\r\n    with open(p, 'r', encoding='utf-8', errors='ignore
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "OPEN: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wx2.html\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\Administrator\\AppData\\Local\\Temp\\parse_wx2.py\", line 7, in <modu
+WARNING agent.tool_executor: Tool patch returned error (0.13s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\20-经验沉淀\\2026-06\\Daily\\2026-06-10.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/
+WARNING agent.tool_executor: Tool patch returned error (0.18s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\20-经验沉淀\\2026-06\\Daily\\2026-06-10.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/
+WARNING agent.tool_executor: Tool patch returned error (0.12s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\20-经验沉淀\\2026-06\\Daily\\2026-06-10.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/
+WARNING agent.tool_executor: Tool patch returned error (0.18s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\20-经验沉淀\\2026-06\\Daily\\2026-06-10.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/
+WARNING agent.tool_executor: Tool patch returned error (0.12s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\20-经验沉淀\\2026-06\\Daily\\2026-06-10.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/
+WARNING agent.tool_executor: Tool patch returned error (0.12s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\20-经验沉淀\\2026-06\\Daily\\2026-06-10.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/
+WARNING agent.tool_executor: Tool patch returned error (0.12s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\20-经验沉淀\\2026-06\\Daily\\2026-06-10.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "Traceback (most recent call last):\r\n  File \"<string>\", line 8, in <module>\r\n  File \"<frozen importlib._bootstrap_external>\", line 936, in exec_module\r\n  File \"<frozen importlib.
+WARNING agent.tool_executor: Tool terminal returned error (0.17s): {"output": "---\n---", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "total 8\ndrwxr-xr-x 1 Administrator 197121 0  6月 10 10:27 .\ndrwxr-xr-x 1 Administrator 197121 0  6月 10 08:49 ..\ndrwxr-xr-x 1 Administrator 197121 0  6月 10 10:43 ai-managed\ndrwxr-xr-x 1 
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 2,334/2,200 chars. Adding this entry (273 chars) would exceed the limit. Replace or remove existing entries first.", "current_entries": ["Hermes on this Windows 
+WARNING agent.tool_executor: Tool patch returned error (0.01s): {"error": "old_string and new_string required"}
+WARNING agent.tool_executor: Tool patch returned error (0.12s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\90-索引\\MOC.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/90-索引/MOC.md' resolved to 'C:\\\\c\\\\ai\
+WARNING agent.tool_executor: Tool patch returned error (0.12s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\90-索引\\MOC.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/90-索引/MOC.md' resolved to 'C:\\\\c\\\\ai\
+WARNING agent.tool_executor: Tool patch returned error (0.12s): {"success": false, "error": "Failed to read file: C:\\c\\ai\\obsidian-文件\\ai-managed\\90-索引\\MOC.md", "_warning": "Relative path '/c/ai/obsidian-文件/ai-managed/90-索引/MOC.md' resolved to 'C:\\\\c\\\\ai\
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"error": "old_text is required for 'replace' action.", "success": false}
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 16, in <module>\r\nAssertionError: old1 not found", "exit_code": 1, "error": null}
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 2,474/2,200 chars. Shorten the new content or remove other entries first."}
+
+[Tool loop warning: same_tool_failure_warning; count=3; memory
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "Traceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\nModuleNotFoundError: No module named 'hermes_agent'", "exit_code": 1, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (17.05s): {"output": "[Command timed out after 15s]", "exit_code": 124, "error": null}
+WARNING agent.tool_executor: Tool search_files returned error (0.29s): {"total_count": 0, "error": "Search failed: grep: Unmatched ( or \\("}
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\Users\Administrator\AppData\Local\hermes\hermes-agent: OSError: [WinError 193] %1 不是有效的 Win32 应用程序。
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.39s): {"output": "fixed\r\nTraceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\n  File \"C:\\Users\\Administrator\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.39s): {"output": "hits: 2\r\nafter hits: 2\r\nTraceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\n  File \"C:\\Users\\Administrator\\AppData\\Roaming\\uv\\python\\cpython-3.11-
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.39s): {"output": "before 8-bytes hits: 0\r\nafter 7-bytes hits: 2\r\nTraceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\n  File \"C:\\Users\\Administrator\\AppData\\Roaming\\uv
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"error": "old_text is required for 'replace' action.", "success": false}
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (0.39s): {"output": "=== state.db schema ===\nTraceback (most recent call last):\r\n  File \"<string>\", line 3, in <module>\r\nsqlite3.OperationalError: unable to open database file\r\n=== messages table prev
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "", "exit_code": 2, "error": null}
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool mem0_search returned error (0.00s): {"error": "mem0 package not installed. Run: pip install mem0ai"}
+WARNING agent.tool_executor: Tool mem0_search returned error (0.00s): {"error": "mem0 package not installed. Run: pip install mem0ai"}
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "ls: cannot access '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/Daily/_pdf/2': No such file or directory", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "ls: cannot access '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/Daily/_pdf/2': No such file or directory", "exit_code": 2, "error": null}
+WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/Daily/_pdf/2026-06-10.pdf
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool terminal returned error (0.58s): {"output": "=== Probe1: Python os.listdir 直接中文路径 ===\r\nexists? True\r\nchildren: ['ai-managed', 'mt']\r\n\r\n=== Probe2: MSYS bash 通过 subprocess调 ls 中文路径 ===\r\nstdout: ''\r\nstderr: \"ls: cannot acc
+WARNING agent.lsp.servers: bash-language-server: shellcheck not found on PATH — diagnostics will be empty until shellcheck is installed (apt: shellcheck, brew: shellcheck, scoop: shellcheck).
+WARNING hermes.lint.lsp: lsp[bash-language-server] spawn/initialize failed for C:\: OSError: [WinError 193] %1 不是有效的 Win32 应用程序。
+WARNING agent.tool_executor: Tool terminal returned error (0.78s): {"output": "chmod: cannot access 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\hermes-safe-shell.sh2': No such file or directory\n=== 用 hermes-safe-shell调 ls ===\n  File \"C:\\Users\\ADMINI~1\\AppD
+WARNING agent.tool_executor: Tool terminal returned error (1.39s): {"output": "PYB64=aW1wb3J0IHN5cywgb3MsIGN0eXBlcwpmcm9tIGN0eXBlcyBpbXBvcnQgd2ludHlwZXMKR2V0U2...\n=== Final test1: ls ===\n  File \"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\hermes_path.JARE.py\", lin
+WARNING agent.tool_executor: Tool terminal returned error (0.27s): {"output": "File \"<stdin>\", line 36\r\n    '''\r\n       ^\r\nSyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 87-88: truncated \\xXX escape", "exit_code": 1, "error
+WARNING agent.tool_executor: Tool terminal returned error (0.39s): {"output": "C:\\Users\\Administrator\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe: can't open file 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Roaming\\\\cn.org.hermesag
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "[OK] wrote C:\\Users\\Administrator\\AppData\\Local\\Temp\\hermes-safe-shell.sh, 969 bytes\r\n[OK] chmod +x\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\Administrator\\AppD
+WARNING agent.tool_executor: Tool patch returned error (0.18s): {"success": false, "error": "old_string and new_string are identical"}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool patch returned error (0.18s): {"success": false, "error": "old_string and new_string are identical"}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "DEBUG helper source first300 chars:\r\n'import sys, os, ctypes\\nfrom ctypes import wintypes\\nGetShortPathNameW = ctypes.windll.kernel32.GetShortPathNameW\\nGetShortPathNameW.argtypes = [
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 5 consecutive failures. Pausing API calls for 120s.
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 6 consecutive failures. Pausing API calls for 120s.
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.18s): {"output": "ls: cannot access '/c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/Daily/_pdf/2026-06-10.pdf2': No such file or directory", "exit_code": 2, "error": null}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/Daily/_pdf/2026-06-10.pdf
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/ai/obsidian-文件/ai-managed/20-经验沉淀/2026-06/Daily/_pdf/2026-06-10.pdf
+WARNING agent.tool_executor: Tool terminal returned error (1.17s): {"output": "File \"<stdin>\", line 10\r\n    obs_uri = 'obsidian://open?path=' + p.replace('\\', '/')\r\n                                                         ^\r\nSyntaxError: unterminated string 
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 5 consecutive failures. Pausing API calls for 120s.
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 6 consecutive failures. Pausing API calls for 120s.
+WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-01.png
+WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-02.png
+WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-03.png
+WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-04.png
+WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /c/hermes-daily-2026-06-10-images/page-05.png
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 2,145/2,200 chars. Adding this entry (260 chars) would exceed the limit. Replace or remove existing entries first.", "current_entries": ["MSYS/Hermes on this Win
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 2,145/2,200 chars. Adding this entry (430 chars) would exceed the limit. Replace or remove existing entries first.", "current_entries": ["MSYS/Hermes on this Win
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 2,145/2,200 chars. Adding this entry (391 chars) would exceed the limit. Replace or remove existing entries first.", "current_entries": ["MSYS/Hermes on this Win
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"error": "old_text is required for 'replace' action.", "success": false}
+
+[Tool loop warning: same_tool_failure_warning; count=4; memory has failed 4 times this turn. This looks like a loop. Do not s
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 2,431/2,200 chars. Shorten the new content or remove other entries first."}
+
+[Tool loop warning: same_tool_failure_warning; count=5; memory
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 2,303/2,200 chars. Shorten the new content or remove other entries first."}
+
+[Tool loop warning: same_tool_failure_warning; count=6; memory
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "File \"<string>\", line 7\r\n    pdfmetrics.registerFont(UnicodeCIDFont(name))\r\n    ^\r\nIndentationError: expected an indented block after 'try' statement on line 6", "exit_code": 1, "e
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "File \"<string>\", line 10\r\n    pdfmetrics.registerFont(TTFont('Msyh', fp, subfontIndex=0))\r\n    ^\r\nIndentationError: expected an indented block after 'try' statement on line 8", "ex
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "File \"<string>\", line 9\r\n    pdfmetrics.registerFont(TTFont(name,fp,subfontIndex=idx) if idx is not None else TTFont(name,fp))\r\n    ^\r\nIndentationError: expected an indented block 
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 5 consecutive failures. Pausing API calls for 120s.
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 6 consecutive failures. Pausing API calls for 120s.
+ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/fcffdf7d.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/fcffdf7d.png'
+ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/e05f19f7.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/e05f19f7.png'
+ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/0bef3b40.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/0bef3b40.png'
+ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/46216d65.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/46216d65.png'
+ERROR gateway.platforms.base: [Weixin] Error sending image: 404, message='Not Found', url='https://n.uguu.se/93981255.png'
+Traceback (most recent call last):
+  File "gateway\platforms\base.py", line 2573, in send_multiple_images
+  File "gateway\platforms\weixin.py", line 1856, in send_image
+  File "gateway\platforms\weixin.py", line 1966, in _download_remote_media
+  File "asyncio\tasks.py", line 489, in wait_for
+  File "gateway\platforms\weixin.py", line 1964, in _do_fetch
+  File "aiohttp\client_reqrep.py", line 636, in raise_for_status
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://n.uguu.se/93981255.png'
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool terminal returned error (0.40s): {"output": "written 2880 bytes\r\nTraceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\n  File \"C:\\Users\\Administrator\\AppData\\Roaming\\uv\\python\\cpython-3.11-window
+WARNING agent.conversation_loop: Corrupted tool_call arguments repaired before request (session=20260611_064818_e253c0df, message_index=244, tool_call_id=call_function_uscpbhka32n3_1, function=patch, preview='{"mode": "replace", "new_string": "\\"TOKEN_GLOBAL=*** "old_string": "\\"TOKEN=***
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (0.00s): {"output": "", "exit_code": -1, "error": "Foreground command uses '&' backgrounding. Use terminal(background=true) for long-lived processes, then run health checks and tests in follow-up terminal call
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "File \"<string>\", line 7\r\n    except urllib.error.HTTPError as e:\r\n    ^^^^^^\r\nSyntaxError: invalid syntax", "exit_code": 1, "error": null}
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.78s): {"output": "Traceback (most recent call last):\r\n  File \"C:\\Users\\Administrator\\AppData\\Local\\hermes\\hermes-agent\\skills\\daily-digest\\references\\daily_renderer.py\", line 531, in <module>\
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.78s): {"output": "Traceback (most recent call last):\r\n  File \"C:\\Users\\Administrator\\AppData\\Local\\hermes\\hermes-agent\\skills\\daily-digest\\references\\daily_renderer.py\", line 531, in <module>\
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "File \"<string>\", line 9\r\n    r = urllib.request.urlopen(f'http://127.0.0.1:18765/img/page-{i:02d}.png?token={T}', timeout=5)\r\n    ^\r\nIndentationError: expected an indented block af
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "File \"<string>\", line 13\r\n    sz = 'FILE' if os.path.isfile(p) else f'DIR ({len(os.listdir(p))} files)'\r\n    ^\r\nIndentationError: expected an indented block after 'if' statement on
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 5 consecutive failures. Pausing API calls for 120s.
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 6 consecutive failures. Pausing API calls for 120s.
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.conversation_loop: Corrupted tool_call arguments repaired before request (session=20260611_064818_e253c0df, message_index=331, tool_call_id=call_function_917kjmymkjx8_1, function=write_file, preview='{"content": "\\"\\"\\"More careful probe to nail down Hermes\\u541e\\u5b57 rules.\\"\\"')
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool terminal returned error (5.20s): {"output": "--- TOK_EN_redact+TOK+EN+arg: 0 total ---\r\n--- write_file+corrupt: 42 total ---\r\n  #33801 open   Secret redaction corrupts code syntax in tool output (write_file, execute_code, \r\n  #
+WARNING agent.tool_executor: Tool terminal returned error (0.18s): {"output": "/usr/bin/bash: line 3: gh: command not found\nwhich: no gh in (/c/Users/Administrator/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/Administrator/bin:/c/User
+WARNING agent.tool_executor: Tool terminal returned error (0.27s): {"output": "File \"<stdin>\", line 7\r\n    \"env_path = r'C:\\Users\\Administrator\\AppData\\Roaming\\cn.org.hermesagent.desktop\\runtime\\hermes-home\\.env'\",\r\n                                   
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 2,129/2,200 chars. Adding this entry (500 chars) would exceed the limit. Replace or remove existing entries first.", "current_entries": ["Hermes/Windows 5 坑（v2 2
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool memory returned error (0.01s): {"success": false, "error": "Replacement would put memory at 2,578/2,200 chars. Shorten the new content or remove other entries first."}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool memory returned error (0.01s): {"success": false, "error": "Replacement would put memory at 2,346/2,200 chars. Shorten the new content or remove other entries first."}
+
+[Tool loop warning: same_tool_failure_warning; count=3; memory
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 2,129/2,200 chars. Adding this entry (235 chars) would exceed the limit. Replace or remove existing entries first.", "current_entries": ["Hermes/Windows 5 坑（v2 2
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"error": "old_text is required for 'remove' action.", "success": false}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "No entry matched 'Hermes Skills 实际位置 ~/.mavis/skills/<name>/SKILL.md (非 ~/.hermes)。“找技能”功能自带: `hermes skills {browse,search,install,inspect,list,check,update,audit,uninsta
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 2,280/2,200 chars. Shorten the new content or remove other entries first."}
+
+[Tool loop warning: same_tool_failure_warning; count=4; memory
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "File \"<string>\", line 12\r\n    if f.endswith(('.py','.sh')):\r\n    ^\r\nIndentationError: expected an indented block after 'for' statement on line 11", "exit_code": 1, "error": null}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 5 consecutive failures. Pausing API calls for 120s.
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 6 consecutive failures. Pausing API calls for 120s.
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "/usr/bin/bash: eval: line 3: unexpected EOF while looking for matching `\"'", "exit_code": 2, "error": null}
+WARNING agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=ThreadPoolExecutor-10_0:4400 provider=minimax-cn base_url=https://api.minimaxi.com/anthropic model=MiniMax-M3 summary=HTTP 500: unknown error, 999 (1000)
+WARNING agent.conversation_loop: Retrying API call in 2.03319365972382s (attempt 1/3) thread=ThreadPoolExecutor-10_0:4400 provider=minimax-cn base_url=https://api.minimaxi.com/anthropic model=MiniMax-M3 error=Error code: 500 - {'type': 'error', 'error': {'type': 'api_error', 'message': 'unknown error, 999 (1000)'}, 'request_id': '0679f29b37c7678bbfcdabc6c32f7350'}
+WARNING agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=ThreadPoolExecutor-10_0:4400 provider=minimax-cn base_url=https://api.minimaxi.com/anthropic model=MiniMax-M3 summary=HTTP 500: unknown error, 999 (1000)
+WARNING agent.conversation_loop: Retrying API call in 2.254367488646735s (attempt 1/3) thread=ThreadPoolExecutor-10_0:4400 provider=minimax-cn base_url=https://api.minimaxi.com/anthropic model=MiniMax-M3 error=Error code: 500 - {'type': 'error', 'error': {'type': 'api_error', 'message': 'unknown error, 999 (1000)'}, 'request_id': '0679f338ffff3f08ed353c8df3897210'}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job '4a823630c7c0': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job '4a823630c7c0': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (0.18s): {"output": "/usr/bin/bash: eval: line 3: unexpected EOF while looking for matching `\"'", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.40s): {"output": "total 35459\ndrwxr-xr-x 1 Administrator 197121        0  6月 14 22:01 .\ndrwxr-xr-x 1 Administrator 197121        0  6月 10 09:31 ..\n-rw-r--r-- 1 Administrator 197121     1183  6月 10 09:59 
+WARNING agent.tool_executor: Tool terminal returned error (8.82s): {"output": "/tmp/daily_renderer_check.py\n/tmp/probe_cid.py\n/tmp/rerender_pdf.py\n/tmp/test_msyh_font.py\n---", "exit_code": 1, "error": null, "exit_code_meaning": "Some directories were inaccessible
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "SESSIONS in W24: 11\r\n  06-10 22:00 source=cron msgs=0 tools=0\r\n  06-10 17:53 source=cron msgs=46 tools=22\r\n  06-10 14:08 source=cron msgs=42 tools=24\r\n  06-10 14:04 source=cron msg
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job '4a823630c7c0': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job '4a823630c7c0': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job 'd2dbb36efc0f': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job 'd2dbb36efc0f': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "/usr/bin/bash: eval: line 3: unexpected EOF while looking for matching `\"'", "exit_code": 2, "error": null}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job '4a823630c7c0': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job '4a823630c7c0': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (182.20s): {"output": "[Command timed out after 180s]", "exit_code": 124, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.00s): {"output": "", "exit_code": -1, "error": "Foreground command uses '&' backgrounding. Use terminal(background=true) for long-lived processes, then run health checks and tests in follow-up terminal call
+WARNING agent.tool_executor: Tool terminal returned error (0.00s): {"output": "", "exit_code": -1, "error": "Foreground command uses '&' backgrounding. Use terminal(background=true) for long-lived processes, then run health checks and tests in follow-up terminal call
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool skill_view returned error (0.10s): {"success": false, "error": "Skill 'skill_view' not found.", "available_skills": ["daily-digest", "dogfood", "hermes-redaction-safe", "mem0", "vault-curator", "yuanbao", "claude-code", "codex", "herme
+WARNING agent.tool_executor: Tool terminal returned error (0.17s): {"output": "2026-06-16T07-32-16Z\n---\naudit.log\nindex-cache\nlock.json\nquarantine\ntaps.json\n---", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (182.23s): {"output": "[Command timed out after 180s]", "exit_code": 124, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.40s): {"output": "=== Source contents ===\ntotal 12\ndrwxr-xr-x 1 Administrator 197121    0  6月  2 11:19 .\ndrwxr-xr-x 1 Administrator 197121    0  6月 10 14:04 ..\n-rw-r--r-- 1 Administrator 197121 7526  6月
+WARNING agent.tool_executor: Tool terminal returned error (1.39s): {"output": "", "exit_code": 1, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.18s): {"output": "/usr/bin/bash: eval: line 3: unexpected EOF while looking for matching `\"'", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.39s): {"output": "=== WAL contents ===\r\nLocal start ts: 1781539200.0\r\nLocal end ts: 1781625600.0\r\nnow ts: 1781618489.614548\r\nToday (06-16) messages: 0, range: None - None\r\nLast 6h: 0 msgs\r\nLast 
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "---\n---", "exit_code": 1, "error": null}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job '4a823630c7c0': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job '4a823630c7c0': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (0.17s): {"output": "page-01.png\npage-02.png\npage-03.png\npage-04.png\npage-05.png\npage-06.png\npage-07.png\npage-08.png\n---\n_render.py\npage-01.png\npage-02.png\npage-03.png\npage-04.png\npage-05.png\npa
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job '4a823630c7c0': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job '4a823630c7c0': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (0.18s): {"output": "cp: '/tmp/wx.html' and 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\wx.html' are the same file", "exit_code": 1, "error": null}
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool terminal returned error (0.79s): {"output": "=== 试 --no-authorize --target claude --no-mcp ===\nInstalled Nubase skill: C:\\Users\\Administrator\\.claude\\skills\\nubase\\SKILL.md\nEnsured Nubase local config is ignored by git: C:\\U
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.base: [Weixin] Send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited — trying plain-text fallback
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR gateway.platforms.base: [Weixin] Fallback send also failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 5 consecutive failures. Pausing API calls for 120s.
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING plugins.memory.mem0: Mem0 circuit breaker tripped after 6 consecutive failures. Pausing API calls for 120s.
+WARNING agent.tool_executor: Tool terminal returned error (182.18s): {"output": "=== 看 Docker image 是基于什么 ===\n# Multi-stage build for nubase backend (Memory · Database · Storage · Auth).\n\n# Stage 1: Build\nFROM maven:3.9-eclipse-temurin-17 AS builder\n\nWORKDIR /app
+WARNING plugins.memory.mem0: Mem0 sync failed: mem0 package not installed. Run: pip install mem0ai
+WARNING agent.tool_executor: Tool terminal returned error (0.58s): {"output": "_pdf\n2026-06-10.md\n2026-06-11.md\n2026-06-12.md\n2026-06-14.md\n2026-06-15.md\n2026-06-16.md\n2026-06-17.md\n---\n_pdf\n2026-W24.md\n---DB SCHEMA---\nTraceback (most recent call last):\r
+WARNING agent.chat_completion_helpers: Stream stale for 180s (threshold 180s) — no chunks received. model=MiniMax-M3 context=~32,383 tokens. Killing connection.
+WARNING run_agent: Failed to rebuild shared OpenAI client (stale_stream_pool_cleanup) thread=ThreadPoolExecutor-26_0:7684 provider=minimax-cn base_url=https://api.minimaxi.com/anthropic model=MiniMax-M3 error=The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+WARNING agent.tool_executor: Tool memory returned error (0.00s): {"error": "Memory is not available. It may be disabled in config or this environment.", "success": false}
+WARNING agent.tool_executor: Tool browser_navigate returned error (16.10s): {"success": false, "error": "Auto-launch failed: Chrome not found. Checked:\n  - agent-browser cache: C:\\Users\\Administrator\\.agent-browser\\browsers\n  - System Chrome installations\n  - Puppeteer
+WARNING agent.tool_executor: Tool terminal returned error (1.99s): {"output": "OBSIDIAN_VAULT_PATH=", "exit_code": 2, "error": null}
+WARNING agent.chat_completion_helpers: Stream stale for 180s (threshold 180s) — no chunks received. model=MiniMax-M3 context=~29,805 tokens. Killing connection.
+WARNING run_agent: Failed to rebuild shared OpenAI client (stale_stream_pool_cleanup) thread=ThreadPoolExecutor-29_0:8040 provider=minimax-cn base_url=https://api.minimaxi.com/anthropic model=MiniMax-M3 error=The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job '4a823630c7c0': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job '4a823630c7c0': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (1.78s): {"output": "/usr/bin/bash: eval: line 3: unexpected EOF while looking for matching `\"'", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (1.99s): {"output": "/c/tmp/state.db\n---\n/c/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/state.db\n---DB probe---\nTraceback (most recent call last):\r\n  File \"<string
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job '4a823630c7c0': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job '4a823630c7c0': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (0.39s): {"output": "./digest/2026-06-15/pdf_to_png.py\n./digest/_tools/pdf_to_png.py\n./push_digest.py\n./render_digest_v3.py\n./skills/daily-digest/daily_renderer_v2.py\n./skills/daily-digest/render_weekly.p
+WARNING agent.tool_executor: Tool read_file returned error (0.29s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: C:/Users/Administrator/daily_renderer_v2.py"}
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "messages cols: ['id', 'session_id', 'role', 'content', 'tool_call_id', 'tool_calls', 'tool_name', 'timestamp', 'token_count', 'finish_reason', 'reasoning', 'reasoning_content', 'reasoning_
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "By day:\r\n  ('2026-06-15', 'assistant', 349)\r\n  ('2026-06-15', 'tool', 364)\r\n  ('2026-06-15', 'user', 21)\r\n  ('2026-06-16', 'assistant', 23)\r\n  ('2026-06-16', 'tool', 34)\r\n  ('2
+WARNING agent.tool_executor: Tool terminal returned error (2.79s): {"output": "Cleared old PNGs from C:\\hermes-daily-2026-06-10-v2-images\r\n  rendered page 01 -> C:\\hermes-daily-2026-06-10-v2-images\\page-01.png (1191x1684, 49850 bytes)\r\n  rendered page 02 -> C:
+WARNING agent.tool_executor: Tool terminal returned error (0.00s): {"output": "", "exit_code": -1, "error": "Foreground command uses '&' backgrounding. Use terminal(background=true) for long-lived processes, then run health checks and tests in follow-up terminal call
+WARNING agent.tool_executor: Tool terminal returned error (0.00s): {"output": "", "exit_code": -1, "error": "Foreground command uses '&' backgrounding. Use terminal(background=true) for long-lived processes, then run health checks and tests in follow-up terminal call
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "/usr/bin/bash: eval: line 33: syntax error near unexpected token `)'\n/usr/bin/bash: eval: line 33: `\")'", "exit_code": 2, "error": null}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job '4a823630c7c0': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job '4a823630c7c0': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job 'd2dbb36efc0f': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job 'd2dbb36efc0f': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool terminal returned error (0.18s): {"output": "/usr/bin/bash: eval: line 3: unexpected EOF while looking for matching `\"'", "exit_code": 2, "error": null}
+WARNING agent.tool_executor: Tool terminal returned error (0.26s): {"output": "2026-06-22 today: []\r\ntoday sessions: [(0,)]\r\nTraceback (most recent call last):\r\n  File \"<string>\", line 17, in <module>\r\nTypeError: 'NoneType' object is not subscriptable", "ex
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "/usr/bin/bash: eval: line 3: unexpected EOF while looking for matching `\"'", "exit_code": 2, "error": null}
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING cron.scheduler: Job '4a823630c7c0': live adapter send to weixin:o9cq801DCcFWLrPvqyGVaMtXxU5c@im.wechat failed (iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited), falling back to standalone
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+WARNING gateway.platforms.weixin: [Weixin] rate limited for o9cq801D; backing off 3.0s before retry
+ERROR gateway.platforms.weixin: [Weixin] send failed to=o9cq801D: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+ERROR cron.scheduler: Job '4a823630c7c0': delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited
+WARNING agent.tool_executor: Tool skill_view returned error (0.20s): {"success": false, "error": "Skill 'audiocraft-audio-generation' not found.", "available_skills": ["codebase-to-course", "daily-digest", "dogfood", "hermes-redaction-safe", "mem0", "nubase", "vault-cu
+WARNING agent.tool_executor: Tool skill_view returned error (0.03s): {"success": false, "error": "Skill 'audiocraft' is not supported on this platform.", "readiness_status": "unsupported"}
+WARNING agent.tool_executor: Tool skill_view returned error (0.09s): {"success": false, "error": "Skill 'serving-llms-vllm' not found.", "available_skills": ["codebase-to-course", "daily-digest", "dogfood", "hermes-redaction-safe", "mem0", "nubase", "vault-curator", "y
+WARNING agent.tool_executor: Tool skill_view returned error (0.03s): {"success": false, "error": "Skill 'vllm' is not supported on this platform.", "readiness_status": "unsupported"}
+WARNING agent.tool_executor: Tool skill_view returned error (0.09s): {"success": false, "error": "Skill 'evaluating-llms-harness' not found.", "available_skills": ["codebase-to-course", "daily-digest", "dogfood", "hermes-redaction-safe", "mem0", "nubase", "vault-curato
+WARNING agent.tool_executor: Tool skill_view returned error (0.03s): {"success": false, "error": "Skill 'lm-evaluation-harness' is not supported on this platform.", "readiness_status": "unsupported"}
+
+[Tool loop warning: same_tool_failure_warning; count=4; skill_view h
+WARNING agent.tool_executor: Tool skill_view returned error (0.03s): {"success": false, "error": "Skill 'obliteratus' is not supported on this platform.", "readiness_status": "unsupported"}
+
+[Tool loop warning: same_tool_failure_warning; count=5; skill_view has failed 
+WARNING tools.skills_tool: Skill name collision for 'spotify': 2 candidates — C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home\skills\media\spotify\SKILL.md; C:\Users\Administrator\AppData\Roaming\cn.org.hermesagent.desktop\runtime\hermes-home\skills\creative\popular-web-designs\templates\spotify.md
+WARNING agent.tool_executor: Tool skill_view returned error (0.07s): {"success": false, "error": "Ambiguous skill name 'spotify': 2 skills match across your local skills dir and external_dirs. Refusing to guess — load one explicitly by its categorized path.", "matches"
+WARNING agent.tool_executor: Tool skill_view returned error (0.03s): {"success": false, "error": "Skill 'apple-notes' is not supported on this platform.", "readiness_status": "unsupported"}
+WARNING agent.tool_executor: Tool skill_view returned error (0.03s): {"success": false, "error": "Skill 'minecraft-modpack-server' is not supported on this platform.", "readiness_status": "unsupported"}
+
+[Tool loop warning: same_tool_failure_warning; count=3; skill_vie
+WARNING agent.tool_executor: Tool terminal returned error (0.12s): {"output": "", "exit_code": 1, "error": null}
+WARNING agent.tool_executor: Tool skill_view returned error (0.04s): {"success": false, "error": "Skill 'kanban' is not supported on this platform.", "readiness_status": "unsupported"}
+
+[Tool loop warning: same_tool_failure_warning; count=4; skill_view has failed 4 tim

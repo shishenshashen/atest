@@ -1,0 +1,12 @@
+﻿Usage: mavis team [options] [command]
+
+Team agent management (export/import)
+
+Options:
+  -h, --help              display help for command
+
+Commands:
+  export [options] [dir]  Export agent configurations to .agents/ directory
+  plan                    Plan execution engine 鈥?run, monitor, steer, and
+                          control plans
+  help [command]          display help for command

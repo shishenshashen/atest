@@ -1,0 +1,202 @@
+version: 1
+plan:
+  name: 2026-06-04 23:00 巡检 14:00 §3 维度 3 收官 02 读取类 + 01 下单类 实战段 1 owner + 2 worker
+  max_concurrency: 2
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: track2-readclass
+    title: T2 - 02 读取类 287/11EA 实战段 (14:00 §3 候选 C, 频次第 1 11EA 全覆盖, 0.6h)
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 2
+    timeout_minutes: 40
+    depends_on: []
+    gates: []
+    prompt: |
+      # 任务: 02 读取类实战段 (23:00 巡检 T2)
+
+      ## 背景
+      - 14:00 §3 维度 3 候选 C "02 读取类 287/11EA 实战段" 闭环
+      - 22:00 plan §资源建议 留 23:00 cron 跑 (跨 11 EA 接入点, 0.5h 估时偏紧)
+      - 22:00 T2 04 实用函数实战段 已落盘范本, 沿用 16:00 T2 6 段结构
+      - 23:00 cron 触达, Mavis owner 已收尾 22:00 plan_cae9e26a, 派你跑 02 实战段
+      - 详 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-04_23-00-plan.md` §4 (含 12 必读 + 6 段范本详细 spec + 9 反模式 + 验收)
+
+      ## 任务目标
+      - Node.js fs readFileSync 1 wiki: `C:\ai\obsidian-文件\mt\EA开发\03-通用片段\02 读取类.md` (预计 8000-12000B)
+      - Node.js fs readFileSync 11 实物 .mq5 (MeanReversion_EA + ScalperXAU + TrendMA_EA + Breakout_EA + MyEA + Dashboard + 5 v5-v8 debug + M17_TestNewsEA)
+      - 选 2-3 demo EA (建议 MeanReversion_EA + ScalperXAU, 11 模块全集 EA, 02 读取类 demo 接入点丰富)
+      - Edit 工具在 02 wiki 末尾追加 ## 实战案例 段 (沿用 16:00 T2 6 段结构)
+      - 6 段结构: 场景 A + 场景 B + 接入点行号 + 调优点 + 陷阱 + 链向 T3 wiki
+      - 0 改 .mq5, 0 改前文, 0 创建新 wiki, 0 placeholders, 0 推荐语违规
+      - 0 改 MOC 前文 (T4 owner 顺手做, 1 行链向允许)
+
+      ## 必做清单
+      1. 12 必读全读 (Node.js fs 实测 02 wiki 8000-12000B + 2 实物 .mq5 + 6 段范本)
+      2. 选 2-3 demo EA (建议: MeanReversion_EA + ScalperXAU)
+      3. Edit 工具在 02 wiki 末尾追加 ## 实战案例 段
+      4. 0 改 .mq5 (Node.js fs statSync 11 实物 mtime 检查, 期望全部保持 19:00 T2 锁定区间)
+      5. 0 改 02 wiki 前文 (只在末尾追加段)
+      6. 0 改 MOC 前文 (T4 owner 顺手做, 1 行链向允许)
+      7. 0 推荐语 (新 ## 实战案例 段无 marketing 语)
+      8. daily/2026-06-04_23-00-track2-result.md 详细 6 章节
+      9. engine outputs 路径: `C:\Users\Administrator\.mavis\plans\plan_<你的 plan id>\outputs\track2-readclass\deliverable.md` (双路径)
+      10. verifier 9 项自校
+
+      ## 阻塞
+      无 (纯 Node.js fs 读 + Edit 工具, 不动 .mq5, 不动 console 1, 不动 MOC 前文)
+
+      ## 时间
+      0.6h (留 6 min buffer for 跨 11 EA 接入点), owner 24:00 cron 接续 review
+
+      ## workspace
+      C:\ai\obsidian-文件\mt\
+    verify_prompt: |
+      # 验证任务: 02 读取类实战段
+
+      ## 自校 9 项
+      1. ✅ 1 wiki 末尾 ## 实战案例 段 (Node.js fs grep, 期望 ## 实战案例 出现 1 次, 6 段结构: 场景 A + 场景 B + 接入点 + 调优 + 陷阱 + 链向)
+      2. ✅ 2 实物 .mq5 Node.js fs readFileSync 实测 (不是 Read 工具, 2/2)
+      3. ✅ 2 .mq5 大小/mtime 与 start 一致 (0 改 .mq5)
+      4. ✅ 6 段结构完整 (Node.js fs grep, 6 段标识: "场景 A" / "场景 B" / "接入点" / "调优" / "陷阱" / "链向" 各 1 命中)
+      5. ✅ 接入点行号实测 100% 命中 (Node.js fs grep, 期望 8+ 段行号引用全部命中实物)
+      6. ✅ 0 placeholders (TODO/待补/FIXME/TBD/XXX = 0, grep 1 wiki)
+      7. ✅ 0 推荐语违规 (新实战段无 marketing 语)
+      8. ✅ deliverable 双路径 (engine outputs + daily 同步写)
+      9. ✅ daily/2026-06-04_23-00-track2-result.md 详细 6 章节
+
+      ## 必查项
+      - 跑 02 wiki grep 期望 ## 实战案例 段位存在 (1 个)
+      - 跑 02 wiki grep 期望 6 段标识 6 命中
+      - 跑 11 实物 .mq5 mtime 检查 期望全部在 start 时 mtime 区间
+      - 跑 MOC mtime 检查 期望 22:24:25 后, 字节 ≥ 7862 (T4 顺手做 1 行链向允许)
+
+      VERDICT: PASS / FAIL (含具体哪 1-3 项不通过)
+
+  - id: track3-orderclass
+    title: T3 - 01 下单类 47/8EA 实战段 (14:00 §3 候选 D, 频次第 3 8EA 覆盖, 0.4h)
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 2
+    timeout_minutes: 25
+    depends_on: []
+    gates: []
+    prompt: |
+      # 任务: 01 下单类实战段 (23:00 巡检 T3)
+
+      ## 背景
+      - 14:00 §3 维度 3 候选 D "01 下单类 47/8EA 实战段" 闭环
+      - 22:00 plan §资源建议 留 23:00 cron 跑 (8 EA 接入点, 0.4h 足够)
+      - 22:00 T2 04 实用函数实战段 已落盘范本, 沿用 16:00 T2 6 段结构
+      - 23:00 cron 触达, Mavis owner 已收尾 22:00 plan_cae9e26a, 派你跑 01 实战段
+      - 详 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-04_23-00-plan.md` §5 (含 12 必读 + 6 段范本详细 spec + 9 反模式 + 验收)
+
+      ## 任务目标
+      - Node.js fs readFileSync 1 wiki: `C:\ai\obsidian-文件\mt\EA开发\03-通用片段\01 下单类.md` (预计 6000-10000B)
+      - Node.js fs readFileSync 8 实物 .mq5 (含 MyEA + 7 minimax-ea 排除 CsvProto/v7debug/v8/M17_TestNewsEA 因 0 OrderSend, 01 频次 47/8EA 8EA 覆盖)
+        - 8 EA: MeanReversion_EA + ScalperXAU + TrendMA_EA + Breakout_EA + MyEA + Dashboard + ScalperXAUv5simple + ScalperXAUv6debug
+      - 选 2-3 demo EA (建议 MeanReversion_EA + ScalperXAU, 01 下单类 demo 接入点丰富)
+      - Edit 工具在 01 wiki 末尾追加 ## 实战案例 段 (沿用 16:00 T2 6 段结构)
+      - 6 段结构: 场景 A + 场景 B + 接入点行号 + 调优点 + 陷阱 + 链向 T3 wiki
+      - 0 改 .mq5, 0 改前文, 0 创建新 wiki, 0 placeholders, 0 推荐语违规
+      - 0 改 MOC 前文 (T4 owner 顺手做, 1 行链向允许)
+
+      ## 必做清单
+      1. 12 必读全读 (Node.js fs 实测 01 wiki 6000-10000B + 2 实物 .mq5 + 6 段范本)
+      2. 选 2-3 demo EA (建议: MeanReversion_EA + ScalperXAU, M01 频次丰富)
+      3. Edit 工具在 01 wiki 末尾追加 ## 实战案例 段
+      4. 0 改 .mq5 (Node.js fs statSync 8 实物 mtime 检查, 期望全部保持)
+      5. 0 改 01 wiki 前文 (只在末尾追加段)
+      6. 0 改 MOC 前文 (T4 owner 顺手做, 1 行链向允许)
+      7. 0 推荐语 (新 ## 实战案例 段无 marketing 语)
+      8. daily/2026-06-04_23-00-track3-result.md 详细 6 章节
+      9. engine outputs 路径: `C:\Users\Administrator\.mavis\plans\plan_<你的 plan id>\outputs\track3-orderclass\deliverable.md` (双路径)
+      10. verifier 9 项自校
+
+      ## 阻塞
+      无 (纯 Node.js fs 读 + Edit 工具, 不动 .mq5, 不动 console 1, 不动 MOC 前文)
+
+      ## 时间
+      0.4h (8 EA 比 02 简单 1/3 复杂度), owner 24:00 cron 接续 review
+
+      ## workspace
+      C:\ai\obsidian-文件\mt\
+    verify_prompt: |
+      # 验证任务: 01 下单类实战段
+
+      ## 自校 9 项
+      1. ✅ 1 wiki 末尾 ## 实战案例 段 (Node.js fs grep, 期望 ## 实战案例 出现 1 次, 6 段结构: 场景 A + 场景 B + 接入点 + 调优 + 陷阱 + 链向)
+      2. ✅ 2 实物 .mq5 Node.js fs readFileSync 实测 (不是 Read 工具, 2/2)
+      3. ✅ 2 .mq5 大小/mtime 与 start 一致 (0 改 .mq5)
+      4. ✅ 6 段结构完整 (Node.js fs grep, 6 段标识: "场景 A" / "场景 B" / "接入点" / "调优" / "陷阱" / "链向" 各 1 命中)
+      5. ✅ 接入点行号实测 100% 命中 (Node.js fs grep, 期望 6+ 段行号引用全部命中实物)
+      6. ✅ 0 placeholders (TODO/待补/FIXME/TBD/XXX = 0, grep 1 wiki)
+      7. ✅ 0 推荐语违规 (新实战段无 marketing 语)
+      8. ✅ deliverable 双路径 (engine outputs + daily 同步写)
+      9. ✅ daily/2026-06-04_23-00-track3-result.md 详细 6 章节
+
+      ## 必查项
+      - 跑 01 wiki grep 期望 ## 实战案例 段位存在 (1 个)
+      - 跑 01 wiki grep 期望 6 段标识 6 命中
+      - 跑 8 实物 .mq5 mtime 检查 期望全部在 start 时 mtime 区间
+      - 跑 MOC mtime 检查 期望 22:24:25 后, 字节 ≥ 7862 (T4 顺手做 1 行链向允许)
+
+      VERDICT: PASS / FAIL (含具体哪 1-3 项不通过)
+
+  - id: track4-moc-links
+    title: T4 - MOC 索引 1-2 行链向 (0.1h, owner 收尾时顺手做, 依赖 T2+T3)
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 1
+    timeout_minutes: 10
+    depends_on: [track2-readclass, track3-orderclass]
+    gates: []
+    prompt: |
+      # 任务: MOC 索引 1-2 行链向 (23:00 巡检 T4)
+
+      ## 背景
+      - T2+T3 完成后 02 读取类 + 01 下单类 实战段已落盘, MOC 需加 1-2 行链向 (实战相关分类 9→10 OR 11)
+      - 23:00 cron 触达, Mavis owner 收尾时顺手做 T4
+      - 详 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-04_23-00-plan.md` §6 (含 5 必读 + 验收)
+
+      ## 任务目标
+      - 改 MOC `C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md` 实战相关分类 9→10 OR 11 wiki 段位链向 (加 1-2 行链向 "02 读取类" + "01 下单类")
+      - 0 改 MOC 前文 (1-2 行链向允许, 字节 +200-400B)
+      - 0 改 .mq5 (0 涉及)
+
+      ## 必做清单
+      1. 5 必读全读 (Node.js fs 实测 MOC 字节 7862 + T2+T3 产物)
+      2. Edit 工具改 MOC 加 1-2 行链向 (实战相关分类 9→10/11)
+      3. 0 改 MOC 前文
+      4. daily/2026-06-04_23-00-track4-result.md 详细 4 章节 (小型, 0.1h task)
+      5. engine outputs 路径: `C:\Users\Administrator\.mavis\plans\plan_<你的 plan id>\outputs\track4-moc-links\deliverable.md` (双路径)
+
+      ## 阻塞
+      无
+
+      ## 时间
+      0.1h, owner 24:00 收尾时顺手做
+
+      ## workspace
+      C:\ai\obsidian-文件\mt\
+    verify_prompt: |
+      # 验证任务: MOC 索引 1-2 行链向
+
+      ## 自校 4 项
+      1. ✅ MOC 实战相关分类 9→10 OR 11 wiki 段位链向 (Node.js fs grep 期望 "02 读取类" + "01 下单类" 各 1 命中)
+      2. ✅ 0 改 MOC 前文 (字节 ≥ 7862)
+      3. ✅ 0 改 .mq5 (0 涉及)
+      4. ✅ deliverable 双路径
+
+      VERDICT: PASS / FAIL

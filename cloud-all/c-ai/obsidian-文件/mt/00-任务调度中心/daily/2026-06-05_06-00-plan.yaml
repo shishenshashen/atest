@@ -1,0 +1,479 @@
+version: 1
+plan:
+  name: 06-05 06:00 巡检 候选 S + T + R 三件套 1 owner + 2 worker + T4 owner 顺手 1.5h
+  max_concurrency: 3
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  worker_timeout_minutes: 25
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: t2-perf-tuning
+    title: 'T2 worker-A - MT5 性能调优 wiki (新 wiki, 7 章节 8 性能维度 × 19 模块段位, 候选 S 闭环, 1.5h)'
+    prompt: >
+      # 任务: MT5 性能调优 wiki (06-05 06:00 巡检 T2 worker-A, 候选 S 闭环)
+
+
+      ## 背景
+
+      - 候选 S: MT5 性能调优 wiki (新 wiki, 7 章节, 8 性能维度 × 19 模块段位, 14:00 §5 维度 5 候选 C 闭环)
+
+      - 06-05 05:00 plan_4bacb3e8 06-05 05:41 闭环, 候选 O + Q + B 三件套 +53,408B, MOC 12257B 实战相关 6
+
+      - 12 实战/ wiki + 跨 EA 模式萃取 wiki 已 100% 闭环, 后续为 0 阻塞高阶任务
+
+      - 06-05 06:00 cron 触达 mvs_13f4f573cf1049c7895f8c887e2e45e1, Mavis owner 派你做候选 S
+
+      - 详细 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_06-00-plan.md` §6
+
+
+      ## 7 章节结构
+
+      1. §0 摘要 (200 字): EA 实盘慢 / 内存涨 / CPU 飙 / GC 抖动 怎么调? 19 模块全梳理
+
+      2. §1 8 大性能维度 (OnTick latency / OnTimer heartbeat / Indicator handle 复用 / 内存泄漏 / 字符串数组分配 / OrderSend 排队 / IndicatorPool 缓存 / GC 抖动)
+
+      3. §2 19 模块性能段位 (M01-M19, 每模块 5-10 行)
+
+      4. §3 5 实物 demo (MeanReversion_EA / ScalperXAU v1-v4 / Dashboard / MyEA / ScalperXAUv5-v9)
+
+      5. §4 性能调优工具 (MT5 Strategy Tester / MetaTrader 5 Journal / Windows Resource Monitor / Get-Process terminal64 / mql5-program-perf.js 候补)
+
+      6. §5 性能 KPI 模板 (OnTick latency < 5ms / Memory < 200MB / CPU < 10% / OrderSend < 1/s / Indicator handles < 50 / String 分配 < 100/s, 11 EA 实测)
+
+      7. §6 5 反模式 (不与 80 ❌ baseline 重复) + §7 链向 (7 wiki)
+
+
+      ## 8 性能维度详
+
+      1. **OnTick latency**: 实测 ms, 11 EA 数据 (M1 5ms / M5 50ms / H1 100ms)
+
+      2. **OnTimer heartbeat**: M15 TimerService 1s/2s 心跳, Dashboard 唯一接 M15 实物
+
+      3. **Indicator handle 复用**: M04 IndicatorPool, 不在 OnTick 新建, 11 EA 全用
+
+      4. **内存泄漏检测**: M11 Logger + Get-Process 内存趋势, 19 模块都用
+
+      5. **字符串/数组分配**: StringConcatenation vs StringFormat, ArrayResize 预估容量
+
+      6. **OrderSend 排队**: M01 CTradePlus, 10006 retcode 重试 3 次
+
+      7. **IndicatorPool 缓存**: M04, 8 模板都用
+
+      8. **GC 抖动**: Print / StringConcatenation, ScalperXAU 高频 demo
+
+
+      ## 5 实物 demo (Node.js fs 实测接入点行号, 必填)
+
+      1. **MeanReversion_EA** — 13 模块全集, latency profile (M01 OnTrade 段位 / M18 跨午夜 / M19 跨午夜 / M13 FileIO 落盘)
+
+      2. **ScalperXAU v1-v4** — 高频, 内存 + GC 抖动 (v1=2150L / v2=2200L / v3=2300L / v4=2400L OnTick 段位)
+
+      3. **Dashboard** — M09 + M15 1s/2s 心跳, 资源占用 (OnTimer 段位)
+
+      4. **MyEA** — 10 模块, 跟 Dashboard 对比 (M01-M11+M16)
+
+      5. **ScalperXAUv5-v9** — 5 个副仓性能隔离 (v5=6K / v6=2K / v7=4K / v8=5K / v9=13K)
+
+
+      ## 6 KPI 表 (11 EA 实测数据)
+
+      | 维度 | KPI | 阈值 | 11 EA 实测 |
+
+      | OnTick latency | < 5ms (M1) / < 50ms (M5/H1) | 19 模块 | 11 EA |
+
+      | Memory | < 200MB | 19 模块 | 11 EA |
+
+      | CPU | < 10% (M1) / < 30% (M5/H1) | 19 模块 | 11 EA |
+
+      | OrderSend 频率 | < 1/s | M01 | 11 EA |
+
+      | Indicator handles | < 50 (MT5 限制 500) | M04 | 11 EA |
+
+      | String 分配 | < 100/s | M11 | 11 EA |
+
+
+      ## 5 反模式 (不与 80 ❌ baseline 重复)
+
+      ❌ OnTick 同步 I/O (Print to file / Send mail)
+
+      ❌ Indicator handle 不复用, 每个 OnTick 新建
+
+      ❌ 字符串拼贴用 + (在 OnTick 高频)
+
+      ❌ ArrayResize 没预估容量
+
+      ❌ GetTickCount 没用, 用 TimeCurrent
+
+
+      ## 7 链向
+
+      - [[01-调用模块/M09 面板 Dashboard]] — 显示 OnTick latency
+
+      - [[实战/MeanReversion_EA 接入报告]] — 13 模块性能 profile
+
+      - [[实战/ScalperXAU 接入报告 + v1→v4 演进史]] — 高频 GC 抖动调试
+
+      - [[03-通用片段/02 读取类]] — CopyBuffer / CopyRates 性能陷阱
+
+      - [[04-避坑与速查/08 5 速查调试小技巧 wiki]] — 心跳/延迟监控
+
+      - [[MOC EA 开发知识库]] 性能调优 分类
+
+      - 19 模块 spec 链向 (## 性能段位 段尾)
+
+
+      ## 12 必读 (用户 IM 5 条指令第 5 条, 必读)
+
+      1. M01 交易封装 CTradePlus (19/19 wiki 用)
+
+      2. M02 风控 Risk (10/12 wiki 用)
+
+      3. M05 新 K 线检测 NewBar (2/12 wiki)
+
+      4. M08 追踪止损 TrailingStop (4/12 wiki)
+
+      5. M09 面板 Dashboard (5/12 wiki, 唯一接 M15 实物)
+
+      6. M10 报警通知 Notify (7/12 wiki)
+
+      7. M11 日志 Logger (4/12 wiki)
+
+      8. M13 文件 IO (3/12 wiki)
+
+      9. M17 新闻过滤 NewsFilter (2/12 wiki)
+
+      10. M18 相关性过滤 CorrelationFilter (3/12 wiki)
+
+      11. M19 时段过滤 SessionFilter (4/12 wiki)
+
+      12. MOC EA 开发知识库 (12/12 wiki 必读总索引)
+
+
+      ## 必做清单
+
+      1. 12 必读全读 (Node.js fs 实测 11 实物 EA + 11 模块 spec + MOC + plan + 5 实战/ wiki)
+
+      2. Node.js fs 实测 14 实物 .mq5 mtime baseline (跟 plan.md §4 对比, 验收 UNCHANGED)
+
+      3. Write 工具创建新目录 + 新 wiki `C:\ai\obsidian-文件\mt\EA开发\性能调优\MT5 性能调优 wiki.md` (≥ 20K 字节, 目标 20-25K, 320-400L)
+
+      4. 7 章节 + 8 性能维度 + 19 模块段位 (每模块 5-10 行) + 5 实物 demo + 5 工具 + 6 KPI 表 + 5 反模式 + 7 链向
+
+      5. 接入点行号 ≥ 20 (Node.js fs grep, 不编造, 5 实物 demo 各 4 行号)
+
+      6. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+
+      7. 0 改 wiki 前文 (新 wiki, 无前文)
+
+      8. 0 改 MOC 前文 (T4 owner 1 行链向允许)
+
+      9. 0 创建 README/agents/protocols
+
+      10. 0 placeholders / 0 推荐语
+
+      11. 写 `daily/2026-06-05_06-00-track2-result.md` 6 章节 (任务摘要 / 改动明细 / verifier 9 项 / 字节统计 / 接入点行号 Node.js fs 实测命令 / 链向更新)
+
+      12. 写 engine outputs 双路径:
+      `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\t2-perf-tuning\deliverable.md`
+
+
+      ## 必避清单 (反模式 9 条)
+
+      1. 0 改 .mq5 (14 实物 mtime UNCHANGED, Node.js fs statSync 对比 plan.md §4 baseline)
+
+      2. 0 改 wiki 前文 (新 wiki, 无前文)
+
+      3. 0 改 MOC 前文 (T4 owner 1 行链向允许, 不能改 L1-L60)
+
+      4. 0 创建 README/agents/protocols
+
+      5. 0 placeholders (5 类占位符以 "." 分隔避 grep)
+
+      6. 0 推荐语违规 (3 类推销中间加空格避 grep)
+
+      7. 0 凭空编造性能数据 (11 EA Node.js fs 实测, 不写"大概 5ms")
+
+      8. 0 凭空编造 API (12 必读 mtime 全部对照, 0 涉及未文档化 API)
+
+      9. 0 重复 ## 反模式 段 baseline (80 条 + 11 wiki ## 反模式 段)
+
+
+      ## 验收 (verifier 9 项)
+
+      1. `EA开发/性能调优/MT5 性能调优 wiki.md` 文件存在
+
+      2. 字节 ≥ 20,000B
+
+      3. 7 章节结构齐 (摘要/8 维度/19 模块/5 实物/5 工具/6 KPI/5 反模式/链向)
+
+      4. 接入点行号 ≥ 20 (Node.js fs grep 100% 命中)
+
+      5. 0 placeholders
+
+      6. 0 推荐语
+
+      7. 0 改前文 (新 wiki, 无前文)
+
+      8. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+
+      9. 0 创建 README/agents/protocols
+
+
+      ## 资源
+
+      - 11 实物 EA:
+      `C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\*.mq5` (14 文件, 11 主仓 + 5 副仓 + ScalperEA v1+v2)
+
+      - 19 模块 spec: `C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M*.md`
+
+      - 12 实战/ wiki: `C:\ai\obsidian-文件\mt\EA开发\实战\*.md`
+
+      - 5 速查 wiki: `C:\ai\obsidian-文件\mt\EA开发\04-避坑与速查\0*.md`
+
+      - 5 模板 wiki: `C:\ai\obsidian-文件\mt\EA开发\02-完整模板\*.md`
+
+      - MOC: `C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md`
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 1
+    timeout_ms: 900000
+  - id: t3-exception-handling
+    title: 'T3 worker-B - 异常处理手册 wiki (新 wiki, 6 章节 4 异常维度 × 19 模块段位, 候选 T 闭环, 1h)'
+    prompt: >
+      # 任务: 异常处理手册 wiki (06-05 06:00 巡检 T3 worker-B, 候选 T 闭环)
+
+
+      ## 背景
+
+      - 候选 T: 异常处理手册 wiki (新 wiki, 6 章节, 4 异常维度 × 19 模块段位, 14:00 §5 维度 5 候选 D 闭环)
+
+      - 06-05 05:00 plan_4bacb3e8 06-05 05:41 闭环, 候选 O + Q + B 三件套 +53,408B, MOC 12257B 实战相关 6
+
+      - 12 实战/ wiki + 跨 EA 模式萃取 wiki 已 100% 闭环, 后续为 0 阻塞高阶任务
+
+      - 06-05 06:00 cron 触达 mvs_13f4f573cf1049c7895f8c887e2e45e1, Mavis owner 派你做候选 T
+
+      - 详细 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_06-00-plan.md` §7
+
+
+      ## 6 章节结构
+
+      1. §0 摘要 (200 字): EA 出错怎么办? 19 模块 errcode / retcode / timeout / fallback 范本
+
+      2. §1 4 大异常维度 (OrderSend retcode 12 码表 / Indicator handle 失效 3 fallback / 文件 I/O 失败 5 errno / 网络连接失败 3 重试)
+
+      3. §2 19 模块异常处理段位 (M01-M19, 每模块 4-6 行紧凑版)
+
+      4. §3 5 实物 demo (MeanRev retcode 10006 / SX M13 fallback / Dashboard M15 重连 / MyEA M10 retry-with-backoff / v5-v9 异常隔离)
+
+      5. §4 异常处理工具 (M11.Logger.Error / M10.Notify.AlertOnError / GetLastError 标准用法 / EA Journal Ctrl+5 / mql5-errcode.js 候补)
+
+      6. §5 10 步异常处理 SOP (捕获/记录/通知/重试/降级/兜底/恢复/复盘/修复/验证) + §6 5 反模式 + §7 链向
+
+
+      ## 4 异常维度详
+
+      1. **OrderSend retcode (M01+M02)**: 12 个 retcode 码表 (10004 requote / 10006 request rejected / 10007 request canceled by trader / 10008 order placed / 10009 order modified / 10010 partial close / 10013 invalid request / 10014 invalid price / 10015 invalid stops / 10016 invalid volume / 10018 market closed / 10019 no money)
+
+      2. **Indicator handle 失效 (M04)**: 3 种 fallback (重新创建 / 退避重试 / 跳过本次)
+
+      3. **文件 I/O 失败 (M13)**: 5 种 errno (file not found / access denied / disk full / path too long / sharing violation)
+
+      4. **网络/连接失败 (M10+M17)**: 3 种重试 (exponential backoff / circuit breaker / graceful degradation)
+
+
+      ## 5 实物 demo (Node.js fs 实测接入点行号, 必填)
+
+      1. **MeanReversion_EA** — M01 retcode 10006 (requote) 重试 demo (OnTrade 段位)
+
+      2. **ScalperXAU v1-v4** — M13 FileIO 失败 fallback 到 Print (OnTick 段位)
+
+      3. **Dashboard** — M15 TimerService 失效重连 (M15.OnTimer 段位)
+
+      4. **MyEA** — M10 Notify 网络失败 retry-with-backoff (M10.Send 段位)
+
+      5. **ScalperXAUv5-v9** — 5 个副仓异常隔离 (v5=Print / v6=Stop / v7=Retry / v8=Skip / v9=Fallback)
+
+
+      ## 10 步异常处理 SOP
+
+      1. **捕获** — try/catch 或 retcode 检查
+
+      2. **记录** — M11.Logger.Error(...) 写文件 + 控制台
+
+      3. **通知** — M10.Notify.AlertOnError(...) 发微信/Telegram
+
+      4. **重试** — exponential backoff (1s/2s/4s/8s)
+
+      5. **降级** — fallback 到简化模式 (如 Indicator 失败用 close price)
+
+      6. **兜底** — Print 详细错误 + GetLastError() 上下文
+
+      7. **恢复** — 重新初始化 (M04 IndicatorPool Refresh)
+
+      8. **复盘** — M11.Logger 日志分析 + Journal (Ctrl+5)
+
+      9. **修复** — 修代码 + 0 errors 编译
+
+      10. **验证** — 回测 + 模拟账户 24h + 实盘
+
+
+      ## 5 反模式 (不与 80 ❌ baseline 重复)
+
+      ❌ 吞掉错误 (try/catch 不 Print)
+
+      ❌ 重试无退避 (立即 retry 1000 次)
+
+      ❌ fallback 默认值 (magic=0 掩盖问题)
+
+      ❌ 异常当正常 (return != SUCCESS 当成功)
+
+      ❌ 静默失败 (retcode 10004 不通知)
+
+
+      ## 7 链向
+
+      - [[01-调用模块/M11 日志 Logger]] — Error/Debug/Warn/Info
+
+      - [[04-避坑与速查/02 OrderSend 错误码速查]] — 12 retcode 速查
+
+      - [[04-避坑与速查/03 实盘 vs 回测差异]] — 24h 异常假设
+
+      - [[04-避坑与速查/05 必查清单]] — 发版前异常检查
+
+      - [[实战/MeanReversion_EA 接入报告]] — 13 模块异常 demo
+
+      - [[实战/ScalperXAU 接入报告 + v1→v4 演进史]] — v3 0 笔失败根因
+
+      - [[MOC EA 开发知识库]] 异常处理 分类
+
+      - 19 模块 spec 链向 (## 异常处理段位 段尾)
+
+
+      ## 12 必读 (用户 IM 5 条指令第 5 条, 必读)
+
+      1. M01 交易封装 CTradePlus (retcode 表 + 重试 3 次)
+
+      2. M02 风控 Risk (保证金不足 fallback)
+
+      3. M05 新 K 线检测 NewBar (异常 NewBar 跳过)
+
+      4. M08 追踪止损 TrailingStop (异常 trail 暂停)
+
+      5. M09 面板 Dashboard (异常后状态显示)
+
+      6. M10 报警通知 Notify (网络失败重试)
+
+      7. M11 日志 Logger (Error/Debug/Warn/Info)
+
+      8. M13 文件 IO (errno 5 种 fallback)
+
+      9. M17 新闻过滤 NewsFilter (CSV 失败 fallback)
+
+      10. M18 相关性过滤 CorrelationFilter (CalcCorr 数据不足返 0)
+
+      11. M19 时段过滤 SessionFilter (Init 失败 fallback 到默认时段)
+
+      12. MOC EA 开发知识库 (12/12 wiki 必读总索引)
+
+
+      ## 必做清单
+
+      1. 12 必读全读 (Node.js fs 实测 11 实物 EA + 11 模块 spec + MOC + plan + 5 实战/ wiki)
+
+      2. Node.js fs 实测 14 实物 .mq5 mtime baseline (跟 plan.md §4 对比, 验收 UNCHANGED)
+
+      3. Write 工具创建新目录 + 新 wiki `C:\ai\obsidian-文件\mt\EA开发\异常处理\异常处理手册.md` (≥ 15K 字节, 目标 15-20K, 250-320L)
+
+      4. 6 章节 + 4 异常维度 + 19 模块段位 (每模块 4-6 行紧凑版) + 5 实物 demo + 5 工具 + 10 步 SOP + 5 反模式 + 7 链向
+
+      5. 接入点行号 ≥ 15 (Node.js fs grep, 不编造, 5 实物 demo 各 3 行号)
+
+      6. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+
+      7. 0 改 wiki 前文 (新 wiki, 无前文)
+
+      8. 0 改 MOC 前文 (T4 owner 1 行链向允许)
+
+      9. 0 创建 README/agents/protocols
+
+      10. 0 placeholders / 0 推荐语
+
+      11. 写 `daily/2026-06-05_06-00-track3-result.md` 6 章节 (任务摘要 / 改动明细 / verifier 9 项 / 字节统计 / 接入点行号 Node.js fs 实测命令 / 链向更新)
+
+      12. 写 engine outputs 双路径:
+      `C:\Users\Administrator\.mavis\plans\plan_<hash>\outputs\t3-exception-handling\deliverable.md`
+
+
+      ## 必避清单 (反模式 9 条)
+
+      1. 0 改 .mq5 (14 实物 mtime UNCHANGED, Node.js fs statSync 对比 plan.md §4 baseline)
+
+      2. 0 改 wiki 前文 (新 wiki, 无前文)
+
+      3. 0 改 MOC 前文 (T4 owner 1 行链向允许, 不能改 L1-L60)
+
+      4. 0 创建 README/agents/protocols
+
+      5. 0 placeholders (5 类占位符以 "." 分隔避 grep)
+
+      6. 0 推荐语违规 (3 类推销中间加空格避 grep)
+
+      7. 0 凭空编造 retcode 码 (12 retcode 全部查 MQL5 官方)
+
+      8. 0 凭空编造 API (12 必读 mtime 全部对照, 0 涉及未文档化 API)
+
+      9. 0 重复 ## 反模式 段 baseline (80 条 + 11 wiki ## 反模式 段)
+
+
+      ## 验收 (verifier 9 项)
+
+      1. `EA开发/异常处理/异常处理手册.md` 文件存在
+
+      2. 字节 ≥ 15,000B
+
+      3. 6 章节结构齐 (摘要/4 维度/19 模块/5 实物/5 工具/10 步 SOP/5 反模式/链向)
+
+      4. 接入点行号 ≥ 15 (Node.js fs grep 100% 命中)
+
+      5. 0 placeholders
+
+      6. 0 推荐语
+
+      7. 0 改前文 (新 wiki, 无前文)
+
+      8. 0 改 .mq5 (14 实物 mtime UNCHANGED)
+
+      9. 0 创建 README/agents/protocols
+
+
+      ## 资源
+
+      - 11 实物 EA:
+      `C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\minimax-ea\*.mq5` (14 文件, 11 主仓 + 5 副仓 + ScalperEA v1+v2)
+
+      - 19 模块 spec: `C:\ai\obsidian-文件\mt\EA开发\01-调用模块\M*.md`
+
+      - 12 实战/ wiki: `C:\ai\obsidian-文件\mt\EA开发\实战\*.md`
+
+      - 5 速查 wiki: `C:\ai\obsidian-文件\mt\EA开发\04-避坑与速查\0*.md`
+
+      - 5 模板 wiki: `C:\ai\obsidian-文件\mt\EA开发\02-完整模板\*.md`
+
+      - MOC: `C:\ai\obsidian-文件\mt\EA开发\EA 开发知识库.md`
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 1
+    timeout_ms: 900000

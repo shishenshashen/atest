@@ -1,0 +1,283 @@
+---
+date: 2026-06-06
+session: mvs_db54f2fa976c44729b18ae078a63365a
+cron: "自动巡检 (0 * * * *)"
+plan_id: 2026-06-06_15-00-cron-patrol
+owner: Mavis
+yaml_type: "mavis-team 引擎 yaml (待 user IM '做 #N' 启)"
+track: 1
+concurrency: 1
+cycles: 2
+auto_accept: false
+auto_reject_retries: 1
+max_consecutive_failures: 2
+worker_timeout_minutes: 90
+verifier_timeout_minutes: 15
+note: "🆕 15:00 §8 写 EA 6 步法 + verifier 9 项 worker prompt 模板嵌入 (沿用 06-05 13:00 plan_7193fa42 成功范本 + 06-06 15:00 强化)"
+---
+
+# 2026-06-06 15:00 mavis-team 引擎 yaml (1 track, 候选 P3 R3 + 候选 T5 R3 standby, 嵌入 6 步法 + verifier 9 项)
+
+> **决策**: 保持 40+ 次"等用户授权"姿势不起新 plan
+> **🆕 15:00 强化**: 6 步法 + verifier 9 项 worker prompt 模板嵌入 (下次 user IM "做 #N" 时直接套用, 不需 owner 临时再 Edit)
+> **完整 9 章节 spec**: `daily/2026-06-06_15-00-plan.md` + `daily/2026-06-06_01-00-plan.md` (1:00 详尽 spec 26,782B/412 行 9 章节)
+> **lesson 沉淀**: `multi-agent-orchestration.md §8` (200+ 行, 写 EA 6 步法 + verifier 9 项)
+
+---
+
+```yaml
+# 引擎 yaml 必带字段 (沿用 06-05 13:00 plan_7193fa42 成功范本 + 06-06 15:00 §8 强化)
+version: 1
+plan:
+  name: 2026-06-06_15-00-cron-patrol-standby
+  max_concurrency: 1
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers: [verifier]
+    audit_sample_rate: 1.0
+    strict_mode: true
+tasks:
+  # 待 user IM "做 #N" 时, owner 复制本 yaml + Edit tasks[] + 启 plan
+  # 候选 P3 R3 worker 模板
+  - id: t2_p3_r3_worker
+    title: 候选 P3 R3 - 5 步法 wiki 实战篇 Round 3
+    role: produce
+    assigned_to: general
+    prompt: |
+      # 任务: 候选 P3 R3 - 5 步法 wiki 实战篇 Round 3 (1h 0 阻塞)
+      # 详细 spec: daily/2026-06-06_01-00-plan.md §4 (1:00 详尽 spec 26,782B/412 行 9 章节)
+      # 完整 9 章节: 1. META + 决策 / 2. 前置 / 3. 候选任务清单 / 4. 候选 P3 R3 详细 spec / 5. 候选 T5 R3 详细 spec / 6. 12 必读 + 14 实物 + 9 反模式 + 4 反哺 / 7. 引擎 yaml + 6 步法 + verifier 9 项 / 8. 6 路径决策树 / 9. 总结 + actionable
+
+      # 🆕 写 EA 必走 6 步法 (15:00 owner 强化, 缺一步 verifier reject)
+      ## 第 1 步: 必读 12 必读 wiki
+      ReadFile: C:\Users\Administrator\.mavis\agents\mavis\memory\mql5-wiki-12-必读.md
+      12 必读清单全部读 (M01-M19 + MOC), 9 反模式全部避, 14 实物 mtime baseline 记下
+      ## 第 2 步: 必读 14 实物 mtime baseline (sandbox 路径) - 即使 wiki 扩展任务也必走
+      Node.js fs readFileSync + statSync 实测 14 实物 sandbox 路径 mtime
+      路径: C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\<hash>\MQL5\Experts\minimax-ea\
+      必显式输出 "sandbox 路径实测 mtime, 14 实物 mtime baseline" 一段
+      ## 第 3 步: 必走 9 反模式 0 命中
+      末尾 grep 推荐|建议使用|强烈建议|待补|TODO|FIXME|TBD|XXX 0 命中
+      写陷阱 5 条必先 grep 120 baseline (80 ❌ + 11 wiki ## 反模式 段 55 条) 避免重复
+      ## 第 4 步: 必走 4 反哺机制
+      (1) MOC 索引 + 行链向 (1-2 行追加, 候选任务 0 改 MOC 前文)
+      (2) 必读链向 (worker prompt 链向 M17/M10/M02/M08 spec)
+      (3) 跨项目 lesson 沉淀 (闭环后写 memory entry)
+      (4) daily/<date>_XX-XX-log.md 9 章节
+      ## 第 5 步: 编译 0 errors - 候选 P3 R3 是 wiki 扩展任务, 跳过 (写 EA 任务时必走)
+      ## 第 6 步: verifier 9 项 + 4 反哺 + 双路径
+      9 项: 0 改 .mq5 / 0 改 wiki 前文 / 0 改 MOC 前文 / 0 README / 0 placeholders / 0 推荐语 / 0 编造行号 / 0 编造 API / 0 重复 baseline
+      4 反哺: 上面第 4 步
+      双路径: engine outputs/track2/deliverable.md + daily/2026-06-06_15-00-track2-result.md
+
+      # 任务实际 spec (沿用 1:00 详尽 spec §4)
+      ## 目标
+      5 wiki 末尾 ## 实战篇 段扩展 Round 3 (沿用 02:00+04:00 R1/R2 pattern)
+      12 wiki 6 段结构: 场景 A + 场景 B + 接入点行号 + 调优点 + 陷阱 + 链向
+      字节 +8K / 22-30L, Node.js fs 验证 30+ 接入点行号
+      0 漂移 0 placeholders 0 推荐语
+
+      ## 步骤
+      1. ReadFile: 5 wiki 现有内容 (12 wiki 末尾 ## 实战篇 段 L1-L200)
+      2. Node.js fs readFileSync + statSync: 5 wiki + 14 实物 sandbox 路径 mtime
+      3. Edit 工具追加 ## 实战篇 段 Round 3 (末尾追加, 不改前文)
+      4. Edit 工具 4 段范本 (场景 A + 场景 B + 接入点行号 + 调优点 + 陷阱 + 链向)
+      5. 末尾 grep 9 反模式 0 命中
+      6. Node.js fs statSync 14 实物 sandbox 路径 mtime UNCHANGED 验证
+      7. WriteFile: engine outputs/t2-p3-r3/deliverable.md (6 章节)
+      8. WriteFile: daily/2026-06-06_15-00-track2-result.md (5 段 R3 6 章节)
+      9. dual path 报告 → root session
+
+      ## 资源
+      - mql5-wiki-12-必读.md (12 必读 + 14 实物 + 9 反模式 + 6 段范本 + 4 反哺)
+      - multi-agent-orchestration.md §8 (6 步法 + verifier 9 项)
+      - daily/2026-06-06_01-00-plan.md §4 (1:00 详尽 spec)
+
+      ## deliverable
+      - engine outputs/t2-p3-r3/deliverable.md (6 章节, 字节 ≥5K)
+      - daily/2026-06-06_15-00-track2-result.md (5 段 R3 6 章节, 字节 ≥5K)
+      - 双重路径: engine + daily
+    verified_by: verifier
+    depends_on: []
+    max_retries: 1
+    timeout_ms: 5400000   # 1.5h
+
+  # 候选 P3 R3 verifier 模板
+  - id: t2_p3_r3_verifier
+    title: 候选 P3 R3 verifier - 9 项检查
+    role: verify
+    assigned_to: verifier
+    prompt: |
+      # Verifier 9 项检查 + 6 步法追溯 (15:00 强化, 必 reject 不读 wiki 的 worker)
+
+      ## 0 必读 12 必读 wiki 验证
+      worker deliverable 里必含一段 "12 必读清单 (M01-M19 + MOC) 全部读过" 的声明
+      没声明 → reject, 理由 "未读 12 必读, 强制重做"
+
+      ## 1 必读 14 实物 mtime baseline (sandbox 路径) 验证
+      worker deliverable 里必含 "sandbox 路径实测 mtime" 一段, 14 实物 mtime 列表
+      没显式 "sandbox 路径" 字符串 → reject, 理由 "未走 sandbox 路径, 误判风险"
+
+      ## 2 必走 9 反模式 0 命中验证
+      worker deliverable 末尾必 grep 9 反模式关键字 0 命中
+      有命中 → reject, 列出命中位置
+
+      ## 3 必走 4 反哺机制验证
+      (1) MOC 索引行链向 — 检查 MOC 文件 mtime + 字节 +X
+      (2) 必读链向 — 检查 wiki [[wiki link]] 包含 M17/M10/M02/M08
+      (3) 跨项目 lesson — 检查 memory entry 是否写入
+      (4) daily log 9 章节 — 检查 9 章节齐全
+      缺一项 → reject
+
+      ## 4 编译 0 errors 验证 - 候选 P3 R3 是 wiki 扩展任务, 跳过 (写 EA 任务时必走)
+
+      ## 5 0 改 .mq5 验证
+      Node.js fs statSync 14 实物 sandbox 路径 mtime, 必 UNCHANGED
+      有 1 实物 DRIFTED → reject
+
+      ## 6-8 其他 0 命中 / 0 编造 / 0 重复 baseline / 0 推荐语
+      标准 9 项 check
+
+      ## 9 双路径落盘验证
+      engine outputs/t2-p3-r3/deliverable.md 必存在
+      daily/2026-06-06_15-00-track2-result.md 必存在
+      缺一个 → reject
+
+      ## 最终判断
+      全过 → PASS
+      任何一项缺 → reject, 列出 reject 理由 + 修复建议
+    depends_on: [t2_p3_r3_worker]
+    max_retries: 1
+    timeout_ms: 900000   # 15 min
+```
+
+---
+
+## 沿用本 yaml 模式 (待 user IM "做 #N" 时, owner 复制本 yaml + Edit tasks[] + 启 plan)
+
+### 候选 T5 R3 worker 模板 (沿用 候选 P3 R3 模式 + 9 模式 wiki 而非 5 wiki)
+
+```yaml
+  - id: t3_t5_r3_worker
+    title: 候选 T5 R3 - 9 模式 wiki 实战篇 Round 3
+    role: produce
+    assigned_to: general
+    prompt: |
+      # 任务: 候选 T5 R3 - 9 模式 wiki 实战篇 Round 3 (1h 0 阻塞)
+      # 详细 spec: daily/2026-06-06_01-00-plan.md §5 (1:00 详尽 spec 26,782B/412 行 9 章节)
+
+      # 沿用 候选 P3 R3 6 步法 + 任务实际 spec
+      # 9 模式 wiki 末尾 ## 反模式 段扩展 Round 3 (沿用 21:00+22:00+23:00+00:00+01:00 R1/R2 pattern)
+      # 9 wiki 末尾 ## 反模式 段 6 段结构: 模式 A + 模式 B + 模式 C + 调优点 + 陷阱 + 链向
+      # 字节 +6K / 18-25L, Node.js fs 验证 30+ 接入点行号
+      # 0 漂移 0 placeholders 0 推荐语
+
+      # deliverable
+      - engine outputs/t3-t5-r3/deliverable.md (6 章节, 字节 ≥5K)
+      - daily/2026-06-06_15-00-track3-result.md (9 模式 R3 6 章节, 字节 ≥5K)
+    verified_by: verifier
+    depends_on: []
+    max_retries: 1
+    timeout_ms: 5400000   # 1.5h
+
+  - id: t3_t5_r3_verifier
+    title: 候选 T5 R3 verifier - 9 项检查
+    role: verify
+    assigned_to: verifier
+    prompt: |
+      # 沿用 候选 P3 R3 verifier 9 项检查
+    depends_on: [t3_t5_r3_worker]
+    max_retries: 1
+    timeout_ms: 900000   # 15 min
+```
+
+### #14 ScalpingMartin 写 EA worker 模板 (写 EA 任务 6 步法必走全)
+
+```yaml
+  - id: t4_14_scalpingmartin_worker
+    title: #14 ScalpingMartin EA 含 MQL5Kit (写 EA 任务, 6 步法必走全)
+    role: produce
+    assigned_to: general
+    prompt: |
+      # 任务: #14 ScalpingMartin EA 含 MQL5Kit (用户手动 IDE 路径)
+      # 详细 spec: daily/2026-06-06_15-00-plan.md (沿用 1:00 详尽 spec)
+
+      # 6 步法全走 (写 EA 任务, 6 步法必走全, 第 5 步编译 0 errors 不能跳)
+      ## 第 1 步: 必读 12 必读 wiki
+      ReadFile: C:\Users\Administrator\.mavis\agents\mavis\memory\mql5-wiki-12-必读.md
+      12 必读清单全部读 (M01-M19 + MOC), 9 反模式全部避, 14 实物 mtime baseline 记下
+      ## 第 2 步: 必读 14 实物 mtime baseline (sandbox 路径)
+      Node.js fs readFileSync + statSync 实测 14 实物 sandbox 路径 mtime
+      路径: C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\<hash>\MQL5\Experts\minimax-ea\
+      必显式输出 "sandbox 路径实测 mtime, 14 实物 mtime baseline" 一段
+      ## 第 3 步: 必走 9 反模式 0 命中
+      末尾 grep 推荐|建议使用|强烈建议|待补|TODO|FIXME|TBD|XXX 0 命中
+      写陷阱 5 条必先 grep 120 baseline 避免重复
+      ## 第 4 步: 必走 4 反哺机制
+      (1) MOC 索引 + 行链向
+      (2) 必读链向
+      (3) 跨项目 lesson 沉淀
+      (4) daily log 9 章节
+      ## 第 5 步: 编译 0 errors (写 EA 任务必走)
+      写到 install 目录 (C:\Program Files\MetaTrader 5\MQL5\Experts\minimax-ea\) 
+      + Node.js fs.copyFileSync 同步 sandbox
+      + mavis mcp call mt5 mt5_compile_ea
+      0 errors 后 Node.js fs statSync sandbox 14 实物 mtime UNCHANGED 验证
+      ## 第 6 步: verifier 9 项 + 4 反哺 + 双路径
+
+      # ScalpingMartin_EA.mq5 模板 (沿用 1:00 spec)
+      ## 必读现有 ScalpingMartin_EA.mq5 (sandbox 路径, 52,677B/1288L mtime 06-01 07:37)
+      ## L947-955 等差 switch / L957-962 总手数闸门 / L964-966 S008
+      ## 集成 MQL5Kit 17 模块 (M01-M19)
+      ## CTradePlus::Init / Buy / Sell / ClosePos
+      ## Risk.CanOpen(type, lot, sl, tp)
+      ## IsNewBar() 单线 demo
+      ## SetParams(start, step, minGap) + Apply() (TrailingStop)
+      ## Notify.Send(msg, highPriority) / Trade / Alert 3 类触发器
+      ## logger.Info/Warn/Error/Trade 4 级别
+      ## CFileIO::AppendCSV(fileName, fields)
+      ## IsNearEvent(±min, _Symbol) + LoadFromCSV() + 6 自检断言
+      ## IsHedgeExposed / thr= 阈值调优 (r=0.6/0.7/0.8 三档)
+      ## 4 预定义常量 (Asia/London/NY/Off) + 跨午夜 NY:22-6 + SetAllowWeekend
+
+      # deliverable
+      - C:\Program Files\MetaTrader 5\MQL5\Experts\_archive\me-ea\ScalpingMartin_EA.mq5 (写 EA)
+      - Node.js fs.copyFileSync 同步 sandbox
+      - mavis mcp call mt5 mt5_compile_ea 0 errors
+      - engine outputs/t4-14/deliverable.md (6 章节, 字节 ≥10K)
+      - daily/2026-06-06_15-00-track4-result.md (6 章节, 字节 ≥10K)
+    verified_by: verifier
+    depends_on: []
+    max_retries: 1
+    timeout_ms: 7200000   # 2h
+
+  - id: t4_14_scalpingmartin_verifier
+    title: #14 ScalpingMartin EA verifier - 9 项检查 (写 EA 任务 6 步法全走)
+    role: verify
+    assigned_to: verifier
+    prompt: |
+      # 沿用 候选 P3 R3 verifier 9 项检查 + 第 4 项编译 0 errors 必走
+      ## 0 必读 12 必读 wiki 验证
+      ## 1 必读 14 实物 mtime baseline (sandbox 路径) 验证
+      ## 2 必走 9 反模式 0 命中验证
+      ## 3 必走 4 反哺机制验证
+      ## 4 编译 0 errors 验证 (写 EA 任务必走)
+      worker deliverable 必含 "mavis mcp call mt5 mt5_compile_ea 0 errors" 一段
+      ## 5 0 改 .mq5 验证 - 写 EA 任务, 必包含新 EA, 14 实物 sandbox 路径 mtime UNCHANGED (除了新 EA 自身)
+      ## 6-8 其他 0 命中 / 0 编造 / 0 重复 baseline / 0 推荐语
+      ## 9 双路径落盘验证
+    depends_on: [t4_14_scalpingmartin_worker]
+    max_retries: 1
+    timeout_ms: 900000   # 15 min
+```
+
+---
+
+## 沿用本 yaml 模式 (沿用 6 步法 + verifier 9 项)
+
+任何 mavis-team plan 写 wiki / 写 EA / 写接入报告任务, owner 复制本 yaml 模板 + Edit tasks[] + mavis team plan run 启即可。
+
+**🆕 15:00 owner 主动沉淀 §8 lesson + plan.yaml 嵌入 6 步法 + verifier 9 项 worker prompt 模板**, 下次 user IM "做 #N" 启任何写 EA 任务, owner 必沿用本 yaml 模板 (不需 owner 临时再 Edit 6 步法)。

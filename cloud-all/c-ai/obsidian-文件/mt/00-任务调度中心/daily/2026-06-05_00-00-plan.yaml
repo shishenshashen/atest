@@ -1,0 +1,157 @@
+version: 1
+plan:
+  name: 2026-06-05 00:00 巡检 M18/M19 实战 wiki 6 章节扩展 + 03 画图类废弃决策 落盘 1 owner + 2 worker
+  max_concurrency: 2
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: track2-m18m19-ext
+    title: T2 - M18/M19 实战 wiki 6 章节扩展 (22:00 资源建议 A, 0.5h, 5 实战 wiki 反链闭环)
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 2
+    timeout_minutes: 30
+    depends_on: []
+    gates: []
+    prompt: |
+      # 任务: M18/M19 实战 wiki 6 章节扩展 (06-05 00:00 巡检 T2)
+
+      ## 背景
+      - 14:00 §3 维度 3 收官, 22:00 资源建议 A 候选 (5 实战 wiki 都用 M18/M19 spec 反链, 实战 wiki 6 章节扩展闭环 14:00 §5 维度 5)
+      - 06-05 00:00 cron 触达, Mavis owner 已收尾 23:00 plan_6e053db8, 派你跑 M18/M19 实战扩展
+      - 详 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_00-00-plan.md` §4 (含 12 必读 + 6 章节详细 spec + 9 反模式 + 验收)
+
+      ## 任务目标
+      - Node.js fs readFileSync 2 wiki:
+        - `C:\ai\obsidian-文件\mt\EA开发\实战\M18 多品种对冲实战.md` (18,468B/331L/6 章节, 12:00 plan_b83778e5 T2 N5-#4 落盘)
+        - `C:\ai\obsidian-文件\mt\EA开发\实战\M19 时段过滤实战.md` (32,435B/747L/7 章节, 12:00 plan_b83778e5 T3 N5-#5 落盘)
+      - Node.js fs readFileSync 5 实物 .mq5 (12:00 M18/M19 反链的 5 实物 wiki 对应 .mq5):
+        - MeanReversion_EA (M18+M19 集成, 13,503B/320L, mtime 2026-06-04 03:21)
+        - ScalperXAU (M18+M19 集成, 42,824B/1033L, mtime 2026-06-04 05:44)
+        - MyEA (M18 反链, 12,541B/301L, mtime 2026-06-03 16:57)
+        - Dashboard (M18 反链, 8,361B/208L, mtime 2026-06-03 16:51)
+        - TrendMA_EA (M18/M19 反链, 9,169B/239L, mtime 2026-06-03 16:50)
+      - 6 章节扩展方向 (M18+M19 各加 6 章节, 沿用 12:00 范本 6 段结构):
+        - 章节 1: 3 场景扩展 (跨午夜 + 跨周末 + 跨多品种同时段)
+        - 章节 2: 调优表扩展 (3 档 → 5 档, 加 4 档/5 档窗口示例)
+        - 章节 3: 跨午夜场景 (M19 重点: NY 22:00-06:00 跨午夜, M19_SessionFilter.mqh L156 跨午夜算法)
+        - 章节 4: 5 实战 wiki 用 M18/M19 spec 反链对照扩展 (MeanRev/Scalper/MyEA+Dashboard/TrendMA+Breakout/5 debug EA 各 1 段链向)
+        - 章节 5: 反模式 5 段扩展 (跨午夜/周末/多品种同时段/0.0545 r=0 阈值/M18 协调 M19)
+        - 章节 6: 链向扩展 (1 段 4 wiki 反链 + 1 段 5 实战 wiki 链向 + 1 段 MOC 实战分类链向)
+      - Edit 工具在 M18 + M19 wiki 末尾追加 ## 实战扩展 段 (沿用 16:00 T2 6 段结构)
+      - 0 改 .mq5, 0 改前文, 0 创建新 wiki, 0 placeholders, 0 推荐语违规, 0 改 MOC 前文 (T4 owner 顺手做)
+
+      ## 必做清单
+      1. 12 必读全读 (Node.js fs 实测 M18 + M19 + 5 实物 + 6 段范本)
+      2. 选 5 demo 实物 (建议: MeanReversion_EA + ScalperXAU + MyEA + Dashboard + TrendMA_EA)
+      3. Edit 工具在 M18 + M19 wiki 末尾追加 ## 实战扩展 段
+      4. 0 改 .mq5 (Node.js fs statSync 5 实物 mtime 检查, 期望全部保持)
+      5. 0 改 M18/M19 wiki 前文 (只在末尾追加段)
+      6. 0 改 MOC 前文 (T4 owner 顺手做, 1 行标注允许)
+      7. 0 推荐语 (新 ## 实战扩展 段无 marketing 语)
+      8. daily/2026-06-05_00-00-track2-result.md 详细 6 章节
+      9. engine outputs 路径: `C:\Users\Administrator\.mavis\plans\plan_<你的 plan id>\outputs\track2-m18m19-ext\deliverable.md` (双路径)
+      10. verifier 9 项自校
+
+      ## 阻塞
+      无 (纯 Node.js fs 读 + Edit 工具, 不动 .mq5, 不动 console 1, 不动 MOC 前文)
+
+      ## 时间
+      0.5h, owner 06-05 01:00 cron 接续 review
+
+      ## workspace
+      C:\ai\obsidian-文件\mt\
+    verify_prompt: |
+      # 验证任务: M18/M19 实战 wiki 6 章节扩展
+
+      ## 自校 9 项
+      1. ✅ 2 wiki 末尾 ## 实战扩展 段 (Node.js fs grep, 期望 ## 实战扩展 出现 2 次, 6 段结构完整)
+      2. ✅ 5 实物 .mq5 Node.js fs readFileSync 实测 (不是 Read 工具, 5/5)
+      3. ✅ 5 .mq5 大小/mtime 与 start 一致 (0 改 .mq5)
+      4. ✅ 6 段结构完整 (Node.js fs grep, 6 段标识: "场景 A" / "场景 B" / "场景 C" / "接入点" / "调优" / "陷阱" / "链向" 各 1 命中)
+      5. ✅ 接入点行号实测 100% 命中 (Node.js fs grep, 期望 5+ 段行号引用全部命中实物)
+      6. ✅ 0 placeholders (TODO/待补/FIXME/TBD/XXX = 0, grep 2 wiki)
+      7. ✅ 0 推荐语违规 (新实战段无 marketing 语)
+      8. ✅ deliverable 双路径 (engine outputs + daily 同步写)
+      9. ✅ daily/2026-06-05_00-00-track2-result.md 详细 6 章节
+
+      ## 必查项
+      - 跑 M18 wiki grep ## 实战扩展 期望出现 1 次
+      - 跑 M19 wiki grep ## 实战扩展 期望出现 1 次
+      - 跑 M18/M19 wiki grep 6 段标识 期望 6 段标识各 1 命中
+      - 跑 5 实物 .mq5 mtime 检查 期望全部在 start 时 mtime 区间
+      - 跑 MOC mtime 检查 期望保持 8361B / mtime 06-05 00:07 后不变化 (T4 owner 06-05 01:00 cron 顺手)
+
+      VERDICT: PASS / FAIL (含具体哪 1-3 项不通过)
+
+  - id: track3-drawclass-deprecate
+    title: T3 - 03 画图类 wiki 废弃决策 落盘 (14:00 §3 候选 C2 闭环, 0.1h, 1 wiki 段头加 "⚠️ 0/0EA 跳过" 段位)
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 1
+    timeout_minutes: 15
+    depends_on: []
+    gates: []
+    prompt: |
+      # 任务: 03 画图类 wiki 废弃决策 落盘 (06-05 00:00 巡检 T3)
+
+      ## 背景
+      - 14:00 §3 维度 3 候选 C2 (03 画图类 0/0EA 跳过), 17:00 T2 4 片段目录已建 (03 画图类 0/0EA 显式标注), 19:00 T3 4 片段索引卡已加
+      - 06-05 00:00 cron 触达, Mavis owner 派你跑 03 画图类废弃决策 wiki 段头加段
+      - 详 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-05_00-00-plan.md` §5 (含 5 必读 + 段头加段详细 spec + 9 反模式 + 验收)
+
+      ## 任务目标
+      - Node.js fs readFileSync 1 wiki: `C:\ai\obsidian-文件\mt\EA开发\03-通用片段\03 画图类.md` (4,541B/19:00 后, 19:00 plan_a1deda2b T3 4 通用片段索引卡 末尾加段)
+      - Node.js fs readFileSync 1 wiki: `C:\ai\obsidian-文件\mt\EA开发\03-通用片段\00 片段目录.md` (17:00 plan_f1c0e97a T2 4 片段目录落盘, 频次表 03 画图类 0/0EA 显式标注)
+      - 确认 0/0EA 跳过: 14:00 §3 维度 3 候选 C2 已确认 0/0EA 跳过 (17:00 T2 频次扫描脚本 frequency-scan.js 实测 03 画图类 0 调用, 11 EA 无 1 个使用画图类函数)
+      - Edit 工具在 03 画图类 wiki 段头加 "⚠️ 0/0EA 跳过" 段位 (1 段 4 行, L1 后插入):
+        - 摘要说明 (1 行): 03 画图类 0/0EA, 14:00 §3 维度 3 候选 C2 闭环
+        - 0/0EA 根因 (1 行): 11 EA 全用 M14.Drawer 模块, 03 画图类片段仅 8 函数 0 demo 接入
+        - 替代方案 (1 行): 用 M14.Drawer 替代 (1 段 5 行链向, M14 spec + 5 实物范本)
+        - 链向 (1 行): 链向 [[03-通用片段/00 片段目录]] 频次表 03 画图类 0/0EA 标注 + [[01-调用模块/M14 画图 Drawer]] spec
+      - 0 改前文, 0 改 MOC 前文 (T4 owner 顺手做), 0 创建新 wiki, 0 placeholders, 0 推荐语违规
+
+      ## 必做清单
+      1. 5 必读全读 (Node.js fs 实测 03 wiki 4,541B + 00 片段目录 wiki 17:00 后 + M14 spec wiki)
+      2. Edit 工具在 03 画图类 wiki 段头加 "⚠️ 0/0EA 跳过" 段位 (1 段 4 行, L1 后插入)
+      3. 0 改前文 (只在 L1 后插入段)
+      4. 0 改 MOC 前文 (T4 owner 顺手做, 1 行标注允许)
+      5. 0 推荐语 (新段无 marketing 语)
+      6. daily/2026-06-05_00-00-track3-result.md 详细 4 章节
+      7. engine outputs 路径: `C:\Users\Administrator\.mavis\plans\plan_<你的 plan id>\outputs\track3-drawclass-deprecate\deliverable.md` (双路径)
+      8. verifier 4 项自校
+
+      ## 阻塞
+      无 (纯 Node.js fs 读 + Edit 工具, 不动 .mq5, 不动 console 1, 不动 MOC 前文)
+
+      ## 时间
+      0.1h, owner 06-05 01:00 cron 接续 review
+
+      ## workspace
+      C:\ai\obsidian-文件\mt\
+    verify_prompt: |
+      # 验证任务: 03 画图类 wiki 废弃决策 落盘
+
+      ## 自校 4 项
+      1. ✅ 1 wiki 段头 ## ⚠️ 0/0EA 跳过 段 (Node.js fs grep, 期望 ## ⚠️ 0/0EA 跳过 出现 1 次, 4 行内容完整)
+      2. ✅ 0 改前文 (L1-段头插入点 全部保留)
+      3. ✅ 0 placeholders (TODO/待补/FIXME/TBD/XXX = 0, grep 1 wiki)
+      4. ✅ 0 推荐语违规 (新段无 marketing 语)
+
+      ## 必查项
+      - 跑 03 画图类 wiki grep ## ⚠️ 0/0EA 跳过 期望出现 1 次
+      - 跑 03 画图类 wiki grep 0/0EA 期望出现 ≥1 次
+      - 跑 03 画图类 wiki grep M14.Drawer 链向 期望出现 ≥1 次
+      - 跑 03 画图类 wiki 字节变化 期望 ≥4541B
+      - 跑 MOC mtime 检查 期望保持 8361B / mtime 06-05 00:07 后不变化 (T4 owner 06-05 01:00 cron 顺手)
+
+      VERDICT: PASS / FAIL (含具体哪 1-3 项不通过)

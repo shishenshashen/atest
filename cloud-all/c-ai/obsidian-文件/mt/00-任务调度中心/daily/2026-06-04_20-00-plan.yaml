@@ -1,0 +1,79 @@
+version: 1
+plan:
+  name: 2026-06-04 20:00 巡检 mavis-team N5 漂移修复 1 owner + 1 worker
+  max_concurrency: 1
+  max_consecutive_failures: 2
+  max_cycles: 2
+  auto_accept: false
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: track1-drift-fix
+    title: T1 - N5 14:00 沉淀 wiki 漂移修复 39 处 (7 wiki 改 cell + 加 ## 验证 段)
+    assigned_to: general
+    role: produce
+    verified_by: verifier
+    max_retries: 2
+    timeout_minutes: 90
+    depends_on: []
+    gates: []
+    prompt: |
+      # 任务: N5 14:00 沉淀 wiki 漂移修复 39 处 (20:00 巡检 T2 闭环)
+
+      ## 背景
+      - 19:00 T2 漂移校验发现 36 处 (T2 修 6 + 待修 30) → 本任务 N5 扩到 39 处全修
+      - 20:00 cron 触达, Mavis owner 已收尾 19:00 plan_a1deda2b (T2+T3 双 done, T3 verifier PASS, T2 verifier INCONCLUSIVE owner override_accept), 派你跑 N5 漂移修复
+      - 详 plan: `C:\ai\obsidian-文件\mt\00-任务调度中心\daily\2026-06-04_20-00-plan.md` §4 (含 12 必读 + 9 步 + 9 反模式 + verifier 9 项 + 39 处漂移完整清单)
+
+      ## 任务目标
+      - Node.js fs readFileSync 11 实物 .mq5 (5 minimax-ea + 5 v5-v8 debug + 1 M17_TestNewsEA) — 跟 19:00 T2 baseline 一致
+      - Edit 工具修 39 处漂移 (按 §4.2.1-§4.2.5 分组, 7 wiki 改 cell + 加 ## 验证 段)
+      - 7 wiki 加 ## 验证 段 (Node.js fs 一键复测命令 + 实物实测 + 漂移根因)
+      - 输出详细 daily deliverable daily/2026-06-04_20-00-track1-result.md 6 章节
+      - 0 改 .mq5, 0 改 MOC, 0 创建新 wiki, 0 placeholders, 0 推荐语违规
+
+      ## 必做清单
+      1. 12 必读全读 (Node.js fs 实测 11 实物 .mq5, 记录 handler def 行 + 7 wiki 当前内容)
+      2. 跑 validate_lines.js 复测 (期望 217 check, FAIL = 30 = 本任务待修)
+      3. Edit 工具修 39 处漂移 (按 §4.2 分组, 5 步: 4 实战 16 处 + 4 spec 4 处 + 2 反链 2 处 + 4 残留注释 4 处 + 17 handler def 17 处)
+      4. 7 wiki 加 ## 验证 段 (含 Node.js fs 一键复测命令)
+      5. 再跑 validate_lines.js 复测 (期望 FAIL = 0, 100% 命中)
+      6. daily/2026-06-04_20-00-track1-result.md 详细 6 章节
+      7. engine outputs 路径: C:\Users\Administrator\.mavis\plans\plan_<你的 plan id>\outputs\track1-drift-fix\deliverable.md (双路径, 与 daily 一致)
+      8. Node.js fs 一键复测命令 (verifier 自校)
+      9. verifier 9 项自校
+
+      ## 阻塞
+      无 (纯 Node.js fs 读 + Edit 工具改 wiki cell + 加段, 不动 .mq5, 不动 MOC, 不动 console 1)
+
+      ## 时间
+      1.5h, owner 21:00 cron 接续 review
+
+      ## workspace
+      C:\ai\obsidian-文件\mt\
+    verify_prompt: |
+      # 验证任务: N5 14:00 沉淀 wiki 漂移修复 39 处
+
+      ## 自校 9 项
+      1. ✅ 39 处漂移 100% 修复 (Node.js fs grep, validate_lines.js 跑通)
+      2. ✅ 11 实物 .mq5 Node.js fs readFileSync 实测 (不是 Read 工具, 11/11)
+      3. ✅ 11 .mq5 大小/mtime 与 start 一致 (0 改 .mq5)
+      4. ✅ 7 wiki 字节 diff 与"39 处 cell 改 + 7 个 ## 验证 段"假设 100% 吻合
+      5. ✅ 0 placeholders (TODO/待补/FIXME/TBD/XXX = 0, Node.js grep 5 wiki)
+      6. ✅ 0 推荐语违规 (新加 7 个 ## 验证 段无 marketing 语)
+      7. ✅ deliverable 双路径 (engine outputs + daily 同步写)
+      8. ✅ daily/2026-06-04_20-00-track1-result.md 详细 6 章节
+      9. ✅ verifier 独立用 Node.js fs 复测 5 段关键引用 100% 命中 (复测命令 deliverable.md §4 写明)
+
+      ## 必查项
+      - 跑 validate_lines.js 期望 FAIL = 0
+      - 跑 11 .mq5 mtime 检查 期望 mtime 全部在 2026-06-03T16:47-2026-06-04T05:59 区间
+      - 跑 EA 开发知识库.md mtime 检查 期望 0 改
+      - 7 wiki grep 期望 ## 验证 段存在 (7 个)
+      - 7 wiki grep 期望 0 placeholders (TODO/待补/FIXME/TBD/XXX)
+
+      VERDICT: PASS / FAIL (含具体哪 1-3 项不通过)
