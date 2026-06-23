@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "task-queue-daily-review",
+      "description": "每日 23:00 跑 task-queue 日报，生成假死率/任务数/最慢环节报告",
+      "schedule": "0 23 * * *",
+      "command": "python \"C:/Users/Administrator/.hermes/skills/task-queue/review.py\" daily",
+      "workdir": "C:/Users/Administrator/.hermes/skills/task-queue",
+      "timeout_sec": 120,
+      "enabled": true,
+      "notify_on_complete": true
+    },
+    {
+      "id": "task-queue-archive-compress",
+      "description": "每日 02:00 压缩 7 天前的 archive jsonl（gzip 节省 90%+ 空间）",
+      "schedule": "0 2 * * *",
+      "command": "python \"C:/Users/Administrator/.hermes/skills/task-queue/archive_compress.py\" --days 7",
+      "workdir": "C:/Users/Administrator/.hermes/skills/task-queue",
+      "timeout_sec": 60,
+      "enabled": true,
+      "notify_on_complete": false
+    },
+    {
+      "id": "task-queue-weekly-review",
+      "description": "每周日 22:00 跑周报，对比上周趋势",
+      "schedule": "0 22 * * 0",
+      "command": "python \"C:/Users/Administrator/.hermes/skills/task-queue/review.py\" weekly",
+      "workdir": "C:/Users/Administrator/.hermes/skills/task-queue",
+      "timeout_sec": 120,
+      "enabled": true,
+      "notify_on_complete": true
+    },
+    {
+      "id": "task-queue-watchdog-autostart",
+      "description": "会话开始时确保 watchdog 在跑（heartbeat 监控）",
+      "schedule": "@startup",
+      "command": "python \"C:/Users/Administrator/.hermes/skills/task-queue/watchdog.py\" start 60",
+      "workdir": "C:/Users/Administrator/.hermes/skills/task-queue",
+      "timeout_sec": 30,
+      "enabled": true,
+      "notify_on_complete": false
+    }
+  ]
+}

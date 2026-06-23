@@ -1,0 +1,8 @@
+{
+  "task_id": "t-20260615-165833-582986",
+  "kind": "nudge",
+  "at": 1781513922,
+  "last_heartbeat": 1781513922,
+  "gap_sec": 0,
+  "msg": "watchdog auto-retried you: strategy=rewrite_prompt, retry#1, don't give up"
+}

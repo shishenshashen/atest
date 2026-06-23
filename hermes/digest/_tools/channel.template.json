@@ -1,0 +1,40 @@
+{
+  "_comment": "P0-D 通道配置模板。老大把下面一个填好, 放到 ~/.hermes/digest/channel.json (或 ~/.hermes/channel.json), 重启后自动接入推送。当前无凭证,daily digest 走 uguu.se 图床 + 落本地 outbox.json 兜底。",
+  "_version": "1.0",
+  "_updated": "2026-06-15",
+  "active_channel": null,
+  "channels": {
+    "feishu_webhook": {
+      "_comment": "飞书群机器人 incoming webhook。飞书群 → 设置 → 群机器人 → 添加机器人 → 自定义 webhook。",
+      "type": "feishu_webhook",
+      "enabled": false,
+      "url": "https://open.feishu.cn/hook/PLACEHOLDER-REPLACE-WITH-YOUR-WEBHOOK-TOKEN",
+      "sign_secret": "",
+      "_how_to_test": "curl -X POST -H 'Content-Type: application/json' -d '{\"msg_type\":\"text\",\"content\":{\"text\":\"hello\"}}' YOUR_URL"
+    },
+    "wechat_bot": {
+      "_comment": "微信群机器人。两种方案:(A) 企业微信群机器人 (有 webhook); (B) 个人微信 (需 itchat/wxpy/HOOK 类库, GFW 风险高, 维护成本大, 不推荐)。",
+      "type": "wechat_work_webhook",
+      "enabled": false,
+      "url": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=PLACEHOLDER"
+    },
+    "telegram_bot": {
+      "_comment": "如果你有 telegram 通道,这是兜底 (GFW 偶尔抽风但 bot API 简单)。",
+      "type": "telegram",
+      "enabled": false,
+      "bot_token": "PLACEHOLDER",
+      "chat_id": "PLACEHOLDER"
+    },
+    "hermes_desktop_notify": {
+      "_comment": "Hermes 桌面通知 (弹窗, 不会真到手机)。做兜底用。",
+      "type": "hermes_native",
+      "enabled": true
+    }
+  },
+  "uguu_se": {
+    "_comment": "图床 (uguu.se)。已验证 6/15,匿名 multipart,老大手机微信浏览器可点开。",
+    "endpoint": "https://uguu.se/upload",
+    "status": "verified_ok",
+    "fallback_chain": ["uguu.se", "0x0.st (已 503)", "catbox (已断)", "imgbb (需 key)"]
+  }
+}

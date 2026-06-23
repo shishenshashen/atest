@@ -1,0 +1,923 @@
+[13:27:44] PUSH [error] ⏰ 任务假死: t-20260611-132738-290805
+角色: test
+目标: 模拟假死的任务（永不心跳）
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'total': 0, 'message': ''}
+[13:28:00] PUSH [error] ⏰ 任务假死: t-20260611-132754-72c7fd
+角色: test
+目标: 模拟假死的任务（永不心跳）
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'total': 0, 'message': ''}
+[13:29:12] watchdog start, interval=60s, pid=2988
+[13:29:25] watchdog start, interval=60s, pid=4780
+[13:31:13] watchdog start, interval=60s, pid=2740
+[13:32:12] PUSH [error] ⏰ 任务假死: t-20260611-133124-458db2
+角色: livetest
+目标: 真实环境假死测试（不心跳）
+心跳断: 48秒前 (阈值 5s)
+进度: {'current': 0, 'total': 0, 'message': ''}
+[14:20:23] BATCH_TIMEOUT requested=1 archived=1
+[14:20:23] PUSH [error] ⏰ 任务假死: t-20260611-142019-c3eb34
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[14:23:45] BATCH_TIMEOUT requested=1 archived=1
+[14:23:45] PUSH [error] ⏰ 任务假死: t-20260611-142341-a8a84c
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[14:24:46] BATCH_TIMEOUT requested=1 archived=1
+[14:24:46] PUSH [error] ⏰ 任务假死: t-20260611-142442-551d39
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[14:25:32] BATCH_TIMEOUT requested=1 archived=1
+[14:25:32] PUSH [error] ⏰ 任务假死: t-20260611-142528-d95fba
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[14:25:46] BATCH_TIMEOUT requested=1 archived=1
+[14:25:46] PUSH [error] ⏰ 任务假死: t-20260611-142542-7e5f5d
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[14:25:51] watchdog start, interval=60s, pid=8772
+[15:13:45] PUSH [error] 🚨 任务升级到 escalate: t-20260611-151345-d2b6ff
+角色: ops 等级: ?
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[15:13:45] PUSH [error] ⏰ 任务假死: t-20260611-151345-854583
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[15:14:08] PUSH [error] ⏰ 任务假死: t-20260611-151404-da30fb
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[15:14:45] PUSH [error] ⏰ 任务假死: t-20260611-151441-f5e7b1
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[15:15:02] PUSH [error] ⏰ 任务假死: t-20260611-151458-3ea4e5
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[15:15:26] PUSH [error] 🚨 任务升级到 escalate: t-20260611-151519-004cdf
+角色: ops 等级: ?
+目标: live e2e test
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '开始干活', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[15:15:40] PUSH [error] ⏰ 任务假死: t-20260611-151519-004cdf
+角色: ops
+目标: live e2e test
+心跳断: 21秒前 (阈值 20s)
+进度: {'current': 0, 'message': '开始干活', 'total': 0}
+[15:16:12] watchdog start, interval=60s, pid=9996
+[15:53:13] PUSH [error] 🚨 任务升级到 escalate: t-20260611-155313-b1babc
+角色: ops 等级: ?
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[15:53:13] PUSH [error] ⏰ 任务假死: t-20260611-155313-0f689b
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[15:53:22] PUSH [error] ⏰ 任务假死: t-20260611-155318-dc076c
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[15:53:29] PUSH [error] 🚨 任务升级到 escalate: t-20260611-155329-9d0b0d
+角色: ops 等级: ?
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[15:53:29] PUSH [error] ⏰ 任务假死: t-20260611-155329-9e7498
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[15:53:38] PUSH [error] ⏰ 任务假死: t-20260611-155334-d6086c
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[15:53:46] watchdog start, interval=60s, pid=1344
+[16:04:13] PUSH [error] 🚨 任务升级到 escalate: t-20260611-160413-7dcbdd
+角色: ops 等级: ?
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:04:13] PUSH [error] ⏰ 任务假死: t-20260611-160413-4e7f37
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:04:22] PUSH [error] ⏰ 任务假死: t-20260611-160418-0394e3
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:04:32] PUSH [error] 🚨 任务升级到 escalate: t-20260611-160432-0d3c78
+角色: ops 等级: ?
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:04:32] PUSH [error] ⏰ 任务假死: t-20260611-160432-c82523
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:04:46] PUSH [error] 🚨 任务升级到 escalate: t-20260611-160432-c2c15f
+角色: ops 等级: ?
+目标: status test 3
+心跳断: 21秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:04:46] PUSH [error] 🚨 任务升级到 escalate: t-20260611-160432-c9ee75
+角色: ops 等级: ?
+目标: status test 2
+心跳断: 19秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:04:46] PUSH [error] 🚨 任务升级到 escalate: t-20260611-160432-ff5a12
+角色: ops 等级: ?
+目标: status test 1
+心跳断: 17秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:04:55] PUSH [error] 🚨 任务升级到 escalate: t-20260611-160454-8068b6
+角色: ops 等级: ?
+目标: ping-level
+心跳断: 6秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:04:55] PUSH [error] 🚨 任务升级到 escalate: t-20260611-160455-59f023
+角色: ops 等级: ?
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:04:55] PUSH [error] ⏰ 任务假死: t-20260611-160455-8f82fc
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:05:02] PUSH [error] 🚨 任务升级到 escalate: t-20260611-160502-d4d8bc
+角色: ops 等级: ?
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:05:02] PUSH [error] ⏰ 任务假死: t-20260611-160502-7d6945
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:05:46] PUSH [error] ⏰ 任务假死: t-20260611-160503-01e13a
+角色: ops
+目标: status test 3
+心跳断: 50秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:05:46] PUSH [error] ⏰ 任务假死: t-20260611-160503-68f1ea
+角色: ops
+目标: status test 1
+心跳断: 46秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:05:46] PUSH [error] ⏰ 任务假死: t-20260611-160503-7efbdf
+角色: ops
+目标: status test 2
+心跳断: 48秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:17:23] PUSH [error] ⏰ 任务假死: t-20260611-161723-ac1081
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:17:23] PUSH [error] ⏰ 任务假死: t-20260611-161723-bbf548
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:17:23] PUSH [error] ⏰ 任务假死: t-20260611-161723-32fec4
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:17:23] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[16:17:23] PUSH [error] ⏰ 任务假死: t-20260611-161723-f4c3a6
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:17:32] PUSH [error] ⏰ 任务假死: t-20260611-161732-a7ae64
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:17:32] PUSH [error] ⏰ 任务假死: t-20260611-161732-4fb9ff
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:17:32] PUSH [error] ⏰ 任务假死: t-20260611-161732-4ece0d
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:17:32] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[16:17:32] PUSH [error] ⏰ 任务假死: t-20260611-161732-e1a42a
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:17:33] PUSH [error] 🚨 任务升级到 escalate: t-20260611-161733-b91a60
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:17:33] PUSH [error] ⏰ 任务假死: t-20260611-161733-16eb03
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:18:56] PUSH [error] ⏰ 任务假死: t-20260611-161852-982108
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:19:06] PUSH [error] 🚨 任务升级到 escalate: t-20260611-161906-f3e441
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:19:06] PUSH [error] ⏰ 任务假死: t-20260611-161906-201263
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:19:39] watchdog start, interval=60s, pid=6604
+[16:20:39] PUSH [error] ⏰ 任务假死: t-20260611-161928-c50f99
+角色: ops
+目标: after cortex adj
+心跳断: 71秒前 (阈值 60s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:21:40] PUSH [error] ⏰ 任务假死: t-20260611-161928-6a25c8
+角色: ops
+目标: 修个 typo
+心跳断: 131秒前 (阈值 120s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:22:40] PUSH [error] 🚨 任务升级到 escalate: t-20260611-161928-fd6fdc
+角色: general 等级: M
+目标: 改个 bug
+心跳断: 192秒前 (3×stale=180s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:23:40] PUSH [error] 🚨 任务升级到 escalate: t-20260611-161928-fd6fdc
+角色: general 等级: M
+目标: 改个 bug
+心跳断: 252秒前 (3×stale=180s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:24:40] PUSH [error] 🚨 任务升级到 escalate: t-20260611-161928-fd6fdc
+角色: general 等级: M
+目标: 改个 bug
+心跳断: 312秒前 (3×stale=180s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:31:22] PUSH [error] ⏰ 任务假死: t-20260611-163122-fae913
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:31:22] PUSH [error] ⏰ 任务假死: t-20260611-163122-b0a67f
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:31:22] PUSH [error] ⏰ 任务假死: t-20260611-163122-f3cbd4
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:31:23] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[16:31:23] PUSH [error] ⏰ 任务假死: t-20260611-163122-fb9f62
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:31:23] PUSH [error] 🚨 任务升级到 escalate: t-20260611-163123-b238ac
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[16:31:23] PUSH [error] ⏰ 任务假死: t-20260611-163123-8a556c
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[16:31:32] PUSH [error] ⏰ 任务假死: t-20260611-163128-1ad08b
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:22:31] CORTEX_ADJ watchdogtest: timeout x3 → auto_timeout=300s
+[17:22:31] PUSH [error] ⏰ 任务假死: t-20260611-172227-1a1f71
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:22:32] PUSH [error] 🚨 任务升级到 escalate: t-20260611-172231-bf19b2
+角色: ops 等级: S
+目标: ping-level
+心跳断: 6秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:22:32] PUSH [error] 🚨 任务升级到 escalate: t-20260611-172232-94b983
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:22:32] PUSH [error] ⏰ 任务假死: t-20260611-172232-ecf534
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:22:32] PUSH [error] ⏰ 任务假死: t-20260611-172232-99751b
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:22:32] PUSH [error] ⏰ 任务假死: t-20260611-172232-03c1a2
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:22:33] PUSH [error] ⏰ 任务假死: t-20260611-172232-a3e033
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:22:33] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[17:22:33] PUSH [error] ⏰ 任务假死: t-20260611-172233-e9fc53
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:22:44] PUSH [error] 🚨 任务升级到 escalate: t-20260611-172244-3ac6c5
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:22:45] PUSH [error] ⏰ 任务假死: t-20260611-172244-2099ac
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:22:56] PUSH [error] 🚨 任务升级到 escalate: t-20260611-172256-e0bb86
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:22:56] PUSH [error] ⏰ 任务假死: t-20260611-172256-af487c
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:23:40] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[17:23:40] PUSH [error] ⏰ 任务假死: t-20260611-172256-2de299
+角色: ops
+目标: status test 2
+心跳断: 49秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:23:40] PUSH [error] ⏰ 任务假死: t-20260611-172256-69cce3
+角色: ops
+目标: status test 1
+心跳断: 47秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:23:40] PUSH [error] ⏰ 任务假死: t-20260611-172256-c19519
+角色: ops
+目标: status test 3
+心跳断: 51秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:53:19] PUSH [error] ⏰ 任务假死: t-20260611-175313-f9b4ac
+角色: test
+目标: 模拟假死的任务（永不心跳）
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:53:28] PUSH [error] ⏰ 任务假死: t-20260611-175324-cd1d34
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:53:29] PUSH [error] 🚨 任务升级到 escalate: t-20260611-175328-28d5d5
+角色: ops 等级: S
+目标: esc-level
+心跳断: 8秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:53:29] PUSH [error] 🚨 任务升级到 escalate: t-20260611-175328-72e3a6
+角色: ops 等级: S
+目标: ping-level
+心跳断: 6秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:53:29] CORTEX_ADJ ops: timeout x3 → auto_timeout=30s
+[17:53:29] PUSH [error] ⏰ 任务假死: t-20260611-175328-a976b0
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:53:29] PUSH [error] ⏰ 任务假死: t-20260611-175329-4366c3
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:53:29] PUSH [error] ⏰ 任务假死: t-20260611-175329-894cdc
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:53:30] PUSH [error] ⏰ 任务假死: t-20260611-175329-8d0020
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:53:30] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[17:53:30] PUSH [error] ⏰ 任务假死: t-20260611-175330-fc99ed
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:53:53] PUSH [error] ⏰ 任务假死: t-20260611-175349-d1498d
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:53:53] PUSH [error] 🚨 任务升级到 escalate: t-20260611-175353-e187f0
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:53:53] PUSH [error] ⏰ 任务假死: t-20260611-175353-caf096
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:54:12] CORTEX_ADJ watchdogtest: timeout x3 → auto_timeout=150s
+[17:54:12] PUSH [error] ⏰ 任务假死: t-20260611-175408-d11266
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:54:24] PUSH [error] 🚨 任务升级到 escalate: t-20260611-175424-343b33
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:54:24] PUSH [error] ⏰ 任务假死: t-20260611-175424-e07691
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:54:36] PUSH [error] 🚨 任务升级到 escalate: t-20260611-175436-9b856e
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:54:36] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[17:54:36] PUSH [error] ⏰ 任务假死: t-20260611-175436-8d9aee
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:54:40] PUSH [error] 🚨 任务升级到 escalate: t-20260611-175437-99a381
+角色: ops 等级: S
+目标: status test 3
+心跳断: 10秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:54:40] PUSH [error] 🚨 任务升级到 escalate: t-20260611-175437-9d7ab5
+角色: ops 等级: S
+目标: status test 2
+心跳断: 8秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:54:40] PUSH [error] 🚨 任务升级到 escalate: t-20260611-175437-b06bb6
+角色: ops 等级: S
+目标: status test 1
+心跳断: 6秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[17:55:40] CORTEX_ADJ ops: timeout x3 → auto_timeout=30s
+[17:55:40] PUSH [error] ⏰ 任务假死: t-20260611-175437-99a381
+角色: ops
+目标: status test 3
+心跳断: 70秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:55:40] PUSH [error] ⏰ 任务假死: t-20260611-175437-9d7ab5
+角色: ops
+目标: status test 2
+心跳断: 68秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:55:40] PUSH [error] ⏰ 任务假死: t-20260611-175437-b06bb6
+角色: ops
+目标: status test 1
+心跳断: 66秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[17:56:51] watchdog start, interval=60s, pid=4308
+[17:57:40] PUSH [error] ⏰ 任务假死: t-20260611-175651-a96467
+角色: ops
+目标: D3-2 测试
+心跳断: 49秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:01:27] watchdog start, interval=60s, pid=8616
+[18:06:00] PUSH [error] ⏰ 任务假死: t-20260611-180556-5492ca
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:06:01] PUSH [error] 🚨 任务升级到 escalate: t-20260611-180601-928468
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:06:01] PUSH [error] ⏰ 任务假死: t-20260611-180601-ec36ca
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:06:01] PUSH [error] ⏰ 任务假死: t-20260611-180601-60578d
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:06:01] PUSH [error] ⏰ 任务假死: t-20260611-180601-ee33bf
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:06:01] PUSH [error] ⏰ 任务假死: t-20260611-180601-f7183c
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:06:02] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:06:02] PUSH [error] ⏰ 任务假死: t-20260611-180601-a5aea3
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:06:31] PUSH [error] 🚨 任务升级到 escalate: t-20260611-180631-2ea9e0
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:06:31] PUSH [error] ⏰ 任务假死: t-20260611-180631-71bea6
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:14:32] watchdog start, interval=60s, pid=5308
+[18:15:55] PUSH [error] 🚨 任务升级到 escalate: t-20260611-181555-042dc4
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:15:55] PUSH [error] ⏰ 任务假死: t-20260611-181555-0f6da8
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:15:55] PUSH [error] 🚨 任务升级到 escalate: t-20260611-181555-7871e0
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:15:55] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:15:55] PUSH [error] ⏰ 任务假死: t-20260611-181555-bd8882
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:15:56] PUSH [error] 🚨 任务升级到 escalate: t-20260611-181556-0b6a98
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:15:56] PUSH [error] ⏰ 任务假死: t-20260611-181556-d907a4
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:16:32] CORTEX_ADJ ops: timeout x3 → auto_timeout=30s
+[18:16:32] PUSH [error] ⏰ 任务假死: t-20260611-181556-9fb925
+角色: ops
+目标: status test 2
+心跳断: 41秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:16:32] PUSH [error] ⏰ 任务假死: t-20260611-181556-da05ab
+角色: ops
+目标: status test 3
+心跳断: 43秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:16:32] PUSH [error] ⏰ 任务假死: t-20260611-181556-f7e8fa
+角色: ops
+目标: status test 1
+心跳断: 39秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:19:37] watchdog start, interval=60s, pid=4404
+[18:19:37] startup purge: 1 stale tasks cancelled
+[18:19:37]   purged t-20260611-181937-7a9d8c gap=200s threshold=50s
+[18:20:37] PUSH [error] ⏰ 任务假死: t-20260611-182034-e3d730
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 3秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:20:39] PUSH [error] 🚨 任务升级到 escalate: t-20260611-182039-af492a
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:20:39] PUSH [error] ⏰ 任务假死: t-20260611-182039-c91170
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:20:40] PUSH [error] ⏰ 任务假死: t-20260611-182040-4f0bc7
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:20:40] PUSH [error] ⏰ 任务假死: t-20260611-182040-7ea4d8
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:20:40] PUSH [error] ⏰ 任务假死: t-20260611-182040-113837
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:20:40] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:20:40] PUSH [error] ⏰ 任务假死: t-20260611-182040-ecfcdc
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:21:04] CORTEX_ADJ watchdogtest: timeout x3 → auto_timeout=75s
+[18:21:04] PUSH [error] ⏰ 任务假死: t-20260611-182100-bb7d85
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:21:05] PUSH [error] ⏰ 任务假死: t-20260611-182104-8cd0d2
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:21:05] PUSH [error] ⏰ 任务假死: t-20260611-182105-72ace4
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:21:05] PUSH [error] ⏰ 任务假死: t-20260611-182105-e569c9
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:21:05] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:21:05] PUSH [error] ⏰ 任务假死: t-20260611-182105-1ca5ab
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:02] PUSH [error] ⏰ 任务假死: t-20260611-182302-8e1e4c
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:02] PUSH [error] ⏰ 任务假死: t-20260611-182302-e386d7
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:02] PUSH [error] ⏰ 任务假死: t-20260611-182302-c82c27
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:02] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:23:02] PUSH [error] ⏰ 任务假死: t-20260611-182302-1153a2
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:03] PUSH [error] ⏰ 任务假死: t-20260611-182303-e07bae
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:03] PUSH [error] ⏰ 任务假死: t-20260611-182303-a30df0
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:03] PUSH [error] ⏰ 任务假死: t-20260611-182303-433594
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:03] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:23:03] PUSH [error] ⏰ 任务假死: t-20260611-182303-5fafaf
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:18] PUSH [error] ⏰ 任务假死: t-20260611-182318-c53eb1
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:18] PUSH [error] ⏰ 任务假死: t-20260611-182318-4cb869
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:18] PUSH [error] ⏰ 任务假死: t-20260611-182318-0d2852
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:18] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:23:18] PUSH [error] ⏰ 任务假死: t-20260611-182318-ab54ab
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:32] PUSH [error] ⏰ 任务假死: t-20260611-182332-df5e7d
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:32] PUSH [error] ⏰ 任务假死: t-20260611-182332-43edd5
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:32] PUSH [error] ⏰ 任务假死: t-20260611-182332-4fb002
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:23:32] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:23:32] PUSH [error] ⏰ 任务假死: t-20260611-182332-ffc660
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:18] PUSH [error] ⏰ 任务假死: t-20260611-182514-213bf0
+角色: watchdogtest
+目标: watchdog e2e
+心跳断: 4秒前 (阈值 3s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:18] PUSH [error] 🚨 任务升级到 escalate: t-20260611-182518-460432
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:25:18] PUSH [error] ⏰ 任务假死: t-20260611-182518-0c9934
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:19] PUSH [error] ⏰ 任务假死: t-20260611-182519-f15235
+角色: ops
+目标: wd cortex test
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:19] PUSH [error] ⏰ 任务假死: t-20260611-182519-c878fc
+角色: ops
+目标: batch 0
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:19] PUSH [error] ⏰ 任务假死: t-20260611-182519-0908df
+角色: ops
+目标: batch 1
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:19] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:25:19] PUSH [error] ⏰ 任务假死: t-20260611-182519-fedf69
+角色: ops
+目标: batch 2
+心跳断: 15秒前 (阈值 10s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:36] PUSH [error] 🚨 任务升级到 escalate: t-20260611-182536-c8bc9e
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:25:36] PUSH [error] ⏰ 任务假死: t-20260611-182536-c0a4c4
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:37] PUSH [error] 🚨 任务升级到 escalate: t-20260611-182536-2a0acf
+角色: ops 等级: S
+目标: status test 3
+心跳断: 8秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:25:37] PUSH [error] 🚨 任务升级到 escalate: t-20260611-182536-df63a7
+角色: ops 等级: S
+目标: status test 2
+心跳断: 6秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:25:55] PUSH [error] 🚨 任务升级到 escalate: t-20260611-182555-23d23a
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:25:55] PUSH [error] ⏰ 任务假死: t-20260611-182555-173e22
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:56] PUSH [error] 🚨 任务升级到 escalate: t-20260611-182556-170b3e
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:25:56] CORTEX_ADJ ops: timeout x3 → auto_timeout=60s
+[18:25:56] PUSH [error] ⏰ 任务假死: t-20260611-182556-dfd2a6
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:25:56] PUSH [error] 🚨 任务升级到 escalate: t-20260611-182556-8d9778
+角色: ops 等级: S
+目标: esc-level
+心跳断: 7秒前 (3×stale=6s)
+进度: {'current': 0, 'message': '', 'total': 0}
+→ 子 agent 已冻结，等你拍板（重试/换思路/取消）
+[18:25:57] PUSH [error] ⏰ 任务假死: t-20260611-182556-09e1e9
+角色: ops
+目标: timeout-level
+心跳断: 6秒前 (阈值 5s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:26:37] watchdog start, interval=60s, pid=7016
+[18:26:37] startup purge: 1 stale tasks cancelled
+[18:26:37]   purged t-20260611-182637-b91c83 gap=200s threshold=50s
+[18:26:37] CORTEX_ADJ ops: timeout x3 → auto_timeout=30s
+[18:26:37] PUSH [error] ⏰ 任务假死: t-20260611-182557-3023fd
+角色: ops
+目标: status test 3
+心跳断: 47秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:26:37] PUSH [error] ⏰ 任务假死: t-20260611-182557-a18f8a
+角色: ops
+目标: status test 2
+心跳断: 45秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}
+[18:26:37] PUSH [error] ⏰ 任务假死: t-20260611-182557-b08cef
+角色: ops
+目标: status test 1
+心跳断: 43秒前 (阈值 30s)
+进度: {'current': 0, 'message': '', 'total': 0}

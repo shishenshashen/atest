@@ -6,9 +6,9 @@ import argparse
 import os
 import shutil
 import sys
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
-# 跳过这些 (路径含以下片段)
+# 跳过这些 (路径含以下片段, 用 / 分隔)
 EXCLUDE_PATTERNS = [
     ".git/",
     "__pycache__/",
@@ -26,17 +26,22 @@ EXCLUDE_GLOBS = [
 ]
 
 
-def should_exclude(rel: str) -> bool:
-    rel = rel.replace("\\", "/")
+def should_exclude(rel_posix: str) -> bool:
+    """rel_posix: 用 / 分隔的相对路径."""
     for pat in EXCLUDE_PATTERNS:
-        if pat in rel:
+        if pat in rel_posix:
             return True
     from fnmatch import fnmatch
-    base = os.path.basename(rel)
+    base = os.path.basename(rel_posix)
     for pat in EXCLUDE_GLOBS:
         if fnmatch(base, pat):
             return True
     return False
+
+
+def to_posix(rel: str) -> str:
+    """统一用 / 分隔."""
+    return rel.replace("\\", "/")
 
 
 def sync(src: Path, dst: Path):
@@ -45,34 +50,39 @@ def sync(src: Path, dst: Path):
     dst.mkdir(parents=True, exist_ok=True)
 
     copied, skipped, removed = 0, 0, 0
-    src_set = set()
+    src_set = set()  # posix rel path
 
     # 1. 走 src, 拷到 dst
     for root, dirs, files in os.walk(src):
-        rel_root = os.path.relpath(root, src)
+        rel_root = to_posix(os.path.relpath(root, src))
         if rel_root == ".":
             rel_root = ""
-        # 排除目录
-        dirs[:] = [d for d in dirs if not should_exclude(
-            (rel_root + "/" + d) if rel_root else d
-        )]
+        # 排除目录 (修改 dirs[:] 让 walk 跳过)
+        new_dirs = []
         for d in dirs:
-            src_set.add(os.path.join(rel_root, d) if rel_root else d)
+            rp = (rel_root + "/" + d) if rel_root else d
+            if not should_exclude(rp):
+                new_dirs.append(d)
+        dirs[:] = new_dirs
+        for d in new_dirs:
+            rp = (rel_root + "/" + d) if rel_root else d
+            src_set.add(rp)
         for f in files:
             rel = (rel_root + "/" + f) if rel_root else f
             if should_exclude(rel):
                 skipped += 1
                 continue
             src_p = Path(root) / f
-            dst_p = dst / rel
+            # 用 PurePosixPath 保证 dst 路径在 Windows 上也用 / 拼接
+            dst_p = dst / PurePosixPath(rel)
             dst_p.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src_p, dst_p)
             src_set.add(rel)
             copied += 1
 
-    # 2. 走 dst, 删 src 没有的
+    # 2. 走 dst, 删 src 没有的 (用 posix 一致)
     for root, dirs, files in os.walk(dst):
-        rel_root = os.path.relpath(root, dst)
+        rel_root = to_posix(os.path.relpath(root, dst))
         if rel_root == ".":
             rel_root = ""
         for f in files:
