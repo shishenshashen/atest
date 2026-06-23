@@ -1,23 +1,28 @@
-# 凭证 & 隐私
+# Hermes 同步 .gitignore
+# 凭证
+.env
+.env.backups/
 *.key
 *.pem
 .ssh/
-.mavis*
-.minimax*
-.mm-x-agent*
-@mmx-agentelectron-updater*
 
-# 临时
+# 临时/缓存
 __pycache__/
 *.pyc
 *.pyo
 *~
 *.tmp
-*.log.gz
+*.lock
 .DS_Store
 Thumbs.db
 
-# 大仓库内部 .git
+# 大二进制: 不传 (会单传压缩版)
+state.db
+state.db-shm
+state.db-wal
+
+# 大目录: 已 exclude (lsp/cache/uploads 等)
+# 仓内 .git
 github-mirror/*/.git/
 hermes-agent/.git/
 

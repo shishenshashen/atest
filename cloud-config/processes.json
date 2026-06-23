@@ -1,0 +1,40 @@
+[
+  {
+    "session_id": "proc_16b49a3066a2",
+    "command": "HERMES_TODAY=2026-06-21 python -u \"C:/Users/Administrator/AppData/Local/Temp/hermes_image_server.py\"",
+    "pid": 7736,
+    "pid_scope": "host",
+    "cwd": "C:\\Users\\Administrator\\.hermes\\digest\\2026-W25",
+    "started_at": 1782050888.143968,
+    "task_id": "default",
+    "session_key": "",
+    "watcher_platform": "",
+    "watcher_chat_id": "",
+    "watcher_user_id": "",
+    "watcher_user_name": "",
+    "watcher_thread_id": "",
+    "watcher_message_id": "",
+    "watcher_interval": 0,
+    "notify_on_complete": true,
+    "watch_patterns": []
+  },
+  {
+    "session_id": "proc_96c926a10189",
+    "command": "HERMES_TODAY=2026-06-21 python /c/Users/Administrator/AppData/Local/Temp/hermes_image_server.py",
+    "pid": 5660,
+    "pid_scope": "host",
+    "cwd": "C:\\Users\\Administrator\\.hermes\\digest\\2026-W25",
+    "started_at": 1782050941.9022071,
+    "task_id": "default",
+    "session_key": "",
+    "watcher_platform": "",
+    "watcher_chat_id": "",
+    "watcher_user_id": "",
+    "watcher_user_name": "",
+    "watcher_thread_id": "",
+    "watcher_message_id": "",
+    "watcher_interval": 0,
+    "notify_on_complete": false,
+    "watch_patterns": []
+  }
+]
