@@ -1,9 +1,0 @@
-{
-  "last_report_path": "C:\\Users\\Administrator\\AppData\\Roaming\\cn.org.hermesagent.desktop\\runtime\\hermes-home\\logs\\curator\\20260623-073334",
-  "last_run_at": "2026-06-23T07:33:34.259753+00:00",
-  "last_run_duration_seconds": 1425.117609,
-  "last_run_summary": "auto: no changes; llm: Let me write the final summary.\n\n## Summary\n\nI scanned all 50+ installed skills and 73 candidates in the prompt, looking for prefix clusters and umbrella-class opportunities. After rigorous review, I found **one genuine consolidation target…\narchived 2 skill(s):\n  • kanban-orchestrator — pruned (stale)\n  • kanban-worker — pruned (stale)\nfull report: hermes curator status",
-  "last_run_summary_shown_at": null,
-  "paused": false,
-  "run_count": 2
-}

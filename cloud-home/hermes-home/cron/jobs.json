@@ -1,0 +1,125 @@
+{
+  "jobs": [
+    {
+      "id": "4a823630c7c0",
+      "name": "daily-digest",
+      "prompt": "Generate today's daily summary using daily-digest skill (v2 Linear-style renderer with cover page, TOC, stat boxes, ASCII bar charts, Msyh font). After writing the markdown file, run the renderer:\n python 'C:\\Users\\Administrator\\AppData\\Local\\hermes\\hermes-agent\\skills\\daily-digest\\references\\daily_renderer.py' <md_path> <pdf_path>\nThen render PDF pages to PNG using PyMuPDF (2x resolution) into C:\\hermes-daily-YYYY-MM-DD-images\\. The self-hosted image server on port 18765 is already running and serving from C:\\hermes-daily-2026-06-10-v2-images\\, so just copy new images there.\nThen GET http://127.0.0.1:18765/ to fetch today's token. In your final response, include the 7 image URLs using the format: http://127.0.0.1:18765/img/page-XX.png?token=<TOKEN>\nFinal message format:\n1. one-line title with date\n2. PDF size + page count\n3. Top 3 highlights as bullets\n4. Markdown path, PDF path, image directory path\n5. Token-protected image URLs\nDo NOT skip renderer step or self-host server step.",
+      "skills": [
+        "daily-digest"
+      ],
+      "skill": "daily-digest",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *",
+        "display": "0 22 * * *"
+      },
+      "schedule_display": "0 22 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 19
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-10T13:51:59.799467+08:00",
+      "next_run_at": "2026-06-24T22:00:00+08:00",
+      "last_run_at": "2026-06-23T22:10:18.528347+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": "delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited",
+      "deliver": "weixin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "d2dbb36efc0f",
+      "name": "weekly-digest",
+      "prompt": "Generate this week's weekly summary using daily-digest skill (v2 Linear-style renderer). Run daily_renderer.py, render PDF to PNG, copy to self-hosted server dir, fetch today's token from http://127.0.0.1:18765/. Final message must include 5+ image URLs in format http://127.0.0.1:18765/img/page-XX.png?token=<TOKEN>. Cover, TOC, stat boxes, Msyh font, no STSong-Light.",
+      "skills": [
+        "daily-digest"
+      ],
+      "skill": "daily-digest",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * 0",
+        "display": "0 22 * * 0"
+      },
+      "schedule_display": "0 22 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-10T13:52:07.034451+08:00",
+      "next_run_at": "2026-06-28T22:00:00+08:00",
+      "last_run_at": "2026-06-21T22:11:29.419956+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": "delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited",
+      "deliver": "weixin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "8e2a93bed802",
+      "name": "monthly-digest",
+      "prompt": "Generate this month's monthly summary using daily-digest skill (v2 Linear-style renderer). Run daily_renderer.py, render PDF to PNG, copy to self-hosted server dir, fetch today's token from http://127.0.0.1:18765/. Final message must include 5+ image URLs in format http://127.0.0.1:18765/img/page-XX.png?token=<TOKEN>.",
+      "skills": [
+        "daily-digest"
+      ],
+      "skill": "daily-digest",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 1 * *",
+        "display": "0 22 1 * *"
+      },
+      "schedule_display": "0 22 1 * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-10T13:52:08.047019+08:00",
+      "next_run_at": "2026-07-01T22:00:00+08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "weixin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-06-23T22:10:18.529345+08:00"
+}
